@@ -1,0 +1,16 @@
+ul, ol {
+	padding: 0 0 0 1px;
+}
+.bx-wrapper {
+	-moz-box-shadow: 0 0 5px #333333;
+	-webkit-box-shadow: 0 0 5px #333333;
+	box-shadow: 0 0 5px #333333;
+	border: solid #333333 5px;
+	background: #333333;
+}
+.bx-wrapper .bx-viewport {
+	
+}
+.bxslider {
+	margin: 0em 0em;
+}

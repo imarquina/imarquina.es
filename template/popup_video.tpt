@@ -1,0 +1,14 @@
+<div id="@@ID@@" style="display:none;">
+	<div class="lightboxcontainer">
+		<div class="lightboxleft">
+			<div class="divtext">
+				<p class="divtitle">@@TITLE@@</p>
+				<p class="divdescription">@@DESCRIPTION@@</p>
+			</div>
+		</div>
+		<div class="lightboxright">
+			<iframe width="100%" height="100%" src="@@URL@@" frameborder="0" allowfullscreen></iframe>
+		</div>
+		<div style="clear:both;"></div>
+	</div>
+</div>  

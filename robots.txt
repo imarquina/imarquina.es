@@ -1,0 +1,8 @@
+User-agent:  *
+Disallow:  /font/
+Disallow: /resources/
+Disallow: /thumbs/
+Disallow: /tracks/
+Disallow: /config.xls$
+ 
+Sitemap: http://www.imarquina.es/sitemap.xml

@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* CSS Document */
+#banner ul, li {
+	display: inline;
+	margin: 0!important;
+	padding: 0!important;
+	float: left;	
+}
+.elemento {
+	
+}
+.elemento img {
+	height: 3em;	
+}
+.logo {
+
+}
+.thumb {
+	margin: 0 0.1em;
+}
+#thumb1 {
+	opacity: 0.8;	
+}
+#thumb2 {
+	opacity: 0.3;
+}
+#thumb3 {
+	opacity: 0.1;
+}
