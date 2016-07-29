@@ -161,9 +161,9 @@ infoLinkTratar = function(infolink){
 	*/	
 }
 seoValoresEstablecer=function(elemento) {
-	document.title = elemento.attr('TITLE');
-	$('meta[name="description"]').attr("content",elemento.attr('INFOTEXT'));	
-	$('meta[name="keywords"]').attr("content",elemento.attr('KEYWORDS'));
+	document.title = elemento.attr("title");
+	$('meta[name="description"]').attr("content",elemento.attr("infotext"));	
+	$('meta[name="keywords"]').attr("content",elemento.attr("keywords"));
 }
 /* Crea el rastro de miga de pan, en base al nodo
    y si la navegación viene por 'Lo nuevo'
@@ -174,14 +174,14 @@ breadcrumbsEstablecer=function(oNode,urlNews) {
 	
 	if(document.URL.toLowerCase().indexOf("detail.html")>0){
 		sResult="secuencia";
-		sResult=hrefEstablecer(oTemp[0].nodeName,oTemp.attr("NAME"),urlNews,1)+' | '+sResult;
+		sResult=hrefEstablecer(oTemp[0].nodeName,oTemp.attr("name"),urlNews,1)+' | '+sResult;
 	}else{
-		sResult+=hrefEstablecer(oTemp[0].nodeName,oTemp.attr("NAME"),urlNews,0)
+		sResult+=hrefEstablecer(oTemp[0].nodeName,oTemp.attr("name"),urlNews,0)
 	}
 
-	while ((oTemp.parent()).attr("NAME")!=undefined) {
+	while ((oTemp.parent()).attr("name")!=undefined) {
 		oTemp=oTemp.parent();
-		sResult=hrefEstablecer(oTemp[0].nodeName,oTemp.attr("NAME"),urlNews,1)+' | '+sResult;
+		sResult=hrefEstablecer(oTemp[0].nodeName,oTemp.attr("name"),urlNews,1)+' | '+sResult;
 	}
 	if(urlNews!=undefined)sResult=hrefEstablecer("Lo último",urlNews,urlNews,1) + ' | ' + sResult;
 	sResult="<a href='./index.html'>inicio</a>"+' | '+sResult;

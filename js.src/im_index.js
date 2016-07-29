@@ -125,7 +125,7 @@ imagenPreview=function(origen,imagenSrc,imagenWidth,imagenHeight,galleryCode,ima
 	}
 	
 	//Set the image src
-	imageTag.attr('src', App.Config.rutaImage+imagenSrc+'.jpg');
+	imageTag.attr("src", App.Config.rutaImage+imagenSrc+'.jpg');
 	 
 	//When the image has loaded, display the dialog
 	imageTag.load(function(){
@@ -154,12 +154,12 @@ textPreview=function(sParam) {
 				capasPopUpAjustar('texto');
 				//El nodo root es config
 				$(xml).find('section').each(function() {
-					var section_name=$(this).attr('NAME');
+					var section_name=$(this).attr("name");
 	
 					if (htmlReplace(section_name)==sParam){
 						var sTitulo='';
 						var sTexto='';
-						
+						debugger;		
 						sTitulo=$(this).find('title').text();
 						$(this).children().each(function() {
 							var nObj=this;
@@ -219,14 +219,14 @@ galeriaCargar=function(sParam,sNews){
 		success: function(xml) {					
 			//El nodo root es config
 			$(xml).find('gallery').each(function() {
-				var gallery_name=$(this).attr('NAME');
+				var gallery_name=$(this).attr("name");
 
 				if (htmlReplace(gallery_name)==sParam){
 					//boton atras + datos social-media
 					var dataText='';
-					if (($(this).parent()).attr("NAME")!=undefined) {
+					if (($(this).parent()).attr("name")!=undefined) {
 						$('.backbottom').html(breadcrumbsEstablecer($(this),sNews));
-						dataText=App.Config.dataTextTitle+($(this).parent()).attr("NAME")+":"+gallery_name;
+						dataText=App.Config.dataTextTitle+($(this).parent()).attr("name")+":"+gallery_name;
 					} else {
 						$('.backbottom').html(breadcrumbsEstablecer($(this),sNews));
 						dataText=App.Config.dataTextTitle+gallery_name;
@@ -240,10 +240,10 @@ galeriaCargar=function(sParam,sNews){
 					//Coleccion de la galeria
 					var iElem = 0;
 					$(this).children().each(function() {
-						var IDImage=$(this).attr('ID');
+						var IDImage=$(this).attr("id");
 						var hImage=typesHash.get(IDImage);
 						if (hImage != null){
-							//var image=$(this).attr('SRC');
+							//var image=$(this).attr("src");
 							var imgName=hImage.SRC.replace(".jpg","");	
 							var sName=hImage.CAPTION;
 							var sInfT=hImage.INFOTEXT;
@@ -301,7 +301,7 @@ folderCargar=function(sParam,sNews){
 		success: function(xml) {					
 			//El nodo root es config
 			$(xml).find('folder').each(function() {
-				var folder_name=$(this).attr('NAME');
+				var folder_name=$(this).attr("name");
 				
 				if (htmlReplace(folder_name)==sParam){
 					//vinculos social-media
@@ -316,9 +316,9 @@ folderCargar=function(sParam,sNews){
 					$(this).children().each(function() {
 						var nObj=this;
 						if (nObj.nodeName=='gallery') {
-							var sName=$(nObj).attr('NAME');
-							var image=$(nObj).attr('SRC');
-							var imgName=$(nObj).attr('SRC').replace(".jpg","");										
+							var sName=$(nObj).attr("name");
+							var image=$(nObj).attr("src");
+							var imgName=$(nObj).attr("src").replace(".jpg","");										
 
 							var elmPan=$("<li>").appendTo("#tiles");
 							var divPan=$("<div class='panel'>").appendTo(elmPan);						
@@ -326,7 +326,7 @@ folderCargar=function(sParam,sNews){
 							$("<p><img class='panel-literal-img' src='./resources/flecha.png'/><span class='panel-literal'>"+App.Config.marcaGaleria+"</span><span class='panel-titulo'>"+sName+"</span></p>").appendTo(elmPan)
 
 							var divDat=$("<div class='datos'>").appendTo(elmPan);
-							$("<p>"+dateFormat($(nObj).attr('UPDATE'))+"</p>").appendTo(divDat);
+							$("<p>"+dateFormat($(nObj).attr("update"))+"</p>").appendTo(divDat);
 							//Crear vínculo carpeta
 							if(sNews!=undefined){
 								$(divPan).wrap("<a href='./index.html?gallery="+htmlReplace(sName)+"&news="+sNews+"'>");
@@ -353,14 +353,14 @@ multimediaCargar=function(sParam,sNews){
 		success: function(xml) {					
 			//El nodo root es config
 			$(xml).find('multimedia').each(function() {
-				var multimedia_name=$(this).attr('NAME');
+				var multimedia_name=$(this).attr("name");
 
 				if (htmlReplace(multimedia_name)==sParam){
 					//boton atras + datos social-media
 					var dataText='';
-					if (($(this).parent()).attr("NAME")!=undefined) {
+					if (($(this).parent()).attr("name")!=undefined) {
 						$('.backbottom').html(breadcrumbsEstablecer($(this),sNews));
-						dataText=App.Config.dataTextTitle+($(this).parent()).attr("NAME")+":"+multimedia_name;
+						dataText=App.Config.dataTextTitle+($(this).parent()).attr("name")+":"+multimedia_name;
 					} else {
 						$('.backbottom').html(breadcrumbsEstablecer($(this),sNews));
 						dataText=App.Config.dataTextTitle+multimedia_name;
@@ -375,10 +375,10 @@ multimediaCargar=function(sParam,sNews){
 					var iElem = 0;
 					var templateTpt = '';
 					$(this).children().each(function() {
-						var IDImage=$(this).attr('ID');
+						var IDImage=$(this).attr("id");
 						var hImage=typesHash.get(IDImage);
 						if (hImage != null){
-							//var image=$(this).attr('SRC');
+							//var image=$(this).attr("src");
 							var imgName=hImage.SRC.replace(".jpg","");	
 							var sName=hImage.CAPTION;
 							var sInfT=hImage.INFOTEXT;
@@ -456,9 +456,9 @@ homeCargar=function(){
 								switch(nGls.nodeName)
 								{
 									case 'folder':
-										var sName=$(nGls).attr('NAME');
-										var image=$(nGls).attr('SRC');
-										var imgName=$(nGls).attr('SRC').replace(".jpg","");										
+										var sName=$(nGls).attr("name");
+										var image=$(nGls).attr("src");
+										var imgName=$(nGls).attr("src").replace(".jpg","");										
 
 										var elmPan=$("<li>").appendTo("#tiles");
 										var divPan=$("<div class='panel'>").appendTo(elmPan);						
@@ -472,7 +472,7 @@ homeCargar=function(){
                                                 var nGal=this;
 												if (nGal.nodeName=='gallery' && iCnt < 4) {
 													var divMig=$("<div class='panel-thumb-imagen'>").appendTo(divTmb);
-													$("<img class='panel-thumbs' src='"+App.Config.rutaThumb+$(nGal).attr("SRC")+"' title='"+$(nGal).attr("NAME")+"' alt='"+$(nGal).attr("NAME")+"'>").appendTo(divMig);
+													$("<img class='panel-thumbs' src='"+App.Config.rutaThumb+$(nGal).attr("src")+"' title='"+$(nGal).attr("name")+"' alt='"+$(nGal).attr("name")+"'>").appendTo(divMig);
 													iCnt++;
 												}
                                             });
@@ -483,14 +483,14 @@ homeCargar=function(){
 											}
 										}
 										var divDat=$("<div class='datos'>").appendTo(elmPan);
-										$("<p>"+dateFormat($(nGls).attr('UPDATE'))+"</p>").appendTo(divDat);	
+										$("<p>"+dateFormat($(nGls).attr("update"))+"</p>").appendTo(divDat);	
 										//Crear vínculo carpeta
 										$(divPan).wrap("<a href='./index.html?folder="+htmlReplace(sName)+"'>");										
 										break;
 									case 'gallery':		
-										var sName=$(nGls).attr('NAME');
-										var image=$(nGls).attr('SRC');
-										var imgName=$(nGls).attr('SRC').replace(".jpg","");										
+										var sName=$(nGls).attr("name");
+										var image=$(nGls).attr("src");
+										var imgName=$(nGls).attr("src").replace(".jpg","");										
 
 										var elmPan=$("<li>").appendTo("#tiles");
 										var divPan=$("<div class='panel'>").appendTo(elmPan);						
@@ -498,14 +498,14 @@ homeCargar=function(){
 										$("<p><img class='panel-literal-img' src='./resources/flecha.png'/><span class='panel-literal'>"+App.Config.marcaGaleria+"</span><span class='panel-titulo'>"+sName+"</span></p>").appendTo(elmPan)
 
 										var divDat=$("<div class='datos'>").appendTo(elmPan);
-										$("<p>"+dateFormat($(nGls).attr('UPDATE'))+"</p>").appendTo(divDat);
+										$("<p>"+dateFormat($(nGls).attr("update"))+"</p>").appendTo(divDat);
 										//Crear vínculo carpeta
 										$(divPan).wrap("<a href='./index.html?gallery="+htmlReplace(sName)+"'>");										
 										break;
 									case 'multimedia':
-										var sName=$(nGls).attr('NAME');
-										var image=$(nGls).attr('SRC');
-										var imgName=$(nGls).attr('SRC').replace(".jpg","");										
+										var sName=$(nGls).attr("name");
+										var image=$(nGls).attr("src");
+										var imgName=$(nGls).attr("src").replace(".jpg","");										
 
 										var elmPan=$("<li>").appendTo("#tiles");
 										var divPan=$("<div class='panel video'>").appendTo(elmPan);						
@@ -513,7 +513,7 @@ homeCargar=function(){
 										$("<p><img class='panel-literal-img' src='./resources/multimedia.png'/><span class='panel-literal'>"+App.Config.marcaGaleria+"</span><span class='panel-titulo'>"+sName+"</span></p>").appendTo(elmPan)
 
 										var divDat=$("<div class='datos'>").appendTo(elmPan);
-										$("<p>"+dateFormat($(nGls).attr('UPDATE'))+"</p>").appendTo(divDat);
+										$("<p>"+dateFormat($(nGls).attr("update"))+"</p>").appendTo(divDat);
 										//Crear vínculo carpeta
 										$(divPan).wrap("<a href='./index.html?multimedia="+htmlReplace(sName)+"'>");										
 										break;
@@ -523,7 +523,7 @@ homeCargar=function(){
 							$("<a type='application/rss+xml' href='./feed.xml' target='_blank'><img src='./resources/rss.png'></a>").appendTo('#rss');
 							break;
 						case 'folder':
-							var sName=$(nObj).attr('NAME');	
+							var sName=$(nObj).attr("name");	
 							
 							var elmPan=$("<li>").appendTo("#tiles");
 							var divPan=$("<div class='panel-section'>").appendTo(elmPan);
@@ -533,21 +533,21 @@ homeCargar=function(){
 								var lstSec=$("<ul>").appendTo(divPan);
 								$(nObj).children().each(function() {
 									if (this.nodeName=='section') {
-										var elmLst=$("<li>"+$(this).attr("NAME")+"</li>").appendTo(lstSec);
+										var elmLst=$("<li>"+$(this).attr("name")+"</li>").appendTo(lstSec);
 										var nSec=$(this);
 										//Establecer eventos
 										elmLst.click(function(e) {
 											e.preventDefault();
-											textPreview(htmlReplace(nSec.attr("NAME")));
+											textPreview(htmlReplace(nSec.attr("name")));
 										});						
 									}
 								});
 							}							
 							var divDat=$("<div class='datos'>").appendTo(elmPan);
-							$("<p>"+dateFormat($(nObj).attr('UPDATE'))+"</p>").appendTo(divDat);									
+							$("<p>"+dateFormat($(nObj).attr("update"))+"</p>").appendTo(divDat);									
 							break;
 						case 'section':
-							var sName=$(nObj).attr('NAME');	
+							var sName=$(nObj).attr("name");	
 							
 							var elmPan=$("<li>").appendTo("#tiles");
 							var divPan=$("<div class='panel-section'>").appendTo(elmPan);
@@ -556,11 +556,11 @@ homeCargar=function(){
 							//Establecer eventos
 							blqTit.click(function(e) {
 								e.preventDefault();
-								textPreview(htmlReplace($(nObj).attr('NAME')));
+								textPreview(htmlReplace($(nObj).attr("name")));
 							});
 							
 							var divDat=$("<div class='datos'>").appendTo(elmPan);
-							$("<p>"+dateFormat($(nObj).attr('UPDATE'))+"</p>").appendTo(divDat);							
+							$("<p>"+dateFormat($(nObj).attr("update"))+"</p>").appendTo(divDat);							
 							break;
 					}
 				});			
@@ -581,7 +581,7 @@ newsMostrar=function(){
 			var iCol=0;			
 			//El nodo root es config
 			$(xml).find('img').each(function() {
-				var IDImage=$(this).attr('ID');
+				var IDImage=$(this).attr("id");
 				var hImage=typesHash.get(IDImage);
 				if (hImage != null){
 					var idImage=hImage.SRC;
@@ -594,7 +594,7 @@ newsMostrar=function(){
 				}
 			});
 			$(xml).find('vid').each(function() {
-				var IDImage=$(this).attr('ID');
+				var IDImage=$(this).attr("id");
 				var hImage=typesHash.get(IDImage);
 				if (hImage != null){
 					var idImage=hImage.SRC;
@@ -644,7 +644,7 @@ newsCargar=function(sParam){
 			var iCol=0;			
 			//El nodo root es config
 			$(xml).find('img').each(function() {
-				var IDImage=$(this).attr('ID');
+				var IDImage=$(this).attr("id");
 				var hImage=typesHash.get(IDImage);
 				if (hImage != null){
 					var idImage=hImage.SRC;
@@ -653,7 +653,7 @@ newsCargar=function(sParam){
 					var captionImage=hImage.CAPTION;
 					var linkUrlImage=hImage.LINKURL;
 					var infoTextImage=hImage.INFOTEXT;
-					var parentFolder=htmlReplace(($(this).parent()).attr("NAME"));
+					var parentFolder=htmlReplace(($(this).parent()).attr("name"));
 					var parentNameFolder=pathImagenComponer($(this),App.Config.separadorPathPanel);
 					
 					colImages[iCol]=[{id:idImage,update:datUpdateImage,public:datPublicImage,titulo:captionImage,
@@ -663,7 +663,7 @@ newsCargar=function(sParam){
 				}
 			});
 			$(xml).find('vid').each(function() {
-				var IDImage=$(this).attr('ID');
+				var IDImage=$(this).attr("id");
 				var hImage=typesHash.get(IDImage);
 				if (hImage != null){
 					var idImage=hImage.SRC;
@@ -672,7 +672,7 @@ newsCargar=function(sParam){
 					var captionImage=hImage.CAPTION;
 					var linkUrlImage=hImage.LINKURL;
 					var infoTextImage=hImage.INFOTEXT;
-					var parentFolder=htmlReplace(($(this).parent()).attr("NAME"));
+					var parentFolder=htmlReplace(($(this).parent()).attr("name"));
 					var parentNameFolder=pathImagenComponer($(this),App.Config.separadorPathPanel);
 					
 					colImages[iCol]=[{id:idImage,update:datUpdateImage,public:datPublicImage,titulo:captionImage,
@@ -725,8 +725,8 @@ pathImagenComponer=function(elemNode,separador) {
 	var oObj=elemNode;
 	var sText='';
 	var iRow=0;
-	while ((oObj.parent()).attr("NAME")!=undefined){
-		sText=(oObj.parent()).attr("NAME")+(iRow!=0?separador+sText:"");
+	while ((oObj.parent()).attr("name")!=undefined){
+		sText=(oObj.parent()).attr("name")+(iRow!=0?separador+sText:"");
 		iRow++;
 		oObj=oObj.parent();
 	}
@@ -744,7 +744,7 @@ nodoImagenLocalizar=function(origen,sParamGaleria,sParamImagen) {
 			success: function(xml) {					
 				//El nodo root es config
 				$(xml).find('gallery').each(function() {
-					var gallery_name=$(this).attr('NAME');
+					var gallery_name=$(this).attr("name");
 	
 					if (htmlReplace(gallery_name)==sParamGaleria){
 						//Coleccion de la galeria
@@ -754,9 +754,9 @@ nodoImagenLocalizar=function(origen,sParamGaleria,sParamImagen) {
 							//Path de la imagen
 							var parentNameFolder=pathImagenComponer($(this),App.Config.separadorPathEnlace);
 							//Nombre archivo
-							var imagen_name=$(this).attr('SRC').replace(".jpg","");
+							var imagen_name=$(this).attr("src").replace(".jpg","");
 							if (imagen_name==sParamImagen) {
-								imagenPreview(origen,imagen_name,$(this).attr("WIDTH"),$(this).attr("HEIGHT"),sParamGaleria,$(this).attr("CAPTION"),parentNameFolder);
+								imagenPreview(origen,imagen_name,$(this).attr("width"),$(this).attr("height"),sParamGaleria,$(this).attr("caption"),parentNameFolder);
 								imagenLocalizada=1;
 								return false;
 							}

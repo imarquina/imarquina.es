@@ -69,15 +69,15 @@ galeriaCargar=function(sParam,sNews){
 		success: function(xml) {					
 			//El nodo root es config
 			$(xml).find('gallery').each(function() {
-				var gallery_name=$(this).attr('NAME');
+				var gallery_name=$(this).attr("name");
 
 				if (htmlReplace(gallery_name)==sParam){
 					//boton atras + datos social-media
 					var dataText='';
-					if (($(this).parent()).attr("NAME")!=undefined) {
+					if (($(this).parent()).attr("name")!=undefined) {
 						//$('.backbottom').wrap("<a href='./index.html?gallery="+sParam+"'>");	
 						$('.backbottom').html(breadcrumbsEstablecer($(this),sNews));
-						dataText=App.Config.dataTextTitle+($(this).parent()).attr("NAME")+":"+gallery_name;
+						dataText=App.Config.dataTextTitle+($(this).parent()).attr("name")+":"+gallery_name;
 					} else {
 						//$('.backbottom').wrap("<a href='./index.html'>");
 						$('.backbottom').html(breadcrumbsEstablecer($(this),sNews));
@@ -88,13 +88,13 @@ galeriaCargar=function(sParam,sNews){
 					seoValoresEstablecer($(this));
 					//Coleccion de la galeria
 					$(this).children().each(function() {	
-						var IDImage=$(this).attr('ID');
+						var IDImage=$(this).attr("id");
 						var hImage=typesHash.get(IDImage);
 						if (hImage != null){
 							var image=hImage.SRC;
 							var imgName=hImage.SRC.replace(".jpg","");	
 							var sName=hImage.CAPTION;
-							//var sInfT=$(this).attr('INFOTEXT');
+							//var sInfT=$(this).attr("infotext");
 							//var sFormat=$(this).attr('FORMAT');		
 							var sWidth=hImage.WIDTH;
 
@@ -126,7 +126,7 @@ newsCargar=function(sParam,sNews){
 			var iCol=0;			
 			//El nodo root es config
 			$(xml).find('img').each(function() {
-				var IDImage=$(this).attr('ID');
+				var IDImage=$(this).attr("id");
 				var hImage=typesHash.get(IDImage);
 				if (hImage != null){
 					var idImage=hImage.SRC;
@@ -136,7 +136,7 @@ newsCargar=function(sParam,sNews){
 					var linkUrlImage=hImage.LINKURL;
 					var infoTextImage=hImage.INFOTEXT;
 					var widthImage=hImage.WIDTH;
-					var parentFolder=htmlReplace(($(this).parent()).attr("NAME"));
+					var parentFolder=htmlReplace(($(this).parent()).attr("name"));
 					var parentNameFolder=pathImagenComponer($(this),App.Config.separadorPathPanel);
 					
 					colImages[iCol]=[{id:idImage,update:datUpdateImage,public:datPublicImage,titulo:captionImage,
@@ -174,15 +174,15 @@ pathImagenComponer=function(elemNode,separador) {
 	var oObj=elemNode;
 	var sText='';
 	var iRow=0;
-	while ((oObj.parent()).attr("NAME")!=undefined){
-		sText=(oObj.parent()).attr("NAME")+(iRow!=0?separador+sText:"");
+	while ((oObj.parent()).attr("name")!=undefined){
+		sText=(oObj.parent()).attr("name")+(iRow!=0?separador+sText:"");
 		iRow++;
 		oObj=oObj.parent();
 	}
 	return sText;
 }
 seoValoresEstablecer=function(elemento) {
-	document.title = elemento.attr('TITLE');
-	$('meta[name="description"]').attr("content",elemento.attr('INFOTEXT'));	
-	$('meta[name="keywords"]').attr("content",elemento.attr('KEYWORDS'));
+	document.title = elemento.attr("title");
+	$('meta[name="description"]').attr("content",elemento.attr("infotext"));	
+	$('meta[name="keywords"]').attr("content",elemento.attr("keywords"));
 }

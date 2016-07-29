@@ -11,21 +11,48 @@ imagenesCargar=function(){
 				var iElem = 0;
 				$(this).children().each(function() {
 					typesHash.put(
-								$(this).attr('SRC').replace(".jpg",""),
+								$(this).attr('src').replace(".jpg",""),
 								new Photo(
-										$(this).attr('SRC').replace(".jpg",""),
-										$(this).attr('WIDTH'),
-										$(this).attr('HEIGHT'),
-										$(this).attr('CAPTION'),
-										$(this).attr('SRC'),
-										$(this).attr('LINKTEXT'),
-										$(this).attr('LINKURL'),
-										$(this).attr('INFOTEXT'),
-										$(this).attr('FORMAT'),
-										$(this).attr('STOCK'),
-										$(this).attr('PRICE'),
-										$(this).attr('UPDATE'),
-										$(this).attr('PUBLIC')
+										$(this).attr('src').replace(".jpg",""),
+										$(this).attr('width'),
+										$(this).attr('height'),
+										$(this).attr('caption'),
+										$(this).attr('src'),
+										$(this).attr('linktext'),
+										$(this).attr('linkurl'),
+										$(this).attr('infotext'),
+										$(this).attr('format'),
+										$(this).attr('stock'),
+										$(this).attr('price'),
+										$(this).attr('update'),
+										$(this).attr('public')
+										)
+								);
+										
+					iElem++;
+				});
+				//return true;
+			});
+			$(xml).find('videos').each(function() {
+				//Coleccion de la galeria
+				var iElem = 0;
+				$(this).children().each(function() {
+					typesHash.put(
+								$(this).attr('src').replace(".jpg",""),
+								new Photo(
+										$(this).attr('src').replace(".jpg",""),
+										$(this).attr('width'),
+										$(this).attr('height'),
+										$(this).attr('caption'),
+										$(this).attr('src'),
+										$(this).attr('linktext'),
+										$(this).attr('linkurl'),
+										$(this).attr('infotext'),
+										$(this).attr('format'),
+										$(this).attr('stock'),
+										$(this).attr('price'),
+										$(this).attr('update'),
+										$(this).attr('public')
 										)
 								);
 										

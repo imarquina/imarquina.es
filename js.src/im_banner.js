@@ -29,7 +29,7 @@ newsCargar=function(){
 					var captionImage=hImage.CAPTION;
 					var linkUrlImage=hImage.LINKURL;
 					var infoTextImage=hImage.INFOTEXT;
-					var parentFolder=htmlReplace(($(this).parent()).attr("NAME"));
+					var parentFolder=htmlReplace(($(this).parent()).attr("name"));
 					var parentNameFolder=pathImagenComponer($(this),App.Config.separadorPathPanel);				
 				
 					colImages[iCol]=[{id:idImage,update:datUpdateImage,public:datPublicImage,titulo:captionImage,linkurl:linkUrlImage,infoimagen:infoTextImage,parentFolder:parentFolder,parentName:parentNameFolder}];
@@ -64,8 +64,8 @@ pathImagenComponer=function(elemNode,separador) {
 	var oObj=elemNode;
 	var sText='';
 	var iRow=0;
-	while ((oObj.parent()).attr("NAME")!=undefined){
-		sText=(oObj.parent()).attr("NAME")+(iRow!=0?separador+sText:"");
+	while ((oObj.parent()).attr("name")!=undefined){
+		sText=(oObj.parent()).attr("name")+(iRow!=0?separador+sText:"");
 		iRow++;
 		oObj=oObj.parent();
 	}
