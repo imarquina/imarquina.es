@@ -148,7 +148,7 @@ textPreview=function(sParam) {
 	$.ajax({
 			type: "GET",
 			url: App.Config.rutaCnf,
-			dataType: "html",
+			dataType: "xml",
 			success: function(xml) {	
 				//organizar capas
 				capasPopUpAjustar('texto');
@@ -157,28 +157,9 @@ textPreview=function(sParam) {
 					var section_name=$(this).attr("name");
 	
 					if (htmlReplace(section_name)==sParam){
-						var sTitulo='';
-						var sTexto='';
-						debugger;		
-						sTitulo=$(this).find('title').text();
-						$(this).children().each(function() {
-							var nObj=this;
-							switch (nObj.nodeName.toLowerCase()){
-								case 'p':
-									sTexto+='<p>'+$(nObj).html()+'</p>';
-									break;
-								case 'ul':
-									sTexto+='<ul>';
-									$(nObj).find('li').each(function() {
-                                        var nLis=this;
-										sTexto+='<li>'+$(nLis).html()+'</li>';
-                                    });
-									sTexto+='</ul>';
-									break;
-								default:
-									break;
-							}
-						});
+						var sTitulo=$(this).attr("name").toUpperCase();
+						var sTexto=$(this).text();
+
 						//Get the HTML Elements
 						imageDialog=$("#dialog");
 						txtTag=$('#texto');
