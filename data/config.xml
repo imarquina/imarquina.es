@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<config infotext="Fotografìa creativa de Iñaki Marquina (night.noise). Desde el Bilbao del sirimiri al paisaje entrópico" keywords="creative surreal art imagine photo photography creativa surrealismo artista imagina entropico matte painting sirimiri bilbao entrópico entropìa" title="IMFotografìa - Iñaki Marquina (night.noise)">
+<config infotext="Fotografía creativa de Iñaki Marquina (night.noise). Desde el Bilbao del sirimiri al paisaje entrópico" keywords="creative surreal art imagine photo photography creativa surrealismo artista imagina entropico matte painting sirimiri bilbao entrópico entropía" title="IMFotografía - Iñaki Marquina (night.noise)">
 <galleries>
 <folder infotext="Un conjunto de galerías de una visión muy personal de un Bilbao que se adapta a la época" keywords="art sirimiri bilbao creative imagine photo photography artista fotografía creativa" name="Bilbao" src="150120005.jpg" title="IMFotografía - Álbum Bilbao" update="20121024">
 <gallery infotext="Paseo bajo la lluvia por el Casco Viejo bilbaino: desde las Calzadas de Mallona al Arriaga por el Ascensor de Begoña" keywords="sirimiri bilbao creative imagine photo photography art fotografía creativa artista" name="Detras del sirimiri" src="150120005.jpg" title="IMFotografía - Galería Bilbao Detrás del sirimiri" update="20150413">
@@ -266,9 +266,9 @@
 </gallery>
 </folder>
 <multimedia infotext="Galería multimedia" keywords="multimedia bilbao art surreal creative imagine video photo photography surrealismo fotografía creativa" name="Multimedia" src="v150431059.jpg" title="IMFotografía - Multimedia" update="20160621">
-<vid id="v150120042_1"/>
-<vid id="v150508015"/>
-<vid id="v150431059"/>
+<img id="v150120042_1"/>
+<img id="v150508015"/>
+<img id="v150431059"/>
 </multimedia>
 </galleries>
 <folder infotext="" keywords="" name="Sobre mi" src="" title="" update="20121010">
