@@ -1,1614 +1,1822 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <rss version="2.0">
-	<channel>
-		<title>IMFotografía - Iñaki Marquina (night.noise)</title>
-		<link>http://www.imarquina.es/</link>
-		<description>Fotografía creativa de Iñaki Marquina (night.noise). Desde el Bilbao del sirimiri al paisaje entrópico</description>
-		<language>es-es</language>
-		<pubDate>Fri, 28 Nov 2014 00:00:00 GMT</pubDate>
-		<lastBuildDate>Tue, 21 Jun 2016 16:31:24 GMT</lastBuildDate>
-		<docs>http://blogs.law.harvard.edu/tech/rss</docs>
-		<managingEditor>imarquina@gmail.com</managingEditor>
-		<webMaster>imarquina@gmail.com</webMaster>
-		<image>
-			<title>IMFotografia</title>
-			<url>http://www.imarquina.es/resources/logo_xs.png</url>
-			<link>http://www.imarquina.es</link>
-			<pubDate>Sat, 12 May 2012 00:00:00 GMT</pubDate>
-			<width>175</width>
-			<height>60</height>
-		</image>
-		<item>
-			<title>Detrás del sirimir IX</title>
-			<link>http://www.imarquina.es/detail.html?gallery=5811fad7ab5db41e7d0e82dfa727a0d6&amp;photo=8</link>
-			<description>Edificio Términus de la Plaza Circular, de 1893 diseñado por Severino Achúcarro</description>
-			<category>Detrás del sirimiri</category>
-			<pubDate>Wed, 22 Jun 2016 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>revelación (vídeo)</title>
-			<link>https://youtu.be/p686YYu6jHQ</link>
-			<description>Pequeña historia de un paseo bajo la lluvia en Bilbao</description>
-			<category>Multimedia</category>
-			<pubDate>Wed, 21 Jun 2016 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>ir.colors (vídeo)</title>
-			<link>https://youtu.be/NLM-Jd35vT8</link>
-			<description>Sobre la técnica de fotografía infrarroja coloreada en edición</description>
-			<category>Multimedia</category>
-			<pubDate>Tue, 20 Jun 2016 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Ilusiones entrópicas (vídeo)</title>
-			<link>https://youtu.be/NrX-dZVDPOg</link>
-			<description>Detalle y navegación entre las Ilusiones entrópicas</description>
-			<category>Multimedia</category>
-			<pubDate>Wed, 30 Oct 2013 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Multimedia</title>
-			<link>http://www.imarquina.es/index.html?multimedia=2f56b4f336dc97edf739bf79523fb9a6</link>
-			<description />
-			<category>Multimedia</category>
-			<pubDate>Tue, 20 Jun 2016 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Detrás del sirimiri VIII</title>
-			<link>http://www.imarquina.es/detail.html?gallery=5811fad7ab5db41e7d0e82dfa727a0d6&amp;photo=7</link>
-			<description>Rascacielos de la Naja en la calle Bailén</description>
-			<category>Detrás del sirimiri</category>
-			<pubDate>Fri, 10 Abr 2015 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>ViewIR XIII</title>
-			<link>http://www.imarquina.es/detail.html?gallery=a20aea03661af1f3fc17df594ca6d1c8&amp;photo=12</link>
-			<description>Parque Tecnológico de Bizkaia</description>
-			<category>ViewIR</category>
-			<pubDate>Sat, 21 Mar 2015 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>ViewIR XII</title>
-			<link>http://www.imarquina.es/detail.html?gallery=a20aea03661af1f3fc17df594ca6d1c8&amp;photo=11</link>
-			<description>Parque Tecnológico de Bizkaia</description>
-			<category>ViewIR</category>
-			<pubDate>Sat, 21 Mar 2015 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>En la órbita de Términus</title>
-			<link>http://www.imarquina.es/detail.html?gallery=e47d6979a642c3e2b0c40b10a78c422c&amp;photo=6			</link>
-			<description>Edificio Términus de la Plaza Circular, de 1893 diseñado por Severino Achúcarro..</description>
-			<category>Monocromatico</category>
-			<pubDate>Sun, 15 Mar 2015 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>ViewIR XI</title>
-			<link>http://www.imarquina.es/detail.html?gallery=a20aea03661af1f3fc17df594ca6d1c8&amp;photo=10</link>
-			<description>Parque Tecnológico de Bizkaia</description>
-			<category>ViewIR</category>
-			<pubDate>Sat, 14 Mar 2015 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Enmarcados</title>
-			<link>http://www.imarquina.es/detail.html?gallery=e47d6979a642c3e2b0c40b10a78c422c&amp;photo=5</link>
-			<description>Visitantes en el Museo Guggenheim..</description>
-			<category>Monocromatico</category>
-			<pubDate>Thu, 5 Mar 2015 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>ViewIR X</title>
-			<link>http://www.imarquina.es/detail.html?gallery=a20aea03661af1f3fc17df594ca6d1c8&amp;photo=9</link>
-			<description>Parque Tecnológico de Bizkaia</description>
-			<category>ViewIR</category>
-			<pubDate>Mon, 2 Mar 2015 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>ViewIR IX</title>
-			<link>http://www.imarquina.es/detail.html?gallery=a20aea03661af1f3fc17df594ca6d1c8&amp;photo=8</link>
-			<description>Parque Tecnológico de Bizkaia</description>
-			<category>ViewIR</category>
-			<pubDate>Mon, 2 Mar 2015 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>ViewIR VIII</title>
-			<link>http://www.imarquina.es/detail.html?gallery=a20aea03661af1f3fc17df594ca6d1c8&amp;photo=7</link>
-			<description>Castillo de Butrón (Bizkaia).</description>
-			<category>ViewIR</category>
-			<pubDate>Sun, 22 Feb 2015 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>ViewIR VII</title>
-			<link>http://www.imarquina.es/detail.html?gallery=a20aea03661af1f3fc17df594ca6d1c8&amp;photo=6</link>
-			<description>Castillo de Butrón (Bizkaia).</description>
-			<category>ViewIR</category>
-			<pubDate>Sun, 22 Feb 2015 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>ViewIR VI</title>
-			<link>http://www.imarquina.es/detail.html?gallery=a20aea03661af1f3fc17df594ca6d1c8&amp;photo=5</link>
-			<description>Castillo de Butrón (Bizkaia).</description>
-			<category>ViewIR</category>
-			<pubDate>Sun, 22 Feb 2015 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Naturaleza dieléctrica</title>
-			<link>http://www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=27</link>
-			<description>Edificio de la sede de BizkayTIC en Getxo. La tierra y el cielo unidos por una chispa, un destello que crea y destrulle.</description>
-			<category>Paisajes entropicos</category>
-			<pubDate>Fri, 28 Nov 2014 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>La torre de Rapunzel y el aliento del dragón</title>
-			<link>http://www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=26</link>
-			<description>El primer rascacielos de Bilbao, la estación de la Concordia y la Naja. Una torre inaccesible al borde de un abismo, el abismo del dragón.</description>
-			<category>Paisajes entropicos</category>
-			<pubDate>Wed, 19 Nov 2014 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>ViewIR V</title>
-			<link>http://www.imarquina.es/detail.html?gallery=a20aea03661af1f3fc17df594ca6d1c8&amp;photo=4</link>
-			<description>Escenas de Sedano (Burgos).</description>
-			<category>ViewIR</category>
-			<pubDate>Sat, 22 Feb 2014 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>ViewIR IV</title>
-			<link>http://www.imarquina.es/detail.html?gallery=a20aea03661af1f3fc17df594ca6d1c8&amp;photo=3</link>
-			<description>Escenas de Sedano (Burgos).</description>
-			<category>ViewIR</category>
-			<pubDate>Mon, 17 Feb 2014 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>ViewIR III</title>
-			<link>http://www.imarquina.es/detail.html?gallery=a20aea03661af1f3fc17df594ca6d1c8&amp;photo=2</link>
-			<description>Escenas de Sedano (Burgos).</description>
-			<category>ViewIR</category>
-			<pubDate>Mon, 10 Feb 2014 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>De entretiempo</title>
-			<link>http://www.imarquina.es/detail.html?gallery=97701138ebc753b25407ec1463e17129&amp;photo=0</link>
-			<description>Alocado pensamiento de 4 estaciones sobre Nanclares de Gamboa en el embalse de Ullíbarri-Gamboa.</description>
-			<category>De suenos</category>
-			<pubDate>Sun, 09 Feb 2014 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>ViewIR II</title>
-			<link>http://www.imarquina.es/detail.html?gallery=a20aea03661af1f3fc17df594ca6d1c8&amp;photo=1</link>
-			<description>Torre Iberdrola de la Plaza Euskadi de Bilbao.</description>
-			<category>ViewIR</category>
-			<pubDate>Thu, 09 Jan 2014 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>ViewIR I</title>
-			<link>http://www.imarquina.es/detail.html?gallery=a20aea03661af1f3fc17df594ca6d1c8&amp;photo=0</link>
-			<description>Edificio de la Plaza Euskadi de Bilbao.</description>
-			<category>ViewIR</category>
-			<pubDate>Thu, 09 Jan 2014 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Crepúsculo en el faro</title>
-			<link>http://www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=25</link>
-			<description>El edificio de la Torre de Iberdrola es un faro en sí misma. En un futuro diferente podría estar en un fururo cabo</description>
-			<category>Paisajes entropicos</category>
-			<pubDate>Sat, 16 Nov 2013 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Presentación exposición BilboArgazki 2013 - FNAC</title>
-			<link>http://www.imarquina.es/detail.html?gallery=5aded4174c419e6b5554a1991aa814b5&amp;photo=0</link>
-			<description>Presentación exposición BilboArgazki 2013 - FNAC</description>
-			<category>En BilboArgazki 2013 - FNAC</category>
-			<pubDate>Sun, 15 Sep 2013 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>La noche de la araña</title>
-			<link>http://www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=23</link>
-			<description>Mamam de Louise Bourgeois en la cueva de Zugarramurdi</description>
-			<category>Paisajes entropicos</category>
-			<pubDate>Tue, 10 Sep 2013 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Velando el bosque</title>
-			<link>http://www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=22</link>
-			<description>Destino del emblemático tigre que culmina el emblemático edificio conocido con el mismo nombre en Bilbao</description>
-			<category>Paisajes entropicos</category>
-			<pubDate>Tue, 10 Sep 2013 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>El nido del fénix</title>
-			<link>http://www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=24</link>
-			<description>Edificio de la Unión y el Fenix del Arenal de Bilbao.</description>
-			<category>Paisajes entropicos</category>
-			<pubDate>Tue, 10 Sep 2013 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>El nido del fénix</title>
-			<link>http://www.imarquina.es/detail.html?gallery=5aded4174c419e6b5554a1991aa814b5&amp;photo=16</link>
-			<description>Edificio de la Unión y el Fenix del Arenal de Bilbao.</description>
-			<category>En BilboArgazki 2013 - FNAC</category>
-			<pubDate>Tue, 10 Sep 2013 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>La noche de la araña</title>
-			<link>http://www.imarquina.es/detail.html?gallery=5aded4174c419e6b5554a1991aa814b5&amp;photo=13</link>
-			<description>Mamam de Louise Bourgeois en la cueva de Zugarramurdi</description>
-			<category>En BilboArgazki 2013 - FNAC</category>
-			<pubDate>Tue, 10 Sep 2013 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Velando el bosque</title>
-			<link>http://www.imarquina.es/detail.html?gallery=5aded4174c419e6b5554a1991aa814b5&amp;photo=7</link>
-			<description>Destino del emblemático tigre que culmina el emblemático edificio conocido con el mismo nombre en Bilbao</description>
-			<category>En BilboArgazki 2013 - FNAC</category>
-			<pubDate>Tue, 10 Sep 2013 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Presentación exposición FTSI</title>
-			<link>http://www.imarquina.es/detail.html?gallery=4c89cd348998c374e8d0924f21a568d2&amp;photo=0</link>
-			<description>Presentación exposición FTSI</description>
-			<category>En FTSI 2013</category>
-			<pubDate>Thu, 04 Jul 2013 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>La fuente del saber</title>
-			<link>http://www.imarquina.es/detail.html?gallery=97701138ebc753b25407ec1463e17129&amp;photo=18</link>
-			<description>No sé qué hay más allá de ese sitio donde nacen las ideas y el conocimiento. Algún día ...</description>
-			<category>De suenos</category>
-			<pubDate>Thu, 30 May 2013 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>El árbol de la vida</title>
-			<link>http://www.imarquina.es/detail.html?gallery=97701138ebc753b25407ec1463e17129&amp;photo=17</link>
-			<description>Basado en una idea de la película Más allá de los sueños (1998)</description>
-			<category>De suenos</category>
-			<pubDate>Wed, 15 May 2013 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Camino a la eternidad</title>
-			<link>http://www.imarquina.es/detail.html?gallery=97701138ebc753b25407ec1463e17129&amp;photo=7</link>
-			<description>Un hombre frente a la entrada del Ascensor de Begoña.</description>
-			<category>De suenos</category>
-			<pubDate>Sun, 17 Mar 2013 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>La casa Batlló XIX</title>
-			<link>http://www.imarquina.es/detail.html?gallery=ccd1308a8d700c6409b336a5e667b29b&amp;photo=18</link>
-			<description>La casa Batlló de Antonio Gaudí</description>
-			<category>La casa Batlló: arquitectura onírica</category>
-			<pubDate>Wed, 20 Feb 2013 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>La casa Batlló XVII</title>
-			<link>http://www.imarquina.es/detail.html?gallery=ccd1308a8d700c6409b336a5e667b29b&amp;photo=16</link>
-			<description>La casa Batlló de Antonio Gaudí</description>
-			<category>La casa Batlló: arquitectura onírica</category>
-			<pubDate>Wed, 20 Feb 2013 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>La casa Batlló XVIII</title>
-			<link>http://www.imarquina.es/detail.html?gallery=ccd1308a8d700c6409b336a5e667b29b&amp;photo=17</link>
-			<description>La casa Batlló de Antonio Gaudí</description>
-			<category>La casa Batlló: arquitectura onírica</category>
-			<pubDate>Wed, 20 Feb 2013 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>La casa Batlló XIV</title>
-			<link>http://www.imarquina.es/detail.html?gallery=ccd1308a8d700c6409b336a5e667b29b&amp;photo=13</link>
-			<description>La casa Batlló de Antonio Gaudí</description>
-			<category>La casa Batlló: arquitectura onírica</category>
-			<pubDate>Mon, 18 Feb 2013 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>La casa Batlló XV</title>
-			<link>http://www.imarquina.es/detail.html?gallery=ccd1308a8d700c6409b336a5e667b29b&amp;photo=14</link>
-			<description>La casa Batlló de Antonio Gaudí</description>
-			<category>La casa Batlló: arquitectura onírica</category>
-			<pubDate>Mon, 18 Feb 2013 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>La casa Batlló XVI</title>
-			<link>http://www.imarquina.es/detail.html?gallery=ccd1308a8d700c6409b336a5e667b29b&amp;photo=15</link>
-			<description>La casa Batlló de Antonio Gaudí</description>
-			<category>La casa Batlló: arquitectura onírica</category>
-			<pubDate>Mon, 18 Feb 2013 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>La casa Batlló XIII</title>
-			<link>http://www.imarquina.es/detail.html?gallery=ccd1308a8d700c6409b336a5e667b29b&amp;photo=12</link>
-			<description>La casa Batlló de Antonio Gaudí</description>
-			<category>La casa Batlló: arquitectura onírica</category>
-			<pubDate>Mon, 18 Feb 2013 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>La casa Batlló X</title>
-			<link>http://www.imarquina.es/detail.html?gallery=ccd1308a8d700c6409b336a5e667b29b&amp;photo=9</link>
-			<description>La casa Batlló de Antonio Gaudí</description>
-			<category>La casa Batlló: arquitectura onírica</category>
-			<pubDate>Sat, 16 Feb 2013 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>La casa Batlló XII</title>
-			<link>http://www.imarquina.es/detail.html?gallery=ccd1308a8d700c6409b336a5e667b29b&amp;photo=11</link>
-			<description>La casa Batlló de Antonio Gaudí</description>
-			<category>La casa Batlló: arquitectura onírica</category>
-			<pubDate>Sat, 16 Feb 2013 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>La casa Batlló XI</title>
-			<link>http://www.imarquina.es/detail.html?gallery=ccd1308a8d700c6409b336a5e667b29b&amp;photo=10</link>
-			<description>La casa Batlló de Antonio Gaudí</description>
-			<category>La casa Batlló: arquitectura onírica</category>
-			<pubDate>Sat, 16 Feb 2013 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>La casa Batlló VII</title>
-			<link>http://www.imarquina.es/detail.html?gallery=ccd1308a8d700c6409b336a5e667b29b&amp;photo=6</link>
-			<description>La casa Batlló de Antonio Gaudí</description>
-			<category>La casa Batlló: arquitectura onírica</category>
-			<pubDate>Thu, 14 Feb 2013 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>La casa Batlló VIII</title>
-			<link>http://www.imarquina.es/detail.html?gallery=ccd1308a8d700c6409b336a5e667b29b&amp;photo=7</link>
-			<description>La casa Batlló de Antonio Gaudí</description>
-			<category>La casa Batlló: arquitectura onírica</category>
-			<pubDate>Thu, 14 Feb 2013 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>La casa Batlló IX</title>
-			<link>http://www.imarquina.es/detail.html?gallery=ccd1308a8d700c6409b336a5e667b29b&amp;photo=8</link>
-			<description>La casa Batlló de Antonio Gaudí</description>
-			<category>La casa Batlló: arquitectura onírica</category>
-			<pubDate>Thu, 14 Feb 2013 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>La casa Batlló VI</title>
-			<link>http://www.imarquina.es/detail.html?gallery=ccd1308a8d700c6409b336a5e667b29b&amp;photo=5</link>
-			<description>La casa Batlló de Antonio Gaudí</description>
-			<category>La casa Batlló: arquitectura onírica</category>
-			<pubDate>Tue, 12 Feb 2013 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>La casa Batlló V</title>
-			<link>http://www.imarquina.es/detail.html?gallery=ccd1308a8d700c6409b336a5e667b29b&amp;photo=4</link>
-			<description>La casa Batlló de Antonio Gaudí</description>
-			<category>La casa Batlló: arquitectura onírica</category>
-			<pubDate>Tue, 12 Feb 2013 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>La casa Batlló IV</title>
-			<link>http://www.imarquina.es/detail.html?gallery=ccd1308a8d700c6409b336a5e667b29b&amp;photo=3</link>
-			<description>La casa Batlló de Antonio Gaudí</description>
-			<category>La casa Batlló: arquitectura onírica</category>
-			<pubDate>Tue, 12 Feb 2013 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>La casa Batlló III</title>
-			<link>http://www.imarquina.es/detail.html?gallery=ccd1308a8d700c6409b336a5e667b29b&amp;photo=2</link>
-			<description>La casa Batlló de Antonio Gaudí</description>
-			<category>La casa Batlló: arquitectura onírica</category>
-			<pubDate>Sun, 10 Feb 2013 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>La casa Batlló I</title>
-			<link>http://www.imarquina.es/detail.html?gallery=ccd1308a8d700c6409b336a5e667b29b&amp;photo=0</link>
-			<description>La casa Batlló de Antonio Gaudí</description>
-			<category>La casa Batlló: arquitectura onírica</category>
-			<pubDate>Sun, 10 Feb 2013 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>La casa Batlló II</title>
-			<link>http://www.imarquina.es/detail.html?gallery=ccd1308a8d700c6409b336a5e667b29b&amp;photo=1</link>
-			<description>La casa Batlló de Antonio Gaudí</description>
-			<category>La casa Batlló: arquitectura onírica</category>
-			<pubDate>Sun, 10 Feb 2013 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>MB el Área 51 VIII</title>
-			<link>http://www.imarquina.es/detail.html?gallery=d207f41c83acbfea45fd282faf583aeb&amp;photo=7</link>
-			<description>Interior de la estación de Renfe en Miribilla</description>
-			<category>Miribilla: el Ãrea 51</category>
-			<pubDate>Sun, 13 Jan 2013 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>MB el Área 51 VI</title>
-			<link>http://www.imarquina.es/detail.html?gallery=d207f41c83acbfea45fd282faf583aeb&amp;photo=5</link>
-			<description>Interior de la estación de Renfe en Miribilla</description>
-			<category>Miribilla: el Ãrea 51</category>
-			<pubDate>Sun, 13 Jan 2013 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>MB el Área 51 XII</title>
-			<link>http://www.imarquina.es/detail.html?gallery=d207f41c83acbfea45fd282faf583aeb&amp;photo=11</link>
-			<description>Interior de la estación de Renfe en Miribilla</description>
-			<category>Miribilla: el Ãrea 51</category>
-			<pubDate>Sun, 13 Jan 2013 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>MB el Área 51 IX</title>
-			<link>http://www.imarquina.es/detail.html?gallery=d207f41c83acbfea45fd282faf583aeb&amp;photo=8</link>
-			<description>Interior de la estación de Renfe en Miribilla</description>
-			<category>Miribilla: el Ãrea 51</category>
-			<pubDate>Sun, 13 Jan 2013 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>MB el Área 51 IV</title>
-			<link>http://www.imarquina.es/detail.html?gallery=d207f41c83acbfea45fd282faf583aeb&amp;photo=3</link>
-			<description>Interior de la estación de Renfe en Miribilla</description>
-			<category>Miribilla: el Ãrea 51</category>
-			<pubDate>Sun, 13 Jan 2013 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>MB el Área 51 VII</title>
-			<link>http://www.imarquina.es/detail.html?gallery=d207f41c83acbfea45fd282faf583aeb&amp;photo=6</link>
-			<description>Interior de la estación de Renfe en Miribilla</description>
-			<category>Miribilla: el Ãrea 51</category>
-			<pubDate>Sun, 13 Jan 2013 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>MB el Área 51 XI</title>
-			<link>http://www.imarquina.es/detail.html?gallery=d207f41c83acbfea45fd282faf583aeb&amp;photo=10</link>
-			<description>Interior de la estación de Renfe en Miribilla</description>
-			<category>Miribilla: el Ãrea 51</category>
-			<pubDate>Sun, 13 Jan 2013 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>MB el Área 51 X</title>
-			<link>http://www.imarquina.es/detail.html?gallery=d207f41c83acbfea45fd282faf583aeb&amp;photo=9</link>
-			<description>Interior de la estación de Renfe en Miribilla</description>
-			<category>Miribilla: el Ãrea 51</category>
-			<pubDate>Sun, 13 Jan 2013 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>MB el Área 51 V</title>
-			<link>http://www.imarquina.es/detail.html?gallery=d207f41c83acbfea45fd282faf583aeb&amp;photo=4</link>
-			<description>Interior de la estación de Renfe en Miribilla</description>
-			<category>Miribilla: el Ãrea 51</category>
-			<pubDate>Sun, 13 Jan 2013 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>MB el Área 51 I</title>
-			<link>http://www.imarquina.es/detail.html?gallery=d207f41c83acbfea45fd282faf583aeb&amp;photo=0</link>
-			<description>Interior de la estación de Renfe en Miribilla</description>
-			<category>Miribilla: el Ãrea 51</category>
-			<pubDate>Mon, 07 Jan 2013 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>MB el Área 51 II</title>
-			<link>http://www.imarquina.es/detail.html?gallery=d207f41c83acbfea45fd282faf583aeb&amp;photo=1</link>
-			<description>Interior de la estación de Renfe en Miribilla</description>
-			<category>Miribilla: el Ãrea 51</category>
-			<pubDate>Mon, 07 Jan 2013 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>MB el Área 51 III</title>
-			<link>http://www.imarquina.es/detail.html?gallery=d207f41c83acbfea45fd282faf583aeb&amp;photo=2</link>
-			<description>Interior de la estación de Renfe en Miribilla</description>
-			<category>Miribilla: el Ãrea 51</category>
-			<pubDate>Mon, 07 Jan 2013 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>El último naufragio</title>
-			<link>http://www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=21</link>
-			<description>Emblemático edificio de Getxo conocido como La Casa de naúfragos.</description>
-			<category>Paisajes entropicos</category>
-			<pubDate>Wed, 21 Nov 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>El último naufragio</title>
-			<link>http://www.imarquina.es/detail.html?gallery=4c89cd348998c374e8d0924f21a568d2&amp;photo=12</link>
-			<description>Emblemático edificio de Getxo conocido como La Casa de naúfragos.</description>
-			<category>En FTSI 2013</category>
-			<pubDate>Wed, 21 Nov 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Superviviente de las tierras altas</title>
-			<link>http://www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=20</link>
-			<description>El Palacio de Santa Clara domina las vistas de Algorta a la bahía.</description>
-			<category>Paisajes entropicos</category>
-			<pubDate>Sun, 11 Nov 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Superviviente de las tierras altas</title>
-			<link>http://www.imarquina.es/detail.html?gallery=4c89cd348998c374e8d0924f21a568d2&amp;photo=11</link>
-			<description>El Palacio de Santa Clara domina las vistas de Algorta a la bahía.</description>
-			<category>En FTSI 2013</category>
-			<pubDate>Sun, 11 Nov 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>La otra Curiosidad</title>
-			<link>http://www.imarquina.es/detail.html?gallery=97701138ebc753b25407ec1463e17129&amp;photo=16</link>
-			<description>Homenaje surrealista sobre la llegada del vehículo Curiosity a Marte.</description>
-			<category>De suenos</category>
-			<pubDate>Sun, 23 Sep 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Tras el tiempo de dragones</title>
-			<link>http://www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=19</link>
-			<description>La Casa Cisco forma parte de las características edificaciones del paseo de la bahía de Getxo.</description>
-			<category>Paisajes entropicos</category>
-			<pubDate>Fri, 07 Sep 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Tras el tiempo de dragones</title>
-			<link>http://www.imarquina.es/detail.html?gallery=5aded4174c419e6b5554a1991aa814b5&amp;photo=9</link>
-			<description>La Casa Cisco forma parte de las características edificaciones del paseo de la bahía de Getxo.</description>
-			<category>En BilboArgazki 2013 - FNAC</category>
-			<pubDate>Fri, 07 Sep 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>El multiverso de Kapoor</title>
-			<link>http://www.imarquina.es/detail.html?gallery=e47d6979a642c3e2b0c40b10a78c422c&amp;photo=4</link>
-			<description>Sobre la escultura El gran árbol y el ojo de Anish Kapoor del Guggenheim.</description>
-			<category>Monocromatico</category>
-			<pubDate>Sun, 26 Aug 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Después de la tormenta</title>
-			<link>http://www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=13</link>
-			<description>El edificio del Ayuntamiento de Bilbao está situado en el solar que antes ocupaba el Convento de San Agustín, derruido en la Primera Guerra Carlista.</description>
-			<category>Paisajes entropicos</category>
-			<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>En el corazón del bosque</title>
-			<link>http://www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=16</link>
-			<description>Edificio de la nueva sede de Osakidetza en el centro de Bilbao. Proyecto de Coll-Barreu Arquitectos.</description>
-			<category>Paisajes entropicos</category>
-			<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>El palacio de las corrientes de aire</title>
-			<link>http://www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=12</link>
-			<description>El Palacio de la Diputación marca el punto álgido del eclecticismo en Bizkaia. Poco después de terminarse la corriente modernista se abriría paso en los nuevos proyectos.</description>
-			<category>Paisajes entropicos</category>
-			<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Mañana en la desembocadura</title>
-			<link>http://www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=6</link>
-			<description>Puente de Vizcaya o Puente Colgante. Une las orillas de Portugalete y Getxo por encima de la ría.</description>
-			<category>Paisajes entropicos</category>
-			<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>El nido del águila</title>
-			<link>http://www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=11</link>
-			<description>Las Torres de Isozaki se han edificado sobre el antiguo solar del Depósito Franco de Bilbao.</description>
-			<category>Paisajes entropicos</category>
-			<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>El día de mañana</title>
-			<link>http://www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=1</link>
-			<description>El Ascensor de Begoña conecta el Casco Viejo con barrio de Begoña por Mallona.</description>
-			<category>Paisajes entropicos</category>
-			<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Eidôlom</title>
-			<link>http://www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=0</link>
-			<description>Monumento de Oteiza frente al Ayuntamiento de Bilbao: Variante ovoide de la desocupación de la esfera.</description>
-			<category>Paisajes entropicos</category>
-			<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>En el mal trato de las olas</title>
-			<link>http://www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=18</link>
-			<description>Edificio de la antigua Alhondiga, en el centro de Bilbao.</description>
-			<category>Paisajes entropicos</category>
-			<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Trascender a tu tiempo</title>
-			<link>http://www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=10</link>
-			<description>Alto horno de antigua acería de Altos Hornos de Vizcaya.</description>
-			<category>Paisajes entropicos</category>
-			<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>El día de mañana</title>
-			<link>http://www.imarquina.es/detail.html?gallery=4c89cd348998c374e8d0924f21a568d2&amp;photo=2</link>
-			<description>El Ascensor de Begoña conecta el Casco Viejo con barrio de Begoña por Mallona.</description>
-			<category>En FTSI 2013</category>
-			<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Mañana en la desembocadura</title>
-			<link>http://www.imarquina.es/detail.html?gallery=4c89cd348998c374e8d0924f21a568d2&amp;photo=3</link>
-			<description>Puente de Vizcaya o Puente Colgante. Une las orillas de Portugalete y Getxo por encima de la ría.</description>
-			<category>En FTSI 2013</category>
-			<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Eidôlom</title>
-			<link>http://www.imarquina.es/detail.html?gallery=4c89cd348998c374e8d0924f21a568d2&amp;photo=1</link>
-			<description>Monumento de Oteiza frente al Ayuntamiento de Bilbao: Variante ovoide de la desocupación de la esfera.</description>
-			<category>En FTSI 2013</category>
-			<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>El palacio de las corrientes de aire</title>
-			<link>http://www.imarquina.es/detail.html?gallery=4c89cd348998c374e8d0924f21a568d2&amp;photo=7</link>
-			<description>El Palacio de la Diputación marca el punto álgido del eclecticismo en Bizkaia. Poco después de terminarse la corriente modernista se abriría paso en los nuevos proyectos.</description>
-			<category>En FTSI 2013</category>
-			<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Después de la tormenta</title>
-			<link>http://www.imarquina.es/detail.html?gallery=4c89cd348998c374e8d0924f21a568d2&amp;photo=8</link>
-			<description>El edificio del Ayuntamiento de Bilbao está situado en el solar que antes ocupaba el Convento de San Agustín, derruido en la Primera Guerra Carlista.</description>
-			<category>En FTSI 2013</category>
-			<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>En el corazón del bosque</title>
-			<link>http://www.imarquina.es/detail.html?gallery=4c89cd348998c374e8d0924f21a568d2&amp;photo=9</link>
-			<description>Edificio de la nueva sede de Osakidetza en el centro de Bilbao. Proyecto de Coll-Barreu Arquitectos.</description>
-			<category>En FTSI 2013</category>
-			<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>En el mal trato de las olas</title>
-			<link>http://www.imarquina.es/detail.html?gallery=4c89cd348998c374e8d0924f21a568d2&amp;photo=10</link>
-			<description>Edificio de la antigua Alhondiga, en el centro de Bilbao.</description>
-			<category>En FTSI 2013</category>
-			<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>El nido del águila</title>
-			<link>http://www.imarquina.es/detail.html?gallery=4c89cd348998c374e8d0924f21a568d2&amp;photo=6</link>
-			<description>Las Torres de Isozaki se han edificado sobre el antiguo solar del Depósito Franco de Bilbao.</description>
-			<category>En FTSI 2013</category>
-			<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Trascender a tu tiempo</title>
-			<link>http://www.imarquina.es/detail.html?gallery=4c89cd348998c374e8d0924f21a568d2&amp;photo=5</link>
-			<description>Alto horno de antigua acería de Altos Hornos de Vizcaya.</description>
-			<category>En FTSI 2013</category>
-			<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Mañana en la desembocadura</title>
-			<link>http://www.imarquina.es/detail.html?gallery=3dfb3e6fc6b70c756a79f07cdf8d11bf&amp;photo=13</link>
-			<description>Puente de Vizcaya o Puente Colgante. Une las orillas de Portugalete y Getxo por encima de la ría.</description>
-			<category>En FTSI 2012</category>
-			<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Trascender a tu tiempo</title>
-			<link>http://www.imarquina.es/detail.html?gallery=3dfb3e6fc6b70c756a79f07cdf8d11bf&amp;photo=17</link>
-			<description>Alto horno de antigua acería de Altos Hornos de Vizcaya.</description>
-			<category>En FTSI 2012</category>
-			<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Eidôlom</title>
-			<link>http://www.imarquina.es/detail.html?gallery=3dfb3e6fc6b70c756a79f07cdf8d11bf&amp;photo=7</link>
-			<description>Monumento de Oteiza frente al Ayuntamiento de Bilbao: Variante ovoide de la desocupación de la esfera.</description>
-			<category>En FTSI 2012</category>
-			<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>El día de mañana</title>
-			<link>http://www.imarquina.es/detail.html?gallery=3dfb3e6fc6b70c756a79f07cdf8d11bf&amp;photo=8</link>
-			<description>El Ascensor de Begoña conecta el Casco Viejo con barrio de Begoña por Mallona.</description>
-			<category>En FTSI 2012</category>
-			<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Después de la tormenta</title>
-			<link>http://www.imarquina.es/detail.html?gallery=5aded4174c419e6b5554a1991aa814b5&amp;photo=12</link>
-			<description>El edificio del Ayuntamiento de Bilbao está situado en el solar que antes ocupaba el Convento de San Agustín, derruido en la Primera Guerra Carlista.</description>
-			<category>En BilboArgazki 2013 - FNAC</category>
-			<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Trascender a tu tiempo</title>
-			<link>http://www.imarquina.es/detail.html?gallery=5aded4174c419e6b5554a1991aa814b5&amp;photo=18</link>
-			<description>Alto horno de antigua acería de Altos Hornos de Vizcaya.</description>
-			<category>En BilboArgazki 2013 - FNAC</category>
-			<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>El palacio de las corrientes de aire</title>
-			<link>http://www.imarquina.es/detail.html?gallery=5aded4174c419e6b5554a1991aa814b5&amp;photo=17</link>
-			<description>El Palacio de la Diputación marca el punto álgido del eclecticismo en Bizkaia. Poco después de terminarse la corriente modernista se abriría paso en los nuevos proyectos.</description>
-			<category>En BilboArgazki 2013 - FNAC</category>
-			<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>El día de mañana</title>
-			<link>http://www.imarquina.es/detail.html?gallery=5aded4174c419e6b5554a1991aa814b5&amp;photo=2</link>
-			<description>El Ascensor de Begoña conecta el Casco Viejo con barrio de Begoña por Mallona.</description>
-			<category>En BilboArgazki 2013 - FNAC</category>
-			<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>El nido del águila</title>
-			<link>http://www.imarquina.es/detail.html?gallery=5aded4174c419e6b5554a1991aa814b5&amp;photo=6</link>
-			<description>Las Torres de Isozaki se han edificado sobre el antiguo solar del Depósito Franco de Bilbao.</description>
-			<category>En BilboArgazki 2013 - FNAC</category>
-			<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>En el mal trato de las olas</title>
-			<link>http://www.imarquina.es/detail.html?gallery=5aded4174c419e6b5554a1991aa814b5&amp;photo=8</link>
-			<description>Edificio de la antigua Alhondiga, en el centro de Bilbao.</description>
-			<category>En BilboArgazki 2013 - FNAC</category>
-			<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Eidôlom</title>
-			<link>http://www.imarquina.es/detail.html?gallery=5aded4174c419e6b5554a1991aa814b5&amp;photo=1</link>
-			<description>Monumento de Oteiza frente al Ayuntamiento de Bilbao: Variante ovoide de la desocupación de la esfera.</description>
-			<category>En BilboArgazki 2013 - FNAC</category>
-			<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Mañana en la desembocadura</title>
-			<link>http://www.imarquina.es/detail.html?gallery=5aded4174c419e6b5554a1991aa814b5&amp;photo=5</link>
-			<description>Puente de Vizcaya o Puente Colgante. Une las orillas de Portugalete y Getxo por encima de la ría.</description>
-			<category>En BilboArgazki 2013 - FNAC</category>
-			<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Naturalez muerta</title>
-			<link>http://www.imarquina.es/detail.html?gallery=2ecaf3cddb905238eb48ad53291f4e89&amp;photo=4</link>
-			<description>Improvisado bodegón en un hayedo de Burgos.</description>
-			<category>De aire</category>
-			<pubDate>Wed, 08 Aug 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Mare Tranquillitatis</title>
-			<link>http://www.imarquina.es/detail.html?gallery=97701138ebc753b25407ec1463e17129&amp;photo=15</link>
-			<description>Homenaje surrealista sobre la llegada de N. Amstrong y su equipo a la Luna.</description>
-			<category>De suenos</category>
-			<pubDate>Sat, 04 Aug 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>En un lugar sobre el arco iris</title>
-			<link>http://www.imarquina.es/detail.html?gallery=97701138ebc753b25407ec1463e17129&amp;photo=2</link>
-			<description>'Fosteritos de MetroBilbao sobre campo de amapolas y más cosas.</description>
-			<category>De suenos</category>
-			<pubDate>Sat, 04 Aug 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Pasajero del tiempo</title>
-			<link>http://www.imarquina.es/detail.html?gallery=97701138ebc753b25407ec1463e17129&amp;photo=14</link>
-			<description>Imagen del Tunel de la Engaña en una realidad alternativa.</description>
-			<category>De suenos</category>
-			<pubDate>Sat, 04 Aug 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>La ciudad de los hombres llovientes IV</title>
-			<link>http://www.imarquina.es/detail.html?gallery=97701138ebc753b25407ec1463e17129&amp;photo=11</link>
-			<description>Composición sobre toma aérea por encima de los 2000 pies y Torre de Iberdrola.</description>
-			<category>De suenos</category>
-			<pubDate>Sun, 08 Jul 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>El bosque de Mizar</title>
-			<link>http://www.imarquina.es/detail.html?gallery=97701138ebc753b25407ec1463e17129&amp;photo=1</link>
-			<description>Escena sobres los mitos y leyendas del corazón del bosque.</description>
-			<category>De suenos</category>
-			<pubDate>Fri, 08 Jun 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>El enroque de la torre</title>
-			<link>http://www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=17</link>
-			<description>El edificio de la Torre de Iberdrola muestra una desproporcional vertical respecto a Bilbao que en pocos años será menos apreciable. Y en algunos más, inexistente</description>
-			<category>Paisajes entropicos</category>
-			<pubDate>Fri, 18 May 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Enhebrando el paisaje</title>
-			<link>http://www.imarquina.es/detail.html?gallery=2ecaf3cddb905238eb48ad53291f4e89&amp;photo=3</link>
-			<description>Las caprichosas formas de las construcciones ruinosas. Lorilla, Sargentes de la Lora, Burgos</description>
-			<category>De aire</category>
-			<pubDate>Wed, 09 May 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>En la aurora de otro tiempo</title>
-			<link>http://www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=15</link>
-			<description>Casa en la esquina entre Hurtado de Amézaga e Iturriza. De Enrique Epalza y Chanfreau es de estilo modernista.</description>
-			<category>Paisajes entropicos</category>
-			<pubDate>Sun, 06 May 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>En la aurora de otro tiempo</title>
-			<link>http://www.imarquina.es/detail.html?gallery=5aded4174c419e6b5554a1991aa814b5&amp;photo=14</link>
-			<description>Casa en la esquina entre Hurtado de Amézaga e Iturriza. De Enrique Epalza y Chanfreau es de estilo modernista.</description>
-			<category>En BilboArgazki 2013 - FNAC</category>
-			<pubDate>Sun, 06 May 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Más allá de los sueños</title>
-			<link>http://www.imarquina.es/detail.html?gallery=97701138ebc753b25407ec1463e17129&amp;photo=3</link>
-			<description>Homenaje sobre el protector de pantalla 'Flying Toasters' sobre el Cañón del Río Ebro.</description>
-			<category>De suenos</category>
-			<pubDate>Fri, 16 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>La puerta del cielo</title>
-			<link>http://www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=4</link>
-			<description>El Puente de la Salve une la Solución Sur con el centro de Bilbao.</description>
-			<category>Paisajes entropicos</category>
-			<pubDate>Mon, 05 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>El monolito de los pájaros</title>
-			<link>http://www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=5</link>
-			<description>Edificio del BBVA en la Plaza Circular de Bilbao al comienzo de la Gran Vía.</description>
-			<category>Paisajes entropicos</category>
-			<pubDate>Mon, 05 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Al compás de las olas</title>
-			<link>http://www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=8</link>
-			<description>Teatro Arriaga situado en El Arenal bilbaíno.</description>
-			<category>Paisajes entropicos</category>
-			<pubDate>Mon, 05 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Al otro lado</title>
-			<link>http://www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=9</link>
-			<description>Puente sobre el río Galindo de Javier Manterola, y pequeña casa al borde de antigua carretera que unía Barakaldo y Sestao.</description>
-			<category>Paisajes entropicos</category>
-			<pubDate>Mon, 05 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>El planeta perdido</title>
-			<link>http://www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=2</link>
-			<description>Estatua de Don Diego López de Haro de la Plaza Circular de Bilbao.</description>
-			<category>Paisajes entropicos</category>
-			<pubDate>Mon, 05 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>El paragonauta</title>
-			<link>http://www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=7</link>
-			<description>Refinería de Petronor de Muskiz.</description>
-			<category>Paisajes entropicos</category>
-			<pubDate>Mon, 05 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Bajo el punto de fusión</title>
-			<link>http://www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=3</link>
-			<description>Museo Guggenheim de Bilbao.</description>
-			<category>Paisajes entropicos</category>
-			<pubDate>Mon, 05 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Al otro lado</title>
-			<link>http://www.imarquina.es/detail.html?gallery=4c89cd348998c374e8d0924f21a568d2&amp;photo=4</link>
-			<description>Puente sobre el río Galindo de Javier Manterola, y pequeña casa al borde de antigua carretera que unía Barakaldo y Sestao.</description>
-			<category>En FTSI 2013</category>
-			<pubDate>Mon, 05 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Detrás del sirimi IV</title>
-			<link>http://www.imarquina.es/detail.html?gallery=3dfb3e6fc6b70c756a79f07cdf8d11bf&amp;photo=4</link>
-			<description>El teatro Arriaga domina la mayoría de las vistas desde el Arenal de Bilbao.</description>
-			<category>En FTSI 2012</category>
-			<pubDate>Mon, 05 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Detrás del sirimi V</title>
-			<link>http://www.imarquina.es/detail.html?gallery=3dfb3e6fc6b70c756a79f07cdf8d11bf&amp;photo=5</link>
-			<description>Edificio del Ayuntamiento de Bilbao ... El hombre del paraguas fue una adquisión muy creativa a la larga.</description>
-			<category>En FTSI 2012</category>
-			<pubDate>Mon, 05 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Detrás del sirimi II</title>
-			<link>http://www.imarquina.es/detail.html?gallery=3dfb3e6fc6b70c756a79f07cdf8d11bf&amp;photo=2</link>
-			<description>Bajada de las Calzadas de Mallona que entran en el Casco Viejo de Bilbao.</description>
-			<category>En FTSI 2012</category>
-			<pubDate>Mon, 05 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Detrás del sirimi I</title>
-			<link>http://www.imarquina.es/detail.html?gallery=3dfb3e6fc6b70c756a79f07cdf8d11bf&amp;photo=1</link>
-			<description>Tramo final de las Calzadas de Mallona a su llegada a la Plaza.</description>
-			<category>En FTSI 2012</category>
-			<pubDate>Mon, 05 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Presentación exposición FTSI</title>
-			<link>http://www.imarquina.es/detail.html?gallery=3dfb3e6fc6b70c756a79f07cdf8d11bf&amp;photo=0</link>
-			<description>Presentación exposición FTSI</description>
-			<category>En FTSI 2012</category>
-			<pubDate>Mon, 05 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Detrás del sirimi III</title>
-			<link>http://www.imarquina.es/detail.html?gallery=3dfb3e6fc6b70c756a79f07cdf8d11bf&amp;photo=3</link>
-			<description>Tinglados portuarios de El Arenal recientemente rehabilitados</description>
-			<category>En FTSI 2012</category>
-			<pubDate>Mon, 05 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>All iron V</title>
-			<link>http://www.imarquina.es/detail.html?gallery=3dfb3e6fc6b70c756a79f07cdf8d11bf&amp;photo=22</link>
-			<description>All iron V</description>
-			<category>En FTSI 2012</category>
-			<pubDate>Mon, 05 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>El paragonauta</title>
-			<link>http://www.imarquina.es/detail.html?gallery=3dfb3e6fc6b70c756a79f07cdf8d11bf&amp;photo=14</link>
-			<description>Refinería de Petronor de Muskiz.</description>
-			<category>En FTSI 2012</category>
-			<pubDate>Mon, 05 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>La puerta del cielo</title>
-			<link>http://www.imarquina.es/detail.html?gallery=3dfb3e6fc6b70c756a79f07cdf8d11bf&amp;photo=11</link>
-			<description>El Puente de la Salve une la Solución Sur con el centro de Bilbao.</description>
-			<category>En FTSI 2012</category>
-			<pubDate>Mon, 05 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>El monolito de los pájaros</title>
-			<link>http://www.imarquina.es/detail.html?gallery=3dfb3e6fc6b70c756a79f07cdf8d11bf&amp;photo=12</link>
-			<description>Edificio del BBVA en la Plaza Circular de Bilbao al comienzo de la Gran Vía.</description>
-			<category>En FTSI 2012</category>
-			<pubDate>Mon, 05 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Al compás de las olas</title>
-			<link>http://www.imarquina.es/detail.html?gallery=3dfb3e6fc6b70c756a79f07cdf8d11bf&amp;photo=15</link>
-			<description>Teatro Arriaga situado en El Arenal bilbaíno.</description>
-			<category>En FTSI 2012</category>
-			<pubDate>Mon, 05 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>All iron I</title>
-			<link>http://www.imarquina.es/detail.html?gallery=3dfb3e6fc6b70c756a79f07cdf8d11bf&amp;photo=18</link>
-			<description>All iron I</description>
-			<category>En FTSI 2012</category>
-			<pubDate>Mon, 05 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>All iron II</title>
-			<link>http://www.imarquina.es/detail.html?gallery=3dfb3e6fc6b70c756a79f07cdf8d11bf&amp;photo=19</link>
-			<description>All iron II</description>
-			<category>En FTSI 2012</category>
-			<pubDate>Mon, 05 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Al otro lado</title>
-			<link>http://www.imarquina.es/detail.html?gallery=3dfb3e6fc6b70c756a79f07cdf8d11bf&amp;photo=16</link>
-			<description>Puente sobre el río Galindo de Javier Manterola, y pequeña casa al borde de antigua carretera que unía Barakaldo y Sestao.</description>
-			<category>En FTSI 2012</category>
-			<pubDate>Mon, 05 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>All iron IV</title>
-			<link>http://www.imarquina.es/detail.html?gallery=3dfb3e6fc6b70c756a79f07cdf8d11bf&amp;photo=21</link>
-			<description>All iron IV</description>
-			<category>En FTSI 2012</category>
-			<pubDate>Mon, 05 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>All iron III</title>
-			<link>http://www.imarquina.es/detail.html?gallery=3dfb3e6fc6b70c756a79f07cdf8d11bf&amp;photo=20</link>
-			<description>All iron III</description>
-			<category>En FTSI 2012</category>
-			<pubDate>Mon, 05 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>All iron VI</title>
-			<link>http://www.imarquina.es/detail.html?gallery=3dfb3e6fc6b70c756a79f07cdf8d11bf&amp;photo=23</link>
-			<description>All iron VI</description>
-			<category>En FTSI 2012</category>
-			<pubDate>Mon, 05 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Detrás del sirimi VI</title>
-			<link>http://www.imarquina.es/detail.html?gallery=3dfb3e6fc6b70c756a79f07cdf8d11bf&amp;photo=6</link>
-			<description>El mercado de abastos de la Ribera era el final del camino de las sardineras que venían de Santurce.</description>
-			<category>En FTSI 2012</category>
-			<pubDate>Mon, 05 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Bajo el punto de fusión</title>
-			<link>http://www.imarquina.es/detail.html?gallery=3dfb3e6fc6b70c756a79f07cdf8d11bf&amp;photo=10</link>
-			<description>Museo Guggenheim de Bilbao.</description>
-			<category>En FTSI 2012</category>
-			<pubDate>Mon, 05 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>El planeta perdido</title>
-			<link>http://www.imarquina.es/detail.html?gallery=3dfb3e6fc6b70c756a79f07cdf8d11bf&amp;photo=9</link>
-			<description>Estatua de Don Diego López de Haro de la Plaza Circular de Bilbao.</description>
-			<category>En FTSI 2012</category>
-			<pubDate>Mon, 05 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>El planeta perdido</title>
-			<link>http://www.imarquina.es/detail.html?gallery=5aded4174c419e6b5554a1991aa814b5&amp;photo=3</link>
-			<description>Estatua de Don Diego López de Haro de la Plaza Circular de Bilbao.</description>
-			<category>En BilboArgazki 2013 - FNAC</category>
-			<pubDate>Mon, 05 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Bajo el punto de fusión</title>
-			<link>http://www.imarquina.es/detail.html?gallery=5aded4174c419e6b5554a1991aa814b5&amp;photo=11</link>
-			<description>Museo Guggenheim de Bilbao.</description>
-			<category>En BilboArgazki 2013 - FNAC</category>
-			<pubDate>Mon, 05 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Al compás de las olas</title>
-			<link>http://www.imarquina.es/detail.html?gallery=5aded4174c419e6b5554a1991aa814b5&amp;photo=15</link>
-			<description>Teatro Arriaga situado en El Arenal bilbaíno.</description>
-			<category>En BilboArgazki 2013 - FNAC</category>
-			<pubDate>Mon, 05 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>El monolito de los pájaros</title>
-			<link>http://www.imarquina.es/detail.html?gallery=5aded4174c419e6b5554a1991aa814b5&amp;photo=10</link>
-			<description>Edificio del BBVA en la Plaza Circular de Bilbao al comienzo de la Gran Vía.</description>
-			<category>En BilboArgazki 2013 - FNAC</category>
-			<pubDate>Mon, 05 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>La puerta del cielo</title>
-			<link>http://www.imarquina.es/detail.html?gallery=5aded4174c419e6b5554a1991aa814b5&amp;photo=4</link>
-			<description>El Puente de la Salve une la Solución Sur con el centro de Bilbao.</description>
-			<category>En BilboArgazki 2013 - FNAC</category>
-			<pubDate>Mon, 05 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Detrás del sirimi II</title>
-			<link>http://www.imarquina.es/detail.html?gallery=5811fad7ab5db41e7d0e82dfa727a0d6&amp;photo=1</link>
-			<description>Bajada de las Calzadas de Mallona que entran en el Casco Viejo de Bilbao.</description>
-			<category>Detrás del sirimiri</category>
-			<pubDate>Mon, 05 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Detrás del sirimi III</title>
-			<link>http://www.imarquina.es/detail.html?gallery=5811fad7ab5db41e7d0e82dfa727a0d6&amp;photo=2</link>
-			<description>Tinglados portuarios de El Arenal recientemente rehabilitados</description>
-			<category>Detrás del sirimiri</category>
-			<pubDate>Mon, 05 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Detrás del sirimi V</title>
-			<link>http://www.imarquina.es/detail.html?gallery=5811fad7ab5db41e7d0e82dfa727a0d6&amp;photo=4</link>
-			<description>Edificio del Ayuntamiento de Bilbao ... El hombre del paraguas fue una adquisión muy creativa a la larga.</description>
-			<category>Detrás del sirimiri</category>
-			<pubDate>Mon, 05 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Detrás del sirimi IV</title>
-			<link>http://www.imarquina.es/detail.html?gallery=5811fad7ab5db41e7d0e82dfa727a0d6&amp;photo=3</link>
-			<description>El teatro Arriaga domina la mayoría de las vistas desde el Arenal de Bilbao.</description>
-			<category>Detrás del sirimiri</category>
-			<pubDate>Mon, 05 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Detrás del sirimi I</title>
-			<link>http://www.imarquina.es/detail.html?gallery=5811fad7ab5db41e7d0e82dfa727a0d6&amp;photo=0</link>
-			<description>Tramo final de las Calzadas de Mallona a su llegada a la Plaza.</description>
-			<category>Detrás del sirimiri</category>
-			<pubDate>Mon, 05 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Detrás del sirimi VI</title>
-			<link>http://www.imarquina.es/detail.html?gallery=5811fad7ab5db41e7d0e82dfa727a0d6&amp;photo=5</link>
-			<description>El mercado de abastos de la Ribera era el final del camino de las sardineras que venían de Santurce.</description>
-			<category>Detrás del sirimiri</category>
-			<pubDate>Mon, 05 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Discurre Bilbao</title>
-			<link>http://www.imarquina.es/detail.html?gallery=c9127b11e7c62e317d3e6c66fa1b6ee7&amp;photo=0</link>
-			<description>Vista de Guggenheim y Abandoibarra desde la pasarela de la Universidad de Deusto en Bilbao.</description>
-			<category>Por la orilla de la ria</category>
-			<pubDate>Thu, 01 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Había una vez en Bilbao un sitio que ... I</title>
-			<link>http://www.imarquina.es/detail.html?gallery=fd32b9a2c5650dd4544072884bff3605&amp;photo=1</link>
-			<description>Avenida Kirikiño de Bilbao. Un rincón multicolor.</description>
-			<category>Policromatico</category>
-			<pubDate>Thu, 01 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>En el rabillo del ojo</title>
-			<link>http://www.imarquina.es/detail.html?gallery=fd32b9a2c5650dd4544072884bff3605&amp;photo=0</link>
-			<description>Corredor sobre graffiti de la península de zorrozaurre.</description>
-			<category>Policromatico</category>
-			<pubDate>Thu, 01 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Había una vez un sitio en Bilbao que ... III</title>
-			<link>http://www.imarquina.es/detail.html?gallery=fd32b9a2c5650dd4544072884bff3605&amp;photo=3</link>
-			<description>Avenida Zuberoa de Bilbao. El otro lado de un rincón multicolor.</description>
-			<category>Policromatico</category>
-			<pubDate>Thu, 01 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Vidrios templados</title>
-			<link>http://www.imarquina.es/detail.html?gallery=fd32b9a2c5650dd4544072884bff3605&amp;photo=4</link>
-			<description>Detalle de la Plaza Circular de Bilbao, sobre el edificio del BBVA y un 'fotsterito' de MetroBilbao.</description>
-			<category>Policromatico</category>
-			<pubDate>Thu, 01 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Había una vez en Bilbao un sitio que ... II</title>
-			<link>http://www.imarquina.es/detail.html?gallery=fd32b9a2c5650dd4544072884bff3605&amp;photo=2</link>
-			<description>Avenida Kirikiño de Bilbao. Un rincón multicolor.</description>
-			<category>Policromatico</category>
-			<pubDate>Thu, 01 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>La musa escondida</title>
-			<link>http://www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=14</link>
-			<description>Escultura homenaje al mÃºsico Juan Crisóstomo de Arriaga que permanecía escondida por su desnudez tras escandalizar a la sociedad bilbaina de posguerra.</description>
-			<category>Paisajes entropicos</category>
-			<pubDate>Thu, 01 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Bajo la Gran Vía II</title>
-			<link>http://www.imarquina.es/detail.html?gallery=e47d6979a642c3e2b0c40b10a78c422c&amp;photo=1</link>
-			<description>Acceso a MetroBilbao desde Plaza Elíptica de Bilbao.</description>
-			<category>Monocromatico</category>
-			<pubDate>Thu, 01 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Jungla financiera</title>
-			<link>http://www.imarquina.es/detail.html?gallery=e47d6979a642c3e2b0c40b10a78c422c&amp;photo=3</link>
-			<description>Detalle del edificio del BBVA en Plaza Circular de Bilbao.</description>
-			<category>Monocromatico</category>
-			<pubDate>Thu, 01 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Bajo la Gran Vía I</title>
-			<link>http://www.imarquina.es/detail.html?gallery=e47d6979a642c3e2b0c40b10a78c422c&amp;photo=0</link>
-			<description>Acceso a MetroBilbao desde calle Berastegi de Bilbao.</description>
-			<category>Monocromatico</category>
-			<pubDate>Thu, 01 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Por encima del Guggenheim</title>
-			<link>http://www.imarquina.es/detail.html?gallery=e47d6979a642c3e2b0c40b10a78c422c&amp;photo=2</link>
-			<description>Vista desde el Puente de la Salva del Museo Guggenheim.</description>
-			<category>Monocromatico</category>
-			<pubDate>Thu, 01 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Detrás del sirimi VII</title>
-			<link>http://www.imarquina.es/detail.html?gallery=5811fad7ab5db41e7d0e82dfa727a0d6&amp;photo=6</link>
-			<description>El Teatro Arriaga, la Estación de La Concordia y el edificio del BBVA: tres edicios, tres épocas, juntos desde este rincón</description>
-			<category>Detrás del sirimiri</category>
-			<pubDate>Thu, 01 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Paseo en línea frente a fachada curvo - convexa</title>
-			<link>http://www.imarquina.es/detail.html?gallery=719425bc4c2bbd43b199ddb4a120b537&amp;photo=1</link>
-			<description>Vista del Teatro Arriaga en el Casco Viejo de Bilbao.</description>
-			<category>De tierra</category>
-			<pubDate>Thu, 01 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Sonidos de Hacienda</title>
-			<link>http://www.imarquina.es/detail.html?gallery=719425bc4c2bbd43b199ddb4a120b537&amp;photo=3</link>
-			<description>Edificio de la antigua Delegación de Hacienda de Pamplona.</description>
-			<category>De tierra</category>
-			<pubDate>Thu, 01 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Entre Bailén y Navarra</title>
-			<link>http://www.imarquina.es/detail.html?gallery=719425bc4c2bbd43b199ddb4a120b537&amp;photo=2</link>
-			<description>El edificio de la Sociedad Bilbaina entre la calle Bailen y la calle Navarra en Bilbao.</description>
-			<category>De tierra</category>
-			<pubDate>Thu, 01 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Pasado y presente</title>
-			<link>http://www.imarquina.es/detail.html?gallery=719425bc4c2bbd43b199ddb4a120b537&amp;photo=0</link>
-			<description>Vista del hotel Marqués de Riscal desde viñedo, Elciego en Álava.</description>
-			<category>De tierra</category>
-			<pubDate>Thu, 01 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>La ciudad de los hombres llovientes</title>
-			<link>http://www.imarquina.es/detail.html?gallery=97701138ebc753b25407ec1463e17129&amp;photo=8</link>
-			<description>Vista de panorámica del Casco Viejo desde el Ascensor de Begoña.</description>
-			<category>De suenos</category>
-			<pubDate>Thu, 01 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>La ciudad de los hombres llovientes II</title>
-			<link>http://www.imarquina.es/detail.html?gallery=97701138ebc753b25407ec1463e17129&amp;photo=9</link>
-			<description>Vista panorámica del Guggenheim y Abandoibarra desde el Puente de la Salve.</description>
-			<category>De suenos</category>
-			<pubDate>Thu, 01 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>¡Nunca te olvides!. No fue siempre todo así ...</title>
-			<link>http://www.imarquina.es/detail.html?gallery=97701138ebc753b25407ec1463e17129&amp;photo=6</link>
-			<description>Un pensamiento sobre la historia que fundamentea de una manera u otra el presente.</description>
-			<category>De suenos</category>
-			<pubDate>Thu, 01 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Persiguiendo a Campanilla</title>
-			<link>http://www.imarquina.es/detail.html?gallery=97701138ebc753b25407ec1463e17129&amp;photo=5</link>
-			<description>Imagen sobre la búsqueda de la fantasía y la persecución de los mitos.</description>
-			<category>De suenos</category>
-			<pubDate>Thu, 01 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>La ciudad de los hombres llovientes III</title>
-			<link>http://www.imarquina.es/detail.html?gallery=97701138ebc753b25407ec1463e17129&amp;photo=10</link>
-			<description>Vista panorámica del Guggenheim y Abandoibarra desde el Puente de la Salve.</description>
-			<category>De suenos</category>
-			<pubDate>Thu, 01 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Hard rain II</title>
-			<link>http://www.imarquina.es/detail.html?gallery=97701138ebc753b25407ec1463e17129&amp;photo=13</link>
-			<description>Vista de Bilbao desde el Parque de Etxebarria en la zona de Mallona.</description>
-			<category>De suenos</category>
-			<pubDate>Thu, 01 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>El fuerte y el punto débil</title>
-			<link>http://www.imarquina.es/detail.html?gallery=97701138ebc753b25407ec1463e17129&amp;photo=4</link>
-			<description>Fotomontaje surrealista sobre la debilidad y la fotaleza.</description>
-			<category>De suenos</category>
-			<pubDate>Thu, 01 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Hard rain I</title>
-			<link>http://www.imarquina.es/detail.html?gallery=97701138ebc753b25407ec1463e17129&amp;photo=12</link>
-			<description>Vista de Bilbao desde el Parque de Etxebarría en la zona de Mallona.</description>
-			<category>De suenos</category>
-			<pubDate>Thu, 01 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Velas en pastel</title>
-			<link>http://www.imarquina.es/detail.html?gallery=d971958737d62d85a97a2a542b451ebc&amp;photo=6</link>
-			<description>Velero en la Bahía de Santander.</description>
-			<category>De fuego</category>
-			<pubDate>Thu, 01 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Ciclista con dos copas</title>
-			<link>http://www.imarquina.es/detail.html?gallery=d971958737d62d85a97a2a542b451ebc&amp;photo=1</link>
-			<description>Ciclista por Abandoibarra desde Puente de La Salve.</description>
-			<category>De fuego</category>
-			<pubDate>Thu, 01 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Momentos de la araña</title>
-			<link>http://www.imarquina.es/detail.html?gallery=d971958737d62d85a97a2a542b451ebc&amp;photo=0</link>
-			<description>Vista de Abandoibarra y escultura L. Bourgeois en Guggenheim.</description>
-			<category>De fuego</category>
-			<pubDate>Thu, 01 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Pareja de noticia</title>
-			<link>http://www.imarquina.es/detail.html?gallery=d971958737d62d85a97a2a542b451ebc&amp;photo=5</link>
-			<description>Reportera de Canal Bilbao a la espera de noticia en el fresco de la mañana</description>
-			<category>De fuego</category>
-			<pubDate>Thu, 01 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Fuga de curvas</title>
-			<link>http://www.imarquina.es/detail.html?gallery=d971958737d62d85a97a2a542b451ebc&amp;photo=4</link>
-			<description>Curvas de metal y sombras en la Pasarela de Manterola en Sestao, Bizkaia.</description>
-			<category>De fuego</category>
-			<pubDate>Thu, 01 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Semana fantástica</title>
-			<link>http://www.imarquina.es/detail.html?gallery=d971958737d62d85a97a2a542b451ebc&amp;photo=3</link>
-			<description>Reflejos de San Fermín 2009 en la fachada de El Corte Ingles de Pamplona.</description>
-			<category>De fuego</category>
-			<pubDate>Thu, 01 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>En la brecha</title>
-			<link>http://www.imarquina.es/detail.html?gallery=d971958737d62d85a97a2a542b451ebc&amp;photo=2</link>
-			<description>Técnicos de limpieza sobre la entrada del Guggenheim en Bilbao.</description>
-			<category>De fuego</category>
-			<pubDate>Thu, 01 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Torre y dos reinas</title>
-			<link>http://www.imarquina.es/detail.html?gallery=d971958737d62d85a97a2a542b451ebc&amp;photo=7</link>
-			<description>Pareja de señoras frente a la Torre Iberdrola de Bilbao en construcción.</description>
-			<category>De fuego</category>
-			<pubDate>Thu, 01 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Descontextualizando a Chillida II</title>
-			<link>http://www.imarquina.es/detail.html?gallery=2ecaf3cddb905238eb48ad53291f4e89&amp;photo=1</link>
-			<description>Detalle de la obra Escuchando la piedra IV, en Chillida Leku.</description>
-			<category>De aire</category>
-			<pubDate>Thu, 01 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Descontextualizando a Chillida III</title>
-			<link>http://www.imarquina.es/detail.html?gallery=2ecaf3cddb905238eb48ad53291f4e89&amp;photo=2</link>
-			<description>Detalle de la obra Harri II, en Chillida Leku.</description>
-			<category>De aire</category>
-			<pubDate>Thu, 01 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Descontextualizando a Chillida I</title>
-			<link>http://www.imarquina.es/detail.html?gallery=2ecaf3cddb905238eb48ad53291f4e89&amp;photo=0</link>
-			<description>Detalle de la obra Harri I, en Chillida Leku.</description>
-			<category>De aire</category>
-			<pubDate>Thu, 01 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Lunático</title>
-			<link>http://www.imarquina.es/detail.html?gallery=d0692fb68700ba495d8117ea3fdc4daf&amp;photo=0</link>
-			<description>Pescador en la playa de Sonabia de Cantabria.</description>
-			<category>De agua</category>
-			<pubDate>Thu, 01 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Duelo al sol</title>
-			<link>http://www.imarquina.es/detail.html?gallery=d0692fb68700ba495d8117ea3fdc4daf&amp;photo=5</link>
-			<description>Dos personas sobre la pasarela sobre el estanque del Guggenheim.</description>
-			<category>De agua</category>
-			<pubDate>Thu, 01 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Dos en la parábola</title>
-			<link>http://www.imarquina.es/detail.html?gallery=d0692fb68700ba495d8117ea3fdc4daf&amp;photo=8</link>
-			<description>Contrapicado del estanque posterior del Guggenheim desde el Puente de La Salve.</description>
-			<category>De agua</category>
-			<pubDate>Thu, 01 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>HÉL BEC</title>
-			<link>http://www.imarquina.es/detail.html?gallery=d0692fb68700ba495d8117ea3fdc4daf&amp;photo=4</link>
-			<description>Helipuerto de la explanada del BEC en Barakaldo.</description>
-			<category>De agua</category>
-			<pubDate>Thu, 01 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>En el ojo del vórtice</title>
-			<link>http://www.imarquina.es/detail.html?gallery=d0692fb68700ba495d8117ea3fdc4daf&amp;photo=3</link>
-			<description>Combinación de arquitectura y sombras en la pasarela de Manterola de Sestao.</description>
-			<category>De agua</category>
-			<pubDate>Thu, 01 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Señales</title>
-			<link>http://www.imarquina.es/detail.html?gallery=d0692fb68700ba495d8117ea3fdc4daf&amp;photo=2</link>
-			<description>Sombra de la escultura de Oteiza del Ayuntamiento de Bilbao.</description>
-			<category>De agua</category>
-			<pubDate>Thu, 01 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>En la intersección de planos</title>
-			<link>http://www.imarquina.es/detail.html?gallery=d0692fb68700ba495d8117ea3fdc4daf&amp;photo=7</link>
-			<description>Jovenes descansando a la sombra del Guggenheim.</description>
-			<category>De agua</category>
-			<pubDate>Thu, 01 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>No mires atrás</title>
-			<link>http://www.imarquina.es/detail.html?gallery=d0692fb68700ba495d8117ea3fdc4daf&amp;photo=6</link>
-			<description>Paseante con el Guggenheim al fondo.</description>
-			<category>De agua</category>
-			<pubDate>Thu, 01 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-		<item>
-			<title>Fríos paseos en bosques metálicos</title>
-			<link>http://www.imarquina.es/detail.html?gallery=d0692fb68700ba495d8117ea3fdc4daf&amp;photo=1</link>
-			<description>'Bosque Metálico' del Palacio de Euskalduna.</description>
-			<category>De agua</category>
-			<pubDate>Thu, 01 Mar 2012 00:00:00 GMT</pubDate>
-			<guid/>
-		</item>
-	</channel>
+<channel>
+<title>IMFotografía - Iñaki Marquina (night.noise)</title>
+<link>www.imarquina.es</link>
+<description>Fotografía creativa de Iñaki Marquina (night.noise). Desde el Bilbao del sirimiri al paisaje entrópico</description>
+<language>es-ES</language>
+<pubDate>Tue, 28 Oct 2014 00:00:00 GMT</pubDate>
+<lastBuildDate>Tue, 21 Jun 2016 00:00:00 GMT</lastBuildDate>
+<docs>http://blogs.law.harvard.edu/tech/rss</docs>
+<managingEditor>imarquina@gmail.com</managingEditor>
+<webMaster>imarquina@gmail.com</webMaster>
+<image>
+<title>IMFotografía</title>
+<url>www.imarquina.es/resources/logo_xs.png</url>
+<link>www.imarquina.es</link>
+<pubDate>Sat, 12 May 2012 00:00:00 GMT</pubDate>
+<width>175</width>
+<height>60</height>
+</image>
+<item>
+<title>Detrás del sirimi IX</title>
+<link>www.imarquina.es/detail.html?gallery=5811fad7ab5db41e7d0e82dfa727a0d6&amp;photo=8</link>
+<description>Edificio Términus de la Plaza Circular, de 1893 diseñado por Severino Achúcarro.</description>
+<category>Detras del sirimiri</category>
+<pubDate>Fri, 17 Jun 2016 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>revelación</title>
+<link>https://youtu.be/p686YYu6jHQ</link>
+<description>Pequeña historia de un paseo bajo la lluvia en Bilbao. Realizado para charla en Photobat</description>
+<category>Multimedia</category>
+<pubDate>Thu, 16 Jun 2016 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>ir.colors</title>
+<link>https://youtu.be/NLM-Jd35vT8</link>
+<description>Sobre la técnica de fotografía infrarroja coloreada en edición. Realizado para charla en Photobat</description>
+<category>Multimedia</category>
+<pubDate>Wed, 15 Jun 2016 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>ViewIR XII</title>
+<link>www.imarquina.es/detail.html?gallery=a20aea03661af1f3fc17df594ca6d1c8&amp;photo=11</link>
+<description>Parque Tecnológico de Bizkia</description>
+<category>ViewIR</category>
+<pubDate>Sat, 21 Mar 2015 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>ViewIR XIII</title>
+<link>www.imarquina.es/detail.html?gallery=a20aea03661af1f3fc17df594ca6d1c8&amp;photo=12</link>
+<description>Parque Tecnológico de Bizkia</description>
+<category>ViewIR</category>
+<pubDate>Sat, 21 Mar 2015 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>En la órbita de Términus</title>
+<link>www.imarquina.es/detail.html?gallery=e47d6979a642c3e2b0c40b10a78c422c&amp;photo=6</link>
+<description>Edificio Términus de la Plaza Circular, de 1893 diseñado por Severino Achúcarro.</description>
+<category>Monocromatico</category>
+<pubDate>Sun, 15 Mar 2015 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>ViewIR XI</title>
+<link>www.imarquina.es/detail.html?gallery=a20aea03661af1f3fc17df594ca6d1c8&amp;photo=10</link>
+<description>Parque Tecnológico de Bizkia</description>
+<category>ViewIR</category>
+<pubDate>Sat, 14 Mar 2015 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Enmarcados</title>
+<link>www.imarquina.es/detail.html?gallery=e47d6979a642c3e2b0c40b10a78c422c&amp;photo=5</link>
+<description>Visitantes en el Museo Guggenheim.</description>
+<category>Monocromatico</category>
+<pubDate>Thu, 5 Mar 2015 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>ViewIR IX</title>
+<link>www.imarquina.es/detail.html?gallery=a20aea03661af1f3fc17df594ca6d1c8&amp;photo=8</link>
+<description>Parque Tecnológico de Bizkia</description>
+<category>ViewIR</category>
+<pubDate>Mon, 2 Mar 2015 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>ViewIR X</title>
+<link>www.imarquina.es/detail.html?gallery=a20aea03661af1f3fc17df594ca6d1c8&amp;photo=9</link>
+<description>Parque Tecnológico de Bizkia</description>
+<category>ViewIR</category>
+<pubDate>Mon, 2 Mar 2015 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>ViewIR VI</title>
+<link>www.imarquina.es/detail.html?gallery=a20aea03661af1f3fc17df594ca6d1c8&amp;photo=5</link>
+<description>Castilo de Butrón (Bizkia)</description>
+<category>ViewIR</category>
+<pubDate>Sun, 22 Feb 2015 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>ViewIR VII</title>
+<link>www.imarquina.es/detail.html?gallery=a20aea03661af1f3fc17df594ca6d1c8&amp;photo=6</link>
+<description>Castilo de Butrón (Bizkia)</description>
+<category>ViewIR</category>
+<pubDate>Sun, 22 Feb 2015 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>ViewIR VIII</title>
+<link>www.imarquina.es/detail.html?gallery=a20aea03661af1f3fc17df594ca6d1c8&amp;photo=7</link>
+<description>Castilo de Butrón (Bizkia)</description>
+<category>ViewIR</category>
+<pubDate>Sun, 22 Feb 2015 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Presentación exposición Torrene Aretoa 2015 - Getxoko Kultur Etxea</title>
+<link>www.imarquina.es/detail.html?gallery=105645b3c821310fcd8c2d6abd8f3b18&amp;photo=0</link>
+<description>Presentación exposición Torrene Aretoa 2015 - Getxoko Kultur Etxea</description>
+<category>En Getxoko Kultur Etxea (Torrene)</category>
+<pubDate>Tue, 9 Dec 2014 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Naturaleza dieléctrica</title>
+<link>www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=27</link>
+<description>Edificio de la sede de BizkayTIC en Getxo. La tierra y el cielo unidos por una chispa, un destello que crea y destrulle</description>
+<category>Paisajes entropicos</category>
+<pubDate>Tue, 9 Dec 2014 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Naturaleza dieléctrica</title>
+<link>www.imarquina.es/detail.html?gallery=105645b3c821310fcd8c2d6abd8f3b18&amp;photo=26</link>
+<description>Edificio de la sede de BizkayTIC en Getxo. La tierra y el cielo unidos por una chispa, un destello que crea y destrulle</description>
+<category>En Getxoko Kultur Etxea (Torrene)</category>
+<pubDate>Tue, 9 Dec 2014 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>La torre de Rapunzel y el aliento del dragón</title>
+<link>www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=26</link>
+<description>El primer rascacielos de Bilbao, la estación de la Concordia y la Naja. Una torre inaccesible al borde de un abismo, el abismo del dragón</description>
+<category>Paisajes entropicos</category>
+<pubDate>Tue, 9 Dec 2014 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>La torre de Rapunzel y el aliento del dragón</title>
+<link>www.imarquina.es/detail.html?gallery=105645b3c821310fcd8c2d6abd8f3b18&amp;photo=25</link>
+<description>El primer rascacielos de Bilbao, la estación de la Concordia y la Naja. Una torre inaccesible al borde de un abismo, el abismo del dragón</description>
+<category>En Getxoko Kultur Etxea (Torrene)</category>
+<pubDate>Tue, 9 Dec 2014 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Detrás del sirimi VIII</title>
+<link>www.imarquina.es/detail.html?gallery=5811fad7ab5db41e7d0e82dfa727a0d6&amp;photo=7</link>
+<description>El rascacielos de la Naja, de 1946 diseñado por los arquitectos José María Chapa y Manuel Ignacio Galíndez. El primer edificio que superó los 40 metros de altura en Bilbao</description>
+<category>Detras del sirimiri</category>
+<pubDate>Sun, 12 Apr 2015 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>ViewIR V</title>
+<link>www.imarquina.es/detail.html?gallery=a20aea03661af1f3fc17df594ca6d1c8&amp;photo=4</link>
+<description>Escenas de Sedano (Burgos)</description>
+<category>ViewIR</category>
+<pubDate>Sat, 22 Feb 2014 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>ViewIR VI</title>
+<link>www.imarquina.es/detail.html?gallery=a20aea03661af1f3fc17df594ca6d1c8&amp;photo=3</link>
+<description>Escenas de Sedano (Burgos)</description>
+<category>ViewIR</category>
+<pubDate>Mon, 17 Feb 2014 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>ViewIR III</title>
+<link>www.imarquina.es/detail.html?gallery=a20aea03661af1f3fc17df594ca6d1c8&amp;photo=2</link>
+<description>Escenas de Sedano (Burgos)</description>
+<category>ViewIR</category>
+<pubDate>Mon, 10 Feb 2014 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>De entretiempo</title>
+<link>www.imarquina.es/detail.html?gallery=97701138ebc753b25407ec1463e17129&amp;photo=0</link>
+<description>Alocado pensamiento de 4 estaciones sobre Nanclares de Gamboa en el embalse de Ullíbarri-Gamboa.</description>
+<category>De suenos</category>
+<pubDate>Sun, 9 Feb 2014 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>ViewIR I</title>
+<link>www.imarquina.es/detail.html?gallery=a20aea03661af1f3fc17df594ca6d1c8&amp;photo=0</link>
+<description>Edificio de la Plaza Euskadi de Bilbao.</description>
+<category>ViewIR</category>
+<pubDate>Sun, 19 Jan 2014 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>ViewIR II</title>
+<link>www.imarquina.es/detail.html?gallery=a20aea03661af1f3fc17df594ca6d1c8&amp;photo=1</link>
+<description>Torre de Iberdrola de la Plaza Euskadi de Bilbao.</description>
+<category>ViewIR</category>
+<pubDate>Sun, 19 Jan 2014 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Ilusiones entrópicas</title>
+<link>https://youtu.be/NrX-dZVDPOg</link>
+<description>Video realizado para la presentación de la exposición de BilboArgazki 2013 'Ilusiones entrópicas' en la FNAC</description>
+<category>Multimedia</category>
+<pubDate>Mon, 28 Oct 2013 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Presentación exposición BilboArgazki 2013 - FNAC</title>
+<link>www.imarquina.es/detail.html?gallery=5aded4174c419e6b5554a1991aa814b5&amp;photo=0</link>
+<description>Presentación exposición BilboArgazki 2013 - FNAC</description>
+<category>En BilboArgazki 2013 - FNAC</category>
+<pubDate>Sun, 15 Sep 2013 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Presentación exposición FTSI</title>
+<link>www.imarquina.es/detail.html?gallery=4c89cd348998c374e8d0924f21a568d2&amp;photo=0</link>
+<description>Presentación exposición FTSI</description>
+<category>En FTSI 2013</category>
+<pubDate>Thu, 4 Jul 2013 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Crepúsculo en el faro</title>
+<link>www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=25</link>
+<description>El edificio de la Torre de Iberdrola es un faro en sí misma. En un futuro diferente podría estar en un fururo cabo</description>
+<category>Paisajes entropicos</category>
+<pubDate>Sat, 16 Nov 2013 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Crepúsculo en el faro</title>
+<link>www.imarquina.es/detail.html?gallery=105645b3c821310fcd8c2d6abd8f3b18&amp;photo=24</link>
+<description>El edificio de la Torre de Iberdrola es un faro en sí misma. En un futuro diferente podría estar en un fururo cabo</description>
+<category>En Getxoko Kultur Etxea (Torrene)</category>
+<pubDate>Sat, 16 Nov 2013 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>El nido del fénix</title>
+<link>www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=24</link>
+<description>Edificio de la Unión y el Fenix del Arenal de Bilbao.</description>
+<category>Paisajes entropicos</category>
+<pubDate>Tue, 10 Sep 2013 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>El nido del fénix</title>
+<link>www.imarquina.es/detail.html?gallery=5aded4174c419e6b5554a1991aa814b5&amp;photo=16</link>
+<description>Edificio de la Unión y el Fenix del Arenal de Bilbao.</description>
+<category>En BilboArgazki 2013 - FNAC</category>
+<pubDate>Tue, 10 Sep 2013 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>El nido del fénix</title>
+<link>www.imarquina.es/detail.html?gallery=105645b3c821310fcd8c2d6abd8f3b18&amp;photo=23</link>
+<description>Edificio de la Unión y el Fenix del Arenal de Bilbao.</description>
+<category>En Getxoko Kultur Etxea (Torrene)</category>
+<pubDate>Tue, 10 Sep 2013 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>La fuente del saber</title>
+<link>www.imarquina.es/detail.html?gallery=97701138ebc753b25407ec1463e17129&amp;photo=18</link>
+<description>No sé qué hay más allá de ese sitio donde nacen las ideas y el conocimiento. Algún día ...</description>
+<category>De suenos</category>
+<pubDate>Thu, 30 May 2013 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>El árbol de la vida</title>
+<link>www.imarquina.es/detail.html?gallery=97701138ebc753b25407ec1463e17129&amp;photo=17</link>
+<description>Basado en una idea de la película Más allá de los sueños (1998)</description>
+<category>De suenos</category>
+<pubDate>Wed, 15 May 2013 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>La noche de la araña</title>
+<link>www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=23</link>
+<description>Mamam de Louise Bourgeois en la cueva de Zugarramurdi</description>
+<category>Paisajes entropicos</category>
+<pubDate>Tue, 10 Sep 2013 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>La noche de la araña</title>
+<link>www.imarquina.es/detail.html?gallery=5aded4174c419e6b5554a1991aa814b5&amp;photo=13</link>
+<description>Mamam de Louise Bourgeois en la cueva de Zugarramurdi</description>
+<category>En BilboArgazki 2013 - FNAC</category>
+<pubDate>Tue, 10 Sep 2013 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>La noche de la araña</title>
+<link>www.imarquina.es/detail.html?gallery=105645b3c821310fcd8c2d6abd8f3b18&amp;photo=22</link>
+<description>Mamam de Louise Bourgeois en la cueva de Zugarramurdi</description>
+<category>En Getxoko Kultur Etxea (Torrene)</category>
+<pubDate>Tue, 10 Sep 2013 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Velando el bosque</title>
+<link>www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=22</link>
+<description>Destino del emblemático tigre que culmina el emblemático edificio conocido con el mismo nombre en Bilbao</description>
+<category>Paisajes entropicos</category>
+<pubDate>Tue, 10 Sep 2013 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Velando el bosque</title>
+<link>www.imarquina.es/detail.html?gallery=5aded4174c419e6b5554a1991aa814b5&amp;photo=7</link>
+<description>Destino del emblemático tigre que culmina el emblemático edificio conocido con el mismo nombre en Bilbao</description>
+<category>En BilboArgazki 2013 - FNAC</category>
+<pubDate>Tue, 10 Sep 2013 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Velando el bosque</title>
+<link>www.imarquina.es/detail.html?gallery=105645b3c821310fcd8c2d6abd8f3b18&amp;photo=21</link>
+<description>Destino del emblemático tigre que culmina el emblemático edificio conocido con el mismo nombre en Bilbao</description>
+<category>En Getxoko Kultur Etxea (Torrene)</category>
+<pubDate>Tue, 10 Sep 2013 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Camino a la eternidad</title>
+<link>www.imarquina.es/detail.html?gallery=97701138ebc753b25407ec1463e17129&amp;photo=7</link>
+<description>Un hombre frente a la entrada del Ascensor de Begoña.</description>
+<category>De suenos</category>
+<pubDate>Sun, 17 Mar 2013 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>La casa Batlló XV</title>
+<link>www.imarquina.es/detail.html?gallery=e88f9ccad8d3ee2a7f0766312e6eeb17&amp;photo=14</link>
+<description>La casa Batlló de Antonio Gaudí</description>
+<category>La casa Batlló: arquitectura onírica</category>
+<pubDate>Mon, 18 Feb 2013 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>La casa Batlló XVI</title>
+<link>www.imarquina.es/detail.html?gallery=e88f9ccad8d3ee2a7f0766312e6eeb17&amp;photo=15</link>
+<description>La casa Batlló de Antonio Gaudí</description>
+<category>La casa Batlló: arquitectura onírica</category>
+<pubDate>Mon, 18 Feb 2013 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>La casa Batlló XVII</title>
+<link>www.imarquina.es/detail.html?gallery=e88f9ccad8d3ee2a7f0766312e6eeb17&amp;photo=16</link>
+<description>La casa Batlló de Antonio Gaudí</description>
+<category>La casa Batlló: arquitectura onírica</category>
+<pubDate>Wed, 20 Feb 2013 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>La casa Batlló XVIII</title>
+<link>www.imarquina.es/detail.html?gallery=e88f9ccad8d3ee2a7f0766312e6eeb17&amp;photo=17</link>
+<description>La casa Batlló de Antonio Gaudí</description>
+<category>La casa Batlló: arquitectura onírica</category>
+<pubDate>Wed, 20 Feb 2013 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>La casa Batlló XIX</title>
+<link>www.imarquina.es/detail.html?gallery=e88f9ccad8d3ee2a7f0766312e6eeb17&amp;photo=18</link>
+<description>La casa Batlló de Antonio Gaudí</description>
+<category>La casa Batlló: arquitectura onírica</category>
+<pubDate>Wed, 20 Feb 2013 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>La casa Batlló XI</title>
+<link>www.imarquina.es/detail.html?gallery=e88f9ccad8d3ee2a7f0766312e6eeb17&amp;photo=10</link>
+<description>La casa Batlló de Antonio Gaudí</description>
+<category>La casa Batlló: arquitectura onírica</category>
+<pubDate>Sat, 16 Feb 2013 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>La casa Batlló XII</title>
+<link>www.imarquina.es/detail.html?gallery=e88f9ccad8d3ee2a7f0766312e6eeb17&amp;photo=11</link>
+<description>La casa Batlló de Antonio Gaudí</description>
+<category>La casa Batlló: arquitectura onírica</category>
+<pubDate>Sat, 16 Feb 2013 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>La casa Batlló XIII</title>
+<link>www.imarquina.es/detail.html?gallery=e88f9ccad8d3ee2a7f0766312e6eeb17&amp;photo=12</link>
+<description>La casa Batlló de Antonio Gaudí</description>
+<category>La casa Batlló: arquitectura onírica</category>
+<pubDate>Mon, 18 Feb 2013 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>La casa Batlló XIV</title>
+<link>www.imarquina.es/detail.html?gallery=e88f9ccad8d3ee2a7f0766312e6eeb17&amp;photo=13</link>
+<description>La casa Batlló de Antonio Gaudí</description>
+<category>La casa Batlló: arquitectura onírica</category>
+<pubDate>Mon, 18 Feb 2013 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>La casa Batlló VIII</title>
+<link>www.imarquina.es/detail.html?gallery=e88f9ccad8d3ee2a7f0766312e6eeb17&amp;photo=7</link>
+<description>La casa Batlló de Antonio Gaudí</description>
+<category>La casa Batlló: arquitectura onírica</category>
+<pubDate>Thu, 14 Feb 2013 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>La casa Batlló IX</title>
+<link>www.imarquina.es/detail.html?gallery=e88f9ccad8d3ee2a7f0766312e6eeb17&amp;photo=8</link>
+<description>La casa Batlló de Antonio Gaudí</description>
+<category>La casa Batlló: arquitectura onírica</category>
+<pubDate>Thu, 14 Feb 2013 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>La casa Batlló X</title>
+<link>www.imarquina.es/detail.html?gallery=e88f9ccad8d3ee2a7f0766312e6eeb17&amp;photo=9</link>
+<description>La casa Batlló de Antonio Gaudí</description>
+<category>La casa Batlló: arquitectura onírica</category>
+<pubDate>Sat, 16 Feb 2013 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>La casa Batlló VII</title>
+<link>www.imarquina.es/detail.html?gallery=e88f9ccad8d3ee2a7f0766312e6eeb17&amp;photo=6</link>
+<description>La casa Batlló de Antonio Gaudí</description>
+<category>La casa Batlló: arquitectura onírica</category>
+<pubDate>Thu, 14 Feb 2013 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>La casa Batlló VI</title>
+<link>www.imarquina.es/detail.html?gallery=e88f9ccad8d3ee2a7f0766312e6eeb17&amp;photo=5</link>
+<description>La casa Batlló de Antonio Gaudí</description>
+<category>La casa Batlló: arquitectura onírica</category>
+<pubDate>Tue, 12 Feb 2013 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>La casa Batlló V</title>
+<link>www.imarquina.es/detail.html?gallery=e88f9ccad8d3ee2a7f0766312e6eeb17&amp;photo=4</link>
+<description>La casa Batlló de Antonio Gaudí</description>
+<category>La casa Batlló: arquitectura onírica</category>
+<pubDate>Tue, 12 Feb 2013 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>La casa Batlló IV</title>
+<link>www.imarquina.es/detail.html?gallery=e88f9ccad8d3ee2a7f0766312e6eeb17&amp;photo=3</link>
+<description>La casa Batlló de Antonio Gaudí</description>
+<category>La casa Batlló: arquitectura onírica</category>
+<pubDate>Tue, 12 Feb 2013 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>La casa Batlló II</title>
+<link>www.imarquina.es/detail.html?gallery=e88f9ccad8d3ee2a7f0766312e6eeb17&amp;photo=1</link>
+<description>La casa Batlló de Antonio Gaudí</description>
+<category>La casa Batlló: arquitectura onírica</category>
+<pubDate>Sun, 10 Feb 2013 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>La casa Batlló III</title>
+<link>www.imarquina.es/detail.html?gallery=e88f9ccad8d3ee2a7f0766312e6eeb17&amp;photo=2</link>
+<description>La casa Batlló de Antonio Gaudí</description>
+<category>La casa Batlló: arquitectura onírica</category>
+<pubDate>Sun, 10 Feb 2013 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>La casa Batlló I</title>
+<link>www.imarquina.es/detail.html?gallery=e88f9ccad8d3ee2a7f0766312e6eeb17&amp;photo=0</link>
+<description>La casa Batlló de Antonio Gaudí</description>
+<category>La casa Batlló: arquitectura onírica</category>
+<pubDate>Sun, 10 Feb 2013 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>MB el Área 51 I</title>
+<link>www.imarquina.es/detail.html?gallery=6c873945e51f011379742ee8659f1fde&amp;photo=0</link>
+<description>Interior de la estación de Renfe en Miribilla</description>
+<category>Miribilla: el Área 51</category>
+<pubDate>Mon, 7 Jan 2013 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>MB el Área 51 II</title>
+<link>www.imarquina.es/detail.html?gallery=6c873945e51f011379742ee8659f1fde&amp;photo=1</link>
+<description>Interior de la estación de Renfe en Miribilla</description>
+<category>Miribilla: el Área 51</category>
+<pubDate>Mon, 7 Jan 2013 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>MB el Área 51 III</title>
+<link>www.imarquina.es/detail.html?gallery=6c873945e51f011379742ee8659f1fde&amp;photo=2</link>
+<description>Interior de la estación de Renfe en Miribilla</description>
+<category>Miribilla: el Área 51</category>
+<pubDate>Mon, 7 Jan 2013 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>MB el Área 51 IV</title>
+<link>www.imarquina.es/detail.html?gallery=6c873945e51f011379742ee8659f1fde&amp;photo=3</link>
+<description>Interior de la estación de Renfe en Miribilla</description>
+<category>Miribilla: el Área 51</category>
+<pubDate>Sun, 13 Jan 2013 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>MB el Área 51 V</title>
+<link>www.imarquina.es/detail.html?gallery=6c873945e51f011379742ee8659f1fde&amp;photo=4</link>
+<description>Interior de la estación de Renfe en Miribilla</description>
+<category>Miribilla: el Área 51</category>
+<pubDate>Sun, 13 Jan 2013 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>MB el Área 51 VI</title>
+<link>www.imarquina.es/detail.html?gallery=6c873945e51f011379742ee8659f1fde&amp;photo=5</link>
+<description>Interior de la estación de Renfe en Miribilla</description>
+<category>Miribilla: el Área 51</category>
+<pubDate>Sun, 13 Jan 2013 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>MB el Área 51 VII</title>
+<link>www.imarquina.es/detail.html?gallery=6c873945e51f011379742ee8659f1fde&amp;photo=6</link>
+<description>Interior de la estación de Renfe en Miribilla</description>
+<category>Miribilla: el Área 51</category>
+<pubDate>Sun, 13 Jan 2013 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>MB el Área 51 VIII</title>
+<link>www.imarquina.es/detail.html?gallery=6c873945e51f011379742ee8659f1fde&amp;photo=7</link>
+<description>Interior de la estación de Renfe en Miribilla</description>
+<category>Miribilla: el Área 51</category>
+<pubDate>Sun, 13 Jan 2013 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>MB el Área 51 IX</title>
+<link>www.imarquina.es/detail.html?gallery=6c873945e51f011379742ee8659f1fde&amp;photo=8</link>
+<description>Interior de la estación de Renfe en Miribilla</description>
+<category>Miribilla: el Área 51</category>
+<pubDate>Sun, 13 Jan 2013 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>MB el Área 51 X</title>
+<link>www.imarquina.es/detail.html?gallery=6c873945e51f011379742ee8659f1fde&amp;photo=9</link>
+<description>Interior de la estación de Renfe en Miribilla</description>
+<category>Miribilla: el Área 51</category>
+<pubDate>Sun, 13 Jan 2013 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>MB el Área 51 XI</title>
+<link>www.imarquina.es/detail.html?gallery=6c873945e51f011379742ee8659f1fde&amp;photo=10</link>
+<description>Interior de la estación de Renfe en Miribilla</description>
+<category>Miribilla: el Área 51</category>
+<pubDate>Sun, 13 Jan 2013 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>MB el Área 51 XII</title>
+<link>www.imarquina.es/detail.html?gallery=6c873945e51f011379742ee8659f1fde&amp;photo=11</link>
+<description>Interior de la estación de Renfe en Miribilla</description>
+<category>Miribilla: el Área 51</category>
+<pubDate>Sun, 13 Jan 2013 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Lunático</title>
+<link>www.imarquina.es/detail.html?gallery=d0692fb68700ba495d8117ea3fdc4daf&amp;photo=0</link>
+<description>Pescador en la playa de Sonabia de Cantabria.</description>
+<category>De agua</category>
+<pubDate>Thu, 1 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Señales</title>
+<link>www.imarquina.es/detail.html?gallery=d0692fb68700ba495d8117ea3fdc4daf&amp;photo=2</link>
+<description>Sombra de la escultura de Oteiza del Ayuntamiento de Bilbao.</description>
+<category>De agua</category>
+<pubDate>Thu, 1 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>No mires atrás</title>
+<link>www.imarquina.es/detail.html?gallery=d0692fb68700ba495d8117ea3fdc4daf&amp;photo=6</link>
+<description>Paseante con el Guggenheim al fondo.</description>
+<category>De agua</category>
+<pubDate>Thu, 1 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>El multiverso de Kapoor</title>
+<link>www.imarquina.es/detail.html?gallery=e47d6979a642c3e2b0c40b10a78c422c&amp;photo=4</link>
+<description>Sobre la escultura El gran árbol y el ojo de Anish Kapoor del Guggenheim.</description>
+<category>Monocromatico</category>
+<pubDate>Sun, 26 Aug 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Naturalez muerta</title>
+<link>www.imarquina.es/detail.html?gallery=2ecaf3cddb905238eb48ad53291f4e89&amp;photo=4</link>
+<description>Improvisado bodegón en un hayedo de Burgos.</description>
+<category>De aire</category>
+<pubDate>Wed, 8 Aug 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>La otra Curiosidad</title>
+<link>www.imarquina.es/detail.html?gallery=97701138ebc753b25407ec1463e17129&amp;photo=16</link>
+<description>Homenaje surrealista sobre la llegada del vehículo Curiosity a Marte.</description>
+<category>De suenos</category>
+<pubDate>Sun, 23 Sep 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Superviviente de las tierras altas</title>
+<link>www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=20</link>
+<description>El Palacio de Santa Clara domina las vistas de Algorta a la bahía.</description>
+<category>Paisajes entropicos</category>
+<pubDate>Sun, 11 Nov 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Superviviente de las tierras altas</title>
+<link>www.imarquina.es/detail.html?gallery=4c89cd348998c374e8d0924f21a568d2&amp;photo=11</link>
+<description>El Palacio de Santa Clara domina las vistas de Algorta a la bahía.</description>
+<category>En FTSI 2013</category>
+<pubDate>Sun, 11 Nov 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Superviviente de las tierras altas</title>
+<link>www.imarquina.es/detail.html?gallery=105645b3c821310fcd8c2d6abd8f3b18&amp;photo=19</link>
+<description>El Palacio de Santa Clara domina las vistas de Algorta a la bahía.</description>
+<category>En Getxoko Kultur Etxea (Torrene)</category>
+<pubDate>Sun, 11 Nov 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>El último naufragio</title>
+<link>www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=21</link>
+<description>Emblemático edificio de Getxo conocido como La Casa de naúfragos.</description>
+<category>Paisajes entropicos</category>
+<pubDate>Wed, 21 Nov 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>El último naufragio</title>
+<link>www.imarquina.es/detail.html?gallery=4c89cd348998c374e8d0924f21a568d2&amp;photo=12</link>
+<description>Emblemático edificio de Getxo conocido como La Casa de naúfragos.</description>
+<category>En FTSI 2013</category>
+<pubDate>Wed, 21 Nov 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>El último naufragio</title>
+<link>www.imarquina.es/detail.html?gallery=105645b3c821310fcd8c2d6abd8f3b18&amp;photo=20</link>
+<description>Emblemático edificio de Getxo conocido como La Casa de naúfragos.</description>
+<category>En Getxoko Kultur Etxea (Torrene)</category>
+<pubDate>Wed, 21 Nov 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Tras el tiempo de dragones</title>
+<link>www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=19</link>
+<description>La Casa Cisco forma parte de las características edificaciones del paseo de la bahía de Getxo.</description>
+<category>Paisajes entropicos</category>
+<pubDate>Fri, 7 Sep 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Tras el tiempo de dragones</title>
+<link>www.imarquina.es/detail.html?gallery=5aded4174c419e6b5554a1991aa814b5&amp;photo=9</link>
+<description>La Casa Cisco forma parte de las características edificaciones del paseo de la bahía de Getxo.</description>
+<category>En BilboArgazki 2013 - FNAC</category>
+<pubDate>Fri, 7 Sep 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Tras el tiempo de dragones</title>
+<link>www.imarquina.es/detail.html?gallery=105645b3c821310fcd8c2d6abd8f3b18&amp;photo=18</link>
+<description>La Casa Cisco forma parte de las características edificaciones del paseo de la bahía de Getxo.</description>
+<category>En Getxoko Kultur Etxea (Torrene)</category>
+<pubDate>Fri, 7 Sep 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>En un lugar sobre el arco iris</title>
+<link>www.imarquina.es/detail.html?gallery=97701138ebc753b25407ec1463e17129&amp;photo=2</link>
+<description>'Fosteritos de MetroBilbao sobre campo de amapolas y más cosas.</description>
+<category>De suenos</category>
+<pubDate>Sat, 4 Aug 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Mare Tranquillitatis</title>
+<link>www.imarquina.es/detail.html?gallery=97701138ebc753b25407ec1463e17129&amp;photo=15</link>
+<description>Homenaje surrealista sobre la llegada de N. Amstrong y su equipo a la Luna.</description>
+<category>De suenos</category>
+<pubDate>Sat, 4 Aug 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Vidrios templados</title>
+<link>www.imarquina.es/detail.html?gallery=fd32b9a2c5650dd4544072884bff3605&amp;photo=4</link>
+<description>Detalle de la Plaza Circular de Bilbao, sobre el edificio del BBVA y un 'fotsterito' de MetroBilbao.</description>
+<category>Policromatico</category>
+<pubDate>Thu, 1 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>La ciudad de los hombres llovientes IV</title>
+<link>www.imarquina.es/detail.html?gallery=97701138ebc753b25407ec1463e17129&amp;photo=11</link>
+<description>Composición sobre toma aérea por encima de los 2000 pies y Torre de Iberdrola.</description>
+<category>De suenos</category>
+<pubDate>Sun, 8 Jul 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>El bosque de Mizar</title>
+<link>www.imarquina.es/detail.html?gallery=97701138ebc753b25407ec1463e17129&amp;photo=1</link>
+<description>Escena sobres los mitos y leyendas del corazón del bosque.</description>
+<category>De suenos</category>
+<pubDate>Fri, 8 Jun 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>En el mal trato de las olas</title>
+<link>www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=18</link>
+<description>Edificio de la antigua Alhondiga, en el centro de Bilbao.</description>
+<category>Paisajes entropicos</category>
+<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>En el mal trato de las olas</title>
+<link>www.imarquina.es/detail.html?gallery=4c89cd348998c374e8d0924f21a568d2&amp;photo=10</link>
+<description>Edificio de la antigua Alhondiga, en el centro de Bilbao.</description>
+<category>En FTSI 2013</category>
+<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>En el mal trato de las olas</title>
+<link>www.imarquina.es/detail.html?gallery=5aded4174c419e6b5554a1991aa814b5&amp;photo=8</link>
+<description>Edificio de la antigua Alhondiga, en el centro de Bilbao.</description>
+<category>En BilboArgazki 2013 - FNAC</category>
+<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>En el mal trato de las olas</title>
+<link>www.imarquina.es/detail.html?gallery=105645b3c821310fcd8c2d6abd8f3b18&amp;photo=17</link>
+<description>Edificio de la antigua Alhondiga, en el centro de Bilbao.</description>
+<category>En Getxoko Kultur Etxea (Torrene)</category>
+<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>El enroque de la torre</title>
+<link>www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=17</link>
+<description>El edificio de la Torre de Iberdrola muestra una desproporcional vertical respecto a Bilbao que en pocos años será menos apreciable. Y en algunos más, inexistente</description>
+<category>Paisajes entropicos</category>
+<pubDate>Fri, 18 May 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>El enroque de la torre</title>
+<link>www.imarquina.es/detail.html?gallery=105645b3c821310fcd8c2d6abd8f3b18&amp;photo=16</link>
+<description>El edificio de la Torre de Iberdrola muestra una desproporcional vertical respecto a Bilbao que en pocos años será menos apreciable. Y en algunos más, inexistente</description>
+<category>En Getxoko Kultur Etxea (Torrene)</category>
+<pubDate>Fri, 18 May 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Enhebrando el paisaje</title>
+<link>www.imarquina.es/detail.html?gallery=2ecaf3cddb905238eb48ad53291f4e89&amp;photo=3</link>
+<description>Las caprichosas formas de las construcciones ruinosas. Lorilla, Sargentes de la Lora, Burgos</description>
+<category>De aire</category>
+<pubDate>Wed, 9 May 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>En el corazón del bosque</title>
+<link>www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=16</link>
+<description>Edificio de la nueva sede de Osakidetza en el centro de Bilbao. Proyecto de Coll-Barreu Arquitectos.</description>
+<category>Paisajes entropicos</category>
+<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>En el corazón del bosque</title>
+<link>www.imarquina.es/detail.html?gallery=4c89cd348998c374e8d0924f21a568d2&amp;photo=9</link>
+<description>Edificio de la nueva sede de Osakidetza en el centro de Bilbao. Proyecto de Coll-Barreu Arquitectos.</description>
+<category>En FTSI 2013</category>
+<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>En el corazón del bosque</title>
+<link>www.imarquina.es/detail.html?gallery=105645b3c821310fcd8c2d6abd8f3b18&amp;photo=15</link>
+<description>Edificio de la nueva sede de Osakidetza en el centro de Bilbao. Proyecto de Coll-Barreu Arquitectos.</description>
+<category>En Getxoko Kultur Etxea (Torrene)</category>
+<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>En la aurora de otro tiempo</title>
+<link>www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=15</link>
+<description>Casa en la esquina entre Hurtado de Amézaga e Iturriza. De Enrique Epalza y Chanfreau es de estilo modernista.</description>
+<category>Paisajes entropicos</category>
+<pubDate>Sun, 6 May 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>En la aurora de otro tiempo</title>
+<link>www.imarquina.es/detail.html?gallery=5aded4174c419e6b5554a1991aa814b5&amp;photo=14</link>
+<description>Casa en la esquina entre Hurtado de Amézaga e Iturriza. De Enrique Epalza y Chanfreau es de estilo modernista.</description>
+<category>En BilboArgazki 2013 - FNAC</category>
+<pubDate>Sun, 6 May 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>En la aurora de otro tiempo</title>
+<link>www.imarquina.es/detail.html?gallery=105645b3c821310fcd8c2d6abd8f3b18&amp;photo=14</link>
+<description>Casa en la esquina entre Hurtado de Amézaga e Iturriza. De Enrique Epalza y Chanfreau es de estilo modernista.</description>
+<category>En Getxoko Kultur Etxea (Torrene)</category>
+<pubDate>Sun, 6 May 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Presentación exposición FTSI</title>
+<link>www.imarquina.es/detail.html?gallery=3dfb3e6fc6b70c756a79f07cdf8d11bf&amp;photo=0</link>
+<description>Presentación exposición FTSI</description>
+<category>En FTSI 2012</category>
+<pubDate>Mon, 5 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Más allá de los sueños</title>
+<link>www.imarquina.es/detail.html?gallery=97701138ebc753b25407ec1463e17129&amp;photo=3</link>
+<description>Homenaje sobre el protector de pantalla 'Flying Toasters' sobre el Cañón del Río Ebro.</description>
+<category>De suenos</category>
+<pubDate>Fri, 16 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>All iron I</title>
+<link>www.imarquina.es/detail.html?gallery=3dfb3e6fc6b70c756a79f07cdf8d11bf&amp;photo=18</link>
+<description>All iron I</description>
+<category>En FTSI 2012</category>
+<pubDate>Mon, 5 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>All iron II</title>
+<link>www.imarquina.es/detail.html?gallery=3dfb3e6fc6b70c756a79f07cdf8d11bf&amp;photo=19</link>
+<description>All iron II</description>
+<category>En FTSI 2012</category>
+<pubDate>Mon, 5 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>All iron III</title>
+<link>www.imarquina.es/detail.html?gallery=3dfb3e6fc6b70c756a79f07cdf8d11bf&amp;photo=20</link>
+<description>All iron III</description>
+<category>En FTSI 2012</category>
+<pubDate>Mon, 5 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>All iron IV</title>
+<link>www.imarquina.es/detail.html?gallery=3dfb3e6fc6b70c756a79f07cdf8d11bf&amp;photo=21</link>
+<description>All iron IV</description>
+<category>En FTSI 2012</category>
+<pubDate>Mon, 5 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>All iron V</title>
+<link>www.imarquina.es/detail.html?gallery=3dfb3e6fc6b70c756a79f07cdf8d11bf&amp;photo=22</link>
+<description>All iron V</description>
+<category>En FTSI 2012</category>
+<pubDate>Mon, 5 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>All iron VI</title>
+<link>www.imarquina.es/detail.html?gallery=3dfb3e6fc6b70c756a79f07cdf8d11bf&amp;photo=23</link>
+<description>All iron VI</description>
+<category>En FTSI 2012</category>
+<pubDate>Mon, 5 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>La ciudad de los hombres llovientes II</title>
+<link>www.imarquina.es/detail.html?gallery=97701138ebc753b25407ec1463e17129&amp;photo=9</link>
+<description>Vista panorámica del Guggenheim y Abandoibarra desde el Puente de la Salve.</description>
+<category>De suenos</category>
+<pubDate>Thu, 1 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Dos en la parábola</title>
+<link>www.imarquina.es/detail.html?gallery=d0692fb68700ba495d8117ea3fdc4daf&amp;photo=8</link>
+<description>Contrapicado del estanque posterior del Guggenheim desde el Puente de La Salve.</description>
+<category>De agua</category>
+<pubDate>Thu, 1 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>La musa escondida</title>
+<link>www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=14</link>
+<description>Escultura homenaje al músico Juan Crisóstomo de Arriaga que permanecía escondida por su desnudez tras escandalizar a la sociedad bilbaina de posguerra.</description>
+<category>Paisajes entropicos</category>
+<pubDate>Thu, 1 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>La ciudad de los hombres llovientes III</title>
+<link>www.imarquina.es/detail.html?gallery=97701138ebc753b25407ec1463e17129&amp;photo=10</link>
+<description>Vista panorámica del Guggenheim y Abandoibarra desde el Puente de la Salve.</description>
+<category>De suenos</category>
+<pubDate>Thu, 1 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>En la intersección de planos</title>
+<link>www.imarquina.es/detail.html?gallery=d0692fb68700ba495d8117ea3fdc4daf&amp;photo=7</link>
+<description>Jovenes descansando a la sombra del Guggenheim.</description>
+<category>De agua</category>
+<pubDate>Thu, 1 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Después de la tormenta</title>
+<link>www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=13</link>
+<description>El edificio del Ayuntamiento de Bilbao está situado en el solar que antes ocupaba el Convento de San Agustín, derruido en la Primera Guerra Carlista.</description>
+<category>Paisajes entropicos</category>
+<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Después de la tormenta</title>
+<link>www.imarquina.es/detail.html?gallery=4c89cd348998c374e8d0924f21a568d2&amp;photo=8</link>
+<description>El edificio del Ayuntamiento de Bilbao está situado en el solar que antes ocupaba el Convento de San Agustín, derruido en la Primera Guerra Carlista.</description>
+<category>En FTSI 2013</category>
+<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Después de la tormenta</title>
+<link>www.imarquina.es/detail.html?gallery=5aded4174c419e6b5554a1991aa814b5&amp;photo=12</link>
+<description>El edificio del Ayuntamiento de Bilbao está situado en el solar que antes ocupaba el Convento de San Agustín, derruido en la Primera Guerra Carlista.</description>
+<category>En BilboArgazki 2013 - FNAC</category>
+<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Después de la tormenta</title>
+<link>www.imarquina.es/detail.html?gallery=105645b3c821310fcd8c2d6abd8f3b18&amp;photo=13</link>
+<description>El edificio del Ayuntamiento de Bilbao está situado en el solar que antes ocupaba el Convento de San Agustín, derruido en la Primera Guerra Carlista.</description>
+<category>En Getxoko Kultur Etxea (Torrene)</category>
+<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>El palacio de las corrientes de aire</title>
+<link>www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=12</link>
+<description>El Palacio de la Diputación marca el punto álgido del eclecticismo en Bizkaia. Poco después de terminarse la corriente modernista se abriría paso en los nuevos proyectos.</description>
+<category>Paisajes entropicos</category>
+<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>El palacio de las corrientes de aire</title>
+<link>www.imarquina.es/detail.html?gallery=4c89cd348998c374e8d0924f21a568d2&amp;photo=7</link>
+<description>El Palacio de la Diputación marca el punto álgido del eclecticismo en Bizkaia. Poco después de terminarse la corriente modernista se abriría paso en los nuevos proyectos.</description>
+<category>En FTSI 2013</category>
+<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>El palacio de las corrientes de aire</title>
+<link>www.imarquina.es/detail.html?gallery=5aded4174c419e6b5554a1991aa814b5&amp;photo=17</link>
+<description>El Palacio de la Diputación marca el punto álgido del eclecticismo en Bizkaia. Poco después de terminarse la corriente modernista se abriría paso en los nuevos proyectos.</description>
+<category>En BilboArgazki 2013 - FNAC</category>
+<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>El palacio de las corrientes de aire</title>
+<link>www.imarquina.es/detail.html?gallery=105645b3c821310fcd8c2d6abd8f3b18&amp;photo=12</link>
+<description>El Palacio de la Diputación marca el punto álgido del eclecticismo en Bizkaia. Poco después de terminarse la corriente modernista se abriría paso en los nuevos proyectos.</description>
+<category>En Getxoko Kultur Etxea (Torrene)</category>
+<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>El nido del águila</title>
+<link>www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=11</link>
+<description>Las Torres de Isozaki se han edificado sobre el antiguo solar del Depósito Franco de Bilbao.</description>
+<category>Paisajes entropicos</category>
+<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>El nido del águila</title>
+<link>www.imarquina.es/detail.html?gallery=4c89cd348998c374e8d0924f21a568d2&amp;photo=6</link>
+<description>Las Torres de Isozaki se han edificado sobre el antiguo solar del Depósito Franco de Bilbao.</description>
+<category>En FTSI 2013</category>
+<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>El nido del águila</title>
+<link>www.imarquina.es/detail.html?gallery=5aded4174c419e6b5554a1991aa814b5&amp;photo=6</link>
+<description>Las Torres de Isozaki se han edificado sobre el antiguo solar del Depósito Franco de Bilbao.</description>
+<category>En BilboArgazki 2013 - FNAC</category>
+<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>El nido del águila</title>
+<link>www.imarquina.es/detail.html?gallery=105645b3c821310fcd8c2d6abd8f3b18&amp;photo=11</link>
+<description>Las Torres de Isozaki se han edificado sobre el antiguo solar del Depósito Franco de Bilbao.</description>
+<category>En Getxoko Kultur Etxea (Torrene)</category>
+<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Trascender a tu tiempo</title>
+<link>www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=10</link>
+<description>Alto horno de antigua acería de Altos Hornos de Vizcaya.</description>
+<category>Paisajes entropicos</category>
+<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Trascender a tu tiempo</title>
+<link>www.imarquina.es/detail.html?gallery=3dfb3e6fc6b70c756a79f07cdf8d11bf&amp;photo=17</link>
+<description>Alto horno de antigua acería de Altos Hornos de Vizcaya.</description>
+<category>En FTSI 2012</category>
+<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Trascender a tu tiempo</title>
+<link>www.imarquina.es/detail.html?gallery=4c89cd348998c374e8d0924f21a568d2&amp;photo=5</link>
+<description>Alto horno de antigua acería de Altos Hornos de Vizcaya.</description>
+<category>En FTSI 2013</category>
+<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Trascender a tu tiempo</title>
+<link>www.imarquina.es/detail.html?gallery=5aded4174c419e6b5554a1991aa814b5&amp;photo=18</link>
+<description>Alto horno de antigua acería de Altos Hornos de Vizcaya.</description>
+<category>En BilboArgazki 2013 - FNAC</category>
+<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Trascender a tu tiempo</title>
+<link>www.imarquina.es/detail.html?gallery=105645b3c821310fcd8c2d6abd8f3b18&amp;photo=10</link>
+<description>Alto horno de antigua acería de Altos Hornos de Vizcaya.</description>
+<category>En Getxoko Kultur Etxea (Torrene)</category>
+<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Al otro lado</title>
+<link>www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=9</link>
+<description>Puente sobre el río Galindo de Javier Manterola, y pequeña casa al borde de antigua carretera que unía Barakaldo y Sestao.</description>
+<category>Paisajes entropicos</category>
+<pubDate>Mon, 5 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Al otro lado</title>
+<link>www.imarquina.es/detail.html?gallery=3dfb3e6fc6b70c756a79f07cdf8d11bf&amp;photo=16</link>
+<description>Puente sobre el río Galindo de Javier Manterola, y pequeña casa al borde de antigua carretera que unía Barakaldo y Sestao.</description>
+<category>En FTSI 2012</category>
+<pubDate>Mon, 5 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Al otro lado</title>
+<link>www.imarquina.es/detail.html?gallery=4c89cd348998c374e8d0924f21a568d2&amp;photo=4</link>
+<description>Puente sobre el río Galindo de Javier Manterola, y pequeña casa al borde de antigua carretera que unía Barakaldo y Sestao.</description>
+<category>En FTSI 2013</category>
+<pubDate>Mon, 5 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Al otro lado</title>
+<link>www.imarquina.es/detail.html?gallery=105645b3c821310fcd8c2d6abd8f3b18&amp;photo=9</link>
+<description>Puente sobre el río Galindo de Javier Manterola, y pequeña casa al borde de antigua carretera que unía Barakaldo y Sestao.</description>
+<category>En Getxoko Kultur Etxea (Torrene)</category>
+<pubDate>Mon, 5 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Al compás de las olas</title>
+<link>www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=8</link>
+<description>Teatro Arriaga situado en El Arenal bilbaíno.</description>
+<category>Paisajes entropicos</category>
+<pubDate>Mon, 5 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Al compás de las olas</title>
+<link>www.imarquina.es/detail.html?gallery=3dfb3e6fc6b70c756a79f07cdf8d11bf&amp;photo=15</link>
+<description>Teatro Arriaga situado en El Arenal bilbaíno.</description>
+<category>En FTSI 2012</category>
+<pubDate>Mon, 5 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Al compás de las olas</title>
+<link>www.imarquina.es/detail.html?gallery=5aded4174c419e6b5554a1991aa814b5&amp;photo=15</link>
+<description>Teatro Arriaga situado en El Arenal bilbaíno.</description>
+<category>En BilboArgazki 2013 - FNAC</category>
+<pubDate>Mon, 5 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Al compás de las olas</title>
+<link>www.imarquina.es/detail.html?gallery=105645b3c821310fcd8c2d6abd8f3b18&amp;photo=8</link>
+<description>Teatro Arriaga situado en El Arenal bilbaíno.</description>
+<category>En Getxoko Kultur Etxea (Torrene)</category>
+<pubDate>Mon, 5 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Mañana en la desembocadura</title>
+<link>www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=6</link>
+<description>Puente de Vizcaya o Puente Colgante. Une las orillas de Portugalete y Getxo por encima de la ría.</description>
+<category>Paisajes entropicos</category>
+<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Mañana en la desembocadura</title>
+<link>www.imarquina.es/detail.html?gallery=3dfb3e6fc6b70c756a79f07cdf8d11bf&amp;photo=13</link>
+<description>Puente de Vizcaya o Puente Colgante. Une las orillas de Portugalete y Getxo por encima de la ría.</description>
+<category>En FTSI 2012</category>
+<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Mañana en la desembocadura</title>
+<link>www.imarquina.es/detail.html?gallery=4c89cd348998c374e8d0924f21a568d2&amp;photo=3</link>
+<description>Puente de Vizcaya o Puente Colgante. Une las orillas de Portugalete y Getxo por encima de la ría.</description>
+<category>En FTSI 2013</category>
+<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Mañana en la desembocadura</title>
+<link>www.imarquina.es/detail.html?gallery=5aded4174c419e6b5554a1991aa814b5&amp;photo=5</link>
+<description>Puente de Vizcaya o Puente Colgante. Une las orillas de Portugalete y Getxo por encima de la ría.</description>
+<category>En BilboArgazki 2013 - FNAC</category>
+<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Mañana en la desembocadura</title>
+<link>www.imarquina.es/detail.html?gallery=105645b3c821310fcd8c2d6abd8f3b18&amp;photo=7</link>
+<description>Puente de Vizcaya o Puente Colgante. Une las orillas de Portugalete y Getxo por encima de la ría.</description>
+<category>En Getxoko Kultur Etxea (Torrene)</category>
+<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Pasajero del tiempo</title>
+<link>www.imarquina.es/detail.html?gallery=97701138ebc753b25407ec1463e17129&amp;photo=14</link>
+<description>Imagen del Tunel de la Engaña en una realidad alternativa.</description>
+<category>De suenos</category>
+<pubDate>Sat, 4 Aug 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>En el rabillo del ojo</title>
+<link>www.imarquina.es/detail.html?gallery=fd32b9a2c5650dd4544072884bff3605&amp;photo=0</link>
+<description>Corredor sobre graffiti de la península de zorrozaurre.</description>
+<category>Policromatico</category>
+<pubDate>Thu, 1 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>El monolito de los pájaros</title>
+<link>www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=5</link>
+<description>Edificio del BBVA en la Plaza Circular de Bilbao al comienzo de la Gran Vía.</description>
+<category>Paisajes entropicos</category>
+<pubDate>Mon, 5 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>El monolito de los pájaros</title>
+<link>www.imarquina.es/detail.html?gallery=3dfb3e6fc6b70c756a79f07cdf8d11bf&amp;photo=12</link>
+<description>Edificio del BBVA en la Plaza Circular de Bilbao al comienzo de la Gran Vía.</description>
+<category>En FTSI 2012</category>
+<pubDate>Mon, 5 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>El monolito de los pájaros</title>
+<link>www.imarquina.es/detail.html?gallery=5aded4174c419e6b5554a1991aa814b5&amp;photo=10</link>
+<description>Edificio del BBVA en la Plaza Circular de Bilbao al comienzo de la Gran Vía.</description>
+<category>En BilboArgazki 2013 - FNAC</category>
+<pubDate>Mon, 5 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>El monolito de los pájaros</title>
+<link>www.imarquina.es/detail.html?gallery=105645b3c821310fcd8c2d6abd8f3b18&amp;photo=6</link>
+<description>Edificio del BBVA en la Plaza Circular de Bilbao al comienzo de la Gran Vía.</description>
+<category>En Getxoko Kultur Etxea (Torrene)</category>
+<pubDate>Mon, 5 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Torre y dos reinas</title>
+<link>www.imarquina.es/detail.html?gallery=d971958737d62d85a97a2a542b451ebc&amp;photo=7</link>
+<description>Pareja de señoras frente a la Torre Iberdrola de Bilbao en construcción.</description>
+<category>De fuego</category>
+<pubDate>Thu, 1 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Pareja de noticia</title>
+<link>www.imarquina.es/detail.html?gallery=d971958737d62d85a97a2a542b451ebc&amp;photo=5</link>
+<description>Reportera de Canal Bilbao a la espera de noticia en el fresco de la mañana</description>
+<category>De fuego</category>
+<pubDate>Thu, 1 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Velas en pastel</title>
+<link>www.imarquina.es/detail.html?gallery=d971958737d62d85a97a2a542b451ebc&amp;photo=6</link>
+<description>Velero en la Bahía de Santander.</description>
+<category>De fuego</category>
+<pubDate>Thu, 1 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Sonidos de Hacienda</title>
+<link>www.imarquina.es/detail.html?gallery=719425bc4c2bbd43b199ddb4a120b537&amp;photo=3</link>
+<description>Edificio de la antigua Delegación de Hacienda de Pamplona.</description>
+<category>De tierra</category>
+<pubDate>Thu, 1 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Semana fantástica</title>
+<link>www.imarquina.es/detail.html?gallery=d971958737d62d85a97a2a542b451ebc&amp;photo=3</link>
+<description>Reflejos de San Fermín 2009 en la fachada de El Corte Ingles de Pamplona.</description>
+<category>De fuego</category>
+<pubDate>Thu, 1 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Descontextualizando a Chillida I</title>
+<link>www.imarquina.es/detail.html?gallery=2ecaf3cddb905238eb48ad53291f4e89&amp;photo=0</link>
+<description>Detalle de la obra Harri I, en Chillida Leku.</description>
+<category>De aire</category>
+<pubDate>Thu, 1 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Descontextualizando a Chillida II</title>
+<link>www.imarquina.es/detail.html?gallery=2ecaf3cddb905238eb48ad53291f4e89&amp;photo=1</link>
+<description>Detalle de la obra Escuchando la piedra IV, en Chillida Leku.</description>
+<category>De aire</category>
+<pubDate>Thu, 1 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Descontextualizando a Chillida III</title>
+<link>www.imarquina.es/detail.html?gallery=2ecaf3cddb905238eb48ad53291f4e89&amp;photo=2</link>
+<description>Detalle de la obra Harri II, en Chillida Leku.</description>
+<category>De aire</category>
+<pubDate>Thu, 1 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>El paragonauta</title>
+<link>www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=7</link>
+<description>Refinería de Petronor de Muskiz.</description>
+<category>Paisajes entropicos</category>
+<pubDate>Mon, 5 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>El paragonauta</title>
+<link>www.imarquina.es/detail.html?gallery=3dfb3e6fc6b70c756a79f07cdf8d11bf&amp;photo=14</link>
+<description>Refinería de Petronor de Muskiz.</description>
+<category>En FTSI 2012</category>
+<pubDate>Mon, 5 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Paseo en línea frente a fachada curvo - convexa</title>
+<link>www.imarquina.es/detail.html?gallery=719425bc4c2bbd43b199ddb4a120b537&amp;photo=1</link>
+<description>Vista del Teatro Arriaga en el Casco Viejo de Bilbao.</description>
+<category>De tierra</category>
+<pubDate>Thu, 1 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Entre Bailén y Navarra</title>
+<link>www.imarquina.es/detail.html?gallery=719425bc4c2bbd43b199ddb4a120b537&amp;photo=2</link>
+<description>El edificio de la Sociedad Bilbaina entre la calle Bailen y la calle Navarra en Bilbao.</description>
+<category>De tierra</category>
+<pubDate>Thu, 1 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>En la brecha</title>
+<link>www.imarquina.es/detail.html?gallery=d971958737d62d85a97a2a542b451ebc&amp;photo=2</link>
+<description>Técnicos de limpieza sobre la entrada del Guggenheim en Bilbao.</description>
+<category>De fuego</category>
+<pubDate>Thu, 1 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Ciclista con dos copas</title>
+<link>www.imarquina.es/detail.html?gallery=d971958737d62d85a97a2a542b451ebc&amp;photo=1</link>
+<description>Ciclista por Abandoibarra desde Puente de La Salve.</description>
+<category>De fuego</category>
+<pubDate>Thu, 1 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Bajo el punto de fusión</title>
+<link>www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=3</link>
+<description>Museo Guggenheim de Bilbao.</description>
+<category>Paisajes entropicos</category>
+<pubDate>Mon, 5 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Bajo el punto de fusión</title>
+<link>www.imarquina.es/detail.html?gallery=3dfb3e6fc6b70c756a79f07cdf8d11bf&amp;photo=10</link>
+<description>Museo Guggenheim de Bilbao.</description>
+<category>En FTSI 2012</category>
+<pubDate>Mon, 5 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Bajo el punto de fusión</title>
+<link>www.imarquina.es/detail.html?gallery=5aded4174c419e6b5554a1991aa814b5&amp;photo=11</link>
+<description>Museo Guggenheim de Bilbao.</description>
+<category>En BilboArgazki 2013 - FNAC</category>
+<pubDate>Mon, 5 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Bajo el punto de fusión</title>
+<link>www.imarquina.es/detail.html?gallery=105645b3c821310fcd8c2d6abd8f3b18&amp;photo=4</link>
+<description>Museo Guggenheim de Bilbao.</description>
+<category>En Getxoko Kultur Etxea (Torrene)</category>
+<pubDate>Mon, 5 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Duelo al sol</title>
+<link>www.imarquina.es/detail.html?gallery=d0692fb68700ba495d8117ea3fdc4daf&amp;photo=5</link>
+<description>Dos personas sobre la pasarela sobre el estanque del Guggenheim.</description>
+<category>De agua</category>
+<pubDate>Thu, 1 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Momentos de la araña</title>
+<link>www.imarquina.es/detail.html?gallery=d971958737d62d85a97a2a542b451ebc&amp;photo=0</link>
+<description>Vista de Abandoibarra y escultura L. Bourgeois en Guggenheim.</description>
+<category>De fuego</category>
+<pubDate>Thu, 1 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>La puerta del cielo</title>
+<link>www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=4</link>
+<description>El Puente de la Salve une la Solución Sur con el centro de Bilbao.</description>
+<category>Paisajes entropicos</category>
+<pubDate>Mon, 5 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>La puerta del cielo</title>
+<link>www.imarquina.es/detail.html?gallery=3dfb3e6fc6b70c756a79f07cdf8d11bf&amp;photo=11</link>
+<description>El Puente de la Salve une la Solución Sur con el centro de Bilbao.</description>
+<category>En FTSI 2012</category>
+<pubDate>Mon, 5 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>La puerta del cielo</title>
+<link>www.imarquina.es/detail.html?gallery=5aded4174c419e6b5554a1991aa814b5&amp;photo=4</link>
+<description>El Puente de la Salve une la Solución Sur con el centro de Bilbao.</description>
+<category>En BilboArgazki 2013 - FNAC</category>
+<pubDate>Mon, 5 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>La puerta del cielo</title>
+<link>www.imarquina.es/detail.html?gallery=105645b3c821310fcd8c2d6abd8f3b18&amp;photo=5</link>
+<description>El Puente de la Salve une la Solución Sur con el centro de Bilbao.</description>
+<category>En Getxoko Kultur Etxea (Torrene)</category>
+<pubDate>Mon, 5 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>El planeta perdido</title>
+<link>www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=2</link>
+<description>Estatua de Don Diego López de Haro de la Plaza Circular de Bilbao.</description>
+<category>Paisajes entropicos</category>
+<pubDate>Mon, 5 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>El planeta perdido</title>
+<link>www.imarquina.es/detail.html?gallery=3dfb3e6fc6b70c756a79f07cdf8d11bf&amp;photo=9</link>
+<description>Estatua de Don Diego López de Haro de la Plaza Circular de Bilbao.</description>
+<category>En FTSI 2012</category>
+<pubDate>Mon, 5 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>El planeta perdido</title>
+<link>www.imarquina.es/detail.html?gallery=5aded4174c419e6b5554a1991aa814b5&amp;photo=3</link>
+<description>Estatua de Don Diego López de Haro de la Plaza Circular de Bilbao.</description>
+<category>En BilboArgazki 2013 - FNAC</category>
+<pubDate>Mon, 5 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>El planeta perdido</title>
+<link>www.imarquina.es/detail.html?gallery=105645b3c821310fcd8c2d6abd8f3b18&amp;photo=3</link>
+<description>Estatua de Don Diego López de Haro de la Plaza Circular de Bilbao.</description>
+<category>En Getxoko Kultur Etxea (Torrene)</category>
+<pubDate>Mon, 5 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>El día de mañana</title>
+<link>www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=1</link>
+<description>El Ascensor de Begoña conecta el Casco Viejo con barrio de Begoña por Mallona.</description>
+<category>Paisajes entropicos</category>
+<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>El día de mañana</title>
+<link>www.imarquina.es/detail.html?gallery=3dfb3e6fc6b70c756a79f07cdf8d11bf&amp;photo=8</link>
+<description>El Ascensor de Begoña conecta el Casco Viejo con barrio de Begoña por Mallona.</description>
+<category>En FTSI 2012</category>
+<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>El día de mañana</title>
+<link>www.imarquina.es/detail.html?gallery=4c89cd348998c374e8d0924f21a568d2&amp;photo=2</link>
+<description>El Ascensor de Begoña conecta el Casco Viejo con barrio de Begoña por Mallona.</description>
+<category>En FTSI 2013</category>
+<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>El día de mañana</title>
+<link>www.imarquina.es/detail.html?gallery=5aded4174c419e6b5554a1991aa814b5&amp;photo=2</link>
+<description>El Ascensor de Begoña conecta el Casco Viejo con barrio de Begoña por Mallona.</description>
+<category>En BilboArgazki 2013 - FNAC</category>
+<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>El día de mañana</title>
+<link>www.imarquina.es/detail.html?gallery=105645b3c821310fcd8c2d6abd8f3b18&amp;photo=2</link>
+<description>El Ascensor de Begoña conecta el Casco Viejo con barrio de Begoña por Mallona.</description>
+<category>En Getxoko Kultur Etxea (Torrene)</category>
+<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Había una vez en Bilbao un sitio que ... I</title>
+<link>www.imarquina.es/detail.html?gallery=fd32b9a2c5650dd4544072884bff3605&amp;photo=1</link>
+<description>Avenida Kirikiño de Bilbao. Un rincón multicolor.</description>
+<category>Policromatico</category>
+<pubDate>Thu, 1 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Había una vez en Bilbao un sitio que ... II</title>
+<link>www.imarquina.es/detail.html?gallery=fd32b9a2c5650dd4544072884bff3605&amp;photo=2</link>
+<description>Avenida Kirikiño de Bilbao. Un rincón multicolor.</description>
+<category>Policromatico</category>
+<pubDate>Thu, 1 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Había una vez un sitio en Bilbao que ... III</title>
+<link>www.imarquina.es/detail.html?gallery=fd32b9a2c5650dd4544072884bff3605&amp;photo=3</link>
+<description>Avenida Zuberoa de Bilbao. El otro lado de un rincón multicolor.</description>
+<category>Policromatico</category>
+<pubDate>Thu, 1 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Fuga de curvas</title>
+<link>www.imarquina.es/detail.html?gallery=d971958737d62d85a97a2a542b451ebc&amp;photo=4</link>
+<description>Curvas de metal y sombras en la Pasarela de Manterola en Sestao, Bizkaia.</description>
+<category>De fuego</category>
+<pubDate>Thu, 1 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Eidôlom</title>
+<link>www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=0</link>
+<description>Monumento de Oteiza frente al Ayuntamiento de Bilbao: Variante ovoide de la desocupación de la esfera.</description>
+<category>Paisajes entropicos</category>
+<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Eidôlom</title>
+<link>www.imarquina.es/detail.html?gallery=3dfb3e6fc6b70c756a79f07cdf8d11bf&amp;photo=7</link>
+<description>Monumento de Oteiza frente al Ayuntamiento de Bilbao: Variante ovoide de la desocupación de la esfera.</description>
+<category>En FTSI 2012</category>
+<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Eidôlom</title>
+<link>www.imarquina.es/detail.html?gallery=4c89cd348998c374e8d0924f21a568d2&amp;photo=1</link>
+<description>Monumento de Oteiza frente al Ayuntamiento de Bilbao: Variante ovoide de la desocupación de la esfera.</description>
+<category>En FTSI 2013</category>
+<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Eidôlom</title>
+<link>www.imarquina.es/detail.html?gallery=5aded4174c419e6b5554a1991aa814b5&amp;photo=1</link>
+<description>Monumento de Oteiza frente al Ayuntamiento de Bilbao: Variante ovoide de la desocupación de la esfera.</description>
+<category>En BilboArgazki 2013 - FNAC</category>
+<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Eidôlom</title>
+<link>www.imarquina.es/detail.html?gallery=105645b3c821310fcd8c2d6abd8f3b18&amp;photo=1</link>
+<description>Monumento de Oteiza frente al Ayuntamiento de Bilbao: Variante ovoide de la desocupación de la esfera.</description>
+<category>En Getxoko Kultur Etxea (Torrene)</category>
+<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>La ciudad de los hombres llovientes</title>
+<link>www.imarquina.es/detail.html?gallery=97701138ebc753b25407ec1463e17129&amp;photo=8</link>
+<description>Vista de panorámica del Casco Viejo desde el Ascensor de Begoña.</description>
+<category>De suenos</category>
+<pubDate>Thu, 1 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Hard rain I</title>
+<link>www.imarquina.es/detail.html?gallery=97701138ebc753b25407ec1463e17129&amp;photo=12</link>
+<description>Vista de Bilbao desde el Parque de Etxebarría en la zona de Mallona.</description>
+<category>De suenos</category>
+<pubDate>Thu, 1 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Hard rain II</title>
+<link>www.imarquina.es/detail.html?gallery=97701138ebc753b25407ec1463e17129&amp;photo=13</link>
+<description>Vista de Bilbao desde el Parque de Etxebarria en la zona de Mallona.</description>
+<category>De suenos</category>
+<pubDate>Thu, 1 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Jungla financiera</title>
+<link>www.imarquina.es/detail.html?gallery=e47d6979a642c3e2b0c40b10a78c422c&amp;photo=3</link>
+<description>Detalle del edificio del BBVA en Plaza Circular de Bilbao.</description>
+<category>Monocromatico</category>
+<pubDate>Thu, 1 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Detrás del sirimi I</title>
+<link>www.imarquina.es/detail.html?gallery=5811fad7ab5db41e7d0e82dfa727a0d6&amp;photo=0</link>
+<description>Tramo final de las Calzadas de Mallona a su llegada a la Plaza.</description>
+<category>Detras del sirimiri</category>
+<pubDate>Mon, 5 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Detrás del sirimi I</title>
+<link>www.imarquina.es/detail.html?gallery=3dfb3e6fc6b70c756a79f07cdf8d11bf&amp;photo=1</link>
+<description>Tramo final de las Calzadas de Mallona a su llegada a la Plaza.</description>
+<category>En FTSI 2012</category>
+<pubDate>Mon, 5 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Detrás del sirimi II</title>
+<link>www.imarquina.es/detail.html?gallery=5811fad7ab5db41e7d0e82dfa727a0d6&amp;photo=1</link>
+<description>Bajada de las Calzadas de Mallona que entran en el Casco Viejo de Bilbao.</description>
+<category>Detras del sirimiri</category>
+<pubDate>Mon, 5 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Detrás del sirimi II</title>
+<link>www.imarquina.es/detail.html?gallery=3dfb3e6fc6b70c756a79f07cdf8d11bf&amp;photo=2</link>
+<description>Bajada de las Calzadas de Mallona que entran en el Casco Viejo de Bilbao.</description>
+<category>En FTSI 2012</category>
+<pubDate>Mon, 5 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Detrás del sirimi III</title>
+<link>www.imarquina.es/detail.html?gallery=5811fad7ab5db41e7d0e82dfa727a0d6&amp;photo=2</link>
+<description>Tinglados portuarios de El Arenal recientemente rehabilitados</description>
+<category>Detras del sirimiri</category>
+<pubDate>Mon, 5 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Detrás del sirimi III</title>
+<link>www.imarquina.es/detail.html?gallery=3dfb3e6fc6b70c756a79f07cdf8d11bf&amp;photo=3</link>
+<description>Tinglados portuarios de El Arenal recientemente rehabilitados</description>
+<category>En FTSI 2012</category>
+<pubDate>Mon, 5 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Detrás del sirimi IV</title>
+<link>www.imarquina.es/detail.html?gallery=5811fad7ab5db41e7d0e82dfa727a0d6&amp;photo=3</link>
+<description>El teatro Arriaga domina la mayoría de las vistas desde el Arenal de Bilbao.</description>
+<category>Detras del sirimiri</category>
+<pubDate>Mon, 5 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Detrás del sirimi IV</title>
+<link>www.imarquina.es/detail.html?gallery=3dfb3e6fc6b70c756a79f07cdf8d11bf&amp;photo=4</link>
+<description>El teatro Arriaga domina la mayoría de las vistas desde el Arenal de Bilbao.</description>
+<category>En FTSI 2012</category>
+<pubDate>Mon, 5 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Detrás del sirimi V</title>
+<link>www.imarquina.es/detail.html?gallery=5811fad7ab5db41e7d0e82dfa727a0d6&amp;photo=4</link>
+<description>Edificio del Ayuntamiento de Bilbao ... El hombre del paraguas fue una adquisión muy creativa a la larga.</description>
+<category>Detras del sirimiri</category>
+<pubDate>Mon, 5 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Detrás del sirimi V</title>
+<link>www.imarquina.es/detail.html?gallery=3dfb3e6fc6b70c756a79f07cdf8d11bf&amp;photo=5</link>
+<description>Edificio del Ayuntamiento de Bilbao ... El hombre del paraguas fue una adquisión muy creativa a la larga.</description>
+<category>En FTSI 2012</category>
+<pubDate>Mon, 5 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Detrás del sirimi VI</title>
+<link>www.imarquina.es/detail.html?gallery=5811fad7ab5db41e7d0e82dfa727a0d6&amp;photo=5</link>
+<description>El mercado de abastos de la Ribera era el final del camino de las sardineras que venían de Santurce.</description>
+<category>Detras del sirimiri</category>
+<pubDate>Mon, 5 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Detrás del sirimi VI</title>
+<link>www.imarquina.es/detail.html?gallery=3dfb3e6fc6b70c756a79f07cdf8d11bf&amp;photo=6</link>
+<description>El mercado de abastos de la Ribera era el final del camino de las sardineras que venían de Santurce.</description>
+<category>En FTSI 2012</category>
+<pubDate>Mon, 5 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Detrás del sirimi VII</title>
+<link>www.imarquina.es/detail.html?gallery=5811fad7ab5db41e7d0e82dfa727a0d6&amp;photo=6</link>
+<description>El Teatro Arriaga, la Estación de La Concordia y el edificio del BBVA: tres edicios, tres épocas, juntos desde este rincón</description>
+<category>Detras del sirimiri</category>
+<pubDate>Thu, 1 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>HÉL BEC</title>
+<link>www.imarquina.es/detail.html?gallery=d0692fb68700ba495d8117ea3fdc4daf&amp;photo=4</link>
+<description>Helipuerto de la explanada del BEC en Barakaldo.</description>
+<category>De agua</category>
+<pubDate>Thu, 1 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Por encima del Guggenheim</title>
+<link>www.imarquina.es/detail.html?gallery=e47d6979a642c3e2b0c40b10a78c422c&amp;photo=2</link>
+<description>Vista desde el Puente de la Salva del Museo Guggenheim.</description>
+<category>Monocromatico</category>
+<pubDate>Thu, 1 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>En el ojo del vórtice</title>
+<link>www.imarquina.es/detail.html?gallery=d0692fb68700ba495d8117ea3fdc4daf&amp;photo=3</link>
+<description>Combinación de arquitectura y sombras en la pasarela de Manterola de Sestao.</description>
+<category>De agua</category>
+<pubDate>Thu, 1 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Bajo la Gran Vía I</title>
+<link>www.imarquina.es/detail.html?gallery=e47d6979a642c3e2b0c40b10a78c422c&amp;photo=0</link>
+<description>Acceso a MetroBilbao desde calle Berastegi de Bilbao.</description>
+<category>Monocromatico</category>
+<pubDate>Thu, 1 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Bajo la Gran Vía II</title>
+<link>www.imarquina.es/detail.html?gallery=e47d6979a642c3e2b0c40b10a78c422c&amp;photo=1</link>
+<description>Acceso a MetroBilbao desde Plaza Elíptica de Bilbao.</description>
+<category>Monocromatico</category>
+<pubDate>Thu, 1 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Pasado y presente</title>
+<link>www.imarquina.es/detail.html?gallery=719425bc4c2bbd43b199ddb4a120b537&amp;photo=0</link>
+<description>Vista del hotel Marqués de Riscal desde viñedo, Elciego en Álava.</description>
+<category>De tierra</category>
+<pubDate>Thu, 1 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Fríos paseos en bosques metálicos</title>
+<link>www.imarquina.es/detail.html?gallery=d0692fb68700ba495d8117ea3fdc4daf&amp;photo=1</link>
+<description>'Bosque Metálico' del Palacio de Euskalduna.</description>
+<category>De agua</category>
+<pubDate>Thu, 1 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Discurre Bilbao</title>
+<link>www.imarquina.es/detail.html?gallery=c9127b11e7c62e317d3e6c66fa1b6ee7&amp;photo=0</link>
+<description>Vista de Guggenheim y Abandoibarra desde la pasarela de la Universidad de Deusto en Bilbao.</description>
+<category>Por la orilla de la ria</category>
+<pubDate>Thu, 1 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>El fuerte y el punto débil</title>
+<link>www.imarquina.es/detail.html?gallery=97701138ebc753b25407ec1463e17129&amp;photo=4</link>
+<description>Fotomontaje surrealista sobre la debilidad y la fotaleza.</description>
+<category>De suenos</category>
+<pubDate>Thu, 1 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Persiguiendo a Campanilla</title>
+<link>www.imarquina.es/detail.html?gallery=97701138ebc753b25407ec1463e17129&amp;photo=5</link>
+<description>Imagen sobre la búsqueda de la fantasía y la persecución de los mitos.</description>
+<category>De suenos</category>
+<pubDate>Thu, 1 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>¡Nunca te olvides!. No fue siempre todo así ...</title>
+<link>www.imarquina.es/detail.html?gallery=97701138ebc753b25407ec1463e17129&amp;photo=6</link>
+<description>Un pensamiento sobre la historia que fundamentea de una manera u otra el presente.</description>
+<category>De suenos</category>
+<pubDate>Thu, 1 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+</channel>
 </rss>
