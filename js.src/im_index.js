@@ -636,11 +636,28 @@ newsCargar=function(sParam){
 					var infoTextImage=hImage.INFOTEXT;
 					var parentFolder=htmlReplace(($(this).parent()).attr("name"));
 					var parentNameFolder=pathImagenComponer($(this),App.Config.separadorPathPanel);
-					var sType='';
+					var sType='imagen';
 					
-					if (idImage.substr(0, 1) =='v') sType='video';
-					else sType='imagen';
-
+					colImages[iCol]=[{id:idImage,update:datUpdateImage,public:datPublicImage,titulo:captionImage,
+										linkurl:linkUrlImage,infoimagen:infoTextImage,parentFolder:parentFolder,
+										parentName:parentNameFolder,type:sType}];
+					iCol++;
+				}
+			});
+			$(xml).find('vid').each(function() {
+				var IDImage=$(this).attr("id");
+				var hImage=typesHash.get(IDImage);
+				if (hImage != null){
+					var idImage=hImage.SRC;
+					var datUpdateImage=hImage.UPDATE;
+					var datPublicImage=hImage.PUBLIC;
+					var captionImage=hImage.CAPTION;
+					var linkUrlImage=hImage.LINKURL;
+					var infoTextImage=hImage.INFOTEXT;
+					var parentFolder=htmlReplace(($(this).parent()).attr("name"));
+					var parentNameFolder=pathImagenComponer($(this),App.Config.separadorPathPanel);
+					var sType='video';
+					
 					colImages[iCol]=[{id:idImage,update:datUpdateImage,public:datPublicImage,titulo:captionImage,
 										linkurl:linkUrlImage,infoimagen:infoTextImage,parentFolder:parentFolder,
 										parentName:parentNameFolder,type:sType}];
