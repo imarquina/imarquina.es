@@ -1,55 +1,80 @@
 #banner-cookie-bottom {
-	background: none repeat scroll 0 0 rgba(0, 0, 0, 0.6);
-	bottom: 0;
-	color: #FFFFFF;
-	height: auto;
-	left: 0;
-	padding: 0.5em 0em 0.5em;
-	position: fixed;
-	text-align: center;
-	width: 100%;
-	z-index: 99999;
-	display: none;
-}
-#banner-cookie-bottom {
-	color: #FFFFFF;
-	text-align: center;
-}
-#banner-cookie-bottom-overlay {
-	margin: 0 auto;
-	width: 100%;
-	display: block;
-}
-#banner-cookie-bottom .banner-cookie-texto {
-	width: 98%;
-	margin: 0em 0.5em;
-}
-.banner-cookie-texto {
-	display: inline;
-	float: left;
-}
-.banner-cookie-vinculos {
-	display: inline-block;
-	margin: 0 auto;
-}
-#banner-cookie-bottom-overlay .banner-cookie-texto a, #banner-cookie-bottom-overlay .banner-cookie-texto a:visited {
-	color: #FFFFFF;
-	text-decoration: underline;
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 1);
+    bottom: 0;
+    color: #FFFFFF;
+    height: auto;
+    left: 0;
+    padding: 0.5em 0em 0.5em;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    z-index: 99999;
+    display: none;
 }
 
-#banner-cookie-submit, #banner-cookie-submit:visited {
-	background-color: #E3AB04;
-	border: 1px solid #E3C104;
-	border-radius: 3px;
-	color: #FFFFFF;
-	font-weight: bold;
-	padding: 0.1em 0.5em;
-	margin: 0em 0em 0em 0em;
-	text-decoration: none;
-	display: inline-block;
+#banner-cookie-bottom {
+    color: #FFFFFF;
+    text-align: left;
+    padding: 1rem;
+    font-size: 100%;
+    font-family: monospace;
+    width: 50%;
+    margin-left: 50%;
+    border-radius: 0.15rem;
 }
+
+#banner-cookie-bottom-overlay {
+    margin: 0 auto;
+    width: 100%;
+    display: block;
+}
+
+#banner-cookie-bottom .banner-cookie-texto {
+    width: 98%;
+    margin: 0em 0.5em;
+}
+
+.banner-cookie-texto {
+    float: left;
+}
+
+.banner-cookie-vinculos {
+    float: right;
+}
+
+#banner-cookie-bottom-overlay .banner-cookie-texto a,
+#banner-cookie-bottom-overlay .banner-cookie-texto a:visited {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+#banner-cookie-submit,
+#banner-cookie-submit:visited {
+    border-radius: 3px;
+    color: #E3AB04;
+    font-weight: bold;
+    padding: 0.1em 0.5em;
+    margin: 0em 0em 0em 0em;
+    text-decoration: none;
+    display: inline-block;
+}
+
 #banner-cookie-cancel {
-	color: #DDDDDD;
-	margin: 0.8em 1em 0em 1em;
-	display: inline-block;
-}	
+    color: #DDDDDD;
+    margin: 0.8em 1em 0em 1em;
+    display: inline-block;
+}
+
+@media (min-width: 34em) {
+    #banner-cookie-bottom {
+        width: 40%;
+        margin-left: 60%;
+    }
+}
+
+@media (min-width: 48em) {
+    #banner-cookie-bottom {
+        width: 30%;
+        margin-left: 70%;
+    }
+}
