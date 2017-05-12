@@ -153,27 +153,27 @@ infoLinkTratar = function(infolink) {
         }
         return sResult;
     } else return App.Constantes.cadenaVacia;
-    /*
-    $("<a href='"+$(this).attr("LINKURL")+"' target='_blank'><div class='datos-social-link'><img class='datos-social-icono' src='resources/flickr.png' style='width:14px!important;' title='ver en flicr'/></div></a>").appendTo(divSoc);
-    $("<div class='datos-social-link'><img class='datos-social-icono' src='resources/facebook.png' style='width:14px!important;' title='publicar en facebook' /></div>").appendTo(divSoc);
-    $("<div class='datos-social-link'><img class='datos-social-icono' src='resources/twitter.png' style='width:14px!important;' title='publicar en twitter' /></div>").appendTo(divSoc);
-    $("<div class='datos-social-link'><img class='datos-social-icono' src='resources/pinterest.png' style='width:14px!important;' title='publicar en pinterest' /></div>").appendTo(divSoc);
-    */
 }
+
 seoValoresEstablecer = function(elemento) {
-        document.title = elemento.attr("title");
-        $('meta[name="description"]').attr("content", elemento.attr("infotext"));
-        $('meta[name="keywords"]').attr("content", elemento.attr("keywords"));
-    }
-    /* Crea el rastro de miga de pan, en base al nodo
+    document.title = elemento.attr("title");
+    $('meta[name="description"]').attr("content", elemento.attr("infotext"));
+    $('meta[name="keywords"]').attr("content", elemento.attr("keywords"));
+}
+
+/* Crea el rastro de miga de pan, en base al nodo
        y si la navegación viene por 'Lo nuevo'
       ================================================== */
 breadcrumbsEstablecer = function(oNode, urlNews) {
-        var oTemp = oNode;
-        var sResult = '';
+    var oTemp = oNode;
+    var sResult = '';
 
+    if (oTemp == undefined && urlNews == undefined) {
+        sResult = "<li class='breadcrumb-item'><a href='./index.html'>inicio</a></li>"
+        sResult += "<li class='breadcrumb-item active'>lo último</li>"
+    } else {
         if (document.URL.toLowerCase().indexOf("detail.html") > 0) {
-            sResult = "secuencia";
+            sResult = "<li class='breadcrumb-item active'>secuencia</li>";
             sResult = hrefEstablecer(oTemp[0].nodeName, oTemp.attr("name"), urlNews, 1) + sResult;
         } else {
             sResult += hrefEstablecer(oTemp[0].nodeName, oTemp.attr("name"), urlNews, 0)
@@ -183,19 +183,21 @@ breadcrumbsEstablecer = function(oNode, urlNews) {
             oTemp = oTemp.parent();
             sResult = hrefEstablecer(oTemp[0].nodeName, oTemp.attr("name"), urlNews, 1) + sResult;
         }
-        if (urlNews != undefined) sResult = hrefEstablecer("Lo último", urlNews, urlNews, 1) + sResult;
+        if (urlNews != undefined) sResult = hrefEstablecer("lo último", urlNews, urlNews, 1) + sResult;
         sResult = "<li class='breadcrumb-item'><a href='./index.html'>inicio</a></li>" + sResult;
-
-        return sResult;
     }
-    /* Genera el vínculo según clave, y si la navegación
-       viene por 'Lo nuevo'
-      ================================================== */
+
+    return sResult;
+}
+
+/* Genera el vínculo según clave, y si la navegación
+   viene por 'Lo nuevo'
+  ================================================== */
 hrefEstablecer = function(clave, valor, urlnews, ishref) {
     var sResult;
 
     if (urlnews != undefined) {
-        if (clave == "Lo último") {
+        if (clave.toLowerCase() == ("lo último").toLowerCase()) {
             if (ishref == 1) {
                 sResult = "<li class='breadcrumb-item'><a href='./index.html?news=" + urlnews + "'>" +
                     ("Lo &uacute;ltimo").toLowerCase() + "</a></li>"

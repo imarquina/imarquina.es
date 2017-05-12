@@ -46,7 +46,6 @@ initialize = function() {
     //
     $('#annio').text(App.Config.annio);
     $('#version').text(App.Config.version);
-    $('.header-logo').wrap("<a href='./index.html'>");
 }
 
 /* Inicializa el plugin wookmark
@@ -276,12 +275,14 @@ folderCargar = function(sParam, sNews) {
                 var folder_name = $(this).attr("name");
 
                 if (htmlReplace(folder_name) == sParam) {
+                    //breadcrump                    
+                    var panBreadCrumb = $("<ul class='breadcrumb'>").insertBefore("#main");
+                    $(breadcrumbsEstablecer($(this), sNews)).appendTo(panBreadCrumb);
+
                     //vinculos social-media
                     $('#shareme').attr("data-url", window.location.href);
                     $('#shareme').attr("data-text", App.Config.dataTextTitle + folder_name);
-                    //boton atras
-                    $('.backbottom').html(breadcrumbsEstablecer($(this), sNews));
-                    $('.backbottom').css({ "display": "block" });
+
                     //establecer valores para SEO
                     seoValoresEstablecer($(this));
                     //Coleccion de la carpeta				
@@ -292,19 +293,27 @@ folderCargar = function(sParam, sNews) {
                             var image = $(nObj).attr("src");
                             var imgName = $(nObj).attr("src").replace(".jpg", "");
 
-                            var elmPan = $("<li>").appendTo("#tiles");
-                            var divPan = $("<div class='panel'>").appendTo(elmPan);
-                            $("<img class='panel-imagen' id='" + imgName + "' src='" + App.Config.rutaImage + imgName + ".jpg' title='" + sName + "' alt='Columnas Css' />").appendTo(divPan);
-                            $("<p><img class='panel-literal-img' src='./resources/flecha.png'/><span class='panel-literal'>" + App.Config.marcaGaleria + "</span><span class='panel-titulo'>" + sName + "</span></p>").appendTo(elmPan)
+                            var divCard = $("<div class='card p-1'>").appendTo("#tiles");
 
-                            var divDat = $("<div class='datos'>").appendTo(elmPan);
-                            $("<p>" + dateFormat($(nObj).attr("update")) + "</p>").appendTo(divDat);
-                            //Crear vínculo carpeta
+                            /** imagen */
+                            var divImage = $("<div class='card-image'>").appendTo(divCard);
+                            $("<img class='card-img-top img-fluid' id='" + imgName + "' src='" + App.Config.rutaImage +
+                                imgName + ".jpg' title='" + sName + "' alt='Columnas Css' />").appendTo(divImage);
+                            //vinculo
                             if (sNews != undefined) {
-                                $(divPan).wrap("<a href='./index.html?gallery=" + htmlReplace(sName) + "&news=" + sNews + "'>");
+                                $(divImage).wrap("<a href='./index.html?gallery=" + htmlReplace(sName) + "&news=" + sNews + "'>");
                             } else {
-                                $(divPan).wrap("<a href='./index.html?gallery=" + htmlReplace(sName) + "'>");
+                                $(divImage).wrap("<a href='./index.html?gallery=" + htmlReplace(sName) + "'>");
                             }
+                            /** bloque */
+                            var divBlock = $("<div class='card-block'>").appendTo(divCard);
+                            //Titulo
+                            var panTitulo = $("<h4 class='card-title'>").appendTo(divBlock);
+                            $("<span class='fa fa-chevron-right'></span>").appendTo(panTitulo);
+                            $("<span class='col-11'>" + sName + "</span>").appendTo(panTitulo);
+                            //Pie
+                            var panDate = $("<p class='card-date card-text text-right'>").appendTo(divBlock);
+                            $("<small class='text-muted'>" + dateFormat($(nObj).attr("update")) + "</small>").appendTo(panDate);
                         }
                     });
                     gridEstablecer();
@@ -329,17 +338,17 @@ multimediaCargar = function(sParam, sNews) {
                 var multimedia_name = $(this).attr("name");
 
                 if (htmlReplace(multimedia_name) == sParam) {
-                    //boton atras + datos social-media
+                    //breadcrump                    
+                    var panBreadCrumb = $("<ul class='breadcrumb'>").insertBefore("#main");
+                    $(breadcrumbsEstablecer($(this), sNews)).appendTo(panBreadCrumb);
+
+                    //vinculos social-media
                     var dataText = '';
                     if (($(this).parent()).attr("name") != undefined) {
-                        $('.backbottom').html(breadcrumbsEstablecer($(this), sNews));
                         dataText = App.Config.dataTextTitle + ($(this).parent()).attr("name") + ":" + multimedia_name;
                     } else {
-                        $('.backbottom').html(breadcrumbsEstablecer($(this), sNews));
                         dataText = App.Config.dataTextTitle + multimedia_name;
                     }
-                    $('.backbottom').css({ "display": "block" });
-                    //vinculos social-media
                     $('#shareme').attr("data-url", window.location.href);
                     $('#shareme').attr("data-text", App.Config.dataTextTitle + dataText);
                     //establecer valores para SEO
@@ -361,34 +370,23 @@ multimediaCargar = function(sParam, sNews) {
                             var sLnkUrl = hImage.LINKURL;
                             var sUpdate = hImage.UPDATE;
 
-                            var elmPan = $("<li>").appendTo("#tiles");
-                            var divPan = $("<div class='panel video'>").appendTo(elmPan);
-                            var divImg = $("<img class='panel-imagen' id='" + imgName + "' style='cursor:pointer' src='" + App.Config.rutaImage + imgName + ".jpg' title='" + sName + "' alt='Columnas Css' />").appendTo(divPan);
-                            $("<p><span class='panel-titulo'>" + sName + ". </span><span class='panel-descripcion'>" + sInfT + "</span></p>").appendTo(elmPan);
-                            //Sección precio copia
-                            var sCadena = '';
-                            if ((sFormat != undefined) && (sFormat != '')) {
-                                sCadena += App.Constantes.dimesion + sFormat;
-                            }
-                            if ((sStock != undefined) && (sStock != '')) {
-                                sCadena += ' ' + sStock;
-                            }
-                            if ((sPrice != undefined) && (sPrice != '')) {
-                                if (sCadena != '') sCadena += '<br />';
-                                sCadena += App.Constantes.copia + sPrice + App.Constantes.moneda;
-                            }
-                            $("<p class='panel-format'>" + sCadena + "</p>").appendTo(elmPan);
-
-                            var divDat = $("<div class='datos'>").appendTo(elmPan);
-
-                            var divSoc = $("<div class='datos-social'>").appendTo(divDat);
-                            $(infoLinkTratar(hImage.LINKURL)).appendTo(divSoc);
-                            $("<p>" + dateFormat(hImage.UPDATE) + "</p>").appendTo(divDat);
-                            if (sNews != undefined) {
-                                $(divImg).wrap("<a data-lity='' href='" + sLnkUrl + "' title='" + sName + "'>");
-                            } else {
-                                $(divImg).wrap("<a data-lity='' href='" + sLnkUrl + "' title='" + sName + "'>");
-                            }
+                            var divCard = $("<div class='card p-1'>").appendTo("#tiles");
+                            /** imagen */
+                            var divImage = $("<div class='card-video'>").appendTo(divCard);
+                            $("<img class='card-img-top img-fluid' id='" + imgName + "' src='" + App.Config.rutaImage +
+                                imgName + ".jpg' title='" + sName + "' alt='Columnas Css' />").appendTo(divImage);
+                            /** bloque */
+                            var divBlock = $("<div class='card-block'>").appendTo(divCard);
+                            var panTitulo = $("<h4 class='card-title'>").appendTo(divBlock);
+                            $("<span class='fa fa-video-camera'></span>").appendTo(panTitulo);
+                            $("<span class='col-11'>" + sName + "</span>").appendTo(panTitulo);
+                            //Texto
+                            var panTexto = $("<p class='card-text '>" + sInfT + "</p>").appendTo(divBlock);
+                            //Pie
+                            var panDate = $("<p class='card-date card-text text-right'>").appendTo(divBlock);
+                            $("<small class='text-muted'>" + dateFormat(sUpdate) + "</small>").appendTo(panDate);
+                            //Crear vínculo carpeta
+                            $(divCard).wrap("<a href='./index.html?multimedia=" + htmlReplace(sName) + "'>");
 
                             iElem++;
                         }
@@ -441,7 +439,7 @@ homeCargar = function() {
                                         $("<span class='col-11'>" + sName + "</span>").appendTo(panTitulo);
                                         //Capa de thumbs de galeria
                                         if ($(nGls).find("gallery").length > 0) {
-                                            var panThumbs = $("<div class='row'>").appendTo(divBlock);
+                                            var panThumbs = $("<div class='row thumbs'>").appendTo(divBlock);
                                             var iCnt = 0;
                                             $(nGls).children().each(function() {
                                                 var nGal = this;
@@ -634,9 +632,9 @@ newsCargar = function(sParam) {
         url: App.Config.rutaCnf,
         dataType: "xml",
         success: function(xml) {
-            //boton atras
-            $('.backbottom').html("<a href='./index.html'>inicio</a> | lo &uacute;ltimo");
-            $('.backbottom').css({ "display": "block" });
+            //breadcrump                    
+            var panBreadCrumb = $("<ul class='breadcrumb'>").insertBefore("#main");
+            $(breadcrumbsEstablecer()).appendTo(panBreadCrumb);
 
             var colImages = new Array;
             var iCol = 0;
@@ -678,33 +676,43 @@ newsCargar = function(sParam) {
             //Cargar los N primeros
             var iCnt = 0;
             for (var i = 0; i < colImages.length - 1 && i < App.Config.elemNuevos; i++) {
-                var typeCss = (colImages[i][0].type == 'video') ? 'video' : '';
-                var icoImagen = (colImages[i][0].type == 'video') ? 'multimedia.png' : 'flecha.png';
-                //Cargar panel con primera imagen
-                var elmPan = $("<li>").appendTo("#tiles");
-                var divPan = $("<div class='panel " + typeCss + "'>").appendTo(elmPan);
-                var divImg = $("<img class='panel-imagen' name='" + colImages[i][0].parentFolder + "' id='" + colImages[i][0].id.replace(".jpg", "") + "' style='cursor:pointer' src='" + App.Config.rutaImage + colImages[i][0].id.replace(".jpg", "") + ".jpg' title='" + colImages[i][0].titulo + "' alt='Columnas Css' />").appendTo(divPan);
-                $("<p><span class='panel-titulo'>" + colImages[i][0].titulo + ". </span><span class='panel-descripcion'>" + colImages[i][0].infoimagen + "</span></p>").appendTo(elmPan);
-                //Capa de referencia galeria
-                var divPar;
-                $("<p><img class='panel-literal-img' src='./resources/" + icoImagen + "'/><span class='panel-parent'>" + colImages[i][0].parentName + "</span></p>").appendTo(elmPan);
-                var divDat = $("<div class='datos'>").appendTo(elmPan);
+                var typeCss = (colImages[i][0].type == 'video') ? 'card-video' : 'card-image';
+                var icoImagen = (colImages[i][0].type == 'video') ? 'fa-video-camera' : 'fa-chevron-right';
+
+                var divCard = $("<div class='card p-1'>").appendTo("#tiles");
+
+                /** imagen */
+                var divImage = $("<div class='" + typeCss + "'>").appendTo(divCard);
+                $("<img class='card-img-top img-fluid' id='" + colImages[i][0].id.replace(".jpg", "") + "' src='" + App.Config.rutaImage +
+                    colImages[i][0].id.replace(".jpg", "") + ".jpg' title='" + colImages[i][0].titulo + "' alt='Columnas Css' />").appendTo(divImage);
+                /** bloque */
+                var divBlock = $("<div class='card-block'>").appendTo(divCard);
+                var panTitulo = $("<h4 class='card-title'>").appendTo(divBlock);
+                $("<span class='fa " + icoImagen + "'></span>").appendTo(panTitulo);
+                $("<span class='col-11'>" + colImages[i][0].titulo + "</span>").appendTo(panTitulo);
+                //Texto
+                var panTexto = $("<p class='card-text '>" + colImages[i][0].infoimagen + "</p>").appendTo(divBlock);
+
+                //Pie
+                var panFooter = $("<div class='card-text row justify-content-between'>").appendTo(divBlock);
 
                 if (colImages[i][0].type == 'video') {
-                    $(divImg).wrap("<a data-lity='' href='" + colImages[i][0].linkurl + "' title='" + colImages[i][0].titulo + "'>");
-                    $(divPar).wrap("<a href='./index.html?multimedia=" + colImages[i][0].parentFolder + "&news=" + sParam + "'>");
+                    $(divImage).wrap("<a data-lity='' href='" + colImages[i][0].linkurl + "' title='" + colImages[i][0].titulo + "'>");
+                    $(panTexto).wrap("<a href='./index.html?multimedia=" + colImages[i][0].parentFolder + "&news=" + sParam + "'>");
                 } else {
-                    $(divImg).wrap("<a href='./detail.html?news=" + sParam + "&photo=" + iCnt + "'>");
-                    $(divPar).wrap("<a href='./index.html?gallery=" + colImages[i][0].parentFolder + "&news=" + sParam + "'>");
+                    $(divImage).wrap("<a href='./detail.html?news=" + sParam + "&photo=" + iCnt + "'>");
+                    $(panTexto).wrap("<a href='./index.html?gallery=" + colImages[i][0].parentFolder + "&news=" + sParam + "'>");
 
-                    //Capa social-media					
-                    var divSoc = $("<div class='datos-social'>").appendTo(divDat);
-                    $(infoLinkTratar(colImages[i][0].linkurl)).appendTo(divSoc);
+                    //Capa social-media
+                    var panSocial = $("<div class='col-4 text-left'>").appendTo(panFooter);
+                    $(infoLinkTratar(colImages[i][0].linkurl)).appendTo(panSocial);
 
                     iCnt++;
                 }
 
-                $("<p>" + dateFormat(colImages[i][0].update) + "</p>").appendTo(divDat);
+                var panDate = $("<p class='card-date card-text text-right'>").appendTo(panFooter);
+                $("<small class='text-muted'>" + dateFormat(colImages[i][0].update) + "</small>").appendTo(panDate);
+
             }
             gridEstablecer();
         }
