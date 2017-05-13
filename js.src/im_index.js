@@ -386,7 +386,7 @@ multimediaCargar = function(sParam, sNews) {
                             var panDate = $("<p class='card-date card-text text-right'>").appendTo(divBlock);
                             $("<small class='text-muted'>" + dateFormat(sUpdate) + "</small>").appendTo(panDate);
                             //Crear vínculo carpeta
-                            $(divCard).wrap("<a href='./index.html?multimedia=" + htmlReplace(sName) + "'>");
+                            $(divCard).wrap("<a data-lity href='" + hImage.LINKURL + "'>");
 
                             iElem++;
                         }
@@ -639,37 +639,49 @@ newsCargar = function(sParam) {
             var colImages = new Array;
             var iCol = 0;
             //El nodo root es config
-            $(xml).find('img').each(function() {
-                var IDImage = $(this).attr("id");
-                var hImage = typesHash.get(IDImage);
-                if (hImage != null) {
-                    var idImage = hImage.SRC;
-                    var datUpdateImage = hImage.UPDATE;
-                    var datPublicImage = hImage.PUBLIC;
-                    var captionImage = hImage.CAPTION;
-                    var linkUrlImage = hImage.LINKURL;
-                    var infoTextImage = hImage.INFOTEXT;
-                    var parentFolder = htmlReplace(($(this).parent()).attr("name"));
-                    var parentNameFolder = pathImagenComponer($(this), App.Config.separadorPathPanel);
-                    var sType = '';
-
-                    if (idImage.substr(0, 1) == 'v') sType = 'video';
-                    else sType = 'imagen';
-
-                    colImages[iCol] = [{
-                        id: idImage,
-                        update: datUpdateImage,
-                        public: datPublicImage,
-                        titulo: captionImage,
-                        linkurl: linkUrlImage,
-                        infoimagen: infoTextImage,
-                        parentFolder: parentFolder,
-                        parentName: parentNameFolder,
-                        type: sType
-                    }];
-                    iCol++;
-                }
-            });
+            var colImages=new Array;
+			var iCol=0;			
+			//El nodo root es config
+			$(xml).find('img').each(function() {
+				var IDImage=$(this).attr("id");
+				var hImage=typesHash.get(IDImage);
+				if (hImage != null){
+					var idImage=hImage.SRC;
+					var datUpdateImage=hImage.UPDATE;
+					var datPublicImage=hImage.PUBLIC;
+					var captionImage=hImage.CAPTION;
+					var linkUrlImage=hImage.LINKURL;
+					var infoTextImage=hImage.INFOTEXT;
+					var parentFolder=htmlReplace(($(this).parent()).attr("name"));
+					var parentNameFolder=pathImagenComponer($(this),App.Config.separadorPathPanel);
+					var sType='imagen';
+					
+					colImages[iCol]=[{id:idImage,update:datUpdateImage,public:datPublicImage,titulo:captionImage,
+										linkurl:linkUrlImage,infoimagen:infoTextImage,parentFolder:parentFolder,
+										parentName:parentNameFolder,type:sType}];
+					iCol++;
+				}
+			});
+			$(xml).find('vid').each(function() {
+				var IDImage=$(this).attr("id");
+				var hImage=typesHash.get(IDImage);
+				if (hImage != null){
+					var idImage=hImage.SRC;
+					var datUpdateImage=hImage.UPDATE;
+					var datPublicImage=hImage.PUBLIC;
+					var captionImage=hImage.CAPTION;
+					var linkUrlImage=hImage.LINKURL;
+					var infoTextImage=hImage.INFOTEXT;
+					var parentFolder=htmlReplace(($(this).parent()).attr("name"));
+					var parentNameFolder=pathImagenComponer($(this),App.Config.separadorPathPanel);
+					var sType='video';
+					
+					colImages[iCol]=[{id:idImage,update:datUpdateImage,public:datPublicImage,titulo:captionImage,
+										linkurl:linkUrlImage,infoimagen:infoTextImage,parentFolder:parentFolder,
+										parentName:parentNameFolder,type:sType}];
+					iCol++;
+				}
+			});
             //Ordenar colección
             colImages.sort(arrayDateSort)
 
