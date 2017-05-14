@@ -171,17 +171,22 @@ breadcrumbsEstablecer = function(oNode, urlNews) {
     if (oTemp == undefined && urlNews == undefined) {
         sResult = "<li class='breadcrumb-item'><a href='./index.html'>inicio</a></li>"
         sResult += "<li class='breadcrumb-item active'>lo último</li>"
+
     } else {
         if (document.URL.toLowerCase().indexOf("detail.html") > 0) {
             sResult = "<li class='breadcrumb-item active'>secuencia</li>";
-            sResult = hrefEstablecer(oTemp[0].nodeName, oTemp.attr("name"), urlNews, 1) + sResult;
+            if (oTemp != '') {
+                sResult = hrefEstablecer(oTemp[0].nodeName, oTemp.attr("name"), urlNews, 1) + sResult;
+            }
         } else {
             sResult += hrefEstablecer(oTemp[0].nodeName, oTemp.attr("name"), urlNews, 0)
         }
 
-        while ((oTemp.parent()).attr("name") != undefined) {
-            oTemp = oTemp.parent();
-            sResult = hrefEstablecer(oTemp[0].nodeName, oTemp.attr("name"), urlNews, 1) + sResult;
+        if (oTemp != '') {
+            while ((oTemp.parent()).attr("name") != undefined) {
+                oTemp = oTemp.parent();
+                sResult = hrefEstablecer(oTemp[0].nodeName, oTemp.attr("name"), urlNews, 1) + sResult;
+            }
         }
         if (urlNews != undefined) sResult = hrefEstablecer("lo último", urlNews, urlNews, 1) + sResult;
         sResult = "<li class='breadcrumb-item'><a href='./index.html'>inicio</a></li>" + sResult;

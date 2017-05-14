@@ -86,7 +86,8 @@ galeriaCargar = function(sParam, sNews) {
                             $("<div class='carousel-item " + sActive + "'><img class='d-block img-fluid' id='" + imgName +
                                 "' src='" + App.Config.rutaImage + imgName +
                                 ".jpg' title='" + sName + "' alt='First slide'></div>").appendTo("#carouselInner");
-                            $("<li data-target='#carouselSlides' class='" + sActive + "' data-slide-to='" + iElem + "'></li>").appendTo("#carouselIndicators");
+                            $("<li data-target='#carouselSlides' class='" + sActive + "' data-slide-to='" +
+                                iElem + "'></li>").appendTo("#carouselIndicators");
 
                             iElem++;
                         }
@@ -106,10 +107,13 @@ newsCargar = function(sParam, sNews) {
         url: App.Config.rutaCnf,
         dataType: "xml",
         success: function(xml) {
-            //boton atras
-            //$('.backbottom').wrap("<a href='./index.html?news="+sParam+"'>");	
-            $('.backbottom').html("<a href='./index.html'>inicio</a> | <a href='./index.html?news=" + sNews + "'>lo &uacute;ltimo</a> | secuencia");
-            $('.backbottom').css({ "display": "block" });
+            //breadcrump                    
+            var panBreadCrumb = $("<ul class='breadcrumb'>").insertBefore("#main");
+            $(breadcrumbsEstablecer('', sNews)).appendTo(panBreadCrumb);
+
+            //dimension
+            $('.carousel-inner').height(sliderHeight);
+            $('.carousel-item').height(sliderHeight);
 
             var colImages = new Array;
             var iCol = 0;
@@ -145,20 +149,24 @@ newsCargar = function(sParam, sNews) {
             //Ordenar colección
             colImages.sort(arrayDateSort)
 
+            var iElem = 0;
+
             //Cargar los N primeros
             for (var i = 0; i < colImages.length - 1 && i < App.Config.elemNuevos; i++) {
-                //Cargar panel con primera imagen
-                var elmPan = $("<li>").appendTo(".bxslider");
-                var divPan = $("<div class='panel' style='width:100%;max-width:" + colImages[i][0].widthImage + "px;margin:0 auto'>").appendTo(elmPan);
-                var divImg = $("<img id='" + colImages[i][0].id.replace(".jpg", "") + "' src='" + App.Config.rutaImage + colImages[i][0].id.replace(".jpg", "") + ".jpg' title='" + colImages[i][0].titulo + "' alt='Columnas Css' />").appendTo(divPan);
+                var imgName = colImages[i][0].id.replace(".jpg", "");
+                var sName = colImages[i][0].captionImage;
 
-                //Capa de referencia galeria
-                var divPar = $("<p class='panel-parent-paragraph'><span class='panel-parent'>Ir a galeria </span><img class='panel-literal-img panel-literal-detalle-img' src='./resources/flecha.png'/><span class='panel-parent'>" + colImages[i][0].parentName + "</span></p>").prependTo(divPan);
-                if (sNews != undefined) {
-                    $(divPar).wrap("<a href='./index.html?gallery=" + colImages[i][0].parentFolder + "&news=" + sNews + "'>");
-                } else {
-                    $(divPar).wrap("<a href='./index.html?gallery=" + colImages[i][0].parentFolder + "'>");
-                }
+                colImages[i][0].widthImage
+
+                var sActive = (iElem == 0) ? ' active' : '';
+
+                $("<div class='carousel-item " + sActive + "'><img class='d-block img-fluid' id='" + imgName +
+                    "' src='" + App.Config.rutaImage + imgName +
+                    ".jpg' title='" + sName + "' alt='First slide'></div>").appendTo("#carouselInner");
+                $("<li data-target='#carouselSlides' class='" + sActive + "' data-slide-to='" +
+                    iElem + "'></li>").appendTo("#carouselIndicators");
+
+                iElem++;
             }
             bannerCookies();
         }
