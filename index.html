@@ -20,8 +20,8 @@
     <title>IMFotograf&iacute;a - I&ntilde;aki Marquina (night.noise)</title>
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
     <!-- Custom styles for this template -->
     <link type="text/css" href="./css.src/im_style.css" rel="stylesheet" />
@@ -34,8 +34,8 @@
 </head>
 
 <body>
-    <div class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <div class="navbar navbar-toggleable fixed-top navbar-inverse bg-inverse">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="navbar-toggler-right">
@@ -57,7 +57,8 @@
             </div>
         </a>
         <!-- Colapsilbe -->
-        <div class="navbar-collapse collapse" id="navbarCollapse" aria-expanded="false">
+        <!--
+        <div class="collapse navbar-collapse" id="nav-content" aria-expanded="false">
             <div class="container-fluid">
                 <div class="about">
                     <h4>About</h4>
@@ -73,6 +74,7 @@
                 </div>
             </div>
         </div>
+        -->
     </div>
 
     <!-- banner -->
@@ -117,7 +119,6 @@
     </footer>
 
     <style>
-        /*
         img {
             opacity: 0 !important;
         }
@@ -137,18 +138,17 @@
         .header-logo-img {
             background-color: #cccccc !important;
         }
-        */
     </style>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
-    <script>
-        window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
-    <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
+
+    <!-- bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="./js.src/ie10-viewport-bug-workaround.js"></script>
@@ -162,7 +162,7 @@
     <script src="./js/im_google-analytics.min.js" type="text/javascript"></script>
     <script src="./js/im_cookies.min.js" type="text/javascript"></script>
     <script src="./js.src/im_comun.js" type="text/javascript"></script>
-    <script src="./js/im_app.constantes.min.js" type="text/javascript"></script>
+    <script src="./js.src/im_app.constantes.js" type="text/javascript"></script>
     <script src="./js.src/im_app.config.js" type="text/javascript"></script>
     <script src="./js/im_photos.min.js" type="text/javascript"></script>
     <script src="./js/im_template.min.js" type="text/javascript"></script>

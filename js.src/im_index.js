@@ -212,6 +212,11 @@ galeriaCargar = function(sParam, sNews) {
                             var divImage = $("<div class='card-image'>").appendTo(divCard);
                             $("<img class='card-img-top img-fluid' id='" + imgName + "' src='" + App.Config.rutaImage +
                                 imgName + ".jpg' title='" + sName + "' alt='Columnas Css' />").appendTo(divImage);
+                            //Marcador de secuencia                            
+                            var divSecuencia = $("<div class='secuencia' title='ver secuencia'>").appendTo(divImage);
+                            $("<span class='fa fa-chevron-left'>").appendTo(divSecuencia);
+                            $("<span class='fa fa-chevron-right'>").appendTo(divSecuencia);
+
                             //vinculo
                             if (sNews != undefined) {
                                 $(divImage).wrap("<a href='./detail.html?gallery=" + sParam + "&photo=" + iElem + "&news=" + sNews + "'>");
@@ -221,16 +226,17 @@ galeriaCargar = function(sParam, sNews) {
                             /** bloque */
                             var divBlock = $("<div class='card-block'>").appendTo(divCard);
                             var panTitulo = $("<h4 class='card-title'>").appendTo(divBlock);
-                            $("<span class='fa fa-chevron-right'></span>").appendTo(panTitulo);
+                            $("<span class='fa " + App.Constantes.iconImage + "'></span>").appendTo(panTitulo);
                             $("<span class='col-11'>" + sName + "</span>").appendTo(panTitulo);
                             //Texto
                             var panTexto = $("<p class='card-text '>" + sInfT + "</p>").appendTo(divBlock);
                             //vinculo
+                            /*
                             if (sNews != undefined) {
                                 $(panTexto).wrap("<a href='./detail.html?gallery=" + sParam + "&photo=" + iElem + "&news=" + sNews + "'>");
                             } else {
                                 $(panTexto).wrap("<a href='./detail.html?gallery=" + sParam + "&photo=" + iElem + "'>");
-                            }
+                            }*/
                             //Dimensiones, precio copia
                             var sCadena = '';
                             if ((sFormat != undefined) && (sFormat != '')) {
@@ -309,7 +315,7 @@ folderCargar = function(sParam, sNews) {
                             var divBlock = $("<div class='card-block'>").appendTo(divCard);
                             //Titulo
                             var panTitulo = $("<h4 class='card-title'>").appendTo(divBlock);
-                            $("<span class='fa fa-chevron-right'></span>").appendTo(panTitulo);
+                            $("<span class='fa " + App.Constantes.iconGallery + "'></span>").appendTo(panTitulo);
                             $("<span class='col-11'>" + sName + "</span>").appendTo(panTitulo);
                             //Pie
                             var panDate = $("<p class='card-date card-text text-right'>").appendTo(divBlock);
@@ -378,12 +384,17 @@ multimediaCargar = function(sParam, sNews) {
                             /** bloque */
                             var divBlock = $("<div class='card-block'>").appendTo(divCard);
                             var panTitulo = $("<h4 class='card-title'>").appendTo(divBlock);
-                            $("<span class='fa fa-video-camera'></span>").appendTo(panTitulo);
+                            $("<span class='fa " + App.Constantes.iconVideo + "'></span>").appendTo(panTitulo);
                             $("<span class='col-11'>" + sName + "</span>").appendTo(panTitulo);
                             //Texto
                             var panTexto = $("<p class='card-text '>" + sInfT + "</p>").appendTo(divBlock);
+
                             //Pie
-                            var panDate = $("<p class='card-date card-text text-right'>").appendTo(divBlock);
+                            var panFooter = $("<div class='card-text row justify-content-between'>").appendTo(divBlock);
+                            //Capa social-media
+                            var panSocial = $("<div class='col-4 text-left'>").appendTo(panFooter);
+                            $("<img src='./resources/youtube.png' style='width:14px!important;' title='publicado en youtube'/>").appendTo(panSocial);
+                            var panDate = $("<p class='card-date card-text text-right'>").appendTo(panFooter);
                             $("<small class='text-muted'>" + dateFormat(sUpdate) + "</small>").appendTo(panDate);
                             //Crear vínculo carpeta
                             $(divCard).wrap("<a data-lity href='" + hImage.LINKURL + "'>");
@@ -435,7 +446,7 @@ homeCargar = function() {
                                             imgName + ".jpg' title='" + sName + "' alt='Columnas Css' />").appendTo(divImage);
                                         var divBlock = $("<div class='card-block'>").appendTo(divCard);
                                         var panTitulo = $("<h4 class='card-title'>").appendTo(divBlock);
-                                        $("<span class='fa fa-plus-square-o'></span>").appendTo(panTitulo);
+                                        $("<span class='fa " + App.Constantes.iconGalleries + "'></span>").appendTo(panTitulo);
                                         $("<span class='col-11'>" + sName + "</span>").appendTo(panTitulo);
                                         //Capa de thumbs de galeria
                                         if ($(nGls).find("gallery").length > 0) {
@@ -475,7 +486,7 @@ homeCargar = function() {
                                             imgName + ".jpg' title='" + sName + "' alt='Columnas Css' />").appendTo(divImage);
                                         var divBlock = $("<div class='card-block'>").appendTo(divCard);
                                         var panTitulo = $("<h4 class='card-title'>").appendTo(divBlock);
-                                        $("<span class='fa fa-chevron-right'></span>").appendTo(panTitulo);
+                                        $("<span class='fa " + App.Constantes.iconGallery + "'></span>").appendTo(panTitulo);
                                         $("<span class='col-11'>" + sName + "</span>").appendTo(panTitulo);
                                         var panDate = $("<p class='card-date card-text text-right'>").appendTo(divBlock);
                                         $("<small class='text-muted'>" + dateFormat($(nGls).attr("update")) + "</small>").appendTo(panDate);
@@ -494,7 +505,7 @@ homeCargar = function() {
                                             imgName + ".jpg' title='" + sName + "' alt='Columnas Css' />").appendTo(divImage);
                                         var divBlock = $("<div class='card-block'>").appendTo(divCard);
                                         var panTitulo = $("<h4 class='card-title'>").appendTo(divBlock);
-                                        $("<span class='fa fa-video-camera'></span>").appendTo(panTitulo);
+                                        $("<span class='fa " + App.Constantes.iconVideo + "'></span>").appendTo(panTitulo);
                                         $("<span class='col-11'>" + sName + "</span>").appendTo(panTitulo);
                                         var panDate = $("<p class='card-date card-text text-right'>").appendTo(divBlock);
                                         $("<small class='text-muted'>" + dateFormat($(nGls).attr("update")) + "</small>").appendTo(panDate);
@@ -511,7 +522,7 @@ homeCargar = function() {
                             var divCard = $("<div class='card p-1'>").appendTo("#tiles");
                             var divBlock = $("<div class='card-block'>").appendTo(divCard);
                             var panTitulo = $("<h4 class='card-title'>").appendTo(divBlock);
-                            $("<span class='fa fa-paperclip'></span>").appendTo(panTitulo);
+                            $("<span class='fa " + App.Constantes.iconText + "'></span>").appendTo(panTitulo);
                             $("<span class='col-11'>" + sName + "</span>").appendTo(panTitulo);
 
                             //Capa de thumbs de galeria
@@ -541,7 +552,7 @@ homeCargar = function() {
                             var divCard = $("<div class='card p-1'>").appendTo("#tiles");
                             var divBlock = $("<div class='card-block'>").appendTo(divCard);
                             var panTitulo = $("<h4 class='card-title'>").appendTo(divBlock);
-                            $("<span class='fa fa-info'></span>").appendTo(panTitulo);
+                            $("<span class='fa " + App.Constantes.iconInfo + "'></span>").appendTo(panTitulo);
                             $("<span class='col-11'>" + sName + "</span>").appendTo(panTitulo);
                             var panDate = $("<p class='card-date card-text text-right'>").appendTo(divBlock);
                             $("<small class='text-muted'>" + dateFormat($(nObj).attr("update")) + "</small>").appendTo(panDate);
@@ -612,7 +623,7 @@ newsMostrar = function() {
                 imgName + ".jpg' title='" + sName + "' alt='Columnas Css' />").appendTo(divImage);
             var divBlock = $("<div class='card-block'>").appendTo(divCard);
             var panTitulo = $("<h4 class='card-title'>").appendTo(divBlock);
-            $("<span class='fa fa-star'></span>").appendTo(panTitulo);
+            $("<span class='fa " + App.Constantes.iconNew + "'></span>").appendTo(panTitulo);
             $("<span class='col-11'>Lo &uacute;ltimo</span>").appendTo(panTitulo);
             var panDate = $("<p class='card-date card-text text-right'>").appendTo(divBlock);
             $("<small class='text-muted'>" + dateFormat(colImages[0][0].update) + "</small>").appendTo(panDate);
@@ -705,32 +716,49 @@ newsCargar = function(sParam) {
             var iCnt = 0;
             for (var i = 0; i < colImages.length - 1 && i < App.Config.elemNuevos; i++) {
                 var typeCss = (colImages[i][0].type == 'video') ? 'card-video' : 'card-image';
-                var icoImagen = (colImages[i][0].type == 'video') ? 'fa-video-camera' : 'fa-chevron-right';
-                var txtTitle = (colImages[i][0].type == 'video') ? colImages[i][0].titulo : 'ver secuencia';
+                var icoImagen = (colImages[i][0].type == 'video') ? App.Constantes.iconVideo : App.Constantes.iconImage;
+                var infoTitle = (colImages[i][0].type == 'video') ? colImages[i][0].titulo : 'ver secuencia';
 
                 var divCard = $("<div class='card p-1'>").appendTo("#tiles");
 
                 /** imagen */
                 var divImage = $("<div class='" + typeCss + "'>").appendTo(divCard);
-                $("<img class='card-img-top img-fluid' id='" + colImages[i][0].id.replace(".jpg", "") + "' src='" + App.Config.rutaImage +
-                    colImages[i][0].id.replace(".jpg", "") + ".jpg' title='" + txtTitle + "' alt='Columnas Css' />").appendTo(divImage);
+                $("<img class='card-img-top img-fluid' id='" + colImages[i][0].id.replace(".jpg", "") +
+                    "' src='" + App.Config.rutaImage +
+                    colImages[i][0].id.replace(".jpg", "") + ".jpg' title='" + colImages[i][0].titulo +
+                    "' alt='Columnas Css' />").appendTo(divImage);
+                //Marcador de secuencia
+                if (colImages[i][0].type != 'video') {
+                    var divSecuencia = $("<div class='secuencia' title='ver secuencia'>").appendTo(divImage);
+                    $("<span class='fa fa-chevron-left'>").appendTo(divSecuencia);
+                    $("<span class='fa fa-chevron-right'>").appendTo(divSecuencia);
+                }
                 /** bloque */
                 var divBlock = $("<div class='card-block'>").appendTo(divCard);
                 var panTitulo = $("<h4 class='card-title'>").appendTo(divBlock);
-                $("<span class='fa " + icoImagen + "'></span>").appendTo(panTitulo);
+                $("<span class='fa " + App.Constantes.icoImagen + "'></span>").appendTo(panTitulo);
                 $("<span class='col-11'>" + colImages[i][0].titulo + "</span>").appendTo(panTitulo);
                 //Texto
-                var panTexto = $("<p class='card-text '>" + colImages[i][0].infoimagen + "</p>").appendTo(divBlock);
+                var panEnlace = $("<div class='card-colection'>").appendTo(divBlock);
+                var panTexto = $("<p class='card-text '><span class='fa " + App.Constantes.iconColection +
+                    "'></span>ir a</p>").appendTo(panEnlace);
+                var txtEnlace = $("<span>" + colImages[i][0].parentName + "</span>").appendTo(panTexto);
 
                 //Pie
                 var panFooter = $("<div class='card-text row justify-content-between'>").appendTo(divBlock);
 
                 if (colImages[i][0].type == 'video') {
-                    $(divImage).wrap("<a data-lity='' href='" + colImages[i][0].linkurl + "' title='" + colImages[i][0].titulo + "'>");
-                    $(panTexto).wrap("<a href='./index.html?multimedia=" + colImages[i][0].parentFolder + "&news=" + sParam + "'>");
+                    $(divImage).wrap("<a data-lity='' href='" + colImages[i][0].linkurl + "'>");
+                    $(txtEnlace).wrap("<a href='./index.html?multimedia=" + colImages[i][0].parentFolder +
+                        "&news=" + sParam + "'>");
+
+                    //Capa social-media
+                    var panSocial = $("<div class='col-4 text-left'>").appendTo(panFooter);
+                    $("<img src='./resources/youtube.png' style='width:14px!important;' title='publicado en youtube'/>").appendTo(panSocial);
                 } else {
                     $(divImage).wrap("<a href='./detail.html?news=" + sParam + "&photo=" + iCnt + "'>");
-                    $(panTexto).wrap("<a href='./index.html?gallery=" + colImages[i][0].parentFolder + "&news=" + sParam + "'>");
+                    $(txtEnlace).wrap("<a href='./index.html?gallery=" + colImages[i][0].parentFolder +
+                        "&news=" + sParam + "'>");
 
                     //Capa social-media
                     var panSocial = $("<div class='col-4 text-left'>").appendTo(panFooter);

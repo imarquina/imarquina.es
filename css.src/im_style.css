@@ -106,12 +106,14 @@ footer .bar-social>a.fa-facebook:hover {
 
 .navbar-toggler {
     color: #eceeef;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
+    display: inline-block !important;
 }
 
 .navbar-toggler-right {
     position: absolute;
     right: 1rem;
+    top: .8rem;
 }
 
 .navbar>.about {
@@ -238,12 +240,12 @@ footer .bar-social>a.fa-facebook:hover {
 }
 
 .card-block {
-    padding: .45rem;
-    padding-bottom: .25rem;
+    padding: .25rem .45rem;
 }
 
 .card-block>h4 {
     margin-bottom: .3rem;
+    margin-top: .2rem;
     color: #ababab;
 }
 
@@ -317,14 +319,22 @@ footer .bar-social>a.fa-facebook:hover {
     vertical-align: top;
 }
 
+.card-colection {}
 
-/*
-img.card-title {
-    width: 0.9rem;
-    vertical-align: top;
-    margin-right: 0.2rem;
+.card-colection>.card-text {
+    margin-bottom: .3rem;
 }
-*/
+
+.card-colection>.card-text>a {
+    margin-left: .3rem;
+}
+
+.card-image .secuencia {
+    position: absolute;
+    top: .3rem;
+    text-align: right;
+    width: 98%;
+}
 
 .card-video {
     background-image: url(../resources/play.png);
@@ -380,7 +390,7 @@ p.card-date {
 
 @media (min-width: 34em) {
     .navbar-toggler {
-        margin-top: 2rem;
+        margin-top: 1.4rem;
     }
     .navbar .header-logo-img {
         padding-left: .5rem;
@@ -414,14 +424,6 @@ p.card-date {
         -webkit-column-count: 4;
         -moz-column-count: 4;
         column-count: 4;
-    }
-}
-
-@media (min-width: 75em) {
-    .card-columns {
-        -webkit-column-count: 5;
-        -moz-column-count: 5;
-        column-count: 5;
     }
 }
 
