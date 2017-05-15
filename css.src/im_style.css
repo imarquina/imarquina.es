@@ -90,18 +90,38 @@ footer .bar-social>a.fa-facebook:hover {
     color: #ffa500 !important;
 }
 
-.navbar-collapse .container-fluid {
-    padding: 1.5rem 2.5rem;
+.navbar-toggleable {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column !important;
+    -ms-flex-direction: column !important;
+    flex-direction: column !important;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: left;
+    -webkit-align-items: left;
+    -ms-flex-align: left;
+    align-items: left;
+}
+
+.container-fluid {
     border-bottom: 1px solid #55595c;
     padding-top: 1rem;
 }
 
-.navbar-collapse h4 {
+.navbar .collapse h4 {
     color: #818a91;
 }
 
-.navbar-collapse .text-muted {
+.navbar .collapse .text-muted {
     color: #818a91;
+}
+
+.navbar .collapse.show {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
 }
 
 .navbar-toggler {
@@ -331,9 +351,11 @@ footer .bar-social>a.fa-facebook:hover {
 
 .card-image .secuencia {
     position: absolute;
-    top: .3rem;
+    top: 1.5rem;
+    right: 1.5rem;
     text-align: right;
     width: 98%;
+    font-size: 1.5rem;
 }
 
 .card-video {
