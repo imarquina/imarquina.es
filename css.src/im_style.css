@@ -14,7 +14,7 @@ body>footer {
 }
 
 body>footer p {
-    margin-bottom: .25rem !important;
+    margin-bottom: .05rem !important;
 }
 
 body>footer .footer-block {
@@ -108,6 +108,17 @@ footer .bar-social>a.fa-facebook:hover {
 .container-fluid {
     border-bottom: 1px solid #55595c;
     padding-top: 1rem;
+}
+
+.container-fluid>.menu {
+    font-size: .9rem;
+}
+
+.container-fluid #menu li>span {
+    margin-right: 0.3rem;
+    width: 1rem;
+    text-align: center;
+    font-size: .8rem;
 }
 
 .navbar .collapse h4 {
