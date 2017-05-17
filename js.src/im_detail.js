@@ -4,9 +4,12 @@ var dataXml;
 /* == Evento de window ============================== */
 $(window).ready(function() {
     initialize();
-    //Cargar tabla imagenes
-    imagenesCargar(typesHash);
-    dataXml = loadXml();
+
+    //Carga colección elementos
+    var photoXml = Database.Photos.load();
+    typesHash = Negocio.Photos.load(photoXml);
+    //Carga album elementos
+    dataXml = Database.Config.load();
 
     var sGallery = queryStringParamGet('gallery');
     if (queryStringParamValue(sGallery)) {
