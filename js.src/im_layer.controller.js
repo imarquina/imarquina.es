@@ -95,7 +95,7 @@ var Controller = (function() {
                         var infoTextImage = hImage.INFOTEXT;
                         var datUpdateImage = hImage.UPDATE;
                         var datPublicImage = hImage.PUBLIC;
-                        var parentFolder = htmlReplace(($(this).parent()).attr("name"));
+                        var parentFolder = Comun.htmlReplace(($(this).parent()).attr("name"));
                         var parentNameFolder = pathImagenComponer($(this), App.Config.separadorPathPanel);
                         var sType = 'imagen';
 
@@ -123,7 +123,7 @@ var Controller = (function() {
                         var infoTextImage = hImage.INFOTEXT;
                         var datUpdateImage = hImage.UPDATE;
                         var datPublicImage = hImage.PUBLIC;
-                        var parentFolder = htmlReplace(($(this).parent()).attr("name"));
+                        var parentFolder = Comun.htmlReplace(($(this).parent()).attr("name"));
                         var parentNameFolder = pathImagenComponer($(this), App.Config.separadorPathPanel);
                         var sType = 'video';
 
@@ -274,7 +274,7 @@ var Controller = (function() {
                 elements.find('gallery').each(function() {
                     var gallery_name = $(this).attr("name");
 
-                    if (htmlReplace(gallery_name) == sParam) {
+                    if (Comun.htmlReplace(gallery_name) == sParam) {
                         //Coleccion de la galeria
                         var iElem = 0;
                         $(this).children().each(function() {
@@ -316,7 +316,7 @@ var Controller = (function() {
                 elements.find('gallery').each(function() {
                     var gallery_name = $(this).attr("name");
 
-                    if (htmlReplace(gallery_name) == sParam) {
+                    if (Comun.htmlReplace(gallery_name) == sParam) {
                         vGallery = $(this);
                     }
                 });
@@ -329,7 +329,7 @@ var Controller = (function() {
                 elements.find('folder').each(function() {
                     var folder_name = $(this).attr("name");
 
-                    if (htmlReplace(folder_name) == sParam) {
+                    if (Comun.htmlReplace(folder_name) == sParam) {
                         //Coleccion de la carpeta				
                         $(this).children().each(function() {
                             var nObj = this;
@@ -357,7 +357,7 @@ var Controller = (function() {
                 elements.find('folder').each(function() {
                     var folder_name = $(this).attr("name");
 
-                    if (htmlReplace(folder_name) == sParam) {
+                    if (Comun.htmlReplace(folder_name) == sParam) {
                         vFolder = $(this);
                     }
                 });
@@ -370,7 +370,7 @@ var Controller = (function() {
                 elements.find('multimedia').each(function() {
                     var multimedia_name = $(this).attr("name");
 
-                    if (htmlReplace(multimedia_name) == sParam) {
+                    if (Comun.htmlReplace(multimedia_name) == sParam) {
                         //Coleccion de la galeria
                         var iElem = 0;
                         $(this).children().each(function() {
@@ -412,7 +412,7 @@ var Controller = (function() {
                 elements.find('multimedia').each(function() {
                     var multimedia_name = $(this).attr("name");
 
-                    if (htmlReplace(multimedia_name) == sParam) {
+                    if (Comun.htmlReplace(multimedia_name) == sParam) {
                         vMultimedia = $(this);
                     }
                 });
@@ -425,7 +425,7 @@ var Controller = (function() {
                 elements.find('section').each(function() {
                     var section_name = $(this).attr("name");
 
-                    if (htmlReplace(section_name) == sParam) {
+                    if (Comun.htmlReplace(section_name) == sParam) {
                         var captionImage = $(this).attr("name");
                         var textoElemento = $(this).text();
                         var sType = 'section';
