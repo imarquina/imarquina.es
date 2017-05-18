@@ -72,6 +72,8 @@ $(window).resize(function() {
 initialize = function() {
     var lightbox = lity();
 
+    $('#titulo').text(App.Config.dataTextTitle);
+    $('#subtitulo').text(App.Config.dataTextSubtitle);
     $('#annio').text(App.Config.annio);
     $('#version').text(App.Config.version);
 }

@@ -167,7 +167,7 @@ footer .bar-social>a.fa-facebook:hover {
 }
 
 .navbar .header-logo-img {
-    padding: 0;
+    padding: 0 0 0 .5rem;
 }
 
 .navbar .header-logo img {
@@ -177,7 +177,7 @@ footer .bar-social>a.fa-facebook:hover {
 
 .navbar .header-texto {
     line-height: 1.4rem;
-    padding: .5rem 0 0 0;
+    padding: .5rem 0 0 .8rem;
 }
 
 .navbar .header-texto-titulo {
@@ -424,9 +424,6 @@ p.card-date {
 @media (min-width: 34em) {
     .navbar-toggler {
         margin-top: 1.4rem;
-    }
-    .navbar .header-logo-img {
-        padding-left: .5rem;
     }
     .navbar .header-texto {
         padding-left: .8rem;
