@@ -81,6 +81,10 @@ footer .bar-goHead {
     border-radius: .25rem;
 }
 
+footer .hidden {
+    display: none;
+}
+
 .navbar {
     margin-bottom: 0;
     justify-content: flex-start;
@@ -179,6 +183,7 @@ footer .bar-goHead {
 
 .navbar .header-logo-img {
     padding: 0;
+    padding-left: .8rem;
 }
 
 .navbar .header-logo img {
@@ -188,7 +193,7 @@ footer .bar-goHead {
 
 .navbar .header-texto {
     line-height: 1.4rem;
-    padding: .5rem 0 0 0;
+    padding: .5rem 0 0 .8rem;
 }
 
 .navbar .header-texto-titulo {
@@ -369,6 +374,10 @@ footer .bar-goHead {
 
 .card-colection>.card-text>a {
     margin-left: .3rem;
+}
+
+.card-image {
+    text-align: center;
 }
 
 .card-image .secuencia {

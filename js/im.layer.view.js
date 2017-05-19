@@ -72,9 +72,9 @@ $(function() {
     var $pos = 20;
     $win.scroll(function() {
         if ($win.scrollTop() <= $pos)
-            $('.bar-goHead').addClass('hidden-xs-up');
+            $('.bar-goHead').addClass('hidden');
         else {
-            $('.bar-goHead').removeClass('hidden-xs-up');
+            $('.bar-goHead').removeClass('hidden');
         }
     });
 });
@@ -85,7 +85,7 @@ initialize = function() {
     var lightbox = lity();
 
     $('#titulo').text(App.Config.dataTextTitle);
-    $('#subtitulo').text(App.Config.dataTextSubtitle);
+    $('#subtitulo').text(App.Config.dataTextSubtitle.toLowerCase());
     $('#annio').text(App.Config.annio);
     $('#version').text(App.Config.version);
 }
