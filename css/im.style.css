@@ -44,6 +44,7 @@ small {
 
 footer .bar-social {
     padding-top: .6rem;
+    padding-left: 1rem;
 }
 
 footer .bar-social>.fa {
@@ -68,6 +69,16 @@ footer .bar-social>a.fa-twitter:hover {
 
 footer .bar-social>a.fa-facebook:hover {
     color: #4f88ff !important;
+}
+
+footer .bar-goHead {
+    margin-bottom: 3.8rem;
+    padding-left: 0;
+    max-width: 2.0rem;
+    padding-bottom: .5rem;
+    background: rgba(136, 136, 136, 0.75);
+    margin-left: 1rem;
+    border-radius: .25rem;
 }
 
 .navbar {
@@ -167,7 +178,7 @@ footer .bar-social>a.fa-facebook:hover {
 }
 
 .navbar .header-logo-img {
-    padding: 0 0 0 .5rem;
+    padding: 0;
 }
 
 .navbar .header-logo img {
@@ -177,7 +188,7 @@ footer .bar-social>a.fa-facebook:hover {
 
 .navbar .header-texto {
     line-height: 1.4rem;
-    padding: .5rem 0 0 .8rem;
+    padding: .5rem 0 0 0;
 }
 
 .navbar .header-texto-titulo {
@@ -239,7 +250,7 @@ footer .bar-social>a.fa-facebook:hover {
 }
 
 .goHead {
-    padding-top: .6rem;
+    padding-top: .5rem;
     display: block;
 }
 
@@ -424,6 +435,9 @@ p.card-date {
 @media (min-width: 34em) {
     .navbar-toggler {
         margin-top: 1.4rem;
+    }
+    .navbar .header-logo-img {
+        padding-left: .5rem;
     }
     .navbar .header-texto {
         padding-left: .8rem;

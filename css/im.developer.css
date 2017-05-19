@@ -1,0 +1,23 @@
+img {
+    opacity: 0 !important;
+}
+
+.card-image {
+    background-color: #cccccc !important;
+}
+
+.card-block>.row>.col-3 {
+    background-color: #cccccc !important;
+}
+
+.card-block>.row>.col-4>a {
+    background-color: #cccccc !important;
+}
+
+.carousel-item {
+    background-color: #cccccc !important;
+}
+
+.header-logo-img {
+    background-color: #cccccc !important;
+}

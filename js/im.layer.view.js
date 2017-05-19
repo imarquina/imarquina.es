@@ -67,6 +67,18 @@ $(window).resize(function() {
     }
 });
 
+$(function() {
+    var $win = $(window);
+    var $pos = 20;
+    $win.scroll(function() {
+        if ($win.scrollTop() <= $pos)
+            $('.bar-goHead').addClass('hidden-xs-up');
+        else {
+            $('.bar-goHead').removeClass('hidden-xs-up');
+        }
+    });
+});
+
 /* Inicializa estados generales
 ================================================== */
 initialize = function() {
