@@ -62,8 +62,8 @@ $(window).ready(function() {
 
 $(window).resize(function() {
     if (document.URL.toLowerCase().indexOf("detail.html") > 0) {
-        $('.carousel-inner').height(sliderHeight);
-        $('.carousel-item').height(sliderHeight);
+        $('.carousel-inner').height(View.Detail.sliderHeight);
+        $('.carousel-item').height(View.Detail.sliderHeight);
     }
 });
 
@@ -88,16 +88,6 @@ initialize = function() {
     $('#subtitulo').text(App.Config.dataTextSubtitle.toLowerCase());
     $('#annio').text(App.Config.annio);
     $('#version').text(App.Config.version);
-}
-
-/** == Calculo de dimension ======================= */
-sliderHeight = function() {
-    var detail = $('.detail').height();
-    var footer = $('footer').height();
-    var navbar = $('.navbar').height();
-    var breadcrumb = $('.breadcrumb').height();
-
-    return (detail - navbar - breadcrumb - footer);
 }
 
 /* Evalua si el objeto imagen es válido
@@ -591,8 +581,8 @@ var View = {
             $(Comun.breadcrumbsEstablecer(nodo, sNews)).appendTo(panBreadCrumb);
 
             //dimension
-            $('.carousel-inner').height(sliderHeight);
-            $('.carousel-item').height(sliderHeight);
+            $('.carousel-inner').height(View.Detail.sliderHeight);
+            $('.carousel-item').height(View.Detail.sliderHeight);
 
             var node_name = '';
 
@@ -622,7 +612,7 @@ var View = {
 
             for (var i = 0; i < colImages.length && i < Limite; i++) {
                 var imgName = colImages[i][0].id.replace(".jpg", "");
-                var sName = colImages[i][0].captionImage;
+                var sName = colImages[i][0].titulo;
 
                 var sActive = establecerElementoActivo(Comun.queryStringParamGet('photo'), i);
 
@@ -635,6 +625,7 @@ var View = {
             Cookies.bannerCookies();
         };
 
+        /* Establece el elemento activo para el caroussel */
         var establecerElementoActivo = function(sParam, elemActual) {
             if (sParam != undefined && sParam != '' && $.isNumeric(sParam)) {
                 return (parseInt(sParam) == elemActual) ? ' active' : '';
@@ -642,6 +633,7 @@ var View = {
                 return (elemActual == 0) ? ' active' : '';
             }
         };
+
         /** FUNCIONES PUBLICAS */
         Detail = {
             /** == Crea la lista de elementos de una galería == */
@@ -721,6 +713,15 @@ var View = {
                 colImages.sort(Comun.arrayDateSort);
 
                 paginaComponer(colImages, '', sNews);
+            },
+            /*  Calculo de dimension */
+            sliderHeight: function() {
+                var detail = $('.detail').height();
+                var footer = $('footer').height();
+                var navbar = $('.navbar').height();
+                var breadcrumb = $('.breadcrumb').height();
+
+                return (detail - navbar - breadcrumb - footer);
             }
         }
         return Detail;
