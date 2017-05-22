@@ -62,8 +62,8 @@ $(window).ready(function() {
 
 $(window).resize(function() {
     if (document.URL.toLowerCase().indexOf("detail.html") > 0) {
-        $('.carousel-inner').height(View.Detail.sliderHeight);
-        $('.carousel-item').height(View.Detail.sliderHeight);
+        //$('.carousel-inner').height(View.Detail.sliderHeight);
+        //$('.carousel-item').height(View.Detail.sliderHeight);
     }
 });
 
@@ -581,8 +581,8 @@ var View = {
             $(Comun.breadcrumbsEstablecer(nodo, sNews)).appendTo(panBreadCrumb);
 
             //dimension
-            $('.carousel-inner').height(View.Detail.sliderHeight);
-            $('.carousel-item').height(View.Detail.sliderHeight);
+            //$('.carousel-inner').height(View.Detail.sliderHeight);
+            //$('.carousel-item').height(View.Detail.sliderHeight);
 
             var node_name = '';
 
@@ -613,16 +613,20 @@ var View = {
             for (var i = 0; i < colImages.length && i < Limite; i++) {
                 var imgName = colImages[i][0].id.replace(".jpg", "");
                 var sName = colImages[i][0].titulo;
+                var sHeight = colImages[i][0].height;
+                var sWidth = colImages[i][0].width;
 
                 var sActive = establecerElementoActivo(Comun.queryStringParamGet('photo'), i);
 
                 $("<div class='carousel-item " + sActive + "'><img class='d-block img-fluid' id='" + imgName +
                     "' src='" + App.Config.rutaImage + imgName +
-                    ".jpg' title='" + sName + "' alt='First slide'></div>").appendTo("#carouselInner");
+                    ".jpg' height='" + sHeight + "' width='" + sWidth + "' title='" + sName + "' alt='First slide'></div>").appendTo("#carouselInner");
                 $("<li data-target='#carouselSlides' class='" + sActive + "' data-slide-to='" +
                     i + "'></li>").appendTo("#carouselIndicators");
             }
             Cookies.bannerCookies();
+
+            carouselNormalization();
         };
 
         /* Establece el elemento activo para el caroussel */
@@ -658,6 +662,7 @@ var View = {
                                 var linkUrlImage = hImage.LINKURL;
                                 var infoTextImage = hImage.INFOTEXT;
                                 var widthImage = hImage.WIDTH;
+                                var heightImage = hImage.HEIGHT;
 
                                 colImages[iCol] = [{
                                     id: idImage,
@@ -666,7 +671,8 @@ var View = {
                                     titulo: captionImage,
                                     linkurl: linkUrlImage,
                                     infoimagen: infoTextImage,
-                                    widthImage: widthImage
+                                    width: widthImage,
+                                    height: heightImage
                                 }];
                                 iCol++;
                             }
@@ -692,6 +698,7 @@ var View = {
                         var linkUrlImage = hImage.LINKURL;
                         var infoTextImage = hImage.INFOTEXT;
                         var widthImage = hImage.WIDTH;
+                        var heightImage = hImage.HEIGHT;
                         var parentFolder = Comun.htmlReplace(($(this).parent()).attr("name"));
                         var parentNameFolder = pathImagenComponer($(this), App.Config.separadorPathPanel);
 
@@ -702,7 +709,8 @@ var View = {
                             titulo: captionImage,
                             linkurl: linkUrlImage,
                             infoimagen: infoTextImage,
-                            widthImage: widthImage,
+                            width: widthImage,
+                            height: heightImage,
                             parentFolder: parentFolder,
                             parentName: parentNameFolder
                         }];
