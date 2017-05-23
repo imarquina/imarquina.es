@@ -60,13 +60,6 @@ $(window).ready(function() {
     }
 });
 
-$(window).resize(function() {
-    if (document.URL.toLowerCase().indexOf("detail.html") > 0) {
-        //$('.carousel-inner').height(View.Detail.sliderHeight);
-        //$('.carousel-item').height(View.Detail.sliderHeight);
-    }
-});
-
 $(function() {
     var $win = $(window);
     var $pos = 20;
@@ -580,10 +573,6 @@ var View = {
             var panBreadCrumb = $("<ul class='breadcrumb'>").insertBefore("#main");
             $(Comun.breadcrumbsEstablecer(nodo, sNews)).appendTo(panBreadCrumb);
 
-            //dimension
-            //$('.carousel-inner').height(View.Detail.sliderHeight);
-            //$('.carousel-item').height(View.Detail.sliderHeight);
-
             var node_name = '';
 
             //vinculos social-media
@@ -721,15 +710,6 @@ var View = {
                 colImages.sort(Comun.arrayDateSort);
 
                 paginaComponer(colImages, '', sNews);
-            },
-            /*  Calculo de dimension */
-            sliderHeight: function() {
-                var detail = $('.detail').height();
-                var footer = $('footer').height();
-                var navbar = $('.navbar').height();
-                var breadcrumb = $('.breadcrumb').height();
-
-                return (detail - navbar - breadcrumb - footer);
             }
         }
         return Detail;
