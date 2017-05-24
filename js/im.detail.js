@@ -21,8 +21,9 @@ carouselNormalization = function() {
                         $(this).css('height', $(this.parentElement).width() * getRatio($(this)) + 'px');
                     }
                 }
-                if ($('#carouselInner').height() < $(window).height() && $('#carouselInner').height() > $(this.parentElement).height()) {
-                    $(this).css('margin-top', ($('#carouselInner').height() - $(this.parentElement).height()) / 2 + 'px');
+                if ($('.detail').height() <= $(window).height()) {
+                    $(this).css('margin-top', (($('.detail').height() - $('.navbar').height() -
+                        $('footer').height()) - $(this.parentElement).height()) / 2 + 'px');
                 } else {
                     $(this).css('margin-top', '0px');
                 }
