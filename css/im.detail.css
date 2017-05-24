@@ -10,11 +10,7 @@ footer {
     padding-top: 9.5rem;
     padding-bottom: 2rem;
     background-color: #333333;
-}
-
-.carousel-inner {
-    min-height: 31rem;
-    max-height: 31rem;
+    min-height: 38.5rem;
 }
 
 .carousel-item>img {
