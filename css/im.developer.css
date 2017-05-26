@@ -22,3 +22,20 @@ img {
 .header-logo-img {
     /*background-color: #cccccc !important;*/
 }
+
+#banner-caroussel-top {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    right: 0rem;
+    background: #a7a7a7;
+    border-radius: 0 0 0 .5rem;
+}
+
+#banner-caroussel-top ul {
+    font-size: .8rem;
+    list-style: none;
+    padding-left: 1rem;
+    padding-top: .5rem;
+    width: 15rem;
+}

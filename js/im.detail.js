@@ -1,66 +1,97 @@
-carouselNormalization = function() {
-    var items = $('#carouselInner .carousel-item img'), //grab all slides
-        heights = [],
-        tHeights = [], //array to store teorical height values
-        tWidths = [], //array to store teorical width values
-        ratio = [], //array to store teorical ratio values
-        layout = [], //array to store teorical height values
-        tallest; //create variable to make note of the tallest slide
+$(window).ready(function() {
+    View.Detail.prototype.Carousel.carouselNormalization();
+});
 
-    if (items.length) {
-        function normalizeHeights() {
-            items.each(function() { //add heights to array
-                //heights.push(this.height);
-                tHeights.push($(this).attr('height'));
-                tWidths.push($(this).attr('width'));
-                ratio.push(getRatio($(this)));
-                layout.push(getLayout($(this)));
+/** evento de cambio de dimension */
+$(window).on('resize orientationchange', function() {
+    var items = $('#carouselInner .carousel-item img') //grab all slides
 
-                if (getLayout($(this)) == 'h') {
-                    if ($(this).attr('width') >= $(this.parentElement).width()) {
-                        $(this).css('height', $(this.parentElement).width() * getRatio($(this)) + 'px');
-                    }
-                }
-                if ($('.detail').height() <= $(window).height()) {
-                    $(this).css('margin-top', (($('.detail').height() - $('.navbar').height() -
-                        $('footer').height()) - $(this.parentElement).height()) / 2 + 'px');
-                } else {
-                    $(this).css('margin-top', '0px');
-                }
-            });
-            tallest = Math.max.apply(null, heights); //cache largest value
-            items.each(function() {
-                //$(this).css('min-height', tallest + 'px');
-            });
-        };
+    items.each(function() { //add heights to array
+        View.Detail.prototype.Carousel.setHeight(this);
+        View.Detail.prototype.Carousel.setMargin(this);
+    });
+    View.Detail.prototype.Carousel.writeHeights();
+});
 
-        function getRatio(element) {
+/** evento de cambio de diapositiva */
+$('#carouselSlides').bind('slide.bs.carousel', function(e) {
+    //console.log('slide event 1!');
+    View.Detail.prototype.Carousel.writeHeights();
+});
+
+View.Detail.prototype = {
+    Carousel: (function() {
+        /** FUNCIONES PRIVADAS */
+        var getRatio = function(element) {
             return element.attr('height') / element.attr('width');
-        };
+        }
 
-        function getLayout(element) {
+        var getLayout = function(element) {
             if (element.attr('height') > element.attr('width')) return 'v';
             else if (element.attr('width') > element.attr('height')) return 'h';
             else return 'v';
         }
-        normalizeHeights();
 
-        $(window).on('resize orientationchange', function() {
-            tallest = 0, heights.length = 0; //reset vars
-            items.each(function() {
-                //$(this).css('min-height', '0'); //reset min-height
-            });
-            normalizeHeights(); //run it again 
-        });
-    }
-}
+        /*  Calculo de dimension */
+        var displayHeight = function() {
+            var detail = $('.detail').height();
+            var footer = $('footer').height();
+            var navbar = $('.navbar').height();
+            var breadcrumb = $('.breadcrumb').height();
 
-/*  Calculo de dimension */
-carouselInnerHeight = function() {
-    var detail = $('.detail').height();
-    var footer = $('footer').height();
-    var navbar = $('.navbar').height();
-    var breadcrumb = $('.breadcrumb').height();
+            return (detail - navbar - footer);
+        }
 
-    return (detail - navbar - breadcrumb - footer);
+        /** FUNCIONES PUBLICAS */
+        Carousel = {
+            carouselNormalization: function() {
+                $('#carouselInner .carousel-item img').one("load", function() {
+                    View.Detail.prototype.Carousel.setHeight(this);
+                    View.Detail.prototype.Carousel.setMargin(this);
+                }).each(function() {
+                    try {
+                        if (this.complete) $(this).load();
+                    } catch (ex) {
+
+                    }
+                });
+                View.Detail.prototype.Carousel.writeHeights();
+            },
+            writeHeights: function() {
+                $('#banner-caroussel-top').empty();
+
+                if (document.URL.toLowerCase().indexOf("localhost") > 0) {
+                    var divLista = $("<ul>").appendTo('#banner-caroussel-top');
+
+                    $("<li>window.height: " + $(window).height() + "px</li>").appendTo(divLista);
+                    $("<li>detail.height: " + $(".detail").height() + "px</li>").appendTo(divLista);
+                    $("<li>carouselSlides.height: " + $('#carouselSlides').height() + "px</li>").appendTo(divLista);
+                    $("<li>carouselInner.height: " + $('#carouselInner').height() + "px</li>").appendTo(divLista);
+                    $("<li>carousel-item: " + $($('.carousel-item.active')[0]).height() + "px</li>").appendTo(divLista);
+                    $("<li>image.height (original): " + $($('.carousel-item.active img')[0]).attr('height') + "px</li>").appendTo(divLista);
+                    $("<li>image.height (processed): " + $($('.carousel-item.active img')[0]).css('height') + "</li>").appendTo(divLista);
+                    $("<li>image.width (original): " + $($('.carousel-item.active img')[0]).attr('width') + "px</li>").appendTo(divLista);
+                    $("<li>image.width (processed): " + $($('.carousel-item.active img')[0]).css('width') + "</li>").appendTo(divLista);
+                }
+            },
+            setHeight: function(element) {
+                if (getLayout($(element)) == 'h') {
+                    if ($(element).attr('width') >= $(element.parentElement).width()) {
+                        $(element).css('height', $(element.parentElement).width() * getRatio($(element)) + 'px');
+                    }
+                }
+            },
+            setMargin: function(element) {
+                if ($('.detail').height() <= $(window).height()) {
+                    var loQueHay = displayHeight();
+                    var laImagen = $(element.parentElement).height();
+                    var margen = (loQueHay - laImagen) / 2;
+                    $(element).css('margin-top', margen + 'px');
+                } else {
+                    $(element).css('margin-top', '0px');
+                }
+            }
+        }
+        return Carousel;
+    })()
 }

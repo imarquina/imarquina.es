@@ -614,8 +614,6 @@ var View = {
                     i + "'></li>").appendTo("#carouselIndicators");
             }
             Cookies.bannerCookies();
-
-            carouselNormalization();
         };
 
         /* Establece el elemento activo para el caroussel */
