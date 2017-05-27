@@ -60,7 +60,7 @@ View.Detail.prototype = {
             writeHeights: function() {
                 $('#banner-caroussel-top').empty();
 
-                if (document.URL.toLowerCase().indexOf("localhost") > 0) {
+                if (App.Config.developer == 1) {
                     var divLista = $("<ul>").appendTo('#banner-caroussel-top');
 
                     $("<li>window.height: " + $(window).height() + "px</li>").appendTo(divLista);

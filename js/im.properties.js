@@ -27,7 +27,8 @@ var App = {
         urlTwitter: "http://www.twitter.com/imarkina",
         urlFacebook: "http://www.facebook.com/imfotografia.eu",
         email: "imarquina@gmail.com",
-        home: "http://www.imarquina.es"
+        home: "http://www.imarquina.es",
+        developer: 0
     },
     Constantes: {
         si: 1,
