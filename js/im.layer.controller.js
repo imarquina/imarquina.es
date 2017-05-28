@@ -96,7 +96,7 @@ var Controller = (function() {
                         var datUpdateImage = hImage.UPDATE;
                         var datPublicImage = hImage.PUBLIC;
                         var parentFolder = Comun.htmlReplace(($(this).parent()).attr("name"));
-                        var parentNameFolder = pathImagenComponer($(this), App.Config.separadorPathPanel);
+                        var parentNameFolder = Controller.Config.pathImagenComponer($(this), App.Config.separadorPathPanel);
                         var sType = 'imagen';
 
                         colElementos[iCol] = [{
@@ -124,7 +124,7 @@ var Controller = (function() {
                         var datUpdateImage = hImage.UPDATE;
                         var datPublicImage = hImage.PUBLIC;
                         var parentFolder = Comun.htmlReplace(($(this).parent()).attr("name"));
-                        var parentNameFolder = pathImagenComponer($(this), App.Config.separadorPathPanel);
+                        var parentNameFolder = Controller.Config.pathImagenComponer($(this), App.Config.separadorPathPanel);
                         var sType = 'video';
 
                         colElementos[iCol] = [{
@@ -436,6 +436,32 @@ var Controller = (function() {
                             type: sType
                         };
                     }
+                });
+                return colElementos;
+            },
+            /* Compone la ruta de galería y/o colección de una imagen */
+            pathImagenComponer: function(elemNode, separador) {
+                var oObj = elemNode;
+                var sText = '';
+                var iRow = 0;
+                while ((oObj.parent()).attr("name") != undefined) {
+                    sText = (oObj.parent()).attr("name") + (iRow != 0 ? separador + sText : "");
+                    iRow++;
+                    oObj = oObj.parent();
+                }
+                return sText;
+            },
+            sloganLoad: function(elements) {
+                var colElementos;
+
+                elements.find('slogan').each(function() {
+                    var textoElemento = $(this).text();
+                    var sType = 'slogan';
+
+                    colElementos = {
+                        texto: textoElemento,
+                        type: sType
+                    };
                 });
                 return colElementos;
             }

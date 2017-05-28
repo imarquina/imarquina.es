@@ -125,9 +125,19 @@ footer .hidden {
     padding-top: 1rem;
 }
 
+.container-fluid h4 {
+    font-size: 0.9rem;
+}
+
 .container-fluid>.menu {
     font-size: .9rem;
 }
+
+.container-fluid>.about>p {
+    font-size: 0.9rem;
+}
+
+.container-fluid>.menu>h4 {}
 
 .container-fluid #menu li>span {
     margin-right: 0.3rem;

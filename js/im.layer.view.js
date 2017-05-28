@@ -5,7 +5,7 @@ var dataXml;
 /* Evento de window
 ================================================== */
 $(window).ready(function() {
-    initialize();
+    View.General.initialize();
 
     //Carga colección elementos
     var photoXml = Database.Photos.load();
@@ -13,7 +13,8 @@ $(window).ready(function() {
     //Carga album elementos
     dataXml = Database.Config.load();
 
-    menuCargar();
+    View.General.menuCargar(dataXml);
+    View.General.sloganLoad(dataXml);
 
     if (document.URL.toLowerCase().indexOf("detail.html") > 0) {
         var sGallery = Comun.queryStringParamGet('gallery');
@@ -34,8 +35,8 @@ $(window).ready(function() {
             var sIndex = Comun.queryStringParamGet('index');
             if (Comun.queryStringParamValue(sIndex)) {
                 var oImagen = $('#' + sIndex);
-                if (imageValidar(oImagen)) {
-                    nodoImagenLocalizar(App.Constantes.origenInicio, sGallery, sIndex);
+                if (View.General.imageValidar(oImagen)) {
+                    View.General.nodoImagenLocalizar(dataXml, App.Constantes.origenInicio, sGallery, sIndex);
                 }
             }
         } else {
@@ -72,72 +73,139 @@ $(function() {
     });
 });
 
-/* Inicializa estados generales
-================================================== */
-initialize = function() {
-    var lightbox = lity();
-
-    $('#titulo').text(App.Config.dataTextTitle);
-    $('#subtitulo').text(App.Config.dataTextSubtitle.toLowerCase());
-    $('#annio').text(App.Config.annio);
-    $('#version').text(App.Config.version);
-}
-
-/* Evalua si el objeto imagen es válido
-================================================== */
-imageValidar = function(oImagen) {
-    if (oImagen != undefined) return true;
-    else return false;
-}
-
-/* Establece y muestra el popup para una imagen
-================================================== */
-imagenPreview = function(origen, imagenSrc, imagenWidth, imagenHeight, galleryCode, imagenTitle, galleryName) {
-    imageDialog = $("#dialog");
-
-    switch (origen) {
-        case App.Constantes.origenInicio:
-        case App.Constantes.origenGaleria:
-            //organizar capas
-            capasPopUpAjustar('imagen');
-            imageTag = $('#image');
-            //vinculos social-media
-            $('#shareme-popup').attr("data-url", App.Config.home + "?gallery=" + galleryCode + '&index=' + imagenSrc);
-            $('#shareme-popup').attr("data-text", App.Config.dataTextTitle + galleryName + ": " + imagenTitle);
-            $("#shareme-popup").attr("data-image", App.Config.home + "/images/" + imagenSrc + '.jpg');
-            break;
-        case App.Constantes.origenNews:
-            //organizar capas
-            capasPopUpAjustar('enlace');
-            imageTag = $('#image');
-            $("<a href='./index.html?gallery=" + galleryCode + "'><span class='enlace-galeria'>Ver y compartir en &aacute;lbum<br />" + ((galleryName.length > 50) ? galleryName.substr(0, 47) + "..." : galleryName) + "</span></a>").appendTo("#enlace");
-            break;
-    }
-
-    var dialogWidth = 'auto';
-    if (imagenWidth > $(window).width()) {
-        dialogWidth = $(window).width() - 10;
-    }
-
-    //Set the image src
-    imageTag.attr("src", App.Config.rutaImage + imagenSrc + '.jpg');
-
-    //When the image has loaded, display the dialog
-    imageTag.load(function() {
-        $('#dialog').dialog({
-            modal: true,
-            resizable: false,
-            draggable: false,
-            width: dialogWidth,
-            minWidth: "300px",
-            /*title: uriParts[uriParts.length - 1]*/
-            title: imagenTitle
-        });
-    });
-    if (origen != App.Constantes.origenNews) socialMediaPopup();
-}
-
 var View = {
+    General: (function() {
+        General = {
+            /* Inicializa estados generales */
+            initialize: function() {
+                var lightbox = lity();
+
+                $('#titulo').text(App.Config.dataTextTitle);
+                $('#subtitulo').text(App.Config.dataTextSubtitle.toLowerCase());
+                $('#annio').text(App.Config.annio);
+                $('#version').text(App.Config.version);
+            },
+            /* Encuentra los elementos de primer nivel y los incluye en el elemento del menu */
+            menuCargar: function(data) {
+                //El nodo root es config
+                data.find('config').each(function() {
+                    //recorrer los nodos de primer nivel
+                    $(this).children().each(function() {
+                        var nObj = this;
+                        //tratamiento en función del tipo de nodo
+                        switch (nObj.nodeName) {
+                            case 'galleries':
+                                $(nObj).children().each(function() {
+                                    var nGls = this;
+                                    switch (nGls.nodeName) {
+                                        case 'folder':
+                                            var sName = $(nGls).attr("name");
+                                            $("<li><span class='fa " + App.Constantes.iconGalleries + "' /><a href='./index.html?folder=" +
+                                                Comun.htmlReplace(sName) + "'>" + sName + "</a></li>").appendTo("#menu");
+                                            break;
+                                        case 'gallery':
+                                            var sName = $(nGls).attr("name");
+                                            $("<li><span class='fa " + App.Constantes.iconGallery + "' /><a href='./index.html?gallery=" +
+                                                Comun.htmlReplace(sName) + "'>" + sName + "</a></li>").appendTo("#menu");
+                                            break;
+                                        case 'multimedia':
+                                            var sName = $(nGls).attr("name");
+                                            $("<li><span class='fa " + App.Constantes.iconVideo + "' /><a href='./index.html?multimedia=" +
+                                                Comun.htmlReplace(sName) + "'>" + sName + "</a></li>").appendTo("#menu");
+                                            break;
+                                    }
+                                });
+                                break;
+                        }
+                    });
+                });
+            },
+            sloganLoad: function(data) {
+                var elemento = Controller.Config.sloganLoad(data);
+
+                var sTexto = elemento.texto;
+                $(sTexto).appendTo('#slogan');
+            },
+            /* Busca el node de una imagen en base a su nombre de archivo */
+            nodoImagenLocalizar: function(data, origen, sParamGaleria, sParamImagen) {
+                var imagenLocalizada = 0;
+                //El nodo root es config
+                data.find('gallery').each(function() {
+                    var gallery_name = $(this).attr("name");
+
+                    if (Comun.htmlReplace(gallery_name) == sParamGaleria) {
+                        //Coleccion de la galeria
+                        $(this).children().each(function() {
+                            //Romper el bucle
+                            if (imagenLocalizada == 1) return false;
+                            //Path de la imagen
+                            var parentNameFolder = Controller.Config.pathImagenComponer($(this), App.Config.separadorPathEnlace);
+                            //Nombre archivo
+                            var imagen_name = $(this).attr("src").replace(".jpg", "");
+                            if (imagen_name == sParamImagen) {
+                                View.General.imagenPreview(origen, imagen_name, $(this).attr("width"), $(this).attr("height"),
+                                    sParamGaleria, $(this).attr("caption"), parentNameFolder);
+                                imagenLocalizada = 1;
+                                return false;
+                            }
+                        });
+                    }
+                    if (imagenLocalizada == 1) return false;
+                });
+            },
+            /* Establece y muestra el popup para una imagen */
+            imagenPreview: function(origen, imagenSrc, imagenWidth, imagenHeight, galleryCode, imagenTitle, galleryName) {
+                imageDialog = $("#dialog");
+
+                switch (origen) {
+                    case App.Constantes.origenInicio:
+                    case App.Constantes.origenGaleria:
+                        //organizar capas
+                        capasPopUpAjustar('imagen');
+                        imageTag = $('#image');
+                        //vinculos social-media
+                        $('#shareme-popup').attr("data-url", App.Config.home + "?gallery=" + galleryCode + '&index=' + imagenSrc);
+                        $('#shareme-popup').attr("data-text", App.Config.dataTextTitle + galleryName + ": " + imagenTitle);
+                        $("#shareme-popup").attr("data-image", App.Config.home + "/images/" + imagenSrc + '.jpg');
+                        break;
+                    case App.Constantes.origenNews:
+                        //organizar capas
+                        capasPopUpAjustar('enlace');
+                        imageTag = $('#image');
+                        $("<a href='./index.html?gallery=" + galleryCode + "'><span class='enlace-galeria'>Ver y compartir en &aacute;lbum<br />" + ((galleryName.length > 50) ? galleryName.substr(0, 47) + "..." : galleryName) + "</span></a>").appendTo("#enlace");
+                        break;
+                }
+
+                var dialogWidth = 'auto';
+                if (imagenWidth > $(window).width()) {
+                    dialogWidth = $(window).width() - 10;
+                }
+
+                //Set the image src
+                imageTag.attr("src", App.Config.rutaImage + imagenSrc + '.jpg');
+
+                //When the image has loaded, display the dialog
+                imageTag.load(function() {
+                    $('#dialog').dialog({
+                        modal: true,
+                        resizable: false,
+                        draggable: false,
+                        width: dialogWidth,
+                        minWidth: "300px",
+                        /*title: uriParts[uriParts.length - 1]*/
+                        title: imagenTitle
+                    });
+                });
+                if (origen != App.Constantes.origenNews) socialMediaPopup();
+            },
+            /* Evalua si el objeto imagen es válido */
+            imageValidar: function(oImagen) {
+                if (oImagen != undefined) return true;
+                else return false;
+            }
+        }
+        return General;
+    })(),
     Index: (function() {
         /** FUNCIONES PRIVADAS */
         var paginaComponer = function(colImages, nodo, sNews) {
@@ -687,7 +755,7 @@ var View = {
                         var widthImage = hImage.WIDTH;
                         var heightImage = hImage.HEIGHT;
                         var parentFolder = Comun.htmlReplace(($(this).parent()).attr("name"));
-                        var parentNameFolder = pathImagenComponer($(this), App.Config.separadorPathPanel);
+                        var parentNameFolder = Controller.Config.pathImagenComponer($(this), App.Config.separadorPathPanel);
 
                         colImages[iCol] = [{
                             id: idImage,
@@ -712,87 +780,4 @@ var View = {
         }
         return Detail;
     })()
-}
-
-/* Encuentra los elementos de primer nivel y los
-incluye en el elemento del menu
-  ================================================== */
-menuCargar = function() {
-    //El nodo root es config
-    dataXml.find('config').each(function() {
-        //recorrer los nodos de primer nivel
-        $(this).children().each(function() {
-            var nObj = this;
-            //tratamiento en función del tipo de nodo
-            switch (nObj.nodeName) {
-                case 'galleries':
-                    $(nObj).children().each(function() {
-                        var nGls = this;
-                        switch (nGls.nodeName) {
-                            case 'folder':
-                                var sName = $(nGls).attr("name");
-                                $("<li><span class='fa " + App.Constantes.iconGalleries + "' /><a href='./index.html?folder=" +
-                                    Comun.htmlReplace(sName) + "'>" + sName + "</a></li>").appendTo("#menu");
-                                break;
-                            case 'gallery':
-                                var sName = $(nGls).attr("name");
-                                $("<li><span class='fa " + App.Constantes.iconGallery + "' /><a href='./index.html?gallery=" +
-                                    Comun.htmlReplace(sName) + "'>" + sName + "</a></li>").appendTo("#menu");
-                                break;
-                            case 'multimedia':
-                                var sName = $(nGls).attr("name");
-                                $("<li><span class='fa " + App.Constantes.iconVideo + "' /><a href='./index.html?multimedia=" +
-                                    Comun.htmlReplace(sName) + "'>" + sName + "</a></li>").appendTo("#menu");
-                                break;
-                        }
-                    });
-                    break;
-            }
-        });
-    });
-}
-
-/* Compone la ruta de galería y/o colección de una
-/* imagen
-  ================================================== */
-pathImagenComponer = function(elemNode, separador) {
-    var oObj = elemNode;
-    var sText = '';
-    var iRow = 0;
-    while ((oObj.parent()).attr("name") != undefined) {
-        sText = (oObj.parent()).attr("name") + (iRow != 0 ? separador + sText : "");
-        iRow++;
-        oObj = oObj.parent();
-    }
-    return sText;
-}
-
-/* Busca el node de una imagen en base a su nombre
-/* de archivo
-  ================================================== */
-nodoImagenLocalizar = function(origen, sParamGaleria, sParamImagen) {
-    var imagenLocalizada = 0;
-    //El nodo root es config
-    $(xml).find('gallery').each(function() {
-        var gallery_name = $(this).attr("name");
-
-        if (Comun.htmlReplace(gallery_name) == sParamGaleria) {
-            //Coleccion de la galeria
-            $(this).children().each(function() {
-                //Romper el bucle
-                if (imagenLocalizada == 1) return false;
-                //Path de la imagen
-                var parentNameFolder = pathImagenComponer($(this), App.Config.separadorPathEnlace);
-                //Nombre archivo
-                var imagen_name = $(this).attr("src").replace(".jpg", "");
-                if (imagen_name == sParamImagen) {
-                    imagenPreview(origen, imagen_name, $(this).attr("width"), $(this).attr("height"),
-                        sParamGaleria, $(this).attr("caption"), parentNameFolder);
-                    imagenLocalizada = 1;
-                    return false;
-                }
-            });
-        }
-        if (imagenLocalizada == 1) return false;
-    });
 }
