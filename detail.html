@@ -30,7 +30,7 @@
     <link type="text/css" href="./css/plugins/lity.min.css" rel="stylesheet" />
     <link type="text/css" href="./css/im.lity.min.css" rel="stylesheet" />
     <link type="text/css" href="./css/im.cookie.min.css" rel="stylesheet" />
-    <link type="text/css" href="./css/im.developer.min.css" rel="stylesheet" />
+    <link type="text/css" href="./css/im.developer.css" rel="stylesheet" />
     <link type="application/rss+xml" rel="alternate" title="IMFotograf&iacute;a RSS" href="http://www.imarquina.es" />
 </head>
 
@@ -48,10 +48,7 @@
                 <div class="header-logo-img">
                     <img src="resources/logo_xs.png" />
                 </div>
-                <div class="col-md-5 col-sm-5 col-xs-5 header-texto">
-                    <div id="titulo" class="header-texto-titulo">IMFotografía</div>
-                    <small id="subtitulo" class="header-texto-subtitulo">iñaki marquina</small>
-                </div>
+                <div id="header" class="col-md-5 col-sm-5 col-xs-5 header-texto"></div>
             </div>
         </a>
         <!-- Colapsilbe -->
@@ -105,14 +102,11 @@
                 </a>
             </div>
             <div class="bar-social">
+                <a id="lnkEmail" href="mailto:imfotografia@live.com" class="fa fa-envelope"></a>
                 <a id="lnkFacebook" href="http://www.facebook.com/imfotografia.eu" target="_blank" class="fa fa-facebook"></a>
                 <a id="lnkTwitter" href="https://twitter.com/imarkina" target="_blank" class="fa fa-twitter"></a>
-                <a id="lnkEmail" href="mailto:imfotografia@live.com" class="fa fa-envelope"></a>
             </div>
-            <div class="col-9 bar-copyright">
-                <p class="card-text"><small>
-                    @<span id="annio">0000</span> Iñaki Marquina v<span id="version">0.0.0</span></small>
-                </p>
+            <div class="col-9 bar-copyright" id="copyright">
                 <p class="card-text"><small>Bootstrap, jQuery, Lity responsive lightbox</small></p>
             </div>
         </div>

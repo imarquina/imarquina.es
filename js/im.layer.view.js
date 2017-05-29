@@ -80,10 +80,12 @@ var View = {
             initialize: function() {
                 var lightbox = lity();
 
-                $('#titulo').text(App.Config.dataTextTitle);
-                $('#subtitulo').text(App.Config.dataTextSubtitle.toLowerCase());
-                $('#annio').text(App.Config.annio);
-                $('#version').text(App.Config.version);
+                $("<div id='titulo' class='header-texto-titulo'>" + App.Config.dataTextTitle + "</div>").appendTo("#header");
+                $("<small id='subtitulo' class='header-texto-subtitulo'>" +
+                    App.Config.dataTextSubtitle.toLowerCase() + "</small>").appendTo("#header");
+                $("<p class='card-text'><small>@<span id='annio'>" + App.Config.annio + "</span> " +
+                    App.Config.author + " v<span id='version'>" + App.Config.version +
+                    "</span></small></p>").prependTo("#copyright");
             },
             /* Encuentra los elementos de primer nivel y los incluye en el elemento del menu */
             menuCargar: function(data) {

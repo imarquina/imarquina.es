@@ -3,6 +3,7 @@ var App = {
     Config: {
         version: '4.1.0',
         annio: '2017',
+        author: 'Inaki Marquina',
         rutaPho: './data/photos.min.xml',
         rutaCnf: './data/config.min.xml',
         rutaThumb: './thumbs/',
