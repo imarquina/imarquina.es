@@ -30,15 +30,6 @@ $(window).ready(function() {
         var sGallery = Comun.queryStringParamGet('gallery');
         if (Comun.queryStringParamValue(sGallery)) {
             View.Index.galeriaCargar(dataXml, sGallery, Comun.queryStringParamGet('news'));
-
-            //Cargar imagen si se indica en el QueryString
-            var sIndex = Comun.queryStringParamGet('index');
-            if (Comun.queryStringParamValue(sIndex)) {
-                var oImagen = $('#' + sIndex);
-                if (View.General.imageValidar(oImagen)) {
-                    View.General.nodoImagenLocalizar(dataXml, App.Constantes.origenInicio, sGallery, sIndex);
-                }
-            }
         } else {
             var sFolder = Comun.queryStringParamGet('folder');
             if (Comun.queryStringParamValue(sFolder)) {
@@ -75,52 +66,66 @@ $(function() {
 
 var View = {
     General: (function() {
+        /* Genera el vínculo según clave, y si la navegación viene por 'Lo nuevo' */
+        var hrefEstablecer = function(clave, valor, urlnews, ishref) {
+            var sResult;
+
+            if (urlnews != undefined) {
+                if (clave.toLowerCase() == ("lo último").toLowerCase()) {
+                    if (ishref == 1) {
+                        sResult = "<li class='breadcrumb-item'><a href='./index.html?news=" + urlnews + "'>" +
+                            ("Lo &uacute;ltimo").toLowerCase() + "</a></li>"
+                    } else { sResult = "<li class='breadcrumb-item active'>" + clave.toLowerCase() + "</li>" };
+                } else {
+                    if (ishref == 1) {
+                        sResult = "<li class='breadcrumb-item'><a href='./index.html?" + clave + "=" + Comun.htmlReplace(valor) +
+                            "&news=" + urlnews + "'>" + valor.toLowerCase() + "</a></li>"
+                    } else { sResult = "<li class='breadcrumb-item active'>" + valor.toLowerCase() + "</li>" };
+                }
+            } else {
+                if (ishref == 1) {
+                    sResult = "<li class='breadcrumb-item'><a href='./index.html?" + clave + "=" + Comun.htmlReplace(valor) + "'>" +
+                        valor.toLowerCase() + "</a></li>"
+                } else { sResult = "<li class='breadcrumb-item active'>" + valor.toLowerCase() + "</li>" };
+            }
+            return sResult;
+        }
         General = {
             /* Inicializa estados generales */
             initialize: function() {
                 var lightbox = lity();
 
-                $("<div id='titulo' class='header-texto-titulo'>" + App.Config.dataTextTitle + "</div>").appendTo("#header");
-                $("<small id='subtitulo' class='header-texto-subtitulo'>" +
-                    App.Config.dataTextSubtitle.toLowerCase() + "</small>").appendTo("#header");
-                $("<p class='card-text'><small>@<span id='annio'>" + App.Config.annio + "</span> " +
-                    App.Config.author + " v<span id='version'>" + App.Config.version +
-                    "</span></small></p>").prependTo("#copyright");
+                View.General.tituloValorEstablecer(App.Config);
             },
             /* Encuentra los elementos de primer nivel y los incluye en el elemento del menu */
             menuCargar: function(data) {
-                //El nodo root es config
-                data.find('config').each(function() {
-                    //recorrer los nodos de primer nivel
-                    $(this).children().each(function() {
-                        var nObj = this;
-                        //tratamiento en función del tipo de nodo
-                        switch (nObj.nodeName) {
-                            case 'galleries':
-                                $(nObj).children().each(function() {
-                                    var nGls = this;
-                                    switch (nGls.nodeName) {
-                                        case 'folder':
-                                            var sName = $(nGls).attr("name");
-                                            $("<li><span class='fa " + App.Constantes.iconGalleries + "' /><a href='./index.html?folder=" +
-                                                Comun.htmlReplace(sName) + "'>" + sName + "</a></li>").appendTo("#menu");
-                                            break;
-                                        case 'gallery':
-                                            var sName = $(nGls).attr("name");
-                                            $("<li><span class='fa " + App.Constantes.iconGallery + "' /><a href='./index.html?gallery=" +
-                                                Comun.htmlReplace(sName) + "'>" + sName + "</a></li>").appendTo("#menu");
-                                            break;
-                                        case 'multimedia':
-                                            var sName = $(nGls).attr("name");
-                                            $("<li><span class='fa " + App.Constantes.iconVideo + "' /><a href='./index.html?multimedia=" +
-                                                Comun.htmlReplace(sName) + "'>" + sName + "</a></li>").appendTo("#menu");
-                                            break;
-                                    }
-                                });
-                                break;
-                        }
-                    });
-                });
+                var colElementos = Controller.Config.menuLoad(data);
+
+                var iCnt = 0;
+                for (var i = 0; i < colElementos.length; i++) {
+                    var sType = colElementos[i].type;
+
+                    switch (sType) {
+                        case 'folder':
+                            var sName = colElementos[i].texto;
+
+                            $("<li><span class='fa " + App.Constantes.iconGalleries + "' /><a href='./index.html?folder=" +
+                                Comun.htmlReplace(sName) + "'>" + sName + "</a></li>").appendTo("#menu");
+                            break;
+                        case 'gallery':
+                            var sName = colElementos[i].texto;
+
+                            $("<li><span class='fa " + App.Constantes.iconGallery + "' /><a href='./index.html?gallery=" +
+                                Comun.htmlReplace(sName) + "'>" + sName + "</a></li>").appendTo("#menu");
+                            break;
+                        case 'multimedia':
+                            var sName = colElementos[i].texto;
+
+                            $("<li><span class='fa " + App.Constantes.iconVideo + "' /><a href='./index.html?multimedia=" +
+                                Comun.htmlReplace(sName) + "'>" + sName + "</a></li>").appendTo("#menu");
+                            break;
+                    }
+                }
             },
             sloganLoad: function(data) {
                 var elemento = Controller.Config.sloganLoad(data);
@@ -128,82 +133,94 @@ var View = {
                 var sTexto = elemento.texto;
                 $(sTexto).appendTo('#slogan');
             },
-            /* Busca el node de una imagen en base a su nombre de archivo */
-            nodoImagenLocalizar: function(data, origen, sParamGaleria, sParamImagen) {
-                var imagenLocalizada = 0;
-                //El nodo root es config
-                data.find('gallery').each(function() {
-                    var gallery_name = $(this).attr("name");
-
-                    if (Comun.htmlReplace(gallery_name) == sParamGaleria) {
-                        //Coleccion de la galeria
-                        $(this).children().each(function() {
-                            //Romper el bucle
-                            if (imagenLocalizada == 1) return false;
-                            //Path de la imagen
-                            var parentNameFolder = Controller.Config.pathImagenComponer($(this), App.Config.separadorPathEnlace);
-                            //Nombre archivo
-                            var imagen_name = $(this).attr("src").replace(".jpg", "");
-                            if (imagen_name == sParamImagen) {
-                                View.General.imagenPreview(origen, imagen_name, $(this).attr("width"), $(this).attr("height"),
-                                    sParamGaleria, $(this).attr("caption"), parentNameFolder);
-                                imagenLocalizada = 1;
-                                return false;
-                            }
-                        });
-                    }
-                    if (imagenLocalizada == 1) return false;
-                });
-            },
-            /* Establece y muestra el popup para una imagen */
-            imagenPreview: function(origen, imagenSrc, imagenWidth, imagenHeight, galleryCode, imagenTitle, galleryName) {
-                imageDialog = $("#dialog");
-
-                switch (origen) {
-                    case App.Constantes.origenInicio:
-                    case App.Constantes.origenGaleria:
-                        //organizar capas
-                        capasPopUpAjustar('imagen');
-                        imageTag = $('#image');
-                        //vinculos social-media
-                        $('#shareme-popup').attr("data-url", App.Config.home + "?gallery=" + galleryCode + '&index=' + imagenSrc);
-                        $('#shareme-popup').attr("data-text", App.Config.dataTextTitle + galleryName + ": " + imagenTitle);
-                        $("#shareme-popup").attr("data-image", App.Config.home + "/images/" + imagenSrc + '.jpg');
-                        break;
-                    case App.Constantes.origenNews:
-                        //organizar capas
-                        capasPopUpAjustar('enlace');
-                        imageTag = $('#image');
-                        $("<a href='./index.html?gallery=" + galleryCode + "'><span class='enlace-galeria'>Ver y compartir en &aacute;lbum<br />" + ((galleryName.length > 50) ? galleryName.substr(0, 47) + "..." : galleryName) + "</span></a>").appendTo("#enlace");
-                        break;
-                }
-
-                var dialogWidth = 'auto';
-                if (imagenWidth > $(window).width()) {
-                    dialogWidth = $(window).width() - 10;
-                }
-
-                //Set the image src
-                imageTag.attr("src", App.Config.rutaImage + imagenSrc + '.jpg');
-
-                //When the image has loaded, display the dialog
-                imageTag.load(function() {
-                    $('#dialog').dialog({
-                        modal: true,
-                        resizable: false,
-                        draggable: false,
-                        width: dialogWidth,
-                        minWidth: "300px",
-                        /*title: uriParts[uriParts.length - 1]*/
-                        title: imagenTitle
-                    });
-                });
-                if (origen != App.Constantes.origenNews) socialMediaPopup();
-            },
             /* Evalua si el objeto imagen es válido */
             imageValidar: function(oImagen) {
                 if (oImagen != undefined) return true;
                 else return false;
+            },
+            generalLoad: function(data) {
+                var elemento = Controller.Config.generalLoad(data);
+
+                var sInfoText = elemento.infoText;
+                var sKeywords = elemento.keywords;
+                var sTitle = elemento.title;
+            },
+            seoValoresEstablecer: function(elemento) {
+                var elemento = Controller.Config.seoValoresLoad(elemento);
+
+                var sNews = '';
+                if (Comun.queryStringParamGet('news')) sNews = " (Lo último)";
+                document.title = elemento.title + sNews;
+                $('meta[name="description"]').attr("content", elemento.infoText);
+                $('meta[name="keywords"]').attr("content", elemento.keywords);
+
+                $('meta[itemprop="name"]').attr("content", App.Config.author);
+                $('meta[itemprop="description"]').attr("content", elemento.infoText);
+                $('meta[name="author"]').attr("content", App.Config.author);
+                $('meta[name="copyright"]').attr("content", '@' + App.Config.annio + ' ' +
+                    App.Config.author + " v" + App.Config.version);
+            },
+            tituloValorEstablecer: function(elemento) {
+                $("<div id='titulo' class='header-texto-titulo'>" + elemento.dataTextTitle + "</div>").appendTo("#header");
+                $("<small id='subtitulo' class='header-texto-subtitulo'>" +
+                    elemento.dataTextSubtitle.toLowerCase() + "</small>").appendTo("#header");
+                $("<p class='card-text'><small>@<span id='annio'>" + elemento.annio + "</span> " +
+                    elemento.author + " v<span id='version'>" + elemento.version +
+                    "</span></small></p>").prependTo("#copyright");
+            },
+            infoLinkTratar: function(infolink) {
+                if (infolink != 'about:blank' && infolink != App.Constantes.cadenaVacia && infolink != undefined) {
+                    var aVinculos = infolink.split("|");
+                    var sResult = App.Constantes.cadenaVacia;
+                    for (var iCnt = 0; iCnt < aVinculos.length; iCnt++) {
+                        var aInfo = aVinculos[iCnt].split("*");
+                        switch (aInfo[0]) {
+                            case App.Constantes.appFlickr:
+                                sResult += "<a href='" + aInfo[1] + "' target='_blank'><img src='resources/flickr.png' style='width:14px!important;' title='publicado en flicr'/></a>";
+                                break;
+                            case App.Constantes.appPinterest:
+                                sResult += "<a href='" + aInfo[1] + "' target='_blank'><img src='resources/pinterest.png' style='width:14px!important;' title='publicado en pinterest'/></a>";
+                                break;
+                            case App.Constantes.app500px:
+                                sResult += "<a href='" + aInfo[1] + "' target='_blank'><img src='resources/500px.png' style='width:14px!important;' title='publicado en 500px'/></a>";
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+                    return sResult;
+                } else return App.Constantes.cadenaVacia;
+            },
+            /* Crea el rastro de miga de pan, en base al nodo y si la navegación viene por 'Lo nuevo' */
+            breadcrumbsEstablecer: function(oNode, urlNews) {
+                var oTemp = oNode;
+                var sResult = '';
+
+                if (oTemp == undefined && urlNews == undefined) {
+                    sResult = "<li class='breadcrumb-item'><a href='./index.html'>inicio</a></li>"
+                    sResult += "<li class='breadcrumb-item active'>lo último</li>"
+
+                } else {
+                    if (document.URL.toLowerCase().indexOf("detail.html") > 0) {
+                        sResult = "<li class='breadcrumb-item active'>secuencia</li>";
+                        if (oTemp != '') {
+                            sResult = hrefEstablecer(oTemp[0].nodeName, oTemp.attr("name"), urlNews, 1) + sResult;
+                        }
+                    } else {
+                        sResult += hrefEstablecer(oTemp[0].nodeName, oTemp.attr("name"), urlNews, 0)
+                    }
+
+                    if (oTemp != '') {
+                        while ((oTemp.parent()).attr("name") != undefined) {
+                            oTemp = oTemp.parent();
+                            sResult = hrefEstablecer(oTemp[0].nodeName, oTemp.attr("name"), urlNews, 1) + sResult;
+                        }
+                    }
+                    if (urlNews != undefined) sResult = hrefEstablecer("lo último", urlNews, urlNews, 1) + sResult;
+                    sResult = "<li class='breadcrumb-item'><a href='./index.html'>inicio</a></li>" + sResult;
+                }
+
+                return sResult;
             }
         }
         return General;
@@ -213,7 +230,7 @@ var View = {
         var paginaComponer = function(colImages, nodo, sNews) {
             //breadcrump                    
             var panBreadCrumb = $("<ul class='breadcrumb'>").insertBefore("#main");
-            $(Comun.breadcrumbsEstablecer(nodo, sNews)).appendTo(panBreadCrumb);
+            $(View.General.breadcrumbsEstablecer(nodo, sNews)).appendTo(panBreadCrumb);
 
             var node_name = '';
 
@@ -231,7 +248,7 @@ var View = {
                 $('#shareme').attr("data-text", App.Config.dataTextTitle + dataText);
 
                 //establecer valores para SEO
-                Comun.seoValoresEstablecer(nodo);
+                View.General.seoValoresEstablecer(nodo);
             }
             Cookies.bannerCookies();
         };
@@ -373,6 +390,7 @@ var View = {
                             break;
                     }
                 }
+                View.General.seoValoresEstablecer(Controller.Config.generalLoad(data));
                 Cookies.bannerCookies();
             },
             /* Crea la lista de elementos de una galería */
@@ -431,7 +449,7 @@ var View = {
                     //Pie
                     var panFooter = $("<div class='card-text row justify-content-between'>").appendTo(divBlock);
                     var panSocial = $("<div class='col-4 text-left'>").appendTo(panFooter);
-                    $(Comun.infoLinkTratar(sLnkUrl)).appendTo(panSocial);
+                    $(View.General.infoLinkTratar(sLnkUrl)).appendTo(panSocial);
                     var panDate = $("<p class='card-date card-text text-right'>").appendTo(panFooter);
                     $("<small class='text-muted'>" + Comun.dateFormat(sUpdate) + "</small>").appendTo(panDate);
                 }
@@ -552,6 +570,7 @@ var View = {
                 colImages.sort(Comun.arrayDateSort);
 
                 paginaComponer('');
+                View.General.seoValoresEstablecer(Controller.Config.generalLoad(data));
 
                 //Cargar los N primeros
                 var iCnt = 0;
@@ -602,14 +621,13 @@ var View = {
 
                         //Capa social-media
                         var panSocial = $("<div class='col-4 text-left'>").appendTo(panFooter);
-                        $(Comun.infoLinkTratar(colImages[i][0].linkurl)).appendTo(panSocial);
+                        $(View.General.infoLinkTratar(colImages[i][0].linkurl)).appendTo(panSocial);
 
                         iCnt++;
                     }
 
                     var panDate = $("<p class='card-date card-text text-right'>").appendTo(panFooter);
                     $("<small class='text-muted'>" + Comun.dateFormat(colImages[i][0].update) + "</small>").appendTo(panDate);
-
                 }
             },
             /* Establece y muestra el popup para un texto */
@@ -638,10 +656,10 @@ var View = {
         /** FUNCIONES PRIVADAS */
         /* Creal el HTML con el esquema de elementos y los
         items de la coleccion */
-        var paginaComponer = function(colImages, nodo, sNews) {
+        var paginaComponer = function(data, colImages, nodo, sNews) {
             //breadcrump                    
             var panBreadCrumb = $("<ul class='breadcrumb'>").insertBefore("#main");
-            $(Comun.breadcrumbsEstablecer(nodo, sNews)).appendTo(panBreadCrumb);
+            $(View.General.breadcrumbsEstablecer(nodo, sNews)).appendTo(panBreadCrumb);
 
             var node_name = '';
 
@@ -655,9 +673,6 @@ var View = {
                 } else {
                     dataText = App.Config.dataTextTitle + node_name;
                 }
-
-                //establecer valores para SEO
-                Comun.seoValoresEstablecer(nodo);
             }
 
             var iElem = 0;
@@ -683,6 +698,7 @@ var View = {
                 $("<li data-target='#carouselSlides' class='" + sActive + "' data-slide-to='" +
                     i + "'></li>").appendTo("#carouselIndicators");
             }
+            View.General.seoValoresEstablecer(Controller.Config.generalLoad(data));
             Cookies.bannerCookies();
         };
 
@@ -735,7 +751,7 @@ var View = {
                             }
                         });
 
-                        paginaComponer(colImages, $(this), sNews);
+                        paginaComponer(data, colImages, $(this), sNews);
                     }
                 });
             },
@@ -777,7 +793,7 @@ var View = {
                 //Ordenar colección
                 colImages.sort(Comun.arrayDateSort);
 
-                paginaComponer(colImages, '', sNews);
+                paginaComponer(data, colImages, '', sNews);
             }
         }
         return Detail;

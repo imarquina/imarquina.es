@@ -464,6 +464,77 @@ var Controller = (function() {
                     };
                 });
                 return colElementos;
+            },
+            menuLoad: function(elements) {
+                var colElementos = new Array;
+                var iCol = 0;
+
+                elements.find('config').each(function() {
+                    //recorrer los nodos de primer nivel
+                    $(this).children().each(function() {
+                        var nObj = this;
+                        //tratamiento en función del tipo de nodo
+                        switch (nObj.nodeName) {
+                            case 'galleries':
+                                $(nObj).children().each(function() {
+                                    var nGls = this;
+                                    switch (nGls.nodeName) {
+                                        case 'folder':
+                                            var sName = $(nGls).attr("name");
+
+                                            colElementos[iCol] = {
+                                                texto: sName,
+                                                type: 'folder'
+                                            };
+                                            break;
+                                        case 'gallery':
+                                            var sName = $(nGls).attr("name");
+
+                                            colElementos[iCol] = {
+                                                texto: sName,
+                                                type: 'gallery'
+                                            };
+                                            break;
+                                        case 'multimedia':
+                                            var sName = $(nGls).attr("name");
+
+                                            colElementos[iCol] = {
+                                                texto: sName,
+                                                type: 'multimedia'
+                                            };
+                                            break;
+                                    }
+                                    iCol++;
+                                });
+                                break;
+                            default:
+                                break;
+                        }
+                    });
+                });
+                return colElementos;
+            },
+            generalLoad: function(elements) {
+                var nNodo;
+
+                elements.find('config').each(function() {
+                    nNodo = $(this);
+                });
+                return nNodo;
+            },
+            seoValoresLoad: function(elemento) {
+                var colElementos;
+
+                var sInfoText = elemento.attr("infotext");
+                var sKeywords = elemento.attr("keywords");
+                var sTitle = elemento.attr("title");
+
+                colElementos = {
+                    infoText: sInfoText,
+                    keywords: sKeywords,
+                    title: sTitle
+                };
+                return colElementos;
             }
         }
     };

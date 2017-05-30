@@ -1,9 +1,9 @@
 // JavaScript Document
 var App = {
     Config: {
-        version: '4.1.0',
+        version: '4.2.0',
         annio: '2017',
-        author: 'Inaki Marquina',
+        author: 'Iñaki Marquina',
         rutaPho: './data/photos.min.xml',
         rutaCnf: './data/config.min.xml',
         rutaThumb: './thumbs/',
@@ -22,7 +22,7 @@ var App = {
         separadorPathPanel: " \/ ",
         separadorPathEnlace: "\/",
         dataTextTitle: "IMFotografia",
-        dataTextSubtitle: "Inaki Marquina",
+        dataTextSubtitle: "Iñaki Marquina",
         dataTextHome: "",
         refererTwitter: "@imarkina",
         urlTwitter: "http://www.twitter.com/imarkina",

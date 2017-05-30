@@ -18,8 +18,8 @@
     padding: 1rem;
     font-size: 100%;
     font-family: monospace;
-    width: 50%;
-    margin-left: 50%;
+    width: 100%;
+    margin-left: 0%;
     border-radius: 0.15rem;
 }
 
@@ -67,14 +67,21 @@
 
 @media (min-width: 34em) {
     #banner-cookie-bottom {
-        width: 40%;
-        margin-left: 60%;
+        width: 70%;
+        margin-left: 30%;
     }
 }
 
 @media (min-width: 48em) {
     #banner-cookie-bottom {
-        width: 30%;
-        margin-left: 70%;
+        width: 50%;
+        margin-left: 50%;
+    }
+}
+
+@media (min-width: 62em) {
+    #banner-cookie-bottom {
+        width: 40%;
+        margin-left: 60%;
     }
 }
