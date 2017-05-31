@@ -17,6 +17,7 @@ var App = {
         elemOffsetStd: 10,
         elemOffsetSpe: 5,
         elemNuevos: 10,
+        elemBanner: 4,
         marcaColeccion: "",
         marcaGaleria: "",
         separadorPathPanel: " \/ ",

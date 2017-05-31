@@ -1,29 +1,23 @@
-@charset "utf-8";
-/* CSS Document */
-#banner ul, li {
-	display: inline;
-	margin: 0!important;
-	padding: 0!important;
-	float: left;	
+#tiles {
+    display: inline-block;
 }
-.elemento {
-	
-}
-.elemento img {
-	height: 3em;	
-}
-.logo {
 
+.card-block {
+    padding: .2rem;
 }
-.thumb {
-	margin: 0 0.1em;
+
+.card,
+.p-3,
+.p-2 {
+    padding: 0 !important;
+    margin: 0 !important;
 }
-#thumb1 {
-	opacity: 0.8;	
+
+.card {
+    border: 0;
+    border-radius: 0;
 }
-#thumb2 {
-	opacity: 0.3;
-}
-#thumb3 {
-	opacity: 0.1;
+
+.card:hover {
+    border: 0;
 }

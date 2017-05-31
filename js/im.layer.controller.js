@@ -96,7 +96,7 @@ var Controller = (function() {
                         var datUpdateImage = hImage.UPDATE;
                         var datPublicImage = hImage.PUBLIC;
                         var parentFolder = Comun.htmlReplace(($(this).parent()).attr("name"));
-                        var parentNameFolder = Controller.Config.pathImagenComponer($(this), App.Config.separadorPathPanel);
+                        var parentNameFolder = Controller.Config.imagePathSet($(this), App.Config.separadorPathPanel);
                         var sType = 'imagen';
 
                         colElementos[iCol] = [{
@@ -124,7 +124,7 @@ var Controller = (function() {
                         var datUpdateImage = hImage.UPDATE;
                         var datPublicImage = hImage.PUBLIC;
                         var parentFolder = Comun.htmlReplace(($(this).parent()).attr("name"));
-                        var parentNameFolder = Controller.Config.pathImagenComponer($(this), App.Config.separadorPathPanel);
+                        var parentNameFolder = Controller.Config.imagePathSet($(this), App.Config.separadorPathPanel);
                         var sType = 'video';
 
                         colElementos[iCol] = [{
@@ -440,7 +440,7 @@ var Controller = (function() {
                 return colElementos;
             },
             /* Compone la ruta de galería y/o colección de una imagen */
-            pathImagenComponer: function(elemNode, separador) {
+            imagePathSet: function(elemNode, separador) {
                 var oObj = elemNode;
                 var sText = '';
                 var iRow = 0;
@@ -515,6 +515,23 @@ var Controller = (function() {
                 return colElementos;
             },
             generalLoad: function(elements) {
+                var colElementos;
+
+                var nGeneral = Controller.Config.generalNodeGet(elements);
+                if (nGeneral != undefined) {
+                    var sInfoText = $(nGeneral).attr("infotext");
+                    var sKeywords = $(nGeneral).attr("keywords");
+                    var sTitle = $(nGeneral).attr("title");
+
+                    colElementos = {
+                        infoText: sInfoText,
+                        keywords: sKeywords,
+                        title: sTitle
+                    };
+                }
+                return colElementos;
+            },
+            generalNodeGet: function(elements) {
                 var nNodo;
 
                 elements.find('config').each(function() {
@@ -535,7 +552,21 @@ var Controller = (function() {
                     title: sTitle
                 };
                 return colElementos;
-            }
+            },
+            bannerCookiesLoad: function(elements) {
+                var colElementos;
+
+                elements.find('cookies').each(function() {
+                    var textoElemento = $(this).text();
+                    var sType = 'cookies';
+
+                    colElementos = {
+                        texto: textoElemento,
+                        type: sType
+                    };
+                });
+                return colElementos;
+            },
         }
     };
 })();
