@@ -18,8 +18,17 @@
     <title></title>
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <!-- Local
+    <link rel="stylesheet" href="./css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/fonts/font-awesome.min.css">
+     -->
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link type="text/css" href="./css/im.style.min.css" rel="stylesheet">
@@ -33,22 +42,23 @@
 </head>
 
 <body>
-    <div class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
-        <div id="banner-caroussel-top"></div>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="navbar-toggler-right">
-            <a href="#" class="fa fa-rss"></a>
-        </div>
-        <a href="./index.html" class="navbar-brand">
-            <div class="row justify-content-start">
-                <div class="header-logo-img">
+    <div class="navbar navbar-toggleable fixed-top navbar-inverse bg-inverse">
+        <div class="d-flex justify-content-start">
+            <div class="p-2 header-logo-img">
+                <a href="./index.html" class="navbar-brand">
                     <img src="resources/logo_xs.png" />
-                </div>
-                <div id="header" class="col-md-5 col-sm-5 col-xs-5 header-texto"></div>
+                </a>
             </div>
-        </a>
+            <div id="header" class="p-2 header-texto"></div>
+            <div class="ml-auto p-2">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-toggler-right">
+                    <a id="lnkrss" href="./feed.xml" target="_blank" class="fa fa-rss"></a>
+                </div>
+            </div>
+        </div>
         <!-- Colapsilbe -->
         <div class="collapse" id="nav-content" aria-expanded="false">
             <div class="container-fluid">
@@ -109,6 +119,11 @@
             </div>
         </div>
     </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
 
     <!-- bootstrap -->
     <!-- CDN -->

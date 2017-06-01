@@ -27,6 +27,9 @@
     <link rel="stylesheet" href="./css/fonts/font-awesome.min.css">
      -->
 
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+
     <!-- Custom styles for this template -->
     <link type="text/css" href="./css/im.style.min.css" rel="stylesheet" />
     <link type="text/css" href="./css/im.index.min.css" rel="stylesheet" />
@@ -40,20 +43,22 @@
 
 <body>
     <div class="navbar navbar-toggleable fixed-top navbar-inverse bg-inverse">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="navbar-toggler-right">
-            <a href="./feed.xml" target="_blank" class="fa fa-rss"></a>
-        </div>
-        <a href="./index.html" class="navbar-brand">
-            <div class="row justify-content-start">
-                <div class="header-logo-img">
+        <div class="d-flex justify-content-start">
+            <div class="p-2 header-logo-img">
+                <a href="./index.html" class="navbar-brand">
                     <img src="resources/logo_xs.png" />
-                </div>
-                <div id="header" class="col-md-5 col-sm-5 col-xs-5 header-texto"></div>
+                </a>
             </div>
-        </a>
+            <div id="header" class="p-2 header-texto"></div>
+            <div class="ml-auto p-2">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-toggler-right">
+                    <a id="lnkrss" href="./feed.xml" target="_blank" class="fa fa-rss"></a>
+                </div>
+            </div>
+        </div>
         <!-- Colapsilbe -->
         <div class="collapse" id="nav-content" aria-expanded="false">
             <div class="container-fluid">

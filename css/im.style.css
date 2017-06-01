@@ -162,14 +162,16 @@ footer .hidden {
 
 .navbar-toggler {
     color: #eceeef;
-    margin-top: 1.5rem;
+    margin-top: 1.4rem;
     display: inline-block !important;
+    position: absolute;
+    top: .7rem;
 }
 
-.navbar-toggler-right {
+.navbar-toggler-right>#lnkrss {
     position: absolute;
-    right: 1rem;
-    top: .8rem;
+    top: -.3rem;
+    right: 0;
 }
 
 .navbar>.about {
@@ -192,33 +194,42 @@ footer .hidden {
 }
 
 .navbar .header-logo-img {
-    padding: 0;
+    padding: 0 !important;
     padding-left: .8rem;
 }
 
-.navbar .header-logo img {
-    width: 100%;
-    min-width: 10rem;
+.navbar .header-logo-img img {
+    min-width: 3.8rem;
 }
 
 .navbar .header-texto {
     line-height: 1.4rem;
-    padding: .5rem 0 0 .8rem;
+    padding: 1.5rem 0 0 0rem !important;
 }
 
 .navbar .header-texto-titulo {
     color: #777;
-    font-family: FuenteTitulo;
-    font-size: 140%;
-    text-align: left;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 160%;
+    text-align: right;
     width: auto;
     float: left;
+    -moz-transform: scaleX(-1);
+    /* Gecko */
+    -o-transform: scaleX(-1);
+    /* Opera */
+    -webkit-transform: scaleX(-1);
+    /* Webkit */
+    transform: scaleX(-1);
+    /* Standard */
+    filter: FlipH;
+    /* IE 6/7/8 */
 }
 
 .navbar .header-texto-subtitulo {
     color: #777;
     text-align: left;
-    font-size: 70%;
+    font-size: 85%;
     float: left;
     width: auto;
 }
@@ -226,6 +237,13 @@ footer .hidden {
 .navbar .header-texto div {
     float: left;
     width: 100%;
+    font-variant-caps: small-caps;
+}
+
+.navbar .p-2 {}
+
+.navbar .p-2 a {
+    margin-right: 0;
 }
 
 .jumbotron {
@@ -271,7 +289,7 @@ footer .hidden {
 
 .album {
     min-height: 50rem;
-    padding-top: 9.5rem;
+    padding-top: 7rem;
     padding-bottom: 1rem;
     background-color: #4a4a4a;
 }
@@ -452,6 +470,12 @@ p.card-date {
 }
 
 @media (min-width: 34em) {
+    .navbar .header-texto-titulo {
+        font-size: 200%;
+    }
+    .header-texto-subtitulo {
+        font-size: 75%;
+    }
     .navbar-toggler {
         margin-top: 1.4rem;
     }

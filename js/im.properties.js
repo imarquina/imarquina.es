@@ -22,6 +22,7 @@ var App = {
         marcaGaleria: "",
         separadorPathPanel: " \/ ",
         separadorPathEnlace: "\/",
+        dataTextBanner: "aifargotof",
         dataTextTitle: "IMFotografia",
         dataTextSubtitle: "Iñaki Marquina",
         dataTextHome: "",
