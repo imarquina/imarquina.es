@@ -108,9 +108,9 @@ footer .hidden {
 .navbar-toggleable {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-    -webkit-flex-direction: column !important;
-    -ms-flex-direction: column !important;
-    flex-direction: column !important;
+    -webkit-flex-direction: row !important;
+    -ms-flex-direction: row !important;
+    flex-direction: row !important;
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
@@ -202,48 +202,10 @@ footer .hidden {
     min-width: 3.8rem;
 }
 
-.navbar .header-texto {
-    line-height: 1.4rem;
-    padding: 1.5rem 0 0 0rem !important;
-}
-
-.navbar .header-texto-titulo {
-    color: #777;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 160%;
-    text-align: right;
-    width: auto;
-    float: left;
-    -moz-transform: scaleX(-1);
-    /* Gecko */
-    -o-transform: scaleX(-1);
-    /* Opera */
-    -webkit-transform: scaleX(-1);
-    /* Webkit */
-    transform: scaleX(-1);
-    /* Standard */
-    filter: FlipH;
-    /* IE 6/7/8 */
-}
-
-.navbar .header-texto-subtitulo {
-    color: #777;
-    text-align: left;
-    font-size: 85%;
-    float: left;
-    width: auto;
-}
-
-.navbar .header-texto div {
-    float: left;
-    width: 100%;
-    font-variant-caps: small-caps;
-}
-
-.navbar .p-2 {}
-
 .navbar .p-2 a {
     margin-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .jumbotron {

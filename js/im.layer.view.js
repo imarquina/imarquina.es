@@ -168,9 +168,6 @@ var View = {
                     App.Config.author + " v" + App.Config.version);
             },
             pageTitleSet: function(elemento) {
-                $("<div id='titulo' class='header-texto-titulo'>" + elemento.dataTextBanner + "</div>").appendTo("#header");
-                $("<small id='subtitulo' class='header-texto-subtitulo'>" +
-                    elemento.dataTextSubtitle.toLowerCase() + "</small>").appendTo("#header");
                 $("<p class='card-text'><small>@<span id='annio'>" + elemento.annio + "</span> " +
                     elemento.author + " v<span id='version'>" + elemento.version +
                     "</span></small></p>").prependTo("#copyright");

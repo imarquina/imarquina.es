@@ -1,5 +1,5 @@
 img {
-    /*opacity: 0 !important;*/
+    -webkit-filter: contrast(0) !important;
     filter: contrast(0) !important;
 }
 
