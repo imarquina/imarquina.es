@@ -1,0 +1,48 @@
+footer {
+    display: none;
+}
+
+.navbar {
+    display: none;
+}
+
+.breadcrumb {
+    display: none;
+}
+
+.detail {
+    padding: 0;
+    background-color: #333333;
+    min-height: 10rem;
+}
+
+.carousel-control-prev {
+    display: none;
+}
+
+.carousel-control-next {
+    display: none;
+}
+
+.image-item {
+    width: 100%;
+    margin: 1rem;
+}
+
+.image-item>.card-block {
+    display: inline-block;
+    vertical-align: top;
+    width: 65%;
+    font-size: 0.9rem;
+}
+
+.card img {}
+
+.image-title {
+    font-weight: bold;
+}
+
+.image-info {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}

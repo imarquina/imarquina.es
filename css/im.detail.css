@@ -1,24 +1,23 @@
-* {
-    margin: 0;
+.carousel-control-prev {
+    display: none;
 }
 
-footer {
-    width: 100%;
+.carousel-control-next {
+    display: none;
 }
 
-.detail {
-    padding-top: 7rem;
-    padding-bottom: 2rem;
-    background-color: #333333;
-    min-height: 38.5rem;
+.carousel .card {
+    flex-direction: column;
 }
 
-.carousel-item>img {
-    margin: 0 auto 0 auto;
-    vertical-align: middle;
+.image-item img {
+    margin: 0 auto;
 }
 
 @media (min-width: 42em) and (min-height: 42em) {
+    .carousel .card {
+        flex-direction: row;
+    }
     footer {
         position: absolute;
         bottom: 0;
@@ -29,9 +28,5 @@ footer {
         padding-top: 7rem;
         padding-bottom: 2rem;
         background-color: #333333;
-    }
-    .carousel-inner {
-        min-height: 0;
-        max-height: none;
     }
 }

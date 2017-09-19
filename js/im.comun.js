@@ -90,5 +90,9 @@ var Comun = {
         var dateB = new Date(Comun.dateAnno(b[0].public), Comun.dateMes(b[0].public), Comun.dateDia(b[0].public));
 
         return dateB - dateA; //sort by date descending	
+    },
+    /* Función saber si está dentro de un iframe */
+    insideIframe: function() {
+        return (window.top !== window.self);
     }
 }

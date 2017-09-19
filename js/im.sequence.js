@@ -1,5 +1,5 @@
 $(window).ready(function() {
-    View.Detail.prototype.Image.imageNormalization();
+    View.Detail.prototype.Carousel.carouselNormalization();
 });
 
 /** evento de cambio de dimension */
@@ -7,14 +7,20 @@ $(window).on('resize orientationchange', function() {
     var items = $('#carouselInner .carousel-item img') //grab all slides
 
     items.each(function() { //add heights to array
-        View.Detail.prototype.Image.setHeight(this);
-        View.Detail.prototype.Image.setMargin(this);
+        View.Detail.prototype.Carousel.setHeight(this);
+        View.Detail.prototype.Carousel.setMargin(this);
     });
-    View.Detail.prototype.Image.writeHeights();
+    View.Detail.prototype.Carousel.writeHeights();
+});
+
+/** evento de cambio de diapositiva */
+$('#carouselSlides').bind('slide.bs.carousel', function(e) {
+    //console.log('slide event 1!');
+    View.Detail.prototype.Carousel.writeHeights();
 });
 
 View.Detail.prototype = {
-    Image: (function() {
+    Carousel: (function() {
         /** FUNCIONES PRIVADAS */
         var getRatio = function(element) {
             return element.attr('height') / element.attr('width');
@@ -37,11 +43,11 @@ View.Detail.prototype = {
         }
 
         /** FUNCIONES PUBLICAS */
-        Image = {
-            imageNormalization: function() {
-                $('#carouselSlides .card img').one("load", function() {
-                    View.Detail.prototype.Image.setHeight(this);
-                    View.Detail.prototype.Image.setMargin(this);
+        Carousel = {
+            carouselNormalization: function() {
+                $('#carouselInner .carousel-item img').one("load", function() {
+                    View.Detail.prototype.Carousel.setHeight(this);
+                    View.Detail.prototype.Carousel.setMargin(this);
                 }).each(function() {
                     try {
                         if (this.complete) $(this).load();
@@ -49,7 +55,7 @@ View.Detail.prototype = {
 
                     }
                 });
-                View.Detail.prototype.Image.writeHeights();
+                View.Detail.prototype.Carousel.writeHeights();
             },
             writeHeights: function() {
                 $('#banner-caroussel-top').empty();
@@ -80,12 +86,12 @@ View.Detail.prototype = {
                     var loQueHay = displayHeight();
                     var laImagen = $(element.parentElement).height();
                     var margen = (loQueHay - laImagen) / 2;
-                    $(element.parentElement).css('margin-top', margen + 'px');
+                    $(element).css('margin-top', margen + 'px');
                 } else {
-                    $(element.parentElement).css('margin-top', '0px');
+                    $(element).css('margin-top', '0px');
                 }
             }
         }
-        return Image;
+        return Carousel;
     })()
 }

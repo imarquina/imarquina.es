@@ -18,7 +18,7 @@ $(window).ready(function() {
         View.General.menuSet(dataXml);
         View.General.sloganSet(dataXml);
 
-        if (document.URL.toLowerCase().indexOf("detail.html") > 0) {
+        if (document.URL.toLowerCase().indexOf("sequence.html") > 0) {
             var sGallery = Comun.queryStringParamGet('gallery');
             if (Comun.queryStringParamValue(sGallery)) {
                 View.Detail.gallerySet(dataXml, sGallery, Comun.queryStringParamGet('news'));
@@ -27,6 +27,12 @@ $(window).ready(function() {
                 if (Comun.queryStringParamValue(sNews)) {
                     View.Detail.newsSet(dataXml, sNews, Comun.queryStringParamGet('news'))
                 }
+            }
+        } else if (document.URL.toLowerCase().indexOf("detail.html") > 0) {
+            var sGallery = Comun.queryStringParamGet('gallery');
+            if (Comun.queryStringParamValue(sGallery)) {
+                View.Detail.imageSet(dataXml, sGallery, Comun.queryStringParamGet('news'),
+                    Comun.queryStringParamGet('photo'));
             }
         } else {
             var sGallery = Comun.queryStringParamGet('gallery');
@@ -204,8 +210,13 @@ var View = {
                     sResult += "<li class='breadcrumb-item active'>lo último</li>"
 
                 } else {
-                    if (document.URL.toLowerCase().indexOf("detail.html") > 0) {
+                    if (document.URL.toLowerCase().indexOf("sequence.html") > 0) {
                         sResult = "<li class='breadcrumb-item active'>secuencia</li>";
+                        if (oTemp != '') {
+                            sResult = hrefSet(oTemp[0].nodeName, oTemp.attr("name"), urlNews, 1) + sResult;
+                        }
+                    } else if (document.URL.toLowerCase().indexOf("detail.html") > 0) {
+                        sResult = "<li class='breadcrumb-item active'>imagen</li>";
                         if (oTemp != '') {
                             sResult = hrefSet(oTemp[0].nodeName, oTemp.attr("name"), urlNews, 1) + sResult;
                         }
@@ -295,7 +306,7 @@ var View = {
                             var divCard = $("<div class='card p-1'>").appendTo("#tiles");
                             var divImage = $("<div class='card-image'>").appendTo(divCard);
                             $("<img class='card-img-top img-fluid' id='" + imgName + "' src='" + App.Config.rutaImage +
-                                imgName + ".jpg' title='" + sName + "' alt='Columnas Css' />").appendTo(divImage);
+                                imgName + ".jpg' title='" + sName + "' alt='imagen " + sName + "' />").appendTo(divImage);
                             var divBlock = $("<div class='card-block'>").appendTo(divCard);
                             var panTitulo = $("<h4 class='card-title'>").appendTo(divBlock);
                             $("<span class='fa " + App.Constantes.iconGallery + "'></span>").appendTo(panTitulo);
@@ -314,7 +325,7 @@ var View = {
                             var divCard = $("<div class='card p-1'>").appendTo("#tiles");
                             var divImage = $("<div class='card-video'>").appendTo(divCard);
                             $("<img class='card-img-top img-fluid' id='" + imgName + "' src='" + App.Config.rutaImage +
-                                imgName + ".jpg' title='" + sName + "' alt='Columnas Css' />").appendTo(divImage);
+                                imgName + ".jpg' title='" + sName + "' alt=' " + sName + "' />").appendTo(divImage);
                             var divBlock = $("<div class='card-block'>").appendTo(divCard);
                             var panTitulo = $("<h4 class='card-title'>").appendTo(divBlock);
                             $("<span class='fa " + App.Constantes.iconVideo + "'></span>").appendTo(panTitulo);
@@ -334,7 +345,7 @@ var View = {
                             var divCard = $("<div class='card p-1'>").appendTo("#tiles");
                             var divImage = $("<div class='card-image'>").appendTo(divCard);
                             $("<img class='card-img-top img-fluid' id='" + imgName + "' src='" + App.Config.rutaImage +
-                                imgName + ".jpg' title='" + sName + "' alt='Columnas Css' />").appendTo(divImage);
+                                imgName + ".jpg' title='" + sName + "' alt=' " + sName + "' />").appendTo(divImage);
                             var divBlock = $("<div class='card-block'>").appendTo(divCard);
                             var panTitulo = $("<h4 class='card-title'>").appendTo(divBlock);
                             $("<span class='fa " + App.Constantes.iconGalleries + "'></span>").appendTo(panTitulo);
@@ -434,7 +445,7 @@ var View = {
                     /** imagen */
                     var divImage = $("<div class='card-image'>").appendTo(divCard);
                     $("<img class='card-img-top img-fluid' id='" + imgName + "' src='" + App.Config.rutaImage +
-                        imgName + ".jpg' title='" + sName + "' alt='Columnas Css' />").appendTo(divImage);
+                        imgName + ".jpg' alt='imagen " + sName + "' />").appendTo(divImage);
                     //Marcador de secuencia                            
                     var divSecuencia = $("<div class='secuencia' title='ver secuencia'>").appendTo(divImage);
                     $("<span class='fa fa-chevron-left'>").appendTo(divSecuencia);
@@ -442,12 +453,12 @@ var View = {
 
                     //vinculo
                     if (sNews != undefined) {
-                        $(divImage).wrap("<a href='./detail.html?gallery=" + sParam + "&photo=" + i + "&news=" + sNews + "'>");
+                        $(divImage).wrap("<a href='./sequence.html?gallery=" + sParam + "&photo=" + i + "&news=" + sNews + "'>");
                     } else {
-                        $(divImage).wrap("<a href='./detail.html?gallery=" + sParam + "&photo=" + i + "'>");
+                        $(divImage).wrap("<a href='./sequence.html?gallery=" + sParam + "&photo=" + i + "'>");
                     }
                     /** bloque */
-                    var divBlock = $("<div class='card-block'>").appendTo(divCard);
+                    var divBlock = $("<div class='card-block' title='ver imagen'>").appendTo(divCard);
                     var panTitulo = $("<h4 class='card-title'>").appendTo(divBlock);
                     $("<span class='fa " + App.Constantes.iconImage + "'></span>").appendTo(panTitulo);
                     $("<span class='col-11'>" + sName + "</span>").appendTo(panTitulo);
@@ -473,6 +484,13 @@ var View = {
                     $(View.General.infoLinkGet(sLnkUrl)).appendTo(panSocial);
                     var panDate = $("<p class='card-date card-text text-right'>").appendTo(panFooter);
                     $("<small class='text-muted'>" + Comun.dateFormat(sUpdate) + "</small>").appendTo(panDate);
+
+                    //vinculo
+                    if (sNews != undefined) {
+                        $(divBlock).wrap("<a href='./detail.html?gallery=" + sParam + "&photo=" + i + "&news=" + sNews + "'>");
+                    } else {
+                        $(divBlock).wrap("<a href='./detail.html?gallery=" + sParam + "&photo=" + i + "'>");
+                    }
                 }
                 pageBuild(data, '', Controller.Config.galleryFind(data, sParam), sNews);
             },
@@ -617,7 +635,7 @@ var View = {
                     /** bloque */
                     var divBlock = $("<div class='card-block'>").appendTo(divCard);
                     var panTitulo = $("<h4 class='card-title'>").appendTo(divBlock);
-                    $("<span class='fa " + App.Constantes.icoImagen + "'></span>").appendTo(panTitulo);
+                    $("<span class='fa " + App.Constantes.iconImage + "'></span>").appendTo(panTitulo);
                     $("<span class='col-11'>" + colImages[i][0].titulo + "</span>").appendTo(panTitulo);
                     //Texto
                     var panEnlace = $("<div class='card-colection'>").appendTo(divBlock);
@@ -636,7 +654,7 @@ var View = {
                         var panSocial = $("<div class='col-4 text-left'>").appendTo(panFooter);
                         $("<img src='./resources/youtube.png' style='width:14px!important;' title='publicado en youtube'/>").appendTo(panSocial);
                     } else {
-                        $(divImage).wrap("<a href='./detail.html?news=" + sParam + "&photo=" + iCnt + "'>");
+                        $(divImage).wrap("<a href='./sequence.html?news=" + sParam + "&photo=" + iCnt + "'>");
                         $(txtEnlace).wrap("<a href='./index.html?gallery=" + colImages[i][0].parentFolder +
                             "&news=" + sParam + "'>");
 
@@ -707,50 +725,101 @@ var View = {
         /** FUNCIONES PRIVADAS */
         /* Creal el HTML con el esquema de elementos y los
         items de la coleccion */
-        var pageBuild = function(data, colImages, nodo, sNews) {
-            //breadcrump                    
-            var panBreadCrumb = $("<ul class='breadcrumb'>").insertBefore("#main");
-            $(View.General.breadcrumGet(nodo, sNews)).appendTo(panBreadCrumb);
-
-            var node_name = '';
-
-            //vinculos social-media
-            if (nodo != '') {
-                node_name = $(this).attr("name");
-
-                var dataText = '';
-                if ((nodo.parent()).attr("name") != undefined) {
-                    dataText = App.Config.dataTextTitle + (nodo.parent()).attr("name") + ":" + node_name;
-                } else {
-                    dataText = App.Config.dataTextTitle + node_name;
+        var pageBuild = function(data, colImages, nodo, sNews, photo) {
+            if (photo != undefined && photo != '') {
+                if (Comun.insideIframe()) {
+                    headTag = document.getElementsByTagName("head")[0].innerHTML;
+                    var frameCSS = headTag + '<link type="text/css" href="./css/im.iframe.css" rel="stylesheet">';
+                    document.getElementsByTagName('head')[0].innerHTML = frameCSS;
                 }
+
+                //breadcrump                    
+                var panBreadCrumb = $("<ul class='breadcrumb'>").insertBefore("#main");
+                $(View.General.breadcrumGet(nodo, sNews)).appendTo(panBreadCrumb);
+
+                var node_name = '';
+
+                //vinculos social-media
+                if (nodo != '') {
+                    node_name = $(this).attr("name");
+
+                    var dataText = '';
+                    if ((nodo.parent()).attr("name") != undefined) {
+                        dataText = App.Config.dataTextTitle + (nodo.parent()).attr("name") + ":" + node_name;
+                    } else {
+                        dataText = App.Config.dataTextTitle + node_name;
+                    }
+                }
+
+                var iElem = 0;
+
+                //Cargar los N primeros para novedades
+                var sGallery = Comun.queryStringParamGet('gallery');
+
+                for (var i = 0; i < colImages.length; i++) {
+                    var imgName = colImages[i][0].id.replace(".jpg", "");
+                    var sName = colImages[i][0].titulo;
+                    var sHeight = colImages[i][0].height;
+                    var sWidth = colImages[i][0].width;
+                    var sInfoimagen = colImages[i][0].infoimagen;
+
+                    var divCard = $("<div class='card p1'>").appendTo("#carouselSlides");
+                    $("<img class='d-block img-fluid' id='" + imgName + "' src='" + App.Config.rutaImage + imgName +
+                        ".jpg' height='" + sHeight + "' width='" + sWidth + "' title='" + sName + "'>").appendTo(divCard);
+                    var divBlock = $("<div class='card-block'>").appendTo(divCard);
+                    var panTitulo = $("<h4 class='card-title'>").appendTo(divBlock);
+                    $("<span class='fa " + App.Constantes.iconImage + "'></span>").appendTo(panTitulo);
+                    $("<span class='col-11'>" + sName + "</span>").appendTo(panTitulo);
+                    $("<p class='card-text'>" + sInfoimagen + "</p>").appendTo(divBlock);
+
+                    $(divCard).wrap("<a href='./sequence.html?gallery=" + sGallery + "&photo=" + photo + "' target='_blank'>");
+                }
+                View.General.seoValuesSet(Controller.Config.generalNodeGet(data));
+            } else {
+                //breadcrump                    
+                var panBreadCrumb = $("<ul class='breadcrumb'>").insertBefore("#main");
+                $(View.General.breadcrumGet(nodo, sNews)).appendTo(panBreadCrumb);
+
+                var node_name = '';
+
+                //vinculos social-media
+                if (nodo != '') {
+                    node_name = $(this).attr("name");
+
+                    var dataText = '';
+                    if ((nodo.parent()).attr("name") != undefined) {
+                        dataText = App.Config.dataTextTitle + (nodo.parent()).attr("name") + ":" + node_name;
+                    } else {
+                        dataText = App.Config.dataTextTitle + node_name;
+                    }
+                }
+
+                var iElem = 0;
+
+                //Cargar los N primeros para novedades
+                var Limite = 1000;
+                var sGallery = Comun.queryStringParamGet('gallery');
+                if (sNews != undefined && sNews != '' && (sGallery == '' || sGallery == undefined)) {
+                    Limite = App.Config.elemNuevos;
+                }
+
+                for (var i = 0; i < colImages.length && i < Limite; i++) {
+                    var imgName = colImages[i][0].id.replace(".jpg", "");
+                    var sName = colImages[i][0].titulo;
+                    var sHeight = colImages[i][0].height;
+                    var sWidth = colImages[i][0].width;
+
+                    var sActive = elementActiveSet(Comun.queryStringParamGet('photo'), i);
+
+                    $("<div class='carousel-item " + sActive + "'><img class='d-block img-fluid' id='" + imgName +
+                        "' src='" + App.Config.rutaImage + imgName +
+                        ".jpg' height='" + sHeight + "' width='" + sWidth + "' title='" + sName + "' alt='First slide'></div>").appendTo("#carouselInner");
+                    $("<li data-target='#carouselSlides' class='" + sActive + "' data-slide-to='" +
+                        i + "'></li>").appendTo("#carouselIndicators");
+                }
+                View.General.seoValuesSet(Controller.Config.generalNodeGet(data));
+                View.General.bannerCookiesLoad(data);
             }
-
-            var iElem = 0;
-
-            //Cargar los N primeros para novedades
-            var Limite = 1000;
-            var sGallery = Comun.queryStringParamGet('gallery');
-            if (sNews != undefined && sNews != '' && (sGallery == '' || sGallery == undefined)) {
-                Limite = App.Config.elemNuevos;
-            }
-
-            for (var i = 0; i < colImages.length && i < Limite; i++) {
-                var imgName = colImages[i][0].id.replace(".jpg", "");
-                var sName = colImages[i][0].titulo;
-                var sHeight = colImages[i][0].height;
-                var sWidth = colImages[i][0].width;
-
-                var sActive = elementActiveSet(Comun.queryStringParamGet('photo'), i);
-
-                $("<div class='carousel-item " + sActive + "'><img class='d-block img-fluid' id='" + imgName +
-                    "' src='" + App.Config.rutaImage + imgName +
-                    ".jpg' height='" + sHeight + "' width='" + sWidth + "' title='" + sName + "' alt='First slide'></div>").appendTo("#carouselInner");
-                $("<li data-target='#carouselSlides' class='" + sActive + "' data-slide-to='" +
-                    i + "'></li>").appendTo("#carouselIndicators");
-            }
-            View.General.seoValuesSet(Controller.Config.generalNodeGet(data));
-            View.General.bannerCookiesLoad(data);
         };
 
         /* Establece el elemento activo para el caroussel */
@@ -803,6 +872,50 @@ var View = {
                         });
 
                         pageBuild(data, colImages, $(this), sNews);
+                    }
+                });
+            },
+            /** == Crea la lista de elementos de una galería == */
+            imageSet: function(data, sParam, sNews, photo) {
+                //El nodo root es config
+                data.find('gallery').each(function() {
+                    var gallery_name = $(this).attr("name");
+
+                    if (Comun.htmlReplace(gallery_name) == sParam) {
+                        var colImages = new Array;
+                        var iCol = 0;
+                        var iPhoto = 0;
+
+                        //Coleccion de la galeria
+                        $(this).children().each(function() {
+                            var IDImage = $(this).attr("id");
+                            var hImage = typesHash.get(IDImage);
+                            if (hImage != null && iPhoto == photo) {
+                                var idImage = hImage.SRC;
+                                var datUpdateImage = hImage.UPDATE;
+                                var datPublicImage = hImage.PUBLIC;
+                                var captionImage = hImage.CAPTION;
+                                var linkUrlImage = hImage.LINKURL;
+                                var infoTextImage = hImage.INFOTEXT;
+                                var widthImage = hImage.WIDTH;
+                                var heightImage = hImage.HEIGHT;
+
+                                colImages[iCol] = [{
+                                    id: idImage,
+                                    update: datUpdateImage,
+                                    public: datPublicImage,
+                                    titulo: captionImage,
+                                    linkurl: linkUrlImage,
+                                    infoimagen: infoTextImage,
+                                    width: widthImage,
+                                    height: heightImage
+                                }];
+                                iCol++;
+                            }
+                            iPhoto++;
+                        });
+
+                        pageBuild(data, colImages, $(this), sNews, photo);
                     }
                 });
             },
