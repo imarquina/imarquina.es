@@ -7,17 +7,43 @@
 }
 
 .carousel .card {
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .image-item img {
     margin: 0 auto;
 }
 
+.image-block {
+    display: flex;
+    justify-content: center;
+    padding: .25rem;
+    margin-bottom: 1rem;
+}
+
+.image-block>.card-image {
+    display: flex;
+    background-color: #2b2b2b;
+    padding: .25rem;
+    border-radius: .25rem;
+}
+
+.image-block>.card-block {
+    background-color: #2b2b2b;
+}
+
+.image-block>.card-block>h4 {
+    margin-top: .2rem;
+    color: #ababab;
+}
+
+.image-block>.card-block>a,
+.image-block>.card-block>h4,
+.image-block>.card-block>p {
+    margin-bottom: .3rem;
+}
+
 @media (min-width: 42em) and (min-height: 42em) {
-    .carousel .card {
-        flex-direction: row;
-    }
     footer {
         position: absolute;
         bottom: 0;

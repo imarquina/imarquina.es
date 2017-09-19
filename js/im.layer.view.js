@@ -763,10 +763,11 @@ var View = {
                     var sWidth = colImages[i][0].width;
                     var sInfoimagen = colImages[i][0].infoimagen;
 
-                    var divCard = $("<div class='card p1'>").appendTo("#carouselSlides");
-                    $("<img class='d-block img-fluid' id='" + imgName + "' src='" + App.Config.rutaImage + imgName +
-                        ".jpg' height='" + sHeight + "' width='" + sWidth + "' title='" + sName + "'>").appendTo(divCard);
-                    var divBlock = $("<div class='card-block'>").appendTo(divCard);
+                    var divCard = $("<div class='col-12 image-block'>").appendTo("#carouselSlides");
+                    var divImage = $("<div class='card-image'>").appendTo(divCard);
+                    $("<img class='img-fluid' id='" + imgName + "' src='" + App.Config.rutaImage + imgName +
+                        ".jpg' height='" + sHeight + "' width='" + sWidth + "' title='" + sName + "'>").appendTo(divImage);
+                    var divBlock = $("<div class='col-3 d-inline-block card-block'>").appendTo(divCard);
                     var panTitulo = $("<h4 class='card-title'>").appendTo(divBlock);
                     $("<span class='fa " + App.Constantes.iconImage + "'></span>").appendTo(panTitulo);
                     $("<span class='col-11'>" + sName + "</span>").appendTo(panTitulo);
