@@ -443,25 +443,31 @@ var View = {
                     var divCard = $("<div class='card p-1'>").appendTo("#tiles");
 
                     /** imagen */
-                    var divImage = $("<div class='card-image'>").appendTo(divCard);
+                    var divImage = $("<div class='card-image' title='ver imagen'>").appendTo(divCard);
                     $("<img class='card-img-top img-fluid' id='" + imgName + "' src='" + App.Config.rutaImage +
                         imgName + ".jpg' alt='imagen " + sName + "' />").appendTo(divImage);
-                    //Marcador de secuencia                            
-                    var divSecuencia = $("<div class='secuencia' title='ver secuencia'>").appendTo(divImage);
-                    $("<span class='fa fa-chevron-left'>").appendTo(divSecuencia);
-                    $("<span class='fa fa-chevron-right'>").appendTo(divSecuencia);
 
                     //vinculo
                     if (sNews != undefined) {
-                        $(divImage).wrap("<a href='./sequence.html?gallery=" + sParam + "&photo=" + i + "&news=" + sNews + "'>");
+                        $(divImage).wrap("<a href='./detail.html?gallery=" + sParam + "&photo=" + i + "&news=" + sNews + "'>");
                     } else {
-                        $(divImage).wrap("<a href='./sequence.html?gallery=" + sParam + "&photo=" + i + "'>");
+                        $(divImage).wrap("<a href='./detail.html?gallery=" + sParam + "&photo=" + i + "'>");
                     }
                     /** bloque */
                     var divBlock = $("<div class='card-block' title='ver imagen'>").appendTo(divCard);
                     var panTitulo = $("<h4 class='card-title'>").appendTo(divBlock);
                     $("<span class='fa " + App.Constantes.iconImage + "'></span>").appendTo(panTitulo);
-                    $("<span class='col-11'>" + sName + "</span>").appendTo(panTitulo);
+                    $("<span class='col-10'>" + sName + "</span>").appendTo(panTitulo);
+                    //Marcador de secuencia                            
+                    var divSecuencia = $("<div title='ver secuencia'>").appendTo(panTitulo);
+                    $("<span class='fa fa-chevron-left'>").appendTo(divSecuencia);
+                    $("<span class='fa fa-chevron-right'>").appendTo(divSecuencia);
+                    //vinculo marcador secuencia
+                    if (sNews != undefined) {
+                        $(divSecuencia).wrap("<a class='secuencia' href='./sequence.html?gallery=" + sParam + "&photo=" + i + "&news=" + sNews + "'>");
+                    } else {
+                        $(divSecuencia).wrap("<a class='secuencia' href='./sequence.html?gallery=" + sParam + "&photo=" + i + "'>");
+                    }
                     //Texto
                     var panTexto = $("<p class='card-text '>" + sInfT + "</p>").appendTo(divBlock);
                     //Dimensiones, precio copia
@@ -484,13 +490,6 @@ var View = {
                     $(View.General.infoLinkGet(sLnkUrl)).appendTo(panSocial);
                     var panDate = $("<p class='card-date card-text text-right'>").appendTo(panFooter);
                     $("<small class='text-muted'>" + Comun.dateFormat(sUpdate) + "</small>").appendTo(panDate);
-
-                    //vinculo
-                    if (sNews != undefined) {
-                        $(divBlock).wrap("<a href='./detail.html?gallery=" + sParam + "&photo=" + i + "&news=" + sNews + "'>");
-                    } else {
-                        $(divBlock).wrap("<a href='./detail.html?gallery=" + sParam + "&photo=" + i + "'>");
-                    }
                 }
                 pageBuild(data, '', Controller.Config.galleryFind(data, sParam), sNews);
             },
@@ -763,17 +762,26 @@ var View = {
                     var sWidth = colImages[i][0].width;
                     var sInfoimagen = colImages[i][0].infoimagen;
 
-                    var divCard = $("<div class='col-12 image-block'>").appendTo("#carouselSlides");
-                    var divImage = $("<div class='card-image'>").appendTo(divCard);
+                    var divCard = $("<div id='layCard' class='col-12 image-block'>").appendTo("#carouselSlides");
+                    var divImage = $("<div id='layImage' class='card-image'>").appendTo(divCard);
                     $("<img class='img-fluid' id='" + imgName + "' src='" + App.Config.rutaImage + imgName +
                         ".jpg' height='" + sHeight + "' width='" + sWidth + "' title='" + sName + "'>").appendTo(divImage);
-                    var divBlock = $("<div class='col-3 d-inline-block card-block'>").appendTo(divCard);
+                    var divBlock = $("<div id='layTexto' class='col-3 d-inline-block card-block'>").appendTo(divCard);
                     var panTitulo = $("<h4 class='card-title'>").appendTo(divBlock);
                     $("<span class='fa " + App.Constantes.iconImage + "'></span>").appendTo(panTitulo);
                     $("<span class='col-11'>" + sName + "</span>").appendTo(panTitulo);
                     $("<p class='card-text'>" + sInfoimagen + "</p>").appendTo(divBlock);
 
-                    $(divCard).wrap("<a href='./sequence.html?gallery=" + sGallery + "&photo=" + photo + "' target='_blank'>");
+                    //Marcador de secuencia                            
+                    var divSecuencia = $("<div title='ver secuencia'>").appendTo(divImage);
+                    $("<span class='fa fa-chevron-left'>").appendTo(divSecuencia);
+                    $("<span class='fa fa-chevron-right'>").appendTo(divSecuencia);
+                    //vinculo marcador secuencia
+                    if (sNews != undefined) {
+                        $(divSecuencia).wrap("<a class='secuencia' href='./sequence.html?gallery=" + sGallery + "&photo=" + photo + "&news=" + sNews + "'>");
+                    } else {
+                        $(divSecuencia).wrap("<a class='secuencia' href='./sequence.html?gallery=" + sGallery + "&photo=" + photo + "'>");
+                    }
                 }
                 View.General.seoValuesSet(Controller.Config.generalNodeGet(data));
             } else {

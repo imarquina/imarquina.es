@@ -39,7 +39,7 @@ View.Detail.prototype = {
         /** FUNCIONES PUBLICAS */
         Image = {
             imageNormalization: function() {
-                $('#carouselSlides .card img').one("load", function() {
+                $('#carouselSlides .card-image img').one("load", function() {
                     View.Detail.prototype.Image.setHeight(this);
                     View.Detail.prototype.Image.setMargin(this);
                 }).each(function() {
@@ -78,11 +78,11 @@ View.Detail.prototype = {
             setMargin: function(element) {
                 if ($('.detail').height() <= $(window).height()) {
                     var loQueHay = displayHeight();
-                    var laImagen = $(element.parentElement).height();
+                    var laImagen = $('#layImage').height();
                     var margen = (loQueHay - laImagen) / 2;
-                    $(element.parentElement).css('margin-top', margen + 'px');
+                    $('#layCard').css('margin-top', margen + 'px');
                 } else {
-                    $(element.parentElement).css('margin-top', '0px');
+                    $('#layCard').css('margin-top', '0px');
                 }
             }
         }
