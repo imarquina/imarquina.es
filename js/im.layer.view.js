@@ -33,6 +33,12 @@ $(window).ready(function() {
             if (Comun.queryStringParamValue(sGallery)) {
                 View.Detail.imageSet(dataXml, sGallery, Comun.queryStringParamGet('news'),
                     Comun.queryStringParamGet('photo'));
+            } else {
+                var sNews = Comun.queryStringParamGet('news');
+                if (Comun.queryStringParamValue(sNews)) {
+                    View.Detail.imageNewSet(dataXml, Comun.queryStringParamValue(sNews),
+                        Comun.queryStringParamGet('photo'));
+                }
             }
         } else {
             var sGallery = Comun.queryStringParamGet('gallery');
@@ -625,17 +631,19 @@ var View = {
                         "' src='" + App.Config.rutaImage +
                         colImages[i][0].id.replace(".jpg", "") + ".jpg' title='" + colImages[i][0].titulo +
                         "' alt='Columnas Css' />").appendTo(divImage);
-                    //Marcador de secuencia
-                    if (colImages[i][0].type != 'video') {
-                        var divSecuencia = $("<div class='secuencia' title='ver secuencia'>").appendTo(divImage);
-                        $("<span class='fa fa-chevron-left'>").appendTo(divSecuencia);
-                        $("<span class='fa fa-chevron-right'>").appendTo(divSecuencia);
-                    }
+                    //Vinculo
+                    $(divImage).wrap("<a href='./detail.html?news=" + sParam + "&photo=" + iCnt + "'>");
                     /** bloque */
                     var divBlock = $("<div class='card-block'>").appendTo(divCard);
                     var panTitulo = $("<h4 class='card-title'>").appendTo(divBlock);
                     $("<span class='fa " + App.Constantes.iconImage + "'></span>").appendTo(panTitulo);
-                    $("<span class='col-11'>" + colImages[i][0].titulo + "</span>").appendTo(panTitulo);
+                    $("<span class='col-10'>" + colImages[i][0].titulo + "</span>").appendTo(panTitulo);
+                    //Marcador de secuencia
+                    if (colImages[i][0].type != 'video') {
+                        var divSecuencia = $("<div title='ver secuencia'>").appendTo(panTitulo);
+                        $("<span class='fa fa-chevron-left'>").appendTo(divSecuencia);
+                        $("<span class='fa fa-chevron-right'>").appendTo(divSecuencia);
+                    }
                     //Texto
                     var panEnlace = $("<div class='card-colection'>").appendTo(divBlock);
                     var panTexto = $("<p class='card-text '><span class='fa " + App.Constantes.iconColection +
@@ -653,7 +661,7 @@ var View = {
                         var panSocial = $("<div class='col-4 text-left'>").appendTo(panFooter);
                         $("<img src='./resources/youtube.png' style='width:14px!important;' title='publicado en youtube'/>").appendTo(panSocial);
                     } else {
-                        $(divImage).wrap("<a href='./sequence.html?news=" + sParam + "&photo=" + iCnt + "'>");
+                        $(divSecuencia).wrap("<a class='secuencia' href='./sequence.html?news=" + sParam + "&photo=" + iCnt + "'>");
                         $(txtEnlace).wrap("<a href='./index.html?gallery=" + colImages[i][0].parentFolder +
                             "&news=" + sParam + "'>");
 
@@ -778,7 +786,7 @@ var View = {
                     $("<span class='fa fa-chevron-right'>").appendTo(divSecuencia);
                     //vinculo marcador secuencia
                     if (sNews != undefined) {
-                        $(divSecuencia).wrap("<a class='secuencia' href='./sequence.html?gallery=" + sGallery + "&photo=" + photo + "&news=" + sNews + "'>");
+                        $(divSecuencia).wrap("<a class='secuencia' href='./sequence.html?news=true&photo=" + photo + "'>");
                     } else {
                         $(divSecuencia).wrap("<a class='secuencia' href='./sequence.html?gallery=" + sGallery + "&photo=" + photo + "'>");
                     }
@@ -934,6 +942,48 @@ var View = {
                         pageBuild(data, colImages, $(this), sNews, photo);
                     }
                 });
+            },
+            /* Crea la lista de elementos de novedades ======== */
+            imageNewSet: function(data, sNews, photo) {
+                var colImgNew = Controller.Config.newsLoad(data);
+                var iCol = 0;
+
+                //Ordenar colección
+                colImgNew.sort(Comun.arrayDateSort);
+
+                //Cargar los N primeros
+                var colImages = new Array;
+                var iCol = 0;
+                var iPhoto = 0;
+                for (var i = 0; i < colImgNew.length - 1; i++) {
+                    if (colImgNew[i][0].type != 'video'){
+                        if (iPhoto == photo) {
+                            var idImage = colImgNew[i][0].id.replace(".jpg", "");
+                            var datUpdateImage = colImgNew[i][0].update;
+                            var datPublicImage = colImgNew[i][0].public;
+                            var captionImage = colImgNew[i][0].titulo;
+                            var linkUrlImage = colImgNew[i][0].linkurl;
+                            var infoTextImage = colImgNew[i][0].infoimagen;
+                            var widthImage = colImgNew[i][0].width;
+                            var heightImage = colImgNew[i][0].height;
+
+                            colImages[iCol] = [{
+                                id: idImage,
+                                update: datUpdateImage,
+                                public: datPublicImage,
+                                titulo: captionImage,
+                                linkurl: linkUrlImage,
+                                infoimagen: infoTextImage,
+                                width: widthImage,
+                                height: heightImage
+                            }];
+                            iCol++;
+                        }
+                        iPhoto++; 
+                    }
+                }
+
+                pageBuild(data, colImages, '', sNews, photo);
             },
             /* Crea la lista de elementos de novedades ======== */
             newsSet: function(data, sParam, sNews) {

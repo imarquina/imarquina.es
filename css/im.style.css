@@ -350,6 +350,10 @@ footer .hidden {
     padding: 0;
 }
 
+.card-title>span.fa{
+    margin-right:.2rem;
+}
+
 .card-title>.col-11 {
     padding-right: .2rem;
     padding-left: .2rem;
