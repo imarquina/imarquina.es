@@ -1,13 +1,24 @@
-.carousel-control-prev {
-    display: none;
+* {
+    margin: 0;
 }
 
-.carousel-control-next {
-    display: none;
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
 }
 
-.carousel .card {
-    flex-direction: row;
+.detail {
+    padding-top: 7rem;
+    padding-bottom: 2rem;
+    background-color: #333333;
+    min-height: 100%;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
 }
 
 .image-item img {
@@ -15,51 +26,54 @@
 }
 
 .image-block {
-    display: flex;
-    justify-content: center;
+    background-color: #2b2b2b;
+    margin: .5rem;
     padding: .25rem;
-    margin-bottom: 1rem;
+    border-radius: .25rem;
 }
 
 .image-block>.card-image {
-    display: flex;
-    background-color: #2b2b2b;
-    padding: .25rem;
-    border-radius: .25rem;
+    padding: 0;
 }
 
 .image-block>.card-image>.secuencia {
     position: absolute;
     margin: 1rem;
     font-size: xx-large;
+    left: .5rem;
 }
 
-.image-block>.card-block {
+.image-block>.image-text {
     background-color: #2b2b2b;
-    padding-top: .5rem;
+    margin-left: .3rem;
+    padding: .2rem;
+    font-size: .8rem;
+    max-width: 15rem;
 }
 
-.image-block>.card-block>h4 {
+.image-block>.image-text>h4 {
     margin-top: .2rem;
     color: #ababab;
 }
 
-.image-block>.card-block>a,
-.image-block>.card-block>h4,
-.image-block>.card-block>p {
+.image-block>.image-text>a,
+.image-block>.image-text>h4,
+.image-block>.image-text>p {
     margin-bottom: .3rem;
 }
 
-@media (min-width: 42em) and (min-height: 42em) {
-    footer {
-        position: absolute;
-        bottom: 0;
+@media (max-width: 62em) {
+    .container {
+        /*display: block;*/
     }
-    .detail {
-        min-height: 100%;
-        height: 100%;
-        padding-top: 7rem;
-        padding-bottom: 2rem;
-        background-color: #333333;
+    .image-block {
+        display: block;
+    }
+    .image-block>.secuencia {
+        top: 0rem;
+    }
+    .image-block>.image-text {
+        display: block;
+        max-width: inherit;
     }
 }

@@ -762,15 +762,15 @@ var View = {
                     var sWidth = colImages[i][0].width;
                     var sInfoimagen = colImages[i][0].infoimagen;
 
-                    var divCard = $("<div id='layCard' class='col-12 image-block'>").appendTo("#carouselSlides");
-                    var divImage = $("<div id='layImage' class='card-image'>").appendTo(divCard);
+                    var divCard = $("<div id='layCard' class='row image-block'>").appendTo("#main");
+                    var divImage = $("<div id='layImage' class='col card-image'>").appendTo(divCard);
                     $("<img class='img-fluid' id='" + imgName + "' src='" + App.Config.rutaImage + imgName +
                         ".jpg' height='" + sHeight + "' width='" + sWidth + "' title='" + sName + "'>").appendTo(divImage);
-                    var divBlock = $("<div id='layTexto' class='col-3 d-inline-block card-block'>").appendTo(divCard);
-                    var panTitulo = $("<h4 class='card-title'>").appendTo(divBlock);
+                    var divBlock = $("<div id='layTexto' class='col col-auto image-text'>").appendTo(divCard);
+                    var panTitulo = $("<h4 class='title'>").appendTo(divBlock);
                     $("<span class='fa " + App.Constantes.iconImage + "'></span>").appendTo(panTitulo);
                     $("<span class='col-11'>" + sName + "</span>").appendTo(panTitulo);
-                    $("<p class='card-text'>" + sInfoimagen + "</p>").appendTo(divBlock);
+                    $("<p class='text'>" + sInfoimagen + "</p>").appendTo(divBlock);
 
                     //Marcador de secuencia                            
                     var divSecuencia = $("<div title='ver secuencia'>").appendTo(divImage);
@@ -830,6 +830,13 @@ var View = {
                 View.General.bannerCookiesLoad(data);
             }
         };
+
+        /* Comprueba la dimensión del elemento */
+        var getLayout = function(height, width) {
+            if (height > width) return 'v';
+            else if (width > height) return 'h';
+            else return 'v';
+        }
 
         /* Establece el elemento activo para el caroussel */
         var elementActiveSet = function(sParam, elemActual) {

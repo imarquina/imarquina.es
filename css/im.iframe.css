@@ -10,26 +10,22 @@ footer {
     display: none;
 }
 
+.container {
+    justify-content: left;
+}
+
 .detail {
     padding: 0;
     background-color: #333333;
     min-height: 10rem;
 }
 
-.carousel-control-prev {
-    display: none;
-}
-
-.carousel-control-next {
-    display: none;
-}
-
-.image-item {
+.image-block {
     width: 100%;
     margin: 1rem;
 }
 
-.image-item>.card-block {
+.image-block>.card-image {
     display: inline-block;
     vertical-align: top;
     width: 65%;

@@ -4,7 +4,7 @@ $(window).ready(function() {
 
 /** evento de cambio de dimension */
 $(window).on('resize orientationchange', function() {
-    var items = $('#carouselInner .carousel-item img') //grab all slides
+    var items = $('#main .image-block img') //grab all slides
 
     items.each(function() { //add heights to array
         View.Detail.prototype.Image.setHeight(this);
@@ -39,8 +39,8 @@ View.Detail.prototype = {
         /** FUNCIONES PUBLICAS */
         Image = {
             imageNormalization: function() {
-                $('#carouselSlides .card-image img').one("load", function() {
-                    View.Detail.prototype.Image.setHeight(this);
+                $('#main .image-block img').one("load", function() {
+                    //View.Detail.prototype.Image.setHeight(this);
                     View.Detail.prototype.Image.setMargin(this);
                 }).each(function() {
                     try {
