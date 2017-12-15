@@ -18,11 +18,11 @@ window.fbAsyncInit = function() {
 
 lnkHrefImage = function(param) {
     FB.ui({
-            method: 'share',
-            mobile_iframe: true,
-            href: param,
-        },
-        function(response) {});
+        method: 'share',
+        mobile_iframe: true,
+        href: param,
+    },
+    function(response) {});
 };
 
 lnkHrefPage = function(param){
