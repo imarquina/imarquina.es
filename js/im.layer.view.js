@@ -167,9 +167,6 @@ var View = {
             seoValuesSet: function(elemento) {
                 var elemento = Controller.Config.seoValoresLoad(elemento);
 
-                var sNews = '';
-                if (Comun.queryStringParamGet('news')) sNews = " (Lo último)";
-                document.title = elemento.title + sNews;
                 $('meta[name="description"]').attr("content", elemento.infoText);
                 $('meta[name="keywords"]').attr("content", elemento.keywords);
 
@@ -178,6 +175,16 @@ var View = {
                 $('meta[name="author"]').attr("content", App.Config.author);
                 $('meta[name="copyright"]').attr("content", '@' + App.Config.annio + ' ' +
                     App.Config.author + " v" + App.Config.version);
+            },
+            openGraph: function(elemento) {
+                var sNews = '';
+                if (Comun.queryStringParamGet('news')) sNews = " (Lo último)";
+
+                $('meta[property="og:url"').attr("content", '' + App.Config.home + '/detail.html?gallery=f8794f27d0c92a8e436f3ba336ae2a0c&photo=1');
+                $('meta[property="og:type"').attr("content", "article");
+                $('meta[property="og:title"').attr("content", elemento.titulo + sNews);
+                $('meta[property="og:description"').attr("content", elemento.infoimagen);
+                $('meta[property="og:image"').attr("content", '' + App.Config.home + '/images/' + elemento.id);
             },
             pageTitleSet: function(elemento) {
                 $("<p class='card-text'><small>@<span id='annio'>" + elemento.annio + "</span> " +
@@ -763,6 +770,15 @@ var View = {
                 //Cargar los N primeros para novedades
                 var sGallery = Comun.queryStringParamGet('gallery');
 
+                var styelCard, styleImage, styleBlock;
+                if (!Comun.insideIframe()) {
+                    styleImage = 'col card-image'
+                    styleBlock = 'col col-auto image-text';
+                } else {
+                    styleImage = 'col col-auto card-image'
+                    styleBlock = 'col image-text';
+                }
+
                 for (var i = 0; i < colImages.length; i++) {
                     var imgName = colImages[i][0].id.replace(".jpg", "");
                     var sName = colImages[i][0].titulo;
@@ -771,27 +787,37 @@ var View = {
                     var sInfoimagen = colImages[i][0].infoimagen;
 
                     var divCard = $("<div id='layCard' class='row image-block'>").appendTo("#main");
-                    var divImage = $("<div id='layImage' class='col card-image'>").appendTo(divCard);
+                    var divImage = $("<div id='layImage' class='" + styleImage + "'>").appendTo(divCard);
                     $("<img class='img-fluid' id='" + imgName + "' src='" + App.Config.rutaImage + imgName +
                         ".jpg' height='" + sHeight + "' width='" + sWidth + "' title='" + sName + "'>").appendTo(divImage);
-                    var divBlock = $("<div id='layTexto' class='col col-auto image-text'>").appendTo(divCard);
+                    var divBlock = $("<div id='layTexto' class='" + styleBlock + "'>").appendTo(divCard);
                     var panTitulo = $("<h4 class='title'>").appendTo(divBlock);
                     $("<span class='fa " + App.Constantes.iconImage + "'></span>").appendTo(panTitulo);
                     $("<span class='col-11'>" + sName + "</span>").appendTo(panTitulo);
                     $("<p class='text'>" + sInfoimagen + "</p>").appendTo(divBlock);
+                    var divSocial = $("<div class='bar-social'>").appendTo(divBlock);
+                    var divFacebook = $("<div id='shareBtn'>").appendTo(divSocial);
+                    $(divFacebook).wrap("<a id='shareLnk' href='#' class='fa fa-facebook-square'>");
+                    document.getElementById('shareLnk').onclick = function() {
+                        lnkHrefImage(App.Config.home + '/images/' + imgName + ".jpg");
+                    };
 
-                    //Marcador de secuencia                            
-                    var divSecuencia = $("<div title='ver secuencia'>").appendTo(divImage);
-                    $("<span class='fa fa-chevron-left'>").appendTo(divSecuencia);
-                    $("<span class='fa fa-chevron-right'>").appendTo(divSecuencia);
-                    //vinculo marcador secuencia
-                    if (sNews != undefined) {
-                        $(divSecuencia).wrap("<a class='secuencia' href='./sequence.html?news=true&photo=" + photo + "'>");
-                    } else {
-                        $(divSecuencia).wrap("<a class='secuencia' href='./sequence.html?gallery=" + sGallery + "&photo=" + photo + "'>");
+                    //Marcador de secuencia     
+                    if (!Comun.insideIframe()) {
+                        var divSecuencia = $("<div title='ver secuencia'>").appendTo(divImage);
+                        $("<span class='fa fa-chevron-left'>").appendTo(divSecuencia);
+                        $("<span class='fa fa-chevron-right'>").appendTo(divSecuencia);
+                        //vinculo marcador secuencia
+                        if (sNews != undefined) {
+                            $(divSecuencia).wrap("<a class='secuencia' href='./sequence.html?news=true&photo=" + photo + "'>");
+                        } else {
+                            $(divSecuencia).wrap("<a class='secuencia' href='./sequence.html?gallery=" + sGallery + "&photo=" + photo + "'>");
+                        }
                     }
+                    View.General.openGraph(colImages[i][0]);
                 }
                 View.General.seoValuesSet(Controller.Config.generalNodeGet(data));
+                View.General.bannerCookiesLoad(data);
             } else {
                 //breadcrump                    
                 var panBreadCrumb = $("<ul class='breadcrumb'>").insertBefore("#main");
@@ -956,7 +982,7 @@ var View = {
                 var iCol = 0;
                 var iPhoto = 0;
                 for (var i = 0; i < colImgNew.length - 1; i++) {
-                    if (colImgNew[i][0].type != 'video'){
+                    if (colImgNew[i][0].type != 'video') {
                         if (iPhoto == photo) {
                             var idImage = colImgNew[i][0].id.replace(".jpg", "");
                             var datUpdateImage = colImgNew[i][0].update;
@@ -979,7 +1005,7 @@ var View = {
                             }];
                             iCol++;
                         }
-                        iPhoto++; 
+                        iPhoto++;
                     }
                 }
 

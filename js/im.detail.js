@@ -40,7 +40,9 @@ View.Detail.prototype = {
         Image = {
             imageNormalization: function() {
                 $('#main .image-block img').one("load", function() {
-                    //View.Detail.prototype.Image.setHeight(this);
+                    if (Comun.insideIframe()) {
+                        View.Detail.prototype.Image.setHeight(this);
+                    }
                     View.Detail.prototype.Image.setMargin(this);
                 }).each(function() {
                     try {
@@ -69,20 +71,34 @@ View.Detail.prototype = {
                 }
             },
             setHeight: function(element) {
-                if (getLayout($(element)) == 'h') {
-                    if ($(element).attr('width') >= $(element.parentElement).width()) {
-                        $(element).css('height', $(element.parentElement).width() * getRatio($(element)) + 'px');
+                if (!Comun.insideIframe()) {
+                    if (getLayout($(element)) == 'h') {
+                        if ($(element).attr('width') >= $(element.parentElement).width()) {
+                            $(element).css('height', $(element.parentElement).width() * getRatio($(element)) + 'px');
+                        }
+                    }
+                } else {
+                    //Dentro de iframe el alto es en función del marco
+                    if (getLayout($(element)) == 'v') {
+                        $(element).css('max-height', Comun.iframeDimensions(0) - 50);
+                        $(element).css('width', 'auto');
+
+                        //Ajustar dimensión bloque texto
+                        var layTexto = $('#main .image-block #layTexto')
+                        layTexto.css('width', $(element).css('width') - layTexto.css("margin-left") - layTexto.css("margin-right") - layTexto.css("padding-left") - layTexto.css("padding-right"));
                     }
                 }
             },
             setMargin: function(element) {
-                if ($('.detail').height() <= $(window).height()) {
-                    var loQueHay = displayHeight();
-                    var laImagen = $('#layImage').height();
-                    var margen = (loQueHay - laImagen) / 2;
-                    $('#layCard').css('margin-top', margen + 'px');
-                } else {
-                    $('#layCard').css('margin-top', '0px');
+                if (!Comun.insideIframe()) {
+                    if ($('.detail').height() <= $(window).height()) {
+                        var loQueHay = displayHeight();
+                        var laImagen = $('#layImage').height();
+                        var margen = (loQueHay - laImagen) / 2;
+                        $('#layCard').css('margin-top', margen + 'px');
+                    } else {
+                        $('#layCard').css('margin-top', '0px');
+                    }
                 }
             }
         }

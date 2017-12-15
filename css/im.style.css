@@ -350,8 +350,8 @@ footer .hidden {
     padding: 0;
 }
 
-.card-title>span.fa{
-    margin-right:.2rem;
+.card-title>span.fa {
+    margin-right: .2rem;
 }
 
 .card-title>.col-11 {
@@ -362,6 +362,7 @@ footer .hidden {
 
 .card-title>.secuencia {
     float: right;
+    position: absolute;
 }
 
 .card-colection>.card-text {
@@ -498,4 +499,29 @@ p.card-date {
 
 .bg-inverse {
     background-color: #2b2b2b !important;
+}
+
+.image-text .title {
+    height: auto;
+}
+
+.image-text .text {
+    height: 90%;
+}
+
+.image-text .bar-social {
+    position: absolute;
+    bottom: 1px;
+    width: 98%;
+    height: auto;
+    text-align: right;
+    font-size: 135%;
+}
+
+.bar-social>a.fa-facebook-square {
+    color: rgba(79, 136, 255, 0.5);
+}
+
+.bar-social>a.fa-facebook-square:hover {
+    color: #4f88ff !important;
 }
