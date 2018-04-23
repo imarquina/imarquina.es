@@ -6,7 +6,7 @@
 <description>Fotografía creativa de Iñaki Marquina (night.noise). Desde el Bilbao del sirimiri al paisaje entrópico</description>
 <language>es-ES</language>
 <pubDate>Tue, 28 Oct 2014 00:00:00 GMT</pubDate>
-<lastBuildDate>Tue, 10 Apr 2018 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 23 Apr 2018 00:00:00 GMT</lastBuildDate>
 <docs>http://blogs.law.harvard.edu/tech/rss</docs>
 <managingEditor>imarquina@gmail.com</managingEditor>
 <webMaster>imarquina@gmail.com</webMaster>
@@ -18,6 +18,14 @@
 <width>175</width>
 <height>60</height>
 </image>
+<item>
+<title>Detrás del sirimi XII</title>
+<link>www.imarquina.es/detail.html?gallery=5811fad7ab5db41e7d0e82dfa727a0d6&amp;photo=11</link>
+<description>Edificio de la Socidad Bilbaina entre la calle Bailén y la calle Navarra, obra del arquitecto Emiliano Amann Amann de 1913</description>
+<category>Detras del sirimiri</category>
+<pubDate>Sun, 11 Feb 2018 00:00:00 GMT</pubDate>
+<guid/>
+</item>
 <item>
 <title>imagina</title>
 <link>https://youtu.be/MNoHt1M0YFM</link>
@@ -107,7 +115,7 @@
 <guid/>
 </item>
 <item>
-<title>Presentación exposición Expodistrito 2017 - Bilbao Udala Ayuntamiento</title>
+<title>Exposición Expodistrito 2017 - Bilbao Udala Ayuntamiento</title>
 <link>www.imarquina.es/detail.html?gallery=204daf63738d843611c4e9a72dde434f&amp;photo=0</link>
 <description>Presentación exposición Torrene Aretoa 2015 - Getxoko Kultur Etxea</description>
 <category>En Expodistrito 2017</category>
@@ -243,9 +251,9 @@
 <guid/>
 </item>
 <item>
-<title>Presentación exposición Torrene Aretoa 2015 - Getxoko Kultur Etxea</title>
+<title>Exposición Torrene Aretoa 2015 - Getxoko Kultur Etxea</title>
 <link>www.imarquina.es/detail.html?gallery=105645b3c821310fcd8c2d6abd8f3b18&amp;photo=0</link>
-<description>Presentación exposición Torrene Aretoa 2015 - Getxoko Kultur Etxea</description>
+<description>Presentación exposición Expodistrito 2017 - Bilbao Udala Ayuntamiento</description>
 <category>En Getxoko Kultur Etxea (Torrene)</category>
 <pubDate>Tue, 9 Dec 2014 00:00:00 GMT</pubDate>
 <guid/>
@@ -279,6 +287,14 @@
 <link>www.imarquina.es/detail.html?gallery=105645b3c821310fcd8c2d6abd8f3b18&amp;photo=25</link>
 <description>El primer rascacielos de Bilbao, la estación de la Concordia y la Naja. Una torre inaccesible al borde de un abismo, el abismo del dragón</description>
 <category>En Getxoko Kultur Etxea (Torrene)</category>
+<pubDate>Tue, 9 Dec 2014 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>La torre de Rapunzel y el aliento del dragón</title>
+<link>www.imarquina.es/detail.html?gallery=799d5a71f111ce499aaccafbc323734a&amp;photo=22</link>
+<description>El primer rascacielos de Bilbao, la estación de la Concordia y la Naja. Una torre inaccesible al borde de un abismo, el abismo del dragón</description>
+<category>Exposición FANT 2018 - XXIV Edicion</category>
 <pubDate>Tue, 9 Dec 2014 00:00:00 GMT</pubDate>
 <guid/>
 </item>
@@ -347,7 +363,7 @@
 <guid/>
 </item>
 <item>
-<title>Presentación exposición BilboArgazki 2013 - FNAC</title>
+<title>Exposición BilboArgazki 2013 - FNAC</title>
 <link>www.imarquina.es/detail.html?gallery=5aded4174c419e6b5554a1991aa814b5&amp;photo=0</link>
 <description>Presentación exposición BilboArgazki 2013 - FNAC</description>
 <category>En BilboArgazki 2013 - FNAC</category>
@@ -355,7 +371,7 @@
 <guid/>
 </item>
 <item>
-<title>Presentación exposición FTSI</title>
+<title>Exposición FTSI</title>
 <link>www.imarquina.es/detail.html?gallery=4c89cd348998c374e8d0924f21a568d2&amp;photo=0</link>
 <description>Presentación exposición FTSI</description>
 <category>En FTSI 2013</category>
@@ -383,6 +399,14 @@
 <link>www.imarquina.es/detail.html?gallery=204daf63738d843611c4e9a72dde434f&amp;photo=16</link>
 <description>El edificio de la Torre de Iberdrola es un faro en sí misma. En un futuro diferente podría estar en un fururo cabo</description>
 <category>En Expodistrito 2017</category>
+<pubDate>Sat, 16 Nov 2013 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Crepúsculo en el faro</title>
+<link>www.imarquina.es/detail.html?gallery=799d5a71f111ce499aaccafbc323734a&amp;photo=11</link>
+<description>El edificio de la Torre de Iberdrola es un faro en sí misma. En un futuro diferente podría estar en un fururo cabo</description>
+<category>Exposición FANT 2018 - XXIV Edicion</category>
 <pubDate>Sat, 16 Nov 2013 00:00:00 GMT</pubDate>
 <guid/>
 </item>
@@ -419,6 +443,14 @@
 <guid/>
 </item>
 <item>
+<title>El nido del fénix</title>
+<link>www.imarquina.es/detail.html?gallery=799d5a71f111ce499aaccafbc323734a&amp;photo=21</link>
+<description>Edificio de la Unión y el Fenix del Arenal de Bilbao.</description>
+<category>Exposición FANT 2018 - XXIV Edicion</category>
+<pubDate>Tue, 10 Sep 2013 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
 <title>La fuente del saber</title>
 <link>www.imarquina.es/detail.html?gallery=97701138ebc753b25407ec1463e17129&amp;photo=18</link>
 <description>No sé qué hay más allá de ese sitio donde nacen las ideas y el conocimiento. Algún día ...</description>
@@ -427,10 +459,26 @@
 <guid/>
 </item>
 <item>
+<title>La fuente del saber</title>
+<link>www.imarquina.es/detail.html?gallery=799d5a71f111ce499aaccafbc323734a&amp;photo=17</link>
+<description>No sé qué hay más allá de ese sitio donde nacen las ideas y el conocimiento. Algún día ...</description>
+<category>Exposición FANT 2018 - XXIV Edicion</category>
+<pubDate>Thu, 30 May 2013 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
 <title>El árbol de la vida</title>
 <link>www.imarquina.es/detail.html?gallery=97701138ebc753b25407ec1463e17129&amp;photo=17</link>
 <description>Basado en una idea de la película Más allá de los sueños (1998)</description>
 <category>De suenos</category>
+<pubDate>Wed, 15 May 2013 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>El árbol de la vida</title>
+<link>www.imarquina.es/detail.html?gallery=799d5a71f111ce499aaccafbc323734a&amp;photo=8</link>
+<description>Basado en una idea de la película Más allá de los sueños (1998)</description>
+<category>Exposición FANT 2018 - XXIV Edicion</category>
 <pubDate>Wed, 15 May 2013 00:00:00 GMT</pubDate>
 <guid/>
 </item>
@@ -467,6 +515,14 @@
 <guid/>
 </item>
 <item>
+<title>La noche de la araña</title>
+<link>www.imarquina.es/detail.html?gallery=799d5a71f111ce499aaccafbc323734a&amp;photo=9</link>
+<description>Mamam de Louise Bourgeois en la cueva de Zugarramurdi</description>
+<category>Exposición FANT 2018 - XXIV Edicion</category>
+<pubDate>Tue, 10 Sep 2013 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
 <title>Velando el bosque</title>
 <link>www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=22</link>
 <description>Destino del emblemático tigre que culmina el emblemático edificio conocido con el mismo nombre en Bilbao</description>
@@ -495,6 +551,14 @@
 <link>www.imarquina.es/detail.html?gallery=204daf63738d843611c4e9a72dde434f&amp;photo=14</link>
 <description>Destino del emblemático tigre que culmina el emblemático edificio conocido con el mismo nombre en Bilbao</description>
 <category>En Expodistrito 2017</category>
+<pubDate>Tue, 10 Sep 2013 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Velando el bosque</title>
+<link>www.imarquina.es/detail.html?gallery=799d5a71f111ce499aaccafbc323734a&amp;photo=20</link>
+<description>Destino del emblemático tigre que culmina el emblemático edificio conocido con el mismo nombre en Bilbao</description>
+<category>Exposición FANT 2018 - XXIV Edicion</category>
 <pubDate>Tue, 10 Sep 2013 00:00:00 GMT</pubDate>
 <guid/>
 </item>
@@ -883,10 +947,26 @@
 <guid/>
 </item>
 <item>
+<title>Tras el tiempo de dragones</title>
+<link>www.imarquina.es/detail.html?gallery=799d5a71f111ce499aaccafbc323734a&amp;photo=18</link>
+<description>La Casa Cisco forma parte de las características edificaciones del paseo de la bahía de Getxo.</description>
+<category>Exposición FANT 2018 - XXIV Edicion</category>
+<pubDate>Fri, 7 Sep 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
 <title>En un lugar sobre el arco iris</title>
 <link>www.imarquina.es/detail.html?gallery=97701138ebc753b25407ec1463e17129&amp;photo=2</link>
 <description>'Fosteritos de MetroBilbao sobre campo de amapolas y más cosas.</description>
 <category>De suenos</category>
+<pubDate>Sat, 4 Aug 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>En un lugar sobre el arco iris</title>
+<link>www.imarquina.es/detail.html?gallery=799d5a71f111ce499aaccafbc323734a&amp;photo=15</link>
+<description>'Fosteritos de MetroBilbao sobre campo de amapolas y más cosas.</description>
+<category>Exposición FANT 2018 - XXIV Edicion</category>
 <pubDate>Sat, 4 Aug 2012 00:00:00 GMT</pubDate>
 <guid/>
 </item>
@@ -963,6 +1043,14 @@
 <guid/>
 </item>
 <item>
+<title>En el mal trato de las olas</title>
+<link>www.imarquina.es/detail.html?gallery=799d5a71f111ce499aaccafbc323734a&amp;photo=14</link>
+<description>Edificio de la antigua Alhondiga, en el centro de Bilbao.</description>
+<category>Exposición FANT 2018 - XXIV Edicion</category>
+<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
 <title>El enroque de la torre</title>
 <link>www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=17</link>
 <description>El edificio de la Torre de Iberdrola muestra una desproporcional vertical respecto a Bilbao que en pocos años será menos apreciable. Y en algunos más, inexistente</description>
@@ -1019,6 +1107,14 @@
 <guid/>
 </item>
 <item>
+<title>En el corazón del bosque</title>
+<link>www.imarquina.es/detail.html?gallery=799d5a71f111ce499aaccafbc323734a&amp;photo=19</link>
+<description>Edificio de la nueva sede de Osakidetza en el centro de Bilbao. Proyecto de Coll-Barreu Arquitectos.</description>
+<category>Exposición FANT 2018 - XXIV Edicion</category>
+<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
 <title>En la aurora de otro tiempo</title>
 <link>www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=15</link>
 <description>Casa en la esquina entre Hurtado de Amézaga e Iturriza. De Enrique Epalza y Chanfreau es de estilo modernista.</description>
@@ -1051,7 +1147,7 @@
 <guid/>
 </item>
 <item>
-<title>Presentación exposición FTSI</title>
+<title>Exposición FTSI</title>
 <link>www.imarquina.es/detail.html?gallery=3dfb3e6fc6b70c756a79f07cdf8d11bf&amp;photo=0</link>
 <description>Presentación exposición FTSI</description>
 <category>En FTSI 2012</category>
@@ -1195,6 +1291,14 @@
 <guid/>
 </item>
 <item>
+<title>Después de la tormenta</title>
+<link>www.imarquina.es/detail.html?gallery=799d5a71f111ce499aaccafbc323734a&amp;photo=12</link>
+<description>El edificio del Ayuntamiento de Bilbao está situado en el solar que antes ocupaba el Convento de San Agustín, derruido en la Primera Guerra Carlista.</description>
+<category>Exposición FANT 2018 - XXIV Edicion</category>
+<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
 <title>El palacio de las corrientes de aire</title>
 <link>www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=12</link>
 <description>El Palacio de la Diputación marca el punto álgido del eclecticismo en Bizkaia. Poco después de terminarse la corriente modernista se abriría paso en los nuevos proyectos.</description>
@@ -1223,6 +1327,14 @@
 <link>www.imarquina.es/detail.html?gallery=105645b3c821310fcd8c2d6abd8f3b18&amp;photo=12</link>
 <description>El Palacio de la Diputación marca el punto álgido del eclecticismo en Bizkaia. Poco después de terminarse la corriente modernista se abriría paso en los nuevos proyectos.</description>
 <category>En Getxoko Kultur Etxea (Torrene)</category>
+<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>El palacio de las corrientes de aire</title>
+<link>www.imarquina.es/detail.html?gallery=799d5a71f111ce499aaccafbc323734a&amp;photo=16</link>
+<description>El Palacio de la Diputación marca el punto álgido del eclecticismo en Bizkaia. Poco después de terminarse la corriente modernista se abriría paso en los nuevos proyectos.</description>
+<category>Exposición FANT 2018 - XXIV Edicion</category>
 <pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
 <guid/>
 </item>
@@ -1267,6 +1379,14 @@
 <guid/>
 </item>
 <item>
+<title>El nido del águila</title>
+<link>www.imarquina.es/detail.html?gallery=799d5a71f111ce499aaccafbc323734a&amp;photo=13</link>
+<description>Las Torres de Isozaki se han edificado sobre el antiguo solar del Depósito Franco de Bilbao.</description>
+<category>Exposición FANT 2018 - XXIV Edicion</category>
+<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
 <title>Trascender a tu tiempo</title>
 <link>www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=10</link>
 <description>Alto horno de antigua acería de Altos Hornos de Vizcaya.</description>
@@ -1307,6 +1427,14 @@
 <guid/>
 </item>
 <item>
+<title>Trascender a tu tiempo</title>
+<link>www.imarquina.es/detail.html?gallery=799d5a71f111ce499aaccafbc323734a&amp;photo=0</link>
+<description>Alto horno de antigua acería de Altos Hornos de Vizcaya.</description>
+<category>Exposición FANT 2018 - XXIV Edicion</category>
+<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
 <title>Al otro lado</title>
 <link>www.imarquina.es/detail.html?gallery=363d12cac0b43079c7c8dc5891bf614f&amp;photo=9</link>
 <description>Puente sobre el río Galindo de Javier Manterola, y pequeña casa al borde de antigua carretera que unía Barakaldo y Sestao.</description>
@@ -1335,6 +1463,14 @@
 <link>www.imarquina.es/detail.html?gallery=105645b3c821310fcd8c2d6abd8f3b18&amp;photo=9</link>
 <description>Puente sobre el río Galindo de Javier Manterola, y pequeña casa al borde de antigua carretera que unía Barakaldo y Sestao.</description>
 <category>En Getxoko Kultur Etxea (Torrene)</category>
+<pubDate>Mon, 5 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Al otro lado</title>
+<link>www.imarquina.es/detail.html?gallery=799d5a71f111ce499aaccafbc323734a&amp;photo=1</link>
+<description>Puente sobre el río Galindo de Javier Manterola, y pequeña casa al borde de antigua carretera que unía Barakaldo y Sestao.</description>
+<category>Exposición FANT 2018 - XXIV Edicion</category>
 <pubDate>Mon, 5 Mar 2012 00:00:00 GMT</pubDate>
 <guid/>
 </item>
@@ -1375,6 +1511,14 @@
 <link>www.imarquina.es/detail.html?gallery=204daf63738d843611c4e9a72dde434f&amp;photo=7</link>
 <description>Teatro Arriaga situado en El Arenal bilbaíno.</description>
 <category>En Expodistrito 2017</category>
+<pubDate>Mon, 5 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Al compás de las olas</title>
+<link>www.imarquina.es/detail.html?gallery=799d5a71f111ce499aaccafbc323734a&amp;photo=10</link>
+<description>Teatro Arriaga situado en El Arenal bilbaíno.</description>
+<category>Exposición FANT 2018 - XXIV Edicion</category>
 <pubDate>Mon, 5 Mar 2012 00:00:00 GMT</pubDate>
 <guid/>
 </item>
@@ -1423,6 +1567,14 @@
 <link>www.imarquina.es/detail.html?gallery=204daf63738d843611c4e9a72dde434f&amp;photo=6</link>
 <description>Puente de Vizcaya o Puente Colgante. Une las orillas de Portugalete y Getxo por encima de la ría.</description>
 <category>En Expodistrito 2017</category>
+<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Mañana en la desembocadura</title>
+<link>www.imarquina.es/detail.html?gallery=799d5a71f111ce499aaccafbc323734a&amp;photo=2</link>
+<description>Puente de Vizcaya o Puente Colgante. Une las orillas de Portugalete y Getxo por encima de la ría.</description>
+<category>Exposición FANT 2018 - XXIV Edicion</category>
 <pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
 <guid/>
 </item>
@@ -1479,6 +1631,14 @@
 <link>www.imarquina.es/detail.html?gallery=204daf63738d843611c4e9a72dde434f&amp;photo=5</link>
 <description>Edificio del BBVA en la Plaza Circular de Bilbao al comienzo de la Gran Vía.</description>
 <category>En Expodistrito 2017</category>
+<pubDate>Mon, 5 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>El monolito de los pájaros</title>
+<link>www.imarquina.es/detail.html?gallery=799d5a71f111ce499aaccafbc323734a&amp;photo=7</link>
+<description>Edificio del BBVA en la Plaza Circular de Bilbao al comienzo de la Gran Vía.</description>
+<category>Exposición FANT 2018 - XXIV Edicion</category>
 <pubDate>Mon, 5 Mar 2012 00:00:00 GMT</pubDate>
 <guid/>
 </item>
@@ -1635,6 +1795,14 @@
 <guid/>
 </item>
 <item>
+<title>Bajo el punto de fusión</title>
+<link>www.imarquina.es/detail.html?gallery=799d5a71f111ce499aaccafbc323734a&amp;photo=4</link>
+<description>Museo Guggenheim de Bilbao.</description>
+<category>Exposición FANT 2018 - XXIV Edicion</category>
+<pubDate>Mon, 5 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
 <title>Duelo al sol</title>
 <link>www.imarquina.es/detail.html?gallery=d0692fb68700ba495d8117ea3fdc4daf&amp;photo=5</link>
 <description>Dos personas sobre la pasarela sobre el estanque del Guggenheim.</description>
@@ -1687,6 +1855,14 @@
 <link>www.imarquina.es/detail.html?gallery=204daf63738d843611c4e9a72dde434f&amp;photo=3</link>
 <description>El Puente de la Salve une la Solución Sur con el centro de Bilbao.</description>
 <category>En Expodistrito 2017</category>
+<pubDate>Mon, 5 Mar 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>La puerta del cielo</title>
+<link>www.imarquina.es/detail.html?gallery=799d5a71f111ce499aaccafbc323734a&amp;photo=3</link>
+<description>El Puente de la Salve une la Solución Sur con el centro de Bilbao.</description>
+<category>Exposición FANT 2018 - XXIV Edicion</category>
 <pubDate>Mon, 5 Mar 2012 00:00:00 GMT</pubDate>
 <guid/>
 </item>
@@ -1779,6 +1955,14 @@
 <guid/>
 </item>
 <item>
+<title>El día de mañana</title>
+<link>www.imarquina.es/detail.html?gallery=799d5a71f111ce499aaccafbc323734a&amp;photo=6</link>
+<description>El Ascensor de Begoña conecta el Casco Viejo con barrio de Begoña por Mallona.</description>
+<category>Exposición FANT 2018 - XXIV Edicion</category>
+<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
 <title>Había una vez en Bilbao un sitio que ... I</title>
 <link>www.imarquina.es/detail.html?gallery=fd32b9a2c5650dd4544072884bff3605&amp;photo=1</link>
 <description>Avenida Kirikiño de Bilbao. Un rincón multicolor.</description>
@@ -1847,6 +2031,14 @@
 <link>www.imarquina.es/detail.html?gallery=105645b3c821310fcd8c2d6abd8f3b18&amp;photo=1</link>
 <description>Monumento de Oteiza frente al Ayuntamiento de Bilbao: Variante ovoide de la desocupación de la esfera.</description>
 <category>En Getxoko Kultur Etxea (Torrene)</category>
+<pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
+<guid/>
+</item>
+<item>
+<title>Eidôlom</title>
+<link>www.imarquina.es/detail.html?gallery=799d5a71f111ce499aaccafbc323734a&amp;photo=5</link>
+<description>Monumento de Oteiza frente al Ayuntamiento de Bilbao: Variante ovoide de la desocupación de la esfera.</description>
+<category>Exposición FANT 2018 - XXIV Edicion</category>
 <pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
 <guid/>
 </item>

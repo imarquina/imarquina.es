@@ -47,13 +47,23 @@ footer {
     background-color: #2b2b2b;
     margin-left: .3rem;
     padding: .2rem;
-    font-size: .8rem;
+    font-size: .85rem;
     max-width: 15rem;
 }
 
 .image-block>.image-text>h4 {
     margin-top: .2rem;
     color: #ababab;
+}
+
+.image-block>.image-text>h4>.title{
+    font-size: .85rem;
+    padding-left: .3rem;
+}
+
+.image-block>.image-text>h4>span.fa{
+    margin-top: .2rem;
+    vertical-align: top;
 }
 
 .image-block>.image-text>a,

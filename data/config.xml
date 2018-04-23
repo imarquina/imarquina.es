@@ -2,7 +2,7 @@
 <config infotext="Fotografía creativa de Iñaki Marquina (night.noise). Desde el Bilbao del sirimiri al paisaje entrópico" keywords="creative surreal art imagine photo photography creativa surrealismo artista imagina entropico matte painting sirimiri bilbao entrópico entropía" title="IMFotografía - Iñaki Marquina (night.noise)">
 <galleries>
 <folder infotext="Un conjunto de galerías de una visión muy personal de un Bilbao que se adapta a la época" keywords="art sirimiri bilbao creative imagine photo photography artista fotografía creativa" name="Bilbao" src="150120005.jpg" title="IMFotografía - Álbum Bilbao" update="20121024">
-<gallery infotext="Paseo bajo la lluvia por el Casco Viejo bilbaino: desde las Calzadas de Mallona al Arriaga por el Ascensor de Begoña" keywords="sirimiri bilbao creative imagine photo photography art fotografía creativa artista" name="Detras del sirimiri" src="150120005.jpg" title="IMFotografía - Galería Bilbao Detrás del sirimiri" update="20150413">
+<gallery infotext="Paseo bajo la lluvia por el Casco Viejo bilbaino: desde las Calzadas de Mallona al Arriaga por el Ascensor de Begoña" keywords="sirimiri bilbao creative imagine photo photography art fotografía creativa artista" name="Detras del sirimiri" src="150120005.jpg" title="IMFotografía - Galería Bilbao Detrás del sirimiri" update="20180410">
 <img id="150120005"/>
 <img id="150120011"/>
 <img id="150120043"/>
@@ -14,6 +14,7 @@
 <img id="150604002_1"/>
 <img id="150668010"/>
 <img id="150689008"/>
+<img id="150702001.pan"/>
 </gallery>
 <gallery infotext="Sacando los colores al tópico del Bilbao gris" keywords="creative imagine photo photography art fotografía creativa artista bilbao policromático policromatic color" name="Policromatico" src="150170008.jpg" title="IMFotografía - Galería Bilbao policromático" update="20121024">
 <img id="150170008"/>
@@ -185,7 +186,7 @@
 <img id="150643013"/>
 <img id="150565060_pan"/>
 </gallery>
-<folder infotext="Exposiciones realizadas y en proyecto donde mostrar mi punto de vista fotográfico" keywords="exposition creative surreal imagine photo photography art exposición fotografía creativa surrealismo artista entropico matte painting sirimiri bilbao entrópico entropía" name="Exposiciones" src="000000040.jpg" title="IMFotografía - Album Exposiciones" update="20170109">
+<folder infotext="Exposiciones realizadas y en proyecto donde mostrar mi punto de vista fotográfico" keywords="exposition creative surreal imagine photo photography art exposición fotografía creativa surrealismo artista entropico matte painting sirimiri bilbao entrópico entropía" name="Exposiciones" src="000000060.jpg" title="IMFotografía - Album Exposiciones" update="20180423">
 <gallery infotext="Exposición realizada en la Fundación de los Trabajadores de la Siderurgia Integral (FTSI) en 2012" keywords="ftsi exposition creative surreal imagine photo photography art exposición fotografía creativa surrealismo artista entropico matte painting sirimiri bilbao entrópico entropía" name="En FTSI 2012" src="000000001.jpg" title="IMFotografía - Galería exposición FTSI 2012" update="20121021">
 <img id="000000001"/>
 <img id="150120005"/>
@@ -297,8 +298,33 @@
 <img id="150247010"/>
 <img id="150224012"/>
 </gallery>
+<gallery infotext="Presentación exposición en el FANT Festival de cine fantástico de Bilbao 2018 en su XXIV edición" keywords="exposición fant bilbao creative surreal imagine photo photography art exposición fotografía creativa surrealismo artista entropico matte painting sirimiri entrópico entropía" name="Exposición FANT 2018 - XXIV Edicion" src="000000060.jpg" title="IMFotografía - Album próximas exposiciones" update="20180423">
+<img id="15027100a"/>
+<img id="15027100b"/>
+<img id="150116019"/>
+<img id="150116023_2"/>
+<img id="150136006"/>
+<img id="150156015"/>
+<img id="150163003"/>
+<img id="150196001"/>
+<img id="150206077"/>
+<img id="150224012"/>
+<img id="150247004"/>
+<img id="150247010"/>
+<img id="150284022"/>
+<img id="150284042_2"/>
+<img id="150298014_pan"/>
+<img id="150299017_pan"/>
+<img id="150376003_pan"/>
+<img id="150387025"/>
+<img id="150414013_pan"/>
+<img id="150415013_pan"/>
+<img id="150419001"/>
+<img id="150431059"/>
+<img id="150536009_pan"/>
+</gallery>
 </folder>
-<multimedia infotext="Galería multimedia" keywords="multimedia bilbao art surreal creative imagine video photo photography surrealismo fotografía creativa" name="Multimedia" src="v150431059.jpg" title="IMFotografía - Multimedia" update="20180410">
+<multimedia infotext="Galería multimedia" keywords="multimedia bilbao art surreal creative imagine video photo photography surrealismo fotografía creativa" name="Multimedia" src="v150431059.jpg" title="IMFotografía - Multimedia" update="20160621">
 <vid id="v150120042_1"/>
 <vid id="v150508015"/>
 <vid id="v150431059"/>
