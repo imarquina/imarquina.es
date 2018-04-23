@@ -89,6 +89,10 @@ footer .hidden {
     padding: .2rem 1rem;
 }
 
+.navbar-brand{
+    max-width: 50%;
+}
+
 .navbar>div>a.fa {
     top: 1rem;
     right: 1.2rem;
