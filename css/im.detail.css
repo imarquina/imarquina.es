@@ -4,16 +4,12 @@
 
 footer {
     width: 100%;
-    position: absolute;
-    bottom: 0;
 }
 
 .detail {
     padding-top: 7rem;
     padding-bottom: 2rem;
     background-color: #333333;
-    min-height: 100%;
-    height: 100%;
 }
 
 .container {
@@ -56,12 +52,12 @@ footer {
     color: #ababab;
 }
 
-.image-block>.image-text>h4>.title{
+.image-block>.image-text>h4>.title {
     font-size: .85rem;
     padding-left: .3rem;
 }
 
-.image-block>.image-text>h4>span.fa{
+.image-block>.image-text>h4>span.fa {
     margin-top: .2rem;
     vertical-align: top;
 }
@@ -85,5 +81,16 @@ footer {
     .image-block>.image-text {
         display: block;
         max-width: inherit;
+    }
+}
+
+@media (min-height: 38.5em) {
+    footer {
+        position: absolute;
+        bottom: 0;
+    }
+    .detail {
+        min-height: 100%;
+        height: 100%;
     }
 }
