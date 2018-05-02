@@ -16,7 +16,7 @@ var App = {
         windowWidthStd: 375,
         elemOffsetStd: 10,
         elemOffsetSpe: 5,
-        elemNuevos: 10,
+        elemNuevos: 20,
         elemBanner: 4,
         marcaColeccion: "",
         marcaGaleria: "",
