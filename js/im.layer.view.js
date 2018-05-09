@@ -237,7 +237,9 @@ var View = {
                         sResult += " <a tabindex=\"0\" class=\"\" role=\"button\" data-trigger=\"focus\" data-toggle=\"popover\" data-html=\"true\" title=\"Serie " + aData[0] + ": " + dSerie + "\" data-content=\"" + 
                             "<p><span class=\'label\'>Tamaño:</span><span class=\'dato\'>" + aData[1] + "</span></p>" +
                             "<p><span class=\'label\'>Stock:</span><span class=\'dato\'>" + aData[2] + "</span></p>" +
+                            "<img class=\'image\' src=\'./store/15027100b." + aData[0] + ".jpg\' class=\'media-object'\/>" +
                             "\">" + aData[0] + "</a>"
+                        
                     }
                     return sResult;
                 } else return App.Constantes.cadenaVacia;
