@@ -1,5 +1,4 @@
 @charset "ISO-8859-1";
-
 /* CSS Document */
 
 html,
@@ -89,7 +88,7 @@ footer .hidden {
     padding: .2rem 1rem;
 }
 
-.navbar-brand{
+.navbar-brand {
     max-width: 50%;
 }
 
@@ -124,10 +123,11 @@ footer .hidden {
     align-items: left;
 }
 
-.navbar-nav{
+.navbar-nav {
     font-size: .8rem;
 }
-.navbar-nav>li>span{
+
+.navbar-nav>li>span {
     padding-right: .3rem;
 }
 
@@ -182,9 +182,9 @@ footer .hidden {
     border: none;
 }
 
-button.navbar-toggler{
+button.navbar-toggler {
     display: inherit;
-    border: 1px solid rgba(255,255,255,.1);
+    border: 1px solid rgba(255, 255, 255, .1);
     margin-top: .3rem;
 }
 
@@ -194,7 +194,7 @@ button.navbar-toggler{
     right: 0;
 }
 
-.navbar-menu{
+.navbar-menu {
     padding-right: .2rem;
     padding-top: 0;
 }
@@ -301,7 +301,7 @@ button.navbar-toggler{
     margin-bottom: .5rem;
 }
 
-.card-text>small{
+.card-text>small {
     font-size: .75rem;
 }
 
@@ -452,7 +452,7 @@ img.card-thumb {
     margin-bottom: .2rem;
 }
 
-.card-date>small{
+.card-date>small {
     font-size: .75rem;
 }
 
@@ -477,9 +477,7 @@ p.card-date {
     .header-texto-subtitulo {
         font-size: 75%;
     }
-    .navbar-toggler {
- 
-    }
+    .navbar-toggler {}
     .navbar .header-logo-img {
         padding-left: .5rem;
     }
@@ -565,4 +563,46 @@ p.card-date {
 
 .bar-social>a.fa-facebook-square:hover {
     color: #4f88ff !important;
+}
+
+.popover {
+    min-width: 245px;
+}
+
+.popover .arrow {}
+
+.popover-header {
+    background: #dedede;
+}
+
+.popover-body {
+    background: #ececec;
+}
+
+.popover-paragraph {
+    display: inline-block;
+    vertical-align: top;
+    padding-left: .5rem;
+    width: 63%;
+}
+
+.popover-line{
+    display: block;
+}
+
+.popover-label {
+    display: inline-block;
+    padding-right: .2rem;
+}
+
+.popover-dato {
+    display: inline-block;
+}
+
+.popover-image {
+    display: inline-block;
+}
+
+.popover-image>img{
+    max-width: 80px;
 }
