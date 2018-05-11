@@ -226,7 +226,7 @@ var View = {
             stockGet: function (stock, image) {
                 if (stock != 'about:blank' && stock != App.Constantes.cadenaVacia && stock != undefined) {
                     var aSeries = stock.split("*");
-                    var sResult = "Venta:";
+                    var sResult = "<span class='card-sale'>Venta:</span>";
                     for (var iCnt = 0; iCnt < aSeries.length; iCnt++) {
                         var aData = aSeries[iCnt].split("|");
                         var dSerie = App.Constantes.cadenaVacia;

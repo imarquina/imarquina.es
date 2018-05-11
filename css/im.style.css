@@ -309,6 +309,10 @@ button.navbar-toggler {
     font-size: .9rem;
 }
 
+.card-sale {
+    color: #ababab;
+}
+
 .card-block {
     padding: .25rem .45rem;
 }
