@@ -1,7 +1,7 @@
 // JavaScript Document
 var App = {
     Config: {
-        version: '4.5.0',
+        version: '4.5.1',
         annio: '2018',
         author: 'Iñaki Marquina',
         rutaPho: './data/photos.min.xml',
