@@ -10,6 +10,7 @@ var App = {
         rutaImage: './images/',
         rutaAudio: './tracks/',
         rutaTpt: './template/',
+        rutaStore: './store/',
         autoResize: 'true',
         elemWidthStd: 210,
         elemWidthSpe: 135,

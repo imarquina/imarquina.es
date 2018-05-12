@@ -241,15 +241,13 @@ var View = {
                                 dSerie = "Foam impreso enmarcado";
                                 break;
                         }
-
                         sResult += " <a tabindex=\"0\" class=\"\" role=\"button\" data-trigger=\"focus\" data-toggle=\"popover\" data-html=\"true\" title=\"Serie " + aData[0] + ": " + dSerie + "\" data-content=\"" +
-                            "<div class=\'popover-image\'><img src=\'./store/" + image + "." + aData[0] + ".jpg\'/></div>" +
+                            "<div class=\'popover-image\'><img src=\'" + App.Config.rutaStore + image + "." + aData[0] + ".jpg\'/></div>" +
                             "<div class=\'popover-paragraph\'>" +
                                 "<div class=\'popover-line\'><div class=\'popover-label\'>Dim.:</div><div class=\'popover-dato\'>" + aData[1] + "</div></div>" +
                                 "<div class=\'popover-line\'><div class=\'popover-label\'>Stock:</div><div class=\'popover-dato\'>" + aData[2] + "</div></div>" + 
                             "</div>" +
                             "\">" + aData[0] + "</a>"
-
                     }
                     return sResult;
                 } else return App.Constantes.cadenaVacia;
