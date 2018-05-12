@@ -825,6 +825,7 @@ var View = {
                     var sHeight = colImages[i][0].height;
                     var sWidth = colImages[i][0].width;
                     var sInfoimagen = colImages[i][0].infoimagen;
+                    var sStock = colImages[i][0].stock;
 
                     var divCard = $("<div id='layCard' class='row image-block'>").appendTo("#main");
                     var divImage = $("<div id='layImage' class='" + styleImage + "'>").appendTo(divCard);
@@ -834,7 +835,10 @@ var View = {
                     var panTitulo = $("<h4>").appendTo(divBlock);
                     $("<span class='fa " + App.Constantes.iconImage + "'></span>").appendTo(panTitulo);
                     $("<span class='title col-11'>" + sName + "</span>").appendTo(panTitulo);
-                    $("<p class='text'>" + sInfoimagen + "</p>").appendTo(divBlock);
+                    var panTexto = $("<div class='text'>").appendTo(divBlock);
+                    $("<p>" + sInfoimagen + "</p>").appendTo(panTexto);
+                    var panDimensiones = $("<p class='card-stock text-left'>").appendTo(panTexto);
+                    $("<small class='text-muted'>" + View.General.stockGet(sStock, imgName) + "</small>").appendTo(panDimensiones);
                     var divSocial = $("<div class='bar-social'>").appendTo(divBlock);
                     var divFacebook = $("<div id='shareBtn'>").appendTo(divSocial);
                     $(divFacebook).wrap("<a id='shareLnk' href='#' class='fa fa-facebook-square'>");
@@ -989,6 +993,7 @@ var View = {
                                 var infoTextImage = hImage.INFOTEXT;
                                 var widthImage = hImage.WIDTH;
                                 var heightImage = hImage.HEIGHT;
+                                var stockImage = hImage.STOCK;
 
                                 colImages[iCol] = [{
                                     id: idImage,
@@ -998,7 +1003,8 @@ var View = {
                                     linkurl: linkUrlImage,
                                     infoimagen: infoTextImage,
                                     width: widthImage,
-                                    height: heightImage
+                                    height: heightImage,
+                                    stock: stockImage
                                 }];
                                 iCol++;
                             }

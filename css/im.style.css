@@ -577,10 +577,12 @@ p.card-date {
 
 .popover-header {
     background: #dedede;
+    font-size: .8rem;
 }
 
 .popover-body {
     background: #ececec;
+    font-size: .8rem;
 }
 
 .popover-paragraph {
