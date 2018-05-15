@@ -1,5 +1,4 @@
 @charset "ISO-8859-1";
-
 /* CSS Document */
 
 html,
@@ -35,11 +34,11 @@ a:hover {
 
 .h4,
 h4 {
-    font-size: .8rem;
+    font-size: .85rem;
 }
 
 small {
-    font-size: 85%;
+    font-size: .85rem;
 }
 
 footer .bar-social {
@@ -86,8 +85,11 @@ footer .hidden {
 }
 
 .navbar {
-    margin-bottom: 0;
-    justify-content: flex-start;
+    padding: .2rem 1rem;
+}
+
+.navbar-brand {
+    max-width: 50%;
 }
 
 .navbar>div>a.fa {
@@ -98,7 +100,8 @@ footer .hidden {
 
 .navbar>div>a.fa-rss {
     color: rgba(255, 165, 0, 0.5);
-    margin-left: 1.5rem;
+    margin-left: 2.5rem;
+    font-size: 1rem;
 }
 
 .navbar>div>a.fa-rss:hover {
@@ -120,13 +123,23 @@ footer .hidden {
     align-items: left;
 }
 
+.navbar-nav {
+    font-size: .8rem;
+}
+
+.navbar-nav>li>span {
+    padding-right: .3rem;
+}
+
 .container-fluid {
     border-bottom: 1px solid #55595c;
     padding-top: 1rem;
+    padding-bottom: .8rem;
+    margin-bottom: .5rem;
 }
 
 .container-fluid h4 {
-    font-size: 0.9rem;
+    font-size: .9rem;
 }
 
 .container-fluid>.menu {
@@ -134,16 +147,20 @@ footer .hidden {
 }
 
 .container-fluid>.about>p {
-    font-size: 0.9rem;
+    font-size: .9rem;
 }
 
 .container-fluid>.menu>h4 {}
 
 .container-fluid #menu li>span {
-    margin-right: 0.3rem;
+    margin-right: .3rem;
     width: 1rem;
     text-align: center;
-    font-size: .8rem;
+    font-size: inherit;
+}
+
+.container-fluid #menu li>a {
+    font-size: .9rem;
 }
 
 .navbar .collapse h4 {
@@ -151,6 +168,7 @@ footer .hidden {
 }
 
 .navbar .collapse .text-muted {
+    font-size: .9rem;
     color: #818a91;
 }
 
@@ -161,17 +179,24 @@ footer .hidden {
 }
 
 .navbar-toggler {
-    color: #eceeef;
-    margin-top: 1.4rem;
-    display: inline-block !important;
-    position: absolute;
-    top: .7rem;
+    border: none;
+}
+
+button.navbar-toggler {
+    display: inherit;
+    border: 1px solid rgba(255, 255, 255, .1);
+    margin-top: .3rem;
 }
 
 .navbar-toggler-right>#lnkrss {
     position: absolute;
     top: -.3rem;
     right: 0;
+}
+
+.navbar-menu {
+    padding-right: .2rem;
+    padding-top: 0;
 }
 
 .navbar>.about {
@@ -236,7 +261,7 @@ footer .hidden {
     margin-bottom: 1.5rem;
     list-style: none;
     background-color: inherit;
-    font-size: 80%;
+    font-size: .9rem;
 }
 
 .breadcrumb-item>a:hover {
@@ -272,8 +297,20 @@ footer .hidden {
 }
 
 .card-text {
-    font-size: .8rem;
+    font-size: .9rem;
     margin-bottom: .5rem;
+}
+
+.card-text>small {
+    font-size: .75rem;
+}
+
+.card-stock {
+    font-size: .9rem;
+}
+
+.card-sale {
+    color: #ababab;
 }
 
 .card-block {
@@ -288,6 +325,8 @@ footer .hidden {
 
 .card-block>h4>span.fa {
     font-size: .8rem;
+    vertical-align: top;
+    padding-top: .2rem;
 }
 
 .card-block>a {
@@ -300,7 +339,7 @@ footer .hidden {
 }
 
 .card-block>p>small {
-    font-size: .7rem;
+    font-size: .75rem;
 }
 
 .card-block>div.row {
@@ -328,6 +367,7 @@ footer .hidden {
     padding-left: 0;
     padding-right: 0;
     margin-bottom: 0;
+    margin-top: .3rem;
 }
 
 .card-block>.row>.col-3>img {
@@ -350,8 +390,8 @@ footer .hidden {
     padding: 0;
 }
 
-.card-title>span.fa{
-    margin-right:.2rem;
+.card-title>span.fa {
+    margin-right: .2rem;
 }
 
 .card-title>.col-11 {
@@ -413,11 +453,17 @@ img.card-thumb {
 }
 
 .card-date {
-    margin-top: .2rem;
+    margin-bottom: .2rem;
+}
+
+.card-date>small {
+    font-size: .75rem;
 }
 
 p.card-date {
     line-height: inherit;
+    margin-bottom: 0;
+    margin-top: .3rem;
 }
 
 .card-columns>a {
@@ -435,9 +481,7 @@ p.card-date {
     .header-texto-subtitulo {
         font-size: 75%;
     }
-    .navbar-toggler {
-        margin-top: 1.4rem;
-    }
+    .navbar-toggler {}
     .navbar .header-logo-img {
         padding-left: .5rem;
     }
@@ -498,4 +542,73 @@ p.card-date {
 
 .bg-inverse {
     background-color: #2b2b2b !important;
+}
+
+.image-text .title {
+    height: auto;
+}
+
+.image-text .text {
+    height: 90%;
+}
+
+.image-text .bar-social {
+    position: absolute;
+    bottom: 1px;
+    width: 98%;
+    height: auto;
+    text-align: right;
+    font-size: 135%;
+}
+
+.bar-social>a.fa-facebook-square {
+    color: rgba(79, 136, 255, 0.5);
+}
+
+.bar-social>a.fa-facebook-square:hover {
+    color: #4f88ff !important;
+}
+
+.popover {
+    min-width: 245px;
+}
+
+.popover .arrow {}
+
+.popover-header {
+    background: #dedede;
+    font-size: .8rem;
+}
+
+.popover-body {
+    background: #ececec;
+    font-size: .8rem;
+}
+
+.popover-paragraph {
+    display: inline-block;
+    vertical-align: top;
+    padding-left: .5rem;
+    width: 63%;
+}
+
+.popover-line{
+    display: block;
+}
+
+.popover-label {
+    display: inline-block;
+    padding-right: .2rem;
+}
+
+.popover-dato {
+    display: inline-block;
+}
+
+.popover-image {
+    display: inline-block;
+}
+
+.popover-image>img{
+    max-width: 80px;
 }

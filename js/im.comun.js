@@ -94,5 +94,8 @@ var Comun = {
     /* Función saber si está dentro de un iframe */
     insideIframe: function() {
         return (window.top !== window.self);
+    },
+    iframeDimensions: function() {
+        return (window.innerHeight, window.innerWidth);
     }
 }

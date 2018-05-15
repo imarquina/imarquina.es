@@ -3,7 +3,7 @@ var typesHash = new Hashtable();
 var dataXml;
 
 /** Eventos */
-$(window).ready(function() {
+$(window).ready(function () {
     View.General.initialize();
 
     //Carga colección elementos
@@ -67,24 +67,27 @@ $(window).ready(function() {
     }
 });
 
-$(function() {
+$(function () {
     var $win = $(window);
     var $pos = 20;
-    $win.scroll(function() {
+    $win.scroll(function () {
         if ($win.scrollTop() <= $pos)
             $('.bar-goHead').addClass('hidden');
         else {
             $('.bar-goHead').removeClass('hidden');
         }
     });
+    $(function () {
+        $('[data-toggle="popover"]').popover()
+    });
 });
 
 /** */
 var View = {
-    General: (function() {
+    General: (function () {
         /* FUNCIONES PRIVADAS */
         /* Genera el vínculo según clave, y si la navegación viene por 'Lo nuevo' */
-        var hrefSet = function(clave, valor, urlnews, ishref) {
+        var hrefSet = function (clave, valor, urlnews, ishref) {
             var sResult;
 
             if (urlnews != undefined) {
@@ -92,24 +95,30 @@ var View = {
                     if (ishref == 1) {
                         sResult = "<li class='breadcrumb-item'><a href='./index.html?news=" + urlnews + "'>" +
                             ("Lo &uacute;ltimo").toLowerCase() + "</a></li>"
-                    } else { sResult = "<li class='breadcrumb-item active'>" + clave.toLowerCase() + "</li>" };
+                    } else {
+                        sResult = "<li class='breadcrumb-item active'>" + clave.toLowerCase() + "</li>"
+                    };
                 } else {
                     if (ishref == 1) {
                         sResult = "<li class='breadcrumb-item'><a href='./index.html?" + clave + "=" + Comun.htmlReplace(valor) +
                             "&news=" + urlnews + "'>" + valor.toLowerCase() + "</a></li>"
-                    } else { sResult = "<li class='breadcrumb-item active'>" + valor.toLowerCase() + "</li>" };
+                    } else {
+                        sResult = "<li class='breadcrumb-item active'>" + valor.toLowerCase() + "</li>"
+                    };
                 }
             } else {
                 if (ishref == 1) {
                     sResult = "<li class='breadcrumb-item'><a href='./index.html?" + clave + "=" + Comun.htmlReplace(valor) + "'>" +
                         valor.toLowerCase() + "</a></li>"
-                } else { sResult = "<li class='breadcrumb-item active'>" + valor.toLowerCase() + "</li>" };
+                } else {
+                    sResult = "<li class='breadcrumb-item active'>" + valor.toLowerCase() + "</li>"
+                };
             }
             return sResult;
         }
         General = {
             /* FUNCIONES PUBLICAS */
-            initialize: function() {
+            initialize: function () {
                 var lightbox = lity();
 
                 if (App.Config.developer == 1) {
@@ -119,7 +128,7 @@ var View = {
                 View.General.pageTitleSet(App.Config);
             },
             /* Encuentra los elementos de primer nivel y los incluye en el elemento del menu */
-            menuSet: function(data) {
+            menuSet: function (data) {
                 var colElementos = Controller.Config.menuLoad(data);
 
                 var iCnt = 0;
@@ -148,28 +157,25 @@ var View = {
                     }
                 }
             },
-            sloganSet: function(data) {
+            sloganSet: function (data) {
                 var elemento = Controller.Config.sloganLoad(data);
 
                 var sTexto = elemento.texto;
                 $(sTexto).appendTo('#slogan');
             },
             /* Evalua si el objeto imagen es válido */
-            imageValidate: function(oImagen) {
+            imageValidate: function (oImagen) {
                 if (oImagen != undefined) return true;
                 else return false;
             },
-            generalGet: function(data) {
+            generalGet: function (data) {
                 var elemento = Controller.Config.generalLoad(data);
 
                 return elemento;
             },
-            seoValuesSet: function(elemento) {
+            seoValuesSet: function (elemento) {
                 var elemento = Controller.Config.seoValoresLoad(elemento);
 
-                var sNews = '';
-                if (Comun.queryStringParamGet('news')) sNews = " (Lo último)";
-                document.title = elemento.title + sNews;
                 $('meta[name="description"]').attr("content", elemento.infoText);
                 $('meta[name="keywords"]').attr("content", elemento.keywords);
 
@@ -179,12 +185,22 @@ var View = {
                 $('meta[name="copyright"]').attr("content", '@' + App.Config.annio + ' ' +
                     App.Config.author + " v" + App.Config.version);
             },
-            pageTitleSet: function(elemento) {
+            openGraph: function (elemento) {
+                var sNews = '';
+                if (Comun.queryStringParamGet('news')) sNews = " (Lo último)";
+
+                $('meta[property="og:url"').attr("content", '' + App.Config.home + '/detail.html?gallery=f8794f27d0c92a8e436f3ba336ae2a0c&photo=1');
+                $('meta[property="og:type"').attr("content", "article");
+                $('meta[property="og:title"').attr("content", elemento.titulo + sNews);
+                $('meta[property="og:description"').attr("content", elemento.infoimagen);
+                $('meta[property="og:image"').attr("content", '' + App.Config.home + '/images/' + elemento.id);
+            },
+            pageTitleSet: function (elemento) {
                 $("<p class='card-text'><small>@<span id='annio'>" + elemento.annio + "</span> " +
                     elemento.author + " v<span id='version'>" + elemento.version +
                     "</span></small></p>").prependTo("#copyright");
             },
-            infoLinkGet: function(infolink) {
+            infoLinkGet: function (infolink) {
                 if (infolink != 'about:blank' && infolink != App.Constantes.cadenaVacia && infolink != undefined) {
                     var aVinculos = infolink.split("|");
                     var sResult = App.Constantes.cadenaVacia;
@@ -207,7 +223,36 @@ var View = {
                     return sResult;
                 } else return App.Constantes.cadenaVacia;
             },
-            breadcrumGet: function(oNode, urlNews) {
+            stockGet: function (stock, image) {
+                if (stock != 'about:blank' && stock != App.Constantes.cadenaVacia && stock != undefined) {
+                    var aSeries = stock.split("*");
+                    var sResult = "<span class='card-sale'>Venta:</span>";
+                    for (var iCnt = 0; iCnt < aSeries.length; iCnt++) {
+                        var aData = aSeries[iCnt].split("|");
+                        var dSerie = App.Constantes.cadenaVacia;
+                        switch (aData[0]) {
+                            case "PAP":
+                                dSerie = "Póster sin enmarcar";
+                                break;
+                            case "EDM":
+                                dSerie = "Foam impreso enmarcado";
+                                break;
+                            case "EGR":
+                                dSerie = "Foam impreso enmarcado";
+                                break;
+                        }
+                        sResult += " <a tabindex=\"0\" class=\"\" role=\"button\" data-trigger=\"focus\" data-toggle=\"popover\" data-html=\"true\" title=\"Serie " + aData[0] + ": " + dSerie + "\" data-content=\"" +
+                            "<div class=\'popover-image\'><img src=\'" + App.Config.rutaStore + image + "." + aData[0] + ".jpg\'/></div>" +
+                            "<div class=\'popover-paragraph\'>" +
+                                "<div class=\'popover-line\'><div class=\'popover-label\'>Dim.:</div><div class=\'popover-dato\'>" + aData[1] + "</div></div>" +
+                                "<div class=\'popover-line\'><div class=\'popover-label\'>Stock:</div><div class=\'popover-dato\'>" + aData[2] + "</div></div>" + 
+                            "</div>" +
+                            "\">" + aData[0] + "</a>"
+                    }
+                    return sResult;
+                } else return App.Constantes.cadenaVacia;
+            },
+            breadcrumGet: function (oNode, urlNews) {
                 var oTemp = oNode;
                 var sResult = '';
 
@@ -242,19 +287,19 @@ var View = {
 
                 return sResult;
             },
-            bannerCookiesLoad: function(data) {
+            bannerCookiesLoad: function (data) {
                 if ($.cookie('banner') != 'hide') {
                     var elemento = Controller.Config.bannerCookiesLoad(data);
                     var sTexto = elemento.texto;
 
                     $("<div id='banner-cookie-bottom-overlay'><div class='banner-cookie-texto'>" + sTexto + "</div></div>").appendTo("#banner-cookie-bottom");
                     $("#banner-cookie-bottom").show();
-                    $("#banner-cookie-submit").click(function(e) {
+                    $("#banner-cookie-submit").click(function (e) {
                         e.preventDefault();
                         $('#banner-cookie-bottom').hide();
                         $.cookie('banner', 'hide');
                     });
-                    $("#banner-cookie-cancel").click(function(e) {
+                    $("#banner-cookie-cancel").click(function (e) {
                         e.preventDefault();
                         $('#banner-cookie-bottom').hide();
                     });
@@ -263,9 +308,9 @@ var View = {
         }
         return General;
     })(),
-    Index: (function() {
+    Index: (function () {
         /** FUNCIONES PRIVADAS */
-        var pageBuild = function(data, colImages, nodo, sNews) {
+        var pageBuild = function (data, colImages, nodo, sNews) {
             //breadcrump                    
             var panBreadCrumb = $("<ul class='breadcrumb'>").insertBefore("#main");
             $(View.General.breadcrumGet(nodo, sNews)).appendTo(panBreadCrumb);
@@ -292,7 +337,7 @@ var View = {
         };
         /** FUNCIONES PUBLICAS */
         Index = {
-            homeSet: function(data) {
+            homeSet: function (data) {
                 //vinculos social-media
                 $('#shareme').attr("data-url", App.Config.home);
                 $('#shareme').attr("data-text", App.Config.dataTextTitle + App.Config.dataTextHome);
@@ -317,7 +362,7 @@ var View = {
                             var panTitulo = $("<h4 class='card-title'>").appendTo(divBlock);
                             $("<span class='fa " + App.Constantes.iconGallery + "'></span>").appendTo(panTitulo);
                             $("<span class='col-11'>" + sName + "</span>").appendTo(panTitulo);
-                            var panDate = $("<p class='card-date card-text text-right'>").appendTo(divBlock);
+                            var panDate = $("<p class='card-date text-right'>").appendTo(divBlock);
                             $("<small class='text-muted'>" + Comun.dateFormat(sUpdate) + "</small>").appendTo(panDate);
 
                             //Crear vínculo carpeta
@@ -336,7 +381,7 @@ var View = {
                             var panTitulo = $("<h4 class='card-title'>").appendTo(divBlock);
                             $("<span class='fa " + App.Constantes.iconVideo + "'></span>").appendTo(panTitulo);
                             $("<span class='col-11'>" + sName + "</span>").appendTo(panTitulo);
-                            var panDate = $("<p class='card-date card-text text-right'>").appendTo(divBlock);
+                            var panDate = $("<p class='card-date text-right'>").appendTo(divBlock);
                             $("<small class='text-muted'>" + Comun.dateFormat(sUpdate) + "</small>").appendTo(panDate);
 
                             //Crear vínculo carpeta
@@ -373,7 +418,7 @@ var View = {
                                     j++;
                                 }
                             }
-                            var panDate = $("<p class='card-date card-text text-right'>").appendTo(divBlock);
+                            var panDate = $("<p class='card-date text-right'>").appendTo(divBlock);
                             $("<small class='text-muted'>" + Comun.dateFormat(sUpdate) +
                                 "</small>").appendTo(panDate);
 
@@ -405,7 +450,7 @@ var View = {
                                     View.Index.modalSet(data, Comun.htmlReplace(sNameS));
                                 }
                             }
-                            var panDate = $("<p class='card-date card-text text-right'>").appendTo(divBlock);
+                            var panDate = $("<p class='card-date text-right'>").appendTo(divBlock);
                             $("<small class='text-muted'>" + Comun.dateFormat(sUpdate) + "</small>").appendTo(panDate);
                             break;
                         case 'section':
@@ -417,7 +462,7 @@ var View = {
                             var panTitulo = $("<h4 class='card-title'>").appendTo(divBlock);
                             $("<span class='fa " + App.Constantes.iconInfo + "'></span>").appendTo(panTitulo);
                             $("<span class='col-11'>" + sName + "</span>").appendTo(panTitulo);
-                            var panDate = $("<p class='card-date card-text text-right'>").appendTo(divBlock);
+                            var panDate = $("<p class='card-date text-right'>").appendTo(divBlock);
                             $("<small class='text-muted'>" + Comun.dateFormat(sUpdate) + "</small>").appendTo(panDate);
 
                             //Crear vínculo
@@ -432,7 +477,7 @@ var View = {
                 View.General.bannerCookiesLoad(data);
             },
             /* Crea la lista de elementos de una galería */
-            gallerySet: function(data, sParam, sNews) {
+            gallerySet: function (data, sParam, sNews) {
                 var colImages = Controller.Config.galleryLoad(data, sParam);
 
                 var iCnt = 0;
@@ -475,7 +520,7 @@ var View = {
                         $(divSecuencia).wrap("<a class='secuencia' href='./sequence.html?gallery=" + sParam + "&photo=" + i + "'>");
                     }
                     //Texto
-                    var panTexto = $("<p class='card-text '>" + sInfT + "</p>").appendTo(divBlock);
+                    var panTexto = $("<p class='card-text'>" + sInfT + "</p>").appendTo(divBlock);
                     //Dimensiones, precio copia
                     var sCadena = '';
                     if ((sFormat != undefined) && (sFormat != '')) {
@@ -488,19 +533,19 @@ var View = {
                         if (sCadena != '') sCadena += '<br />';
                         sCadena += App.Constantes.copia + sPrice + App.Constantes.moneda;
                     }
-                    var panDimensiones = $("<p class='card-text text-left'>").appendTo(divBlock);
-                    $("<small class='text-muted'>" + sCadena + "</small>").appendTo(panDimensiones);
+                    var panDimensiones = $("<p class='card-stock text-left'>").appendTo(divBlock);
+                    $("<small class='text-muted'>" + View.General.stockGet(sStock, imgName) + "</small>").appendTo(panDimensiones);
                     //Pie
-                    var panFooter = $("<div class='card-text row justify-content-between'>").appendTo(divBlock);
+                    var panFooter = $("<div class='row justify-content-between'>").appendTo(divBlock);
                     var panSocial = $("<div class='col-4 text-left'>").appendTo(panFooter);
                     $(View.General.infoLinkGet(sLnkUrl)).appendTo(panSocial);
-                    var panDate = $("<p class='card-date card-text text-right'>").appendTo(panFooter);
+                    var panDate = $("<p class='card-date text-right'>").appendTo(panFooter);
                     $("<small class='text-muted'>" + Comun.dateFormat(sUpdate) + "</small>").appendTo(panDate);
                 }
                 pageBuild(data, '', Controller.Config.galleryFind(data, sParam), sNews);
             },
             /* Crea la lista de elementos de una carpeta */
-            folderSet: function(data, sParam, sNews) {
+            folderSet: function (data, sParam, sNews) {
                 var colImages = Controller.Config.folderLoad(data, sParam);
 
                 var iCnt = 0;
@@ -529,7 +574,7 @@ var View = {
                     $("<span class='fa " + App.Constantes.iconGallery + "'></span>").appendTo(panTitulo);
                     $("<span class='col-11'>" + sName + "</span>").appendTo(panTitulo);
                     //Pie
-                    var panDate = $("<p class='card-date card-text text-right'>").appendTo(divBlock);
+                    var panDate = $("<p class='card-date text-right'>").appendTo(divBlock);
                     $("<small class='text-muted'>" + Comun.dateFormat(sUpdate) + "</small>").appendTo(panDate);
                 }
                 pageBuild(data, '', Controller.Config.folderFind(data, sParam), sNews);
@@ -537,7 +582,7 @@ var View = {
             /* Crea la lista de elementos de una galería
             /* El segundo parámetro sirve para crear la
             /* miga de pan */
-            multimediaSet: function(data, sParam, sNews) {
+            multimediaSet: function (data, sParam, sNews) {
                 var colImages = Controller.Config.multimediaLoad(data, sParam);
 
                 var iCnt = 0;
@@ -562,14 +607,14 @@ var View = {
                     $("<span class='fa " + App.Constantes.iconVideo + "'></span>").appendTo(panTitulo);
                     $("<span class='col-11'>" + sName + "</span>").appendTo(panTitulo);
                     //Texto
-                    var panTexto = $("<p class='card-text '>" + sInfT + "</p>").appendTo(divBlock);
+                    var panTexto = $("<p class='card-text'>" + sInfT + "</p>").appendTo(divBlock);
 
                     //Pie
-                    var panFooter = $("<div class='card-text row justify-content-between'>").appendTo(divBlock);
+                    var panFooter = $("<div class='row justify-content-between'>").appendTo(divBlock);
                     //Capa social-media
                     var panSocial = $("<div class='col-4 text-left'>").appendTo(panFooter);
                     $("<img src='./resources/youtube.png' style='width:14px!important;' title='publicado en youtube'/>").appendTo(panSocial);
-                    var panDate = $("<p class='card-date card-text text-right'>").appendTo(panFooter);
+                    var panDate = $("<p class='card-date text-right'>").appendTo(panFooter);
                     $("<small class='text-muted'>" + Comun.dateFormat(sUpdate) + "</small>").appendTo(panDate);
                     //Crear vínculo carpeta
                     $(divCard).wrap("<a data-lity href='" + sLnkUrl + "'>");
@@ -577,7 +622,7 @@ var View = {
                 pageBuild(data, '', Controller.Config.multimediaFind(data, sParam), sNews);
             },
             /* Crea la lista de elementos en base al dato PUBLIC */
-            lastCargar: function(data) {
+            lastCargar: function (data) {
                 var colImages = Controller.Config.newsLoad(data);
                 //Ordenar colección
                 colImages.sort(Comun.arrayDateSort);
@@ -601,14 +646,14 @@ var View = {
                 $("<span class='fa " + App.Constantes.iconNew + "'></span>").appendTo(panTitulo);
                 $("<span class='col-11'>Lo &uacute;ltimo</span>").appendTo(panTitulo);
                 //Pie
-                var panDate = $("<p class='card-date card-text text-right'>").appendTo(divBlock);
+                var panDate = $("<p class='card-date text-right'>").appendTo(divBlock);
                 $("<small class='text-muted'>" + Comun.dateFormat(colImages[0][0].update) + "</small>").appendTo(panDate);
 
                 //Crear vínculo carpeta
                 $(divCard).wrap("<a href='./index.html?news=" + colImages[0][0].update + "'>");
             },
             /* Crea el elemento de lista para novedades */
-            newsSet: function(data, sParam) {
+            newsSet: function (data, sParam) {
                 var colImages = Controller.Config.newsLoad(data);
                 //Ordenar colección
                 colImages.sort(Comun.arrayDateSort);
@@ -646,11 +691,11 @@ var View = {
                     }
                     //Texto
                     var panEnlace = $("<div class='card-colection'>").appendTo(divBlock);
-                    var panTexto = $("<p class='card-text '><span class='fa " + App.Constantes.iconColection +
+                    var panTexto = $("<p class='card-text'><span class='fa " + App.Constantes.iconColection +
                         "'></span>ir a</p>").appendTo(panEnlace);
                     var txtEnlace = $("<span>" + colImages[i][0].parentName + "</span>").appendTo(panTexto);
                     //Pie
-                    var panFooter = $("<div class='card-text row justify-content-between'>").appendTo(divBlock);
+                    var panFooter = $("<div class='row justify-content-between'>").appendTo(divBlock);
                     //Social
                     if (colImages[i][0].type == 'video') {
                         $(divImage).wrap("<a data-lity='' href='" + colImages[i][0].linkurl + "'>");
@@ -672,12 +717,12 @@ var View = {
                         iCnt++;
                     }
 
-                    var panDate = $("<p class='card-date card-text text-right'>").appendTo(panFooter);
+                    var panDate = $("<p class='card-date text-right'>").appendTo(panFooter);
                     $("<small class='text-muted'>" + Comun.dateFormat(colImages[i][0].update) + "</small>").appendTo(panDate);
                 }
             },
             /* Crea el elemento de lista para novedades */
-            bannerSet: function(data) {
+            bannerSet: function (data) {
                 var colImages = Controller.Config.newsLoad(data);
                 //Ordenar colección
                 colImages.sort(Comun.arrayDateSort);
@@ -707,7 +752,7 @@ var View = {
                 }
             },
             /* Establece y muestra el popup para un texto */
-            modalSet: function(data, sParam) {
+            modalSet: function (data, sParam) {
                 var elemento = Controller.Config.modalLoad(data, sParam);
 
                 var sTitulo = elemento.titulo.toUpperCase();
@@ -728,11 +773,11 @@ var View = {
         }
         return Index;
     })(),
-    Detail: (function() {
+    Detail: (function () {
         /** FUNCIONES PRIVADAS */
         /* Creal el HTML con el esquema de elementos y los
         items de la coleccion */
-        var pageBuild = function(data, colImages, nodo, sNews, photo) {
+        var pageBuild = function (data, colImages, nodo, sNews, photo) {
             if (photo != undefined && photo != '') {
                 if (Comun.insideIframe()) {
                     headTag = document.getElementsByTagName("head")[0].innerHTML;
@@ -763,35 +808,58 @@ var View = {
                 //Cargar los N primeros para novedades
                 var sGallery = Comun.queryStringParamGet('gallery');
 
+                var styelCard, styleImage, styleBlock;
+                if (!Comun.insideIframe()) {
+                    styleImage = 'col card-image'
+                    styleBlock = 'col col-auto image-text';
+                } else {
+                    styleImage = 'col col-auto card-image'
+                    styleBlock = 'col image-text';
+                }
+
                 for (var i = 0; i < colImages.length; i++) {
                     var imgName = colImages[i][0].id.replace(".jpg", "");
                     var sName = colImages[i][0].titulo;
                     var sHeight = colImages[i][0].height;
                     var sWidth = colImages[i][0].width;
                     var sInfoimagen = colImages[i][0].infoimagen;
+                    var sStock = colImages[i][0].stock;
 
                     var divCard = $("<div id='layCard' class='row image-block'>").appendTo("#main");
-                    var divImage = $("<div id='layImage' class='col card-image'>").appendTo(divCard);
+                    var divImage = $("<div id='layImage' class='" + styleImage + "'>").appendTo(divCard);
                     $("<img class='img-fluid' id='" + imgName + "' src='" + App.Config.rutaImage + imgName +
                         ".jpg' height='" + sHeight + "' width='" + sWidth + "' title='" + sName + "'>").appendTo(divImage);
-                    var divBlock = $("<div id='layTexto' class='col col-auto image-text'>").appendTo(divCard);
-                    var panTitulo = $("<h4 class='title'>").appendTo(divBlock);
+                    var divBlock = $("<div id='layTexto' class='" + styleBlock + "'>").appendTo(divCard);
+                    var panTitulo = $("<h4>").appendTo(divBlock);
                     $("<span class='fa " + App.Constantes.iconImage + "'></span>").appendTo(panTitulo);
-                    $("<span class='col-11'>" + sName + "</span>").appendTo(panTitulo);
-                    $("<p class='text'>" + sInfoimagen + "</p>").appendTo(divBlock);
+                    $("<span class='title col-11'>" + sName + "</span>").appendTo(panTitulo);
+                    var panTexto = $("<div class='text'>").appendTo(divBlock);
+                    $("<p>" + sInfoimagen + "</p>").appendTo(panTexto);
+                    var panDimensiones = $("<p class='card-stock text-left'>").appendTo(panTexto);
+                    $("<small class='text-muted'>" + View.General.stockGet(sStock, imgName) + "</small>").appendTo(panDimensiones);
+                    var divSocial = $("<div class='bar-social'>").appendTo(divBlock);
+                    var divFacebook = $("<div id='shareBtn'>").appendTo(divSocial);
+                    $(divFacebook).wrap("<a id='shareLnk' href='#' class='fa fa-facebook-square'>");
+                    document.getElementById('shareLnk').onclick = function () {
+                        lnkHrefImage(App.Config.home + '/images/' + imgName + ".jpg");
+                    };
 
-                    //Marcador de secuencia                            
-                    var divSecuencia = $("<div title='ver secuencia'>").appendTo(divImage);
-                    $("<span class='fa fa-chevron-left'>").appendTo(divSecuencia);
-                    $("<span class='fa fa-chevron-right'>").appendTo(divSecuencia);
-                    //vinculo marcador secuencia
-                    if (sNews != undefined) {
-                        $(divSecuencia).wrap("<a class='secuencia' href='./sequence.html?news=true&photo=" + photo + "'>");
-                    } else {
-                        $(divSecuencia).wrap("<a class='secuencia' href='./sequence.html?gallery=" + sGallery + "&photo=" + photo + "'>");
+                    //Marcador de secuencia     
+                    if (!Comun.insideIframe()) {
+                        var divSecuencia = $("<div title='ver secuencia'>").appendTo(divImage);
+                        $("<span class='fa fa-chevron-left'>").appendTo(divSecuencia);
+                        $("<span class='fa fa-chevron-right'>").appendTo(divSecuencia);
+                        //vinculo marcador secuencia
+                        if (sNews != undefined) {
+                            $(divSecuencia).wrap("<a class='secuencia' href='./sequence.html?news=true&photo=" + photo + "'>");
+                        } else {
+                            $(divSecuencia).wrap("<a class='secuencia' href='./sequence.html?gallery=" + sGallery + "&photo=" + photo + "'>");
+                        }
                     }
+                    View.General.openGraph(colImages[i][0]);
                 }
                 View.General.seoValuesSet(Controller.Config.generalNodeGet(data));
+                View.General.bannerCookiesLoad(data);
             } else {
                 //breadcrump                    
                 var panBreadCrumb = $("<ul class='breadcrumb'>").insertBefore("#main");
@@ -840,14 +908,14 @@ var View = {
         };
 
         /* Comprueba la dimensión del elemento */
-        var getLayout = function(height, width) {
+        var getLayout = function (height, width) {
             if (height > width) return 'v';
             else if (width > height) return 'h';
             else return 'v';
         }
 
         /* Establece el elemento activo para el caroussel */
-        var elementActiveSet = function(sParam, elemActual) {
+        var elementActiveSet = function (sParam, elemActual) {
             if (sParam != undefined && sParam != '' && $.isNumeric(sParam)) {
                 return (parseInt(sParam) == elemActual) ? ' active' : '';
             } else {
@@ -858,9 +926,9 @@ var View = {
         /** FUNCIONES PUBLICAS */
         Detail = {
             /** == Crea la lista de elementos de una galería == */
-            gallerySet: function(data, sParam, sNews) {
+            gallerySet: function (data, sParam, sNews) {
                 //El nodo root es config
-                data.find('gallery').each(function() {
+                data.find('gallery').each(function () {
                     var gallery_name = $(this).attr("name");
 
                     if (Comun.htmlReplace(gallery_name) == sParam) {
@@ -868,7 +936,7 @@ var View = {
                         var iCol = 0;
 
                         //Coleccion de la galeria
-                        $(this).children().each(function() {
+                        $(this).children().each(function () {
                             var IDImage = $(this).attr("id");
                             var hImage = typesHash.get(IDImage);
                             if (hImage != null) {
@@ -900,9 +968,9 @@ var View = {
                 });
             },
             /** == Crea la lista de elementos de una galería == */
-            imageSet: function(data, sParam, sNews, photo) {
+            imageSet: function (data, sParam, sNews, photo) {
                 //El nodo root es config
-                data.find('gallery').each(function() {
+                data.find('gallery').each(function () {
                     var gallery_name = $(this).attr("name");
 
                     if (Comun.htmlReplace(gallery_name) == sParam) {
@@ -911,7 +979,7 @@ var View = {
                         var iPhoto = 0;
 
                         //Coleccion de la galeria
-                        $(this).children().each(function() {
+                        $(this).children().each(function () {
                             var IDImage = $(this).attr("id");
                             var hImage = typesHash.get(IDImage);
                             if (hImage != null && iPhoto == photo) {
@@ -923,6 +991,7 @@ var View = {
                                 var infoTextImage = hImage.INFOTEXT;
                                 var widthImage = hImage.WIDTH;
                                 var heightImage = hImage.HEIGHT;
+                                var stockImage = hImage.STOCK;
 
                                 colImages[iCol] = [{
                                     id: idImage,
@@ -932,7 +1001,8 @@ var View = {
                                     linkurl: linkUrlImage,
                                     infoimagen: infoTextImage,
                                     width: widthImage,
-                                    height: heightImage
+                                    height: heightImage,
+                                    stock: stockImage
                                 }];
                                 iCol++;
                             }
@@ -944,7 +1014,7 @@ var View = {
                 });
             },
             /* Crea la lista de elementos de novedades ======== */
-            imageNewSet: function(data, sNews, photo) {
+            imageNewSet: function (data, sNews, photo) {
                 var colImgNew = Controller.Config.newsLoad(data);
                 var iCol = 0;
 
@@ -956,7 +1026,7 @@ var View = {
                 var iCol = 0;
                 var iPhoto = 0;
                 for (var i = 0; i < colImgNew.length - 1; i++) {
-                    if (colImgNew[i][0].type != 'video'){
+                    if (colImgNew[i][0].type != 'video') {
                         if (iPhoto == photo) {
                             var idImage = colImgNew[i][0].id.replace(".jpg", "");
                             var datUpdateImage = colImgNew[i][0].update;
@@ -979,18 +1049,18 @@ var View = {
                             }];
                             iCol++;
                         }
-                        iPhoto++; 
+                        iPhoto++;
                     }
                 }
 
                 pageBuild(data, colImages, '', sNews, photo);
             },
             /* Crea la lista de elementos de novedades ======== */
-            newsSet: function(data, sParam, sNews) {
+            newsSet: function (data, sParam, sNews) {
                 var colImages = new Array;
                 var iCol = 0;
                 //El nodo root es config
-                data.find('img').each(function() {
+                data.find('img').each(function () {
                     var IDImage = $(this).attr("id");
                     var hImage = typesHash.get(IDImage);
                     if (hImage != null) {

@@ -1,8 +1,8 @@
 // JavaScript Document
 var App = {
     Config: {
-        version: '4.3.0',
-        annio: '2017',
+        version: '4.5.1',
+        annio: '2018',
         author: 'Iñaki Marquina',
         rutaPho: './data/photos.min.xml',
         rutaCnf: './data/config.min.xml',
@@ -10,13 +10,14 @@ var App = {
         rutaImage: './images/',
         rutaAudio: './tracks/',
         rutaTpt: './template/',
+        rutaStore: './store/',
         autoResize: 'true',
         elemWidthStd: 210,
         elemWidthSpe: 135,
         windowWidthStd: 375,
         elemOffsetStd: 10,
         elemOffsetSpe: 5,
-        elemNuevos: 10,
+        elemNuevos: 20,
         elemBanner: 4,
         marcaColeccion: "",
         marcaGaleria: "",
