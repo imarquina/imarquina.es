@@ -1,7 +1,7 @@
 // JavaScript Document
 var App = {
     Config: {
-        version: '4.5.1',
+        version: '4.5.2',
         annio: '2018',
         author: 'Iñaki Marquina',
         rutaPho: './data/photos.min.xml',
@@ -10,6 +10,8 @@ var App = {
         rutaImage: './images/',
         rutaAudio: './tracks/',
         rutaTpt: './template/',
+        rutaResources: './resources/',
+        rutaAuxiliares: './resources/images/',
         rutaStore: './store/',
         autoResize: 'true',
         elemWidthStd: 210,
@@ -32,6 +34,19 @@ var App = {
         urlFacebook: "http://www.facebook.com/imfotografia.eu",
         email: "imarquina@gmail.com",
         home: "http://www.imarquina.es",
+        cultures: {
+            0: {
+                id: "es-ES",
+                date: "dd/mm/yyyy",
+                currency: "00,00 €"
+            },
+            1: {
+                id: "en-UK",
+                date: "yyyy/dd/mm",
+                currency: "00,00 $"
+            }
+        },
+        extProperties: ".properties",
         developer: 0
     },
     Constantes: {

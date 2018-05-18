@@ -100,12 +100,30 @@ footer .hidden {
 
 .navbar>div>a.fa-rss {
     color: rgba(255, 165, 0, 0.5);
-    margin-left: 2.5rem;
+    margin-left: .2rem;
     font-size: 1rem;
 }
 
 .navbar>div>a.fa-rss:hover {
     color: #ffa500 !important;
+}
+
+.navbar>div>a.culture {
+    font-size: 12px;
+    display: inline-block;
+    width: auto;
+    margin-left: 0.2rem;
+}
+
+ul.culture {
+    padding: 0;
+    margin: 0;
+}
+
+ul.culture>li {
+    display: inline-block;
+    width: 49%;
+    text-align: center;
 }
 
 .navbar-toggleable {
@@ -262,6 +280,7 @@ button.navbar-toggler {
     list-style: none;
     background-color: inherit;
     font-size: .9rem;
+    text-transform: lowercase;
 }
 
 .breadcrumb-item>a:hover {
@@ -339,7 +358,7 @@ button.navbar-toggler {
 }
 
 .card-block>p>small {
-    font-size: .75rem;
+    font-size: .8rem;
 }
 
 .card-block>div.row {
@@ -417,7 +436,7 @@ button.navbar-toggler {
 }
 
 .card-video {
-    background-image: url(../resources/play.png);
+    background-image: url(../resources/images/play.png);
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
@@ -569,20 +588,28 @@ p.card-date {
     color: #4f88ff !important;
 }
 
-.popover {
+.popover-serie {
     min-width: 245px;
 }
 
-.popover .arrow {}
+.popover-idioma {
+    min-width: 125px;
+}
+
+.popover-idioma>ul {
+    text-align: center;
+}
 
 .popover-header {
     background: #dedede;
     font-size: .8rem;
+    padding: .3rem .3rem;
 }
 
 .popover-body {
     background: #ececec;
     font-size: .8rem;
+    padding: .3rem .3rem;
 }
 
 .popover-paragraph {
@@ -592,7 +619,7 @@ p.card-date {
     width: 63%;
 }
 
-.popover-line{
+.popover-line {
     display: block;
 }
 
@@ -609,6 +636,6 @@ p.card-date {
     display: inline-block;
 }
 
-.popover-image>img{
+.popover-image>img {
     max-width: 80px;
 }

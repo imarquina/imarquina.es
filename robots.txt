@@ -1,7 +1,8 @@
 User-agent:  *
-Disallow:  /font/
+Disallow: /font/
 Disallow: /resources/
 Disallow: /thumbs/
+Disallow: /store/
 Disallow: /tracks/
 Disallow: /config.xls$
  

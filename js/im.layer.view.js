@@ -25,7 +25,7 @@ $(window).ready(function () {
             } else {
                 var sNews = Comun.queryStringParamGet('news');
                 if (Comun.queryStringParamValue(sNews)) {
-                    View.Detail.newsSet(dataXml, sNews, Comun.queryStringParamGet('news'))
+                    View.Detail.newsSet(dataXml, sNews, sNews)
                 }
             }
         } else if (document.URL.toLowerCase().indexOf("detail.html") > 0) {
@@ -36,7 +36,7 @@ $(window).ready(function () {
             } else {
                 var sNews = Comun.queryStringParamGet('news');
                 if (Comun.queryStringParamValue(sNews)) {
-                    View.Detail.imageNewSet(dataXml, Comun.queryStringParamValue(sNews),
+                    View.Detail.imageNewSet(dataXml, sNews,
                         Comun.queryStringParamGet('photo'));
                 }
             }
@@ -91,27 +91,27 @@ var View = {
             var sResult;
 
             if (urlnews != undefined) {
-                if (clave.toLowerCase() == ("lo último").toLowerCase()) {
+                if (clave.toLowerCase() == (Localization.Culture.getResource("menu.masNuevo").toLowerCase())) {
                     if (ishref == 1) {
                         sResult = "<li class='breadcrumb-item'><a href='./index.html?news=" + urlnews + "'>" +
-                            ("Lo &uacute;ltimo").toLowerCase() + "</a></li>"
+                            (Localization.Culture.getResource("menu.masNuevo")) + "</a></li>"
                     } else {
-                        sResult = "<li class='breadcrumb-item active'>" + clave.toLowerCase() + "</li>"
+                        sResult = "<li class='breadcrumb-item active'>" + clave + "</li>"
                     };
                 } else {
                     if (ishref == 1) {
                         sResult = "<li class='breadcrumb-item'><a href='./index.html?" + clave + "=" + Comun.htmlReplace(valor) +
-                            "&news=" + urlnews + "'>" + valor.toLowerCase() + "</a></li>"
+                            "&news=" + urlnews + "'>" + valor + "</a></li>"
                     } else {
-                        sResult = "<li class='breadcrumb-item active'>" + valor.toLowerCase() + "</li>"
+                        sResult = "<li class='breadcrumb-item active'>" + valor + "</li>"
                     };
                 }
             } else {
                 if (ishref == 1) {
                     sResult = "<li class='breadcrumb-item'><a href='./index.html?" + clave + "=" + Comun.htmlReplace(valor) + "'>" +
-                        valor.toLowerCase() + "</a></li>"
+                        valor + "</a></li>"
                 } else {
-                    sResult = "<li class='breadcrumb-item active'>" + valor.toLowerCase() + "</li>"
+                    sResult = "<li class='breadcrumb-item active'>" + valor + "</li>"
                 };
             }
             return sResult;
@@ -126,6 +126,7 @@ var View = {
                 }
 
                 View.General.pageTitleSet(App.Config);
+                Localization.Culture.localeLoad();
             },
             /* Encuentra los elementos de primer nivel y los incluye en el elemento del menu */
             menuSet: function (data) {
@@ -187,7 +188,7 @@ var View = {
             },
             openGraph: function (elemento) {
                 var sNews = '';
-                if (Comun.queryStringParamGet('news')) sNews = " (Lo último)";
+                if (Comun.queryStringParamGet('news')) sNews = " (" + Localization.Culture.getResource("menu.masNuevo") + ")";
 
                 $('meta[property="og:url"').attr("content", '' + App.Config.home + '/detail.html?gallery=f8794f27d0c92a8e436f3ba336ae2a0c&photo=1');
                 $('meta[property="og:type"').attr("content", "article");
@@ -208,13 +209,13 @@ var View = {
                         var aInfo = aVinculos[iCnt].split("*");
                         switch (aInfo[0]) {
                             case App.Constantes.appFlickr:
-                                sResult += "<a href='" + aInfo[1] + "' target='_blank'><img src='resources/flickr.png' style='width:14px!important;' title='publicado en flicr'/></a>";
+                                sResult += "<a href='" + aInfo[1] + "' target='_blank'><img src='" + App.Config.rutaAuxiliares + "flickr.png' style='width:14px!important;' title='" + Localization.Culture.getResource("detalle.imagen.publicado.flickr") + "'/></a>";
                                 break;
                             case App.Constantes.appPinterest:
-                                sResult += "<a href='" + aInfo[1] + "' target='_blank'><img src='resources/pinterest.png' style='width:14px!important;' title='publicado en pinterest'/></a>";
+                                sResult += "<a href='" + aInfo[1] + "' target='_blank'><img src='" + App.Config.rutaAuxiliares + "pinterest.png' style='width:14px!important;' title='" + Localization.Culture.getResource("detalle.imagen.publicado.pinterest") + "'/></a>";
                                 break;
                             case App.Constantes.app500px:
-                                sResult += "<a href='" + aInfo[1] + "' target='_blank'><img src='resources/500px.png' style='width:14px!important;' title='publicado en 500px'/></a>";
+                                sResult += "<a href='" + aInfo[1] + "' target='_blank'><img src='" + App.Config.rutaAuxiliares + "500px.png' style='width:14px!important;' title='" + Localization.Culture.getResource("detalle.imagen.publicado.500px") + "'/></a>";
                                 break;
                             default:
                                 break;
@@ -226,26 +227,28 @@ var View = {
             stockGet: function (stock, image) {
                 if (stock != 'about:blank' && stock != App.Constantes.cadenaVacia && stock != undefined) {
                     var aSeries = stock.split("*");
-                    var sResult = "<span class='card-sale'>Venta:</span>";
+                    var sResult = "<span class='card-sale'>" + Localization.Culture.getResource("detalle.serie") + "</span>";
                     for (var iCnt = 0; iCnt < aSeries.length; iCnt++) {
                         var aData = aSeries[iCnt].split("|");
                         var dSerie = App.Constantes.cadenaVacia;
                         switch (aData[0]) {
                             case "PAP":
-                                dSerie = "Póster sin enmarcar";
+                                dSerie = Localization.Culture.getResource("detalle.serie.pap");
                                 break;
                             case "EDM":
-                                dSerie = "Foam impreso enmarcado";
+                                dSerie = Localization.Culture.getResource("detalle.serie.edm");
                                 break;
                             case "EGR":
-                                dSerie = "Foam impreso enmarcado";
+                                dSerie = Localization.Culture.getResource("detalle.serie.egr");
                                 break;
                         }
-                        sResult += " <a tabindex=\"0\" class=\"\" role=\"button\" data-trigger=\"focus\" data-toggle=\"popover\" data-html=\"true\" title=\"Serie " + aData[0] + ": " + dSerie + "\" data-content=\"" +
+                        sResult += " <a tabindex=\"0\" class=\"\" role=\"button\" data-trigger=\"focus\" data-toggle=\"popover\" data-html=\"true\" title=\"" + Localization.Culture.getResource("detalle.serie") + " " + aData[0] + ": " + dSerie + "\" data-content=\"" +
+                            "<div class=\'popover-serie\'>" +
                             "<div class=\'popover-image\'><img src=\'" + App.Config.rutaStore + image + "." + aData[0] + ".jpg\'/></div>" +
                             "<div class=\'popover-paragraph\'>" +
-                                "<div class=\'popover-line\'><div class=\'popover-label\'>Dim.:</div><div class=\'popover-dato\'>" + aData[1] + "</div></div>" +
-                                "<div class=\'popover-line\'><div class=\'popover-label\'>Stock:</div><div class=\'popover-dato\'>" + aData[2] + "</div></div>" + 
+                            "<div class=\'popover-line\'><div class=\'popover-label\'>Dim.:</div><div class=\'popover-dato\'>" + aData[1] + "</div></div>" +
+                            "<div class=\'popover-line\'><div class=\'popover-label\'>Stock:</div><div class=\'popover-dato\'>" + aData[2] + "</div></div>" +
+                            "</div>" +
                             "</div>" +
                             "\">" + aData[0] + "</a>"
                     }
@@ -257,17 +260,17 @@ var View = {
                 var sResult = '';
 
                 if (oTemp == undefined && urlNews == undefined) {
-                    sResult = "<li class='breadcrumb-item'><a href='./index.html'>inicio</a></li>"
-                    sResult += "<li class='breadcrumb-item active'>lo último</li>"
+                    sResult = "<li class='breadcrumb-item'><a href='./index.html'>" + Localization.Culture.getResource("menu.inicio") + "</a></li>"
+                    sResult += "<li class='breadcrumb-item active'>" + Localization.Culture.getResource("menu.masNuevo") + "</li>"
 
                 } else {
                     if (document.URL.toLowerCase().indexOf("sequence.html") > 0) {
-                        sResult = "<li class='breadcrumb-item active'>secuencia</li>";
+                        sResult = "<li class='breadcrumb-item active'>" + Localization.Culture.getResource("menu.secuencia") + "</li>";
                         if (oTemp != '') {
                             sResult = hrefSet(oTemp[0].nodeName, oTemp.attr("name"), urlNews, 1) + sResult;
                         }
                     } else if (document.URL.toLowerCase().indexOf("detail.html") > 0) {
-                        sResult = "<li class='breadcrumb-item active'>imagen</li>";
+                        sResult = "<li class='breadcrumb-item active'>" + Localization.Culture.getResource("menu.imagen") + "</li>";
                         if (oTemp != '') {
                             sResult = hrefSet(oTemp[0].nodeName, oTemp.attr("name"), urlNews, 1) + sResult;
                         }
@@ -281,8 +284,8 @@ var View = {
                             sResult = hrefSet(oTemp[0].nodeName, oTemp.attr("name"), urlNews, 1) + sResult;
                         }
                     }
-                    if (urlNews != undefined) sResult = hrefSet("lo último", urlNews, urlNews, 1) + sResult;
-                    sResult = "<li class='breadcrumb-item'><a href='./index.html'>inicio</a></li>" + sResult;
+                    if (urlNews != undefined) sResult = hrefSet(Localization.Culture.getResource("menu.masNuevo"), urlNews, urlNews, 1) + sResult;
+                    sResult = "<li class='breadcrumb-item'><a href='./index.html'>" + Localization.Culture.getResource("menu.inicio") + "</a></li>" + sResult;
                 }
 
                 return sResult;
@@ -414,7 +417,7 @@ var View = {
                                 }
                                 while (j < 4) {
                                     var divThumb = $("<div class='col-3'>").appendTo(panThumbs);
-                                    $("<img class='img-fluid' src='resources/000000000.png' alt='no imagen'>").appendTo(divThumb);
+                                    $("<img class='img-fluid' src='" + App.Config.rutaAuxiliares + "000000000.png' alt='no imagen'>").appendTo(divThumb);
                                     j++;
                                 }
                             }
@@ -494,7 +497,7 @@ var View = {
                     var divCard = $("<div class='card p-1'>").appendTo("#tiles");
 
                     /** imagen */
-                    var divImage = $("<div class='card-image' title='ver imagen'>").appendTo(divCard);
+                    var divImage = $("<div class='card-image' title='" + Localization.Culture.getResource("detalle.imagen.ver") + "'>").appendTo(divCard);
                     $("<img class='card-img-top img-fluid' id='" + imgName + "' src='" + App.Config.rutaImage +
                         imgName + ".jpg' alt='imagen " + sName + "' />").appendTo(divImage);
 
@@ -505,12 +508,12 @@ var View = {
                         $(divImage).wrap("<a href='./detail.html?gallery=" + sParam + "&photo=" + i + "'>");
                     }
                     /** bloque */
-                    var divBlock = $("<div class='card-block' title='ver imagen'>").appendTo(divCard);
+                    var divBlock = $("<div class='card-block' title='" + Localization.Culture.getResource("detalle.imagen.ver") + "'>").appendTo(divCard);
                     var panTitulo = $("<h4 class='card-title'>").appendTo(divBlock);
                     $("<span class='fa " + App.Constantes.iconImage + "'></span>").appendTo(panTitulo);
                     $("<span class='col-10'>" + sName + "</span>").appendTo(panTitulo);
                     //Marcador de secuencia                            
-                    var divSecuencia = $("<div title='ver secuencia'>").appendTo(panTitulo);
+                    var divSecuencia = $("<div title='" + Localization.Culture.getResource("detalle.secuencia.ver") + "'>").appendTo(panTitulo);
                     $("<span class='fa fa-chevron-left'>").appendTo(divSecuencia);
                     $("<span class='fa fa-chevron-right'>").appendTo(divSecuencia);
                     //vinculo marcador secuencia
@@ -613,7 +616,7 @@ var View = {
                     var panFooter = $("<div class='row justify-content-between'>").appendTo(divBlock);
                     //Capa social-media
                     var panSocial = $("<div class='col-4 text-left'>").appendTo(panFooter);
-                    $("<img src='./resources/youtube.png' style='width:14px!important;' title='publicado en youtube'/>").appendTo(panSocial);
+                    $("<img src='" + App.Config.rutaAuxiliares + "youtube.png' style='width:14px!important;' title='" + Localization.Culture.getResource("detalle.imagen.publicado.youtube") + "'/>").appendTo(panSocial);
                     var panDate = $("<p class='card-date text-right'>").appendTo(panFooter);
                     $("<small class='text-muted'>" + Comun.dateFormat(sUpdate) + "</small>").appendTo(panDate);
                     //Crear vínculo carpeta
@@ -644,7 +647,7 @@ var View = {
                 //Texto
                 var panTitulo = $("<h4 class='card-title'>").appendTo(divBlock);
                 $("<span class='fa " + App.Constantes.iconNew + "'></span>").appendTo(panTitulo);
-                $("<span class='col-11'>Lo &uacute;ltimo</span>").appendTo(panTitulo);
+                $("<span class='col-11'>" + Localization.Culture.getResource("menu.masNuevo") + "</span>").appendTo(panTitulo);
                 //Pie
                 var panDate = $("<p class='card-date text-right'>").appendTo(divBlock);
                 $("<small class='text-muted'>" + Comun.dateFormat(colImages[0][0].update) + "</small>").appendTo(panDate);
@@ -666,7 +669,7 @@ var View = {
                 for (var i = 0; i < colImages.length - 1 && i < App.Config.elemNuevos; i++) {
                     var typeCss = (colImages[i][0].type == 'video') ? 'card-video' : 'card-image';
                     var icoImagen = (colImages[i][0].type == 'video') ? App.Constantes.iconVideo : App.Constantes.iconImage;
-                    var infoTitle = (colImages[i][0].type == 'video') ? colImages[i][0].titulo : 'ver secuencia';
+                    var infoTitle = (colImages[i][0].type == 'video') ? colImages[i][0].titulo : Localization.Culture.getResource("detalle.secuencia.ver");
 
                     var divCard = $("<div class='card p-1'>").appendTo("#tiles");
 
@@ -685,7 +688,7 @@ var View = {
                     $("<span class='col-10'>" + colImages[i][0].titulo + "</span>").appendTo(panTitulo);
                     //Marcador de secuencia
                     if (colImages[i][0].type != 'video') {
-                        var divSecuencia = $("<div title='ver secuencia'>").appendTo(panTitulo);
+                        var divSecuencia = $("<div title='" + Localization.Culture.getResource("detalle.secuencia.ver") + "'>").appendTo(panTitulo);
                         $("<span class='fa fa-chevron-left'>").appendTo(divSecuencia);
                         $("<span class='fa fa-chevron-right'>").appendTo(divSecuencia);
                     }
@@ -704,7 +707,7 @@ var View = {
 
                         //Capa social-media
                         var panSocial = $("<div class='col-4 text-left'>").appendTo(panFooter);
-                        $("<img src='./resources/youtube.png' style='width:14px!important;' title='publicado en youtube'/>").appendTo(panSocial);
+                        $("<img src='" + App.Config.rutaAuxiliares + "youtube.png' style='width:14px!important;' title='" + Localization.Culture.getResource("detalle.imagen.publicado.youtube") + "'/>").appendTo(panSocial);
                     } else {
                         $(divSecuencia).wrap("<a class='secuencia' href='./sequence.html?news=" + sParam + "&photo=" + iCnt + "'>");
                         $(txtEnlace).wrap("<a href='./index.html?gallery=" + colImages[i][0].parentFolder +
@@ -736,7 +739,7 @@ var View = {
                 var divThumbs = $("<div id='thumbs' class='d-flex flex-row'>").appendTo(divBlock);
 
                 var divThumbLogo = $("<div class='p-3'>").appendTo(divThumbs);
-                var divLogo = $("<img class='img-fluid' src='./resources/logo_xs.png' title='" +
+                var divLogo = $("<img class='img-fluid' src='" + App.Config.rutaAuxiliares + "logo_xs.png' title='" +
                     oGeneral.title + "' />").appendTo(divThumbLogo);
                 $(divThumbLogo).wrap("<a href='./index.html?news=" + sParam + "'>");
 
@@ -846,7 +849,7 @@ var View = {
 
                     //Marcador de secuencia     
                     if (!Comun.insideIframe()) {
-                        var divSecuencia = $("<div title='ver secuencia'>").appendTo(divImage);
+                        var divSecuencia = $("<div title='" + Localization.Culture.getResource("detalle.secuencia.ver") + "'>").appendTo(divImage);
                         $("<span class='fa fa-chevron-left'>").appendTo(divSecuencia);
                         $("<span class='fa fa-chevron-right'>").appendTo(divSecuencia);
                         //vinculo marcador secuencia

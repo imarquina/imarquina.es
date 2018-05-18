@@ -1,4 +1,4 @@
-var Controller = (function() {
+var Controller = (function () {
     function Photo(id, width, height, caption, src, linktext, linkurl, infotext, format, stock, price, update, publi) {
         this.ID = id;
         this.WIDTH = width;
@@ -19,13 +19,13 @@ var Controller = (function() {
 
     return {
         Photos: {
-            load: function(photos) {
+            load: function (photos) {
                 var tableHash = new Hashtable();
                 //El nodo root es config
-                photos.find('photos').each(function() {
+                photos.find('photos').each(function () {
                     //Coleccion de la galeria
                     var iElem = 0;
-                    $(this).children().each(function() {
+                    $(this).children().each(function () {
                         tableHash.put(
                             $(this).attr('src').replace(".jpg", ""),
                             new Photo(
@@ -49,10 +49,10 @@ var Controller = (function() {
                     });
                     //return true;
                 });
-                photos.find('videos').each(function() {
+                photos.find('videos').each(function () {
                     //Coleccion de la galeria
                     var iElem = 0;
-                    $(this).children().each(function() {
+                    $(this).children().each(function () {
                         tableHash.put(
                             $(this).attr('src').replace(".jpg", ""),
                             new Photo(
@@ -81,11 +81,11 @@ var Controller = (function() {
             }
         },
         Config: {
-            newsLoad: function(elements) {
+            newsLoad: function (elements) {
                 var colElementos = new Array;
                 var iCol = 0;
 
-                elements.find('img').each(function() {
+                elements.find('img').each(function () {
                     var IDImage = $(this).attr("id");
                     var hImage = typesHash.get(IDImage);
                     if (hImage != null) {
@@ -113,7 +113,7 @@ var Controller = (function() {
                         iCol++;
                     }
                 });
-                elements.find('vid').each(function() {
+                elements.find('vid').each(function () {
                     var IDImage = $(this).attr("id");
                     var hImage = typesHash.get(IDImage);
                     if (hImage != null) {
@@ -143,18 +143,18 @@ var Controller = (function() {
                 });
                 return colElementos;
             },
-            allLoad: function(elements) {
+            allLoad: function (elements) {
                 var colElementos = new Array;
                 var iCol = 0;
 
-                elements.find('config').each(function() {
+                elements.find('config').each(function () {
                     //recorrer los nodos de primer nivel
-                    $(this).children().each(function() {
+                    $(this).children().each(function () {
                         var nObj = this;
                         //tratamiento en función del tipo de nodo
                         switch (nObj.nodeName) {
                             case 'galleries':
-                                $(nObj).children().each(function() {
+                                $(nObj).children().each(function () {
                                     var nGls = this;
                                     switch (nGls.nodeName) {
                                         case 'folder':
@@ -165,7 +165,7 @@ var Controller = (function() {
                                             var iThu = 0;
 
                                             if ($(nGls).find("gallery").length > 0) {
-                                                $(nGls).children().each(function() {
+                                                $(nGls).children().each(function () {
                                                     var nGal = this;
                                                     if (nGal.nodeName == 'gallery') {
                                                         var idTImage = $(nGal).attr("src");
@@ -226,7 +226,7 @@ var Controller = (function() {
                                 var iThu = 0;
 
                                 if ($(nObj).find("section").length > 0) {
-                                    $(nObj).children().each(function() {
+                                    $(nObj).children().each(function () {
                                         var nSec = this;
 
                                         if (nSec.nodeName == 'section') {
@@ -267,17 +267,17 @@ var Controller = (function() {
                 });
                 return colElementos;
             },
-            galleryLoad: function(elements, sParam) {
+            galleryLoad: function (elements, sParam) {
                 var colElementos = new Array;
                 var iCol = 0;
 
-                elements.find('gallery').each(function() {
+                elements.find('gallery').each(function () {
                     var gallery_name = $(this).attr("name");
 
                     if (Comun.htmlReplace(gallery_name) == sParam) {
                         //Coleccion de la galeria
                         var iElem = 0;
-                        $(this).children().each(function() {
+                        $(this).children().each(function () {
                             var IDImage = $(this).attr("id");
                             var hImage = typesHash.get(IDImage);
                             if (hImage != null) {
@@ -311,9 +311,9 @@ var Controller = (function() {
                 });
                 return colElementos;
             },
-            galleryFind: function(elements, sParam) {
+            galleryFind: function (elements, sParam) {
                 var vGallery = '';
-                elements.find('gallery').each(function() {
+                elements.find('gallery').each(function () {
                     var gallery_name = $(this).attr("name");
 
                     if (Comun.htmlReplace(gallery_name) == sParam) {
@@ -322,16 +322,16 @@ var Controller = (function() {
                 });
                 return vGallery;
             },
-            folderLoad: function(elements, sParam) {
+            folderLoad: function (elements, sParam) {
                 var colElementos = new Array;
                 var iCol = 0;
 
-                elements.find('folder').each(function() {
+                elements.find('folder').each(function () {
                     var folder_name = $(this).attr("name");
 
                     if (Comun.htmlReplace(folder_name) == sParam) {
                         //Coleccion de la carpeta				
-                        $(this).children().each(function() {
+                        $(this).children().each(function () {
                             var nObj = this;
                             if (nObj.nodeName == 'gallery') {
                                 var idImage = $(this).attr("src");
@@ -352,9 +352,9 @@ var Controller = (function() {
                 });
                 return colElementos;
             },
-            folderFind: function(elements, sParam) {
+            folderFind: function (elements, sParam) {
                 var vFolder = '';
-                elements.find('folder').each(function() {
+                elements.find('folder').each(function () {
                     var folder_name = $(this).attr("name");
 
                     if (Comun.htmlReplace(folder_name) == sParam) {
@@ -363,17 +363,17 @@ var Controller = (function() {
                 });
                 return vFolder;
             },
-            multimediaLoad: function(elements, sParam) {
+            multimediaLoad: function (elements, sParam) {
                 var colElementos = new Array;
                 var iCol = 0;
 
-                elements.find('multimedia').each(function() {
+                elements.find('multimedia').each(function () {
                     var multimedia_name = $(this).attr("name");
 
                     if (Comun.htmlReplace(multimedia_name) == sParam) {
                         //Coleccion de la galeria
                         var iElem = 0;
-                        $(this).children().each(function() {
+                        $(this).children().each(function () {
                             var IDImage = $(this).attr("id");
                             var hImage = typesHash.get(IDImage);
                             if (hImage != null) {
@@ -407,9 +407,9 @@ var Controller = (function() {
                 });
                 return colElementos;
             },
-            multimediaFind: function(elements, sParam) {
+            multimediaFind: function (elements, sParam) {
                 var vMultimedia = '';
-                elements.find('multimedia').each(function() {
+                elements.find('multimedia').each(function () {
                     var multimedia_name = $(this).attr("name");
 
                     if (Comun.htmlReplace(multimedia_name) == sParam) {
@@ -418,11 +418,11 @@ var Controller = (function() {
                 });
                 return vMultimedia
             },
-            modalLoad: function(elements, sParam) {
+            modalLoad: function (elements, sParam) {
                 var colElementos;
                 var iCol = 0;
 
-                elements.find('section').each(function() {
+                elements.find('section').each(function () {
                     var section_name = $(this).attr("name");
 
                     if (Comun.htmlReplace(section_name) == sParam) {
@@ -440,7 +440,7 @@ var Controller = (function() {
                 return colElementos;
             },
             /* Compone la ruta de galería y/o colección de una imagen */
-            imagePathSet: function(elemNode, separador) {
+            imagePathSet: function (elemNode, separador) {
                 var oObj = elemNode;
                 var sText = '';
                 var iRow = 0;
@@ -451,10 +451,10 @@ var Controller = (function() {
                 }
                 return sText;
             },
-            sloganLoad: function(elements) {
+            sloganLoad: function (elements) {
                 var colElementos;
 
-                elements.find('slogan').each(function() {
+                elements.find('slogan').each(function () {
                     var textoElemento = $(this).text();
                     var sType = 'slogan';
 
@@ -465,18 +465,18 @@ var Controller = (function() {
                 });
                 return colElementos;
             },
-            menuLoad: function(elements) {
+            menuLoad: function (elements) {
                 var colElementos = new Array;
                 var iCol = 0;
 
-                elements.find('config').each(function() {
+                elements.find('config').each(function () {
                     //recorrer los nodos de primer nivel
-                    $(this).children().each(function() {
+                    $(this).children().each(function () {
                         var nObj = this;
                         //tratamiento en función del tipo de nodo
                         switch (nObj.nodeName) {
                             case 'galleries':
-                                $(nObj).children().each(function() {
+                                $(nObj).children().each(function () {
                                     var nGls = this;
                                     switch (nGls.nodeName) {
                                         case 'folder':
@@ -514,7 +514,7 @@ var Controller = (function() {
                 });
                 return colElementos;
             },
-            generalLoad: function(elements) {
+            generalLoad: function (elements) {
                 var colElementos;
 
                 var nGeneral = Controller.Config.generalNodeGet(elements);
@@ -531,15 +531,15 @@ var Controller = (function() {
                 }
                 return colElementos;
             },
-            generalNodeGet: function(elements) {
+            generalNodeGet: function (elements) {
                 var nNodo;
 
-                elements.find('config').each(function() {
+                elements.find('config').each(function () {
                     nNodo = $(this);
                 });
                 return nNodo;
             },
-            seoValoresLoad: function(elemento) {
+            seoValoresLoad: function (elemento) {
                 var colElementos;
 
                 var sInfoText = elemento.attr("infotext");
@@ -553,10 +553,10 @@ var Controller = (function() {
                 };
                 return colElementos;
             },
-            bannerCookiesLoad: function(elements) {
+            bannerCookiesLoad: function (elements) {
                 var colElementos;
 
-                elements.find('cookies').each(function() {
+                elements.find('cookies').each(function () {
                     var textoElemento = $(this).text();
                     var sType = 'cookies';
 
@@ -566,7 +566,7 @@ var Controller = (function() {
                     };
                 });
                 return colElementos;
-            },
+            }
         }
     };
 })();

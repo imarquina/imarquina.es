@@ -1,6 +1,6 @@
 var Database = {
     Config: {
-        load: function() {
+        load: function () {
             var vReturn;
 
             $.ajax({
@@ -9,21 +9,21 @@ var Database = {
                     url: App.Config.rutaCnf,
                     dataType: "xml"
                 })
-                .done(function(xml) {
+                .done(function (xml) {
                     //El nodo root es config
                     vReturn = $(xml);
                 })
-                .fail(function() {
+                .fail(function () {
                     alert("Error de acceso a datos");
                 })
-                .always(function() {
+                .always(function () {
                     //alert("complete");
                 });
             return vReturn;
         }
     },
     Photos: {
-        load: function() {
+        load: function () {
             var vReturn;
 
             $.ajax({
@@ -32,21 +32,21 @@ var Database = {
                     url: App.Config.rutaPho,
                     dataType: "xml"
                 })
-                .done(function(xml) {
+                .done(function (xml) {
                     //El nodo root es config
                     vReturn = $(xml);
                 })
-                .fail(function() {
+                .fail(function () {
                     alert("Error de acceso a datos");
                 })
-                .always(function() {
+                .always(function () {
                     //alert("complete");
                 });
             return vReturn;
         }
     },
     Template: {
-        load: function(template) {
+        load: function (template) {
             var vReturn = '';
 
             $.ajax({
@@ -55,13 +55,35 @@ var Database = {
                     url: App.Config.rutaTpt + template,
                     dataType: "html"
                 })
-                .done(function(data) {
+                .done(function (data) {
                     vReturn = data;
                 })
-                .fail(function() {
+                .fail(function () {
                     alert("Error de acceso a plantilla");
                 })
-                .always(function() {
+                .always(function () {
+                    //alert("complete");
+                });
+            return vReturn;
+        }
+    },
+    Property: {
+        load: function (property) {
+            var vReturn = '';
+
+            $.ajax({
+                    type: "GET",
+                    async: false,
+                    url: App.Config.rutaResources + property,
+                    dataType: "text"
+                })
+                .done(function (data) {
+                    vReturn = data;
+                })
+                .fail(function () {
+                    alert("Error de acceso a property");
+                })
+                .always(function () {
                     //alert("complete");
                 });
             return vReturn;
